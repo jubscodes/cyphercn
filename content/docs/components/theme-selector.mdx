@@ -1,6 +1,6 @@
 ---
 title: Theme Selector
-description: A complete theme selector component with dropdown selection and code copy functionality.
+description: A terminal-styled theme selector component with dropdown selection and code copy functionality.
 ---
 
 import CopyCommandButton from "@/components/copy-command-button";
@@ -11,12 +11,12 @@ import ThemeSelectorExample from "@/components/examples/theme-selector";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/theme-selector"
-    command="pnpm dlx shadcn@latest add @8bitcn/theme-selector"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/theme-selector"
+    command="pnpm dlx shadcn@latest add @cyphercn/theme-selector"
   />
 </div>
 
-<ComponentPreview title="8-bit Theme Selector component" name="theme-selector">
+<ComponentPreview title="CypherCN Theme Selector" name="theme-selector">
   <ThemeSelectorShowcase />
 </ComponentPreview>
 
@@ -81,8 +81,8 @@ function MyComponent() {
   return (
     <div>
       <p>Current theme: {activeTheme}</p>
-      <button onClick={() => setActiveTheme(Theme.Sega)}>
-        Switch to Sega
+      <button onClick={() => setActiveTheme(Theme.Default)}>
+        Switch to default (green phosphor)
       </button>
     </div>
   )

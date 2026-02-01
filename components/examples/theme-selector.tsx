@@ -118,8 +118,8 @@ function MyComponent() {
   return (
     <div>
       <p>Current theme: {activeTheme}</p>
-      <button onClick={() => setActiveTheme(Theme.Sega)}>
-        Switch to Sega
+      <button onClick={() => setActiveTheme(Theme.Default)}>
+        Switch to default (green phosphor)
       </button>
     </div>
   )

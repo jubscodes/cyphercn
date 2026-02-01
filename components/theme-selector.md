@@ -14,7 +14,7 @@ A complete theme selector component with dropdown selection and code copy functi
 ## Installation
 
 ```bash
-npx shadcn@latest add @8bitcn/theme-selector
+npx shadcn@latest add @cyphercn/theme-selector
 ```
 
 ## Setup
@@ -67,21 +67,20 @@ export default function MyPage() {
 
 ## Available Themes
 
-The theme selector includes 12 different 8-bit themes:
+The theme selector uses the **CypherCN** theme: MS-DOS / cyber terminal style with phosphor colours.
 
-1. **Default** - Clean black and white theme
-2. **Sega** - Blue and white Sega-inspired theme
-3. **Gameboy** - Classic Game Boy green theme
-4. **Atari** - Retro Atari-inspired theme
-5. **Nintendo** - Nintendo-style theme
-6. **Arcade** - Bright arcade colors
-7. **NeoGeo** - Neo Geo console theme
-8. **SoftPop** - Soft pastel colors
-9. **Pacman** - Pac-Man inspired yellow theme
-10. **VHS** - VHS tape aesthetic
-11. **Cassette** - Cassette tape theme
-12. **RustyByte** - Rusty, weathered look
-13. **Zelda** - Golden yellows, forest greens
+- **CypherCN** – Phosphor green on black (default). Monospace fonts, zero radius, light/dark support.
+
+Colour variants (applied via CSS classes in `globals.css` under `.theme-cyphercn.variant-*`):
+
+- **Green** – Default phosphor green
+- **Amber** – Warm CRT phosphor
+- **Cyan** – Cool blue-green terminal
+- **Red** – Alert/warning terminal
+- **White** – High-contrast monochrome
+- **Orange** – Vintage amber-orange
+
+**High-contrast** mode (`.theme-cyphercn.high-contrast`) is available for WCAG AA compliance.
 
 ## Components
 
@@ -144,8 +143,8 @@ function MyComponent() {
   return (
     <div>
       <p>Current theme: {activeTheme}</p>
-      <button onClick={() => handleThemeChange(Theme.Sega)}>
-        Switch to Sega Theme
+      <button onClick={() => handleThemeChange(Theme.Default)}>
+        Switch to default (green phosphor)
       </button>
     </div>
   );

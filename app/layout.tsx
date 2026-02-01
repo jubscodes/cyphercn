@@ -2,7 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, IBM_Plex_Mono } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { ActiveThemeProvider } from "@/components/active-theme";
 import { ScreenSize } from "@/components/screen-size";
@@ -20,9 +20,11 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
+        className={`${geistSans.variable} ${ibmPlexMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <NuqsAdapter>
           <RootProvider
@@ -53,7 +55,7 @@ export default function RootLayout({
             >
               <ActiveThemeProvider>
                 <SiteHeader />
-                <div className="mx-auto w-full max-w-[1400px] flex-1 border-r border-l border-dashed">
+                <div className="mx-auto w-full max-w-[1400px] flex-1">
                   {children}
                 </div>
                 <SiteFooter />

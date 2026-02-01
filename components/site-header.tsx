@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -12,12 +11,11 @@ import { RetroModeSwitcher } from "./ui/retro-mode-switcher";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-b border-dashed bg-background/95">
-      <div className="flex h-full w-full max-w-[1400px] items-center gap-2 border-r border-l border-dashed px-2 md:mx-auto md:gap-5 md:px-6">
+    <header className="sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-border border-b bg-background/95">
+      <div className="flex h-full w-full max-w-[1400px] items-center gap-2 px-2 md:mx-auto md:gap-5 md:px-6">
         <Link className="hidden items-center gap-2 md:flex" href="/">
-          <Image alt="logo" height={32} src="/8bitcn.png" width={32} />{" "}
           <h2 className={`${"retro"} hidden font-bold text-xs md:inline-block`}>
-            8bitcn/ui
+            cyphercn
           </h2>
         </Link>
 
@@ -39,7 +37,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2 md:ml-auto">
           <SearchDocumentation />
 
-          <Link href="https://github.com/TheOrcDev/8bitcn-ui" target="_blank">
+          <Link href="https://github.com/jubscodes/cyphercn" target="_blank">
             <Button
               className="flex items-center gap-2"
               size="sm"
@@ -64,9 +62,9 @@ export function SiteHeader() {
 export async function StarsCount() {
   "use cache";
 
-  const data = await fetch("https://api.github.com/repos/TheOrcDev/8bitcn-ui");
+  const data = await fetch("https://api.github.com/repos/jubscodes/cyphercn");
   const json = await data.json();
-  const stars = json.stargazers_count;
+  const stars = json.stargazers_count ?? 0;
 
   return (
     <span className="retro mt-0.5 w-12 text-muted-foreground text-xs tabular-nums">

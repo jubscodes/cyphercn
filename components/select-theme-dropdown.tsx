@@ -10,19 +10,12 @@ import {
 import { Theme } from "@/lib/themes";
 
 const themes = [
-  { name: Theme.Default, color: "#000" },
-  { name: Theme.Sega, color: "#0055a4" },
-  { name: Theme.Gameboy, color: "#8bac0f" },
-  { name: Theme.Atari, color: "#7a4009" },
-  { name: Theme.Nintendo, color: "#104cb0" },
-  { name: Theme.Arcade, color: "#F07CD4" },
-  { name: Theme.NeoGeo, color: "#dc2626" },
-  { name: Theme.SoftPop, color: "#4B3F99" },
-  { name: Theme.Pacman, color: "#ffcc00" },
-  { name: Theme.VHS, color: "#8B5CF6" },
-  { name: Theme.Cassette, color: "#8B5A2B" },
-  { name: Theme.RustyByte, color: "#d2691e" },
-  { name: Theme.Zelda, color: "oklch(0.75 0.2 90)" },
+  { name: Theme.Default, color: "oklch(0.85 0.25 142)" },
+  { name: Theme.Amber, color: "oklch(0.85 0.18 85)" },
+  { name: Theme.Cyan, color: "oklch(0.85 0.15 195)" },
+  { name: Theme.Red, color: "oklch(0.7 0.22 25)" },
+  { name: Theme.White, color: "oklch(0.95 0 0)" },
+  { name: Theme.Orange, color: "oklch(0.8 0.2 55)" },
 ];
 
 export function SelectThemeDropdown({
