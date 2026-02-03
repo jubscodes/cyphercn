@@ -19,7 +19,7 @@ description: Best practices for wrapping shadcn/ui components. Apply when creati
 import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Button as ShadcnButton } from "@/components/ui/button";
-import "@/components/ui/8bit/styles/retro.css";
+import "@/components/ui/cypher/styles/retro.css";
 
 export const buttonVariants = cva("", {
   variants: {
@@ -135,6 +135,6 @@ function Card({ className, font, ...props }: BitCardProps) {
 
 ### Component Examples
 
-- `components/ui/8bit/button.tsx` - Basic wrapper with pixel borders
-- `components/ui/8bit/card.tsx` - Card with outer wrapper
-- `components/ui/8bit/dialog.tsx` - Multi-subcomponent wrapper
+- `components/ui/cypher/button.tsx` - Basic wrapper with pixel borders
+- `components/ui/cypher/card.tsx` - Card with outer wrapper
+- `components/ui/cypher/dialog.tsx` - Multi-subcomponent wrapper

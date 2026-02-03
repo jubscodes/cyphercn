@@ -84,7 +84,7 @@ Remember 8-bit components wrap shadcn/ui:
 
 ```tsx
 // Import the 8-bit component
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 
 // Not the base shadcn component
 import { Button } from "@/components/ui/button"; // Wrong!
@@ -96,7 +96,7 @@ All 8-bit components require retro.css:
 
 ```tsx
 // This import is required in the component source
-import "@/components/ui/8bit/styles/retro.css";
+import "@/components/ui/cypher/styles/retro.css";
 
 // Documentation shows usage with 8-bit components
 <Button className="retro">START GAME</Button>
@@ -153,7 +153,7 @@ description: Displays an 8-bit mission and task tracking system.
 1. **Gaming context** - Use game-related terminology
 2. **Realistic data** - Show actual game scenarios
 3. **Retro styling** - Use `.retro` class for pixel fonts
-4. **Wrapper awareness** - Import from `@/components/ui/8bit/`
+4. **Wrapper awareness** - Import from `@/components/ui/cypher/`
 5. **Variant showcase** - Demonstrate multiple variants
 6. **Block complexity** - Handle multi-component documentation
 7. **8-bit specific** - Emphasize unique 8-bit features

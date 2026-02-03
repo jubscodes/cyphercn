@@ -132,7 +132,7 @@ Use Radix state-based animations for overlays:
 
 ### Reference Components
 
-- `components/ui/8bit/spinner.tsx` - Animated spinner
-- `components/ui/8bit/xp-bar.tsx` - Custom blink animation
-- `components/ui/8bit/skeleton.tsx` - Loading skeleton
-- `components/ui/8bit/accordion.tsx` - Radix state animations
+- `components/ui/cypher/spinner.tsx` - Animated spinner
+- `components/ui/cypher/xp-bar.tsx` - Custom blink animation
+- `components/ui/cypher/skeleton.tsx` - Loading skeleton
+- `components/ui/cypher/accordion.tsx` - Radix state animations

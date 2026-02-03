@@ -18,14 +18,14 @@ Register 8-bit components in `registry.json` for discovery via `shadcn add @8bit
   "registryDependencies": ["button"],
   "files": [
     {
-      "path": "components/ui/8bit/button.tsx",
+      "path": "components/ui/cypher/button.tsx",
       "type": "registry:component",
-      "target": "components/ui/8bit/button.tsx"
+      "target": "components/ui/cypher/button.tsx"
     },
     {
-      "path": "components/ui/8bit/styles/retro.css",
+      "path": "components/ui/cypher/styles/retro.css",
       "type": "registry:component",
-      "target": "components/ui/8bit/styles/retro.css"
+      "target": "components/ui/cypher/styles/retro.css"
     }
   ]
 }
@@ -45,19 +45,19 @@ For pre-built layouts like game UIs:
   "categories": ["gaming"],
   "files": [
     {
-      "path": "components/ui/8bit/blocks/chapter-intro.tsx",
+      "path": "components/ui/cypher/blocks/chapter-intro.tsx",
       "type": "registry:block",
-      "target": "components/ui/8bit/blocks/chapter-intro.tsx"
+      "target": "components/ui/cypher/blocks/chapter-intro.tsx"
     },
     {
-      "path": "components/ui/8bit/styles/retro.css",
+      "path": "components/ui/cypher/styles/retro.css",
       "type": "registry:component",
-      "target": "components/ui/8bit/styles/retro.css"
+      "target": "components/ui/cypher/styles/retro.css"
     },
     {
-      "path": "components/ui/8bit/card.tsx",
+      "path": "components/ui/cypher/card.tsx",
       "type": "registry:component",
-      "target": "components/ui/8bit/card.tsx"
+      "target": "components/ui/cypher/card.tsx"
     }
   ]
 }
@@ -70,14 +70,14 @@ Always include `retro.css` in registry entries:
 ```json
 "files": [
   {
-    "path": "components/ui/8bit/new-component.tsx",
+    "path": "components/ui/cypher/new-component.tsx",
     "type": "registry:component",
-    "target": "components/ui/8bit/new-component.tsx"
+    "target": "components/ui/cypher/new-component.tsx"
   },
   {
-    "path": "components/ui/8bit/styles/retro.css",
+    "path": "components/ui/cypher/styles/retro.css",
     "type": "registry:component",
-    "target": "components/ui/8bit/styles/retro.css"
+    "target": "components/ui/cypher/styles/retro.css"
   }
 ]
 ```
@@ -117,7 +117,7 @@ For blocks with multiple components:
 
 ### Adding a New Component
 
-1. Create component in `components/ui/8bit/component.tsx`
+1. Create component in `components/ui/cypher/component.tsx`
 2. Update `registry.json` with entry (copy existing component as template)
 3. Include `retro.css` dependency
 4. Test with: `pnpm dlx shadcn@latest add @8bitcn/component`

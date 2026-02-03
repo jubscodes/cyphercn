@@ -2,7 +2,7 @@
 
 Accessible retro components that you can copy and paste into your apps. Free. Open Source.
 
-Visit [8bitcn.com](https://8bitcn.com/)
+Visit [cyphercn.com](https://cyphercn.com/)
 
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=❤&logo=GitHub&color=#fe8e86)](https://github.com/sponsors/theorcdev)
 
@@ -17,20 +17,20 @@ Please read the [contributing guide](/contributing.md).
 To add the `button` component to your project, run the following command:
 
 ```bash
-pnpm dlx shadcn@latest add @8bitcn/button
+pnpm dlx shadcn@latest add @cyphercn/button
 ```
 
 Once installed, you can import and use the component in your files:
 
 ```typescript
-import { Button } from "@/components/ui/8bit";
+import { Button } from "@/components/ui/cypher";
 
 export default function App() {
   return <Button>Click me</Button>;
 }
 ```
 
-**Note:** The import path `@/components/ui/8bit` assumes your project has a path alias configured (common in Next.js and similar frameworks). Adjust the path to match your project's structure if needed.
+**Note:** The import path `@/components/ui/cypher` assumes your project has a path alias configured (common in Next.js and similar frameworks). Adjust the path to match your project's structure if needed.
 
 <p align="center">
   <img src="./public/images/readme/8bitcn-button-example.png" alt="8bitcn Button example" />

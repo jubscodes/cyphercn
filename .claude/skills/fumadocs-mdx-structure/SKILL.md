@@ -21,7 +21,7 @@ description: Brief description of the 8-bit component.
 All documentation files require these imports:
 
 ```mdx
-import { ComponentName } from "@/components/ui/8bit/component-name";
+import { ComponentName } from "@/components/ui/cypher/component-name";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
@@ -68,7 +68,7 @@ Wrap component examples:
 ---
 
 ```tsx
-import { ComponentName } from "@/components/ui/8bit/component-name"
+import { ComponentName } from "@/components/ui/cypher/component-name"
 ```
 
 ```tsx
@@ -84,7 +84,7 @@ title: Button
 description: Displays an 8-bit button component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
@@ -111,7 +111,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Button } from "@/components/ui/8bit/button"
+import { Button } from "@/components/ui/cypher/button"
 ```
 
 ```tsx
@@ -127,7 +127,7 @@ import { Button } from "@/components/ui/8bit/button"
 4. **ComponentPreview** - Use for all component examples
 5. **Code blocks** - Use ```tsx for TypeScript examples
 6. **Section separators** - Use `---` after headings
-7. **8-bit imports** - Use `@/components/ui/8bit/` path
+7. **8-bit imports** - Use `@/components/ui/cypher/` path
 
 ### File Location
 

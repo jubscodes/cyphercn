@@ -12,7 +12,7 @@ Create game-like interfaces with state-driven visuals for health, XP, mana, and 
 Build on the Progress component with game-specific variants:
 
 ```tsx
-import { Progress } from "@/components/ui/8bit/progress";
+import { Progress } from "@/components/ui/cypher/progress";
 
 function HealthBar({ value = 100, ...props }: BitProgressProps) {
   return (
@@ -133,6 +133,6 @@ function EnemyHealth({ health, maxHealth }: EnemyHealthProps) {
 
 ### Reference Components
 
-- `components/ui/8bit/health-bar.tsx` - Health bar implementation
-- `components/ui/8bit/xp-bar.tsx` - XP bar with level up notification
-- `components/ui/8bit/mana-bar.tsx` - Mana bar implementation
+- `components/ui/cypher/health-bar.tsx` - Health bar implementation
+- `components/ui/cypher/xp-bar.tsx` - XP bar with level up notification
+- `components/ui/cypher/mana-bar.tsx` - Mana bar implementation

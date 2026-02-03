@@ -1,9 +1,10 @@
 export const sharedMetaData = {
   title: {
-    default: "Build your retro library - 8bitcn/ui",
-    template: "%s - 8bitcn/ui",
+    default: "Terminal UI Components - cyphercn",
+    template: "%s - cyphercn",
   },
-  description: "A collection of 8-bit styled components for your next project.",
+  description:
+    "Terminal-styled components for React. A cyberpunk command center UI library.",
   openGraph: {
     images: "/assets/graph.png",
   },

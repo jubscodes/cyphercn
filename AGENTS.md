@@ -8,7 +8,7 @@ This file provides essential information for agentic coding assistants working i
 
 **Package Manager**: pnpm
 **Registry**: https://ui.shadcn.com/registry
-**Installation**: `pnpm dlx shadcn@latest add @8bitcn/[component-name]`
+**Installation**: `pnpm dlx shadcn@latest add @cyphercn/[component-name]`
 
 ## Commands
 
@@ -55,7 +55,7 @@ export const Button = ({ className, ...props }: ButtonProps) => {
 <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
 ```
 
-**Required Retro CSS**: All 8-bit components must import the retro stylesheet:
+**Required stylesheet**: 8-bit components must import the shared stylesheet:
 ```tsx
 import "./styles/retro.css"
 ```
@@ -68,7 +68,7 @@ import "./styles/retro.css"
   ```
 - Import order: External libraries (alphabetical) → Internal `@/*` imports
 - Prefer named exports over default exports
-- 8-bit components must import retro.css: `import "./styles/retro.css"`
+- Registry components must import the shared stylesheet: `import "./styles/retro.css"`
 
 ### TypeScript
 - **Strict mode enabled** - All types must be properly defined
@@ -156,7 +156,7 @@ Example: `feat(components): add new prop to avatar component`
 ## Registry Structure
 
 Components are registered in `registry.json` with specific patterns:
-- **Component entries**: Include retro.css dependency and proper file mappings
+- **Component entries**: Include retro.css (cypher styles) dependency and proper file mappings
 - **Block entries**: Pre-built layouts like login forms, player profiles
 - **Gaming categories**: Components marked with "gaming" category for game UI elements
 - **Dependencies**: Explicitly declare shadcn/ui dependencies via `registryDependencies`
@@ -167,7 +167,7 @@ Components are registered in `registry.json` with specific patterns:
 /app              - Next.js App Router pages
 /components       - React components
   /ui            - shadcn/ui components
-  /ui/8bit       - Retro 8-bit styled components
+  /ui/cypher     - Retro 8-bit styled components
 /lib             - Utility functions
 /config          - Configuration files
 /hooks           - Custom React hooks

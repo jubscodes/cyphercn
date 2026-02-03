@@ -32,7 +32,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 ```
 
-**8bit components** (e.g., `8bit/button.tsx`):
+**Cypher components** (e.g., `cypher/button.tsx`):
 
 ```tsx
 import { type VariantProps, cva } from "class-variance-authority";
@@ -41,14 +41,14 @@ import { cn } from "@/lib/utils";
 
 import { Button as ShadcnButton } from "@/components/ui/button";
 
-import "@/components/ui/8bit/styles/retro.css";
+import "@/components/ui/cypher/styles/retro.css";
 ```
 
 Import order:
 1. External libraries (class-variance-authority, @radix-ui)
 2. Internal utils (`@/lib/utils`)
 3. Base component alias (`@/components/ui/component`)
-4. Retro stylesheet (`@/components/ui/8bit/styles/retro.css`)
+4. Retro stylesheet (`@/components/ui/cypher/styles/retro.css`)
 
 ### Type Definitions
 
@@ -65,7 +65,7 @@ function Button({
   })
 ```
 
-**8bit components**: Export interface separately
+**Cypher components**: Export interface separately
 
 ```tsx
 export interface BitButtonProps
@@ -92,7 +92,7 @@ const DialogOverlay = React.forwardRef<
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 ```
 
-**8bit components**: Use `ref` prop (React 19 pattern)
+**Cypher components**: Use `ref` prop (React 19 pattern)
 
 ```tsx
 export interface BitButtonProps
@@ -105,12 +105,12 @@ function Button({ ref, ...props }: BitButtonProps) {
 }
 ```
 
-### 8bit Component Patterns
+### Cypher Component Patterns
 
-**Retro CSS import**: Required for all 8bit components
+**Retro CSS import**: Required for all cypher components
 
 ```tsx
-import "@/components/ui/8bit/styles/retro.css";
+import "@/components/ui/cypher/styles/retro.css";
 ```
 
 **Base component alias**: Import base component with alias
@@ -119,7 +119,7 @@ import "@/components/ui/8bit/styles/retro.css";
 import { Button as ShadcnButton } from "@/components/ui/button";
 ```
 
-**Variant overrides**: 8bit variants often have minimal styles (borders/colors handled by CSS)
+**Variant overrides**: Cypher variants often have minimal styles (borders/colors handled by CSS)
 
 ```tsx
 export const buttonVariants = cva("", {
@@ -135,5 +135,5 @@ export const buttonVariants = cva("", {
 ### Reference Files
 
 - `components/ui/button.tsx` - Base component example
-- `components/ui/8bit/button.tsx` - 8bit wrapper example
+- `components/ui/cypher/button.tsx` - Cypher wrapper example
 - `components/ui/dialog.tsx` - Complex base component with Radix primitives

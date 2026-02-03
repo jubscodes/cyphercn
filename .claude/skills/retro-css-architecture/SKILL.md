@@ -12,7 +12,7 @@ Organize CSS for 8-bit components using custom properties, pixel fonts, and resp
 All 8-bit components must import the retro stylesheet:
 
 ```tsx
-import "@/components/ui/8bit/styles/retro.css";
+import "@/components/ui/cypher/styles/retro.css";
 ```
 
 ### Pixel Font
@@ -76,7 +76,7 @@ Use consistent pixel values for retro feel:
 
 ### CSS Organization
 
-Keep retro-specific styles in `components/ui/8bit/styles/retro.css`:
+Keep retro-specific styles in `components/ui/cypher/styles/retro.css`:
 
 ```css
 /* Import pixel font */
@@ -122,5 +122,5 @@ Use Tailwind utilities for component-specific styling:
 
 ### Reference Files
 
-- `components/ui/8bit/styles/retro.css` - Global retro styles
-- `components/ui/8bit/button.tsx` - CSS class usage example
+- `components/ui/cypher/styles/retro.css` - Global retro styles
+- `components/ui/cypher/button.tsx` - CSS class usage example
