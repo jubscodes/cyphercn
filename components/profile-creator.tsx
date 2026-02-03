@@ -6,19 +6,19 @@ import { parseAsBoolean, parseAsString, useQueryStates } from "nuqs";
 import { useMemo, useState } from "react";
 import { useThemeConfig, useUrlTheme } from "@/components/active-theme";
 import { SelectThemeDropdown } from "@/components/select-theme-dropdown";
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
-import { Input } from "@/components/ui/8bit/input";
-import { Label } from "@/components/ui/8bit/label";
-import { Separator } from "@/components/ui/8bit/separator";
-import { Switch } from "@/components/ui/8bit/switch";
-import { Textarea } from "@/components/ui/8bit/textarea";
-import { toast } from "@/components/ui/8bit/toast";
+} from "@/components/ui/cypher/card";
+import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
+import { Separator } from "@/components/ui/cypher/separator";
+import { Switch } from "@/components/ui/cypher/switch";
+import { Textarea } from "@/components/ui/cypher/textarea";
+import { toast } from "@/components/ui/cypher/toast";
 
 import CopyProfileCardDialog from "./copy-profile-card-dialog";
 import ProfileCard from "./profile-card";
@@ -237,9 +237,9 @@ export default function ProfileCreator() {
 
     return `"use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/8bit/avatar";
-import { Badge } from "@/components/ui/8bit/badge";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/8bit/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/cypher/avatar";
+import { Badge } from "@/components/ui/cypher/badge";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/cypher/card";
 
 function getInitials(name: string) {
   if (!name) return "?";

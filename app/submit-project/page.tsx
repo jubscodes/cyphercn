@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { SubmitProjectForm } from "@/components/forms/submit-project-form";
-import { Skeleton } from "@/components/ui/8bit/skeleton";
+import { Skeleton } from "@/components/ui/cypher/skeleton";
 
 export default function Home() {
   return (

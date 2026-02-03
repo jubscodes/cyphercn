@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ComponentShowcase from "@/components/examples/component-showcase";
-import Sponsors from "@/components/sponsors";
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 
 export default function Home() {
   return (
@@ -21,11 +20,9 @@ export default function Home() {
 
       <ComponentShowcase />
 
-      <Sponsors />
-
       <div className="mt-8 border-4 border-foreground/20 border-dashed p-6 text-center">
         <h2 className={`${"retro"} mb-2 font-bold text-lg md:text-xl`}>
-          Built something with 8bitcn?
+          Built something with cyphercn?
         </h2>
         <p className="mx-auto mb-4 max-w-md text-muted-foreground text-sm">
           Share your project with the community! Submit it here and you could

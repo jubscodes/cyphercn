@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import { useSidebar } from "@/components/ui/sidebar";
 
 export function DashboardHeader() {

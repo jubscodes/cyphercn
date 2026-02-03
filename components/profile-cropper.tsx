@@ -1,21 +1,20 @@
 "use client";
 
 import { useCallback, useState } from "react";
-
-import { Avatar, AvatarImage } from "@/components/ui/8bit/avatar";
-import { Button } from "@/components/ui/8bit/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-} from "@/components/ui/8bit/dialog";
-import { Slider } from "@/components/ui/8bit/slider";
 import {
   Cropper,
   CropperCropArea,
   CropperDescription,
   CropperImage,
 } from "@/components/ui/cropper";
+import { Avatar, AvatarImage } from "@/components/ui/cypher/avatar";
+import { Button } from "@/components/ui/cypher/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/cypher/dialog";
+import { Slider } from "@/components/ui/cypher/slider";
 
 interface Props {
   toggleImageCropper: (state?: boolean) => void;
@@ -119,7 +118,7 @@ const ProfileCropper = ({
         <DialogTitle>Crop Your Avatar</DialogTitle>
         {croppedImgUrl ? (
           <div className="flex flex-col items-center gap-4">
-            <Avatar className="size-40" variant="retro">
+            <Avatar className="size-40">
               <AvatarImage alt={"Avatar"} src={croppedImgUrl} />
             </Avatar>
             <div className="mt-6 flex w-full items-center gap-6">
@@ -137,7 +136,7 @@ const ProfileCropper = ({
                   toggleImageCropper(false);
                   setCroppedImgUrl(null);
                 }}
-                variant={"secondary"}
+                variant={"default"}
               >
                 Save
               </Button>

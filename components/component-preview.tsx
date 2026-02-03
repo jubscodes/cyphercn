@@ -1,3 +1,5 @@
+"use client";
+
 import { OpenInV0Button } from "@/components/open-in-v0-button";
 
 interface ComponentPreviewProps {
@@ -12,7 +14,7 @@ export default function ComponentPreview({
   children,
 }: ComponentPreviewProps) {
   return (
-    <div className="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+    <div className="relative flex min-h-[450px] flex-col gap-4 border border-foreground/20 p-4">
       <div className="flex items-center justify-between">
         <h2 className="text-muted-foreground text-sm sm:pl-3">{title}</h2>
 

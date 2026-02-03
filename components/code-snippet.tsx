@@ -3,8 +3,8 @@
 import { Check, Clipboard } from "lucide-react";
 import { isValidElement, type ReactNode, useState } from "react";
 import ShikiHighlighter from "react-shiki";
-import { toast } from "@/components/ui/8bit/toast";
 import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/cypher/toast";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 

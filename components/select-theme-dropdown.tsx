@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/8bit/select";
+} from "@/components/ui/cypher/select";
 import { Theme } from "@/lib/themes";
 
 const themes = [

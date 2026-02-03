@@ -2,13 +2,13 @@ import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 import { DashboardHeader } from "@/components/dashboard-header";
 import { DataTable } from "@/components/data-table";
 import { SectionCards } from "@/components/section-cards";
-import ChartBarMultiple from "@/components/ui/8bit/blocks/chart-bar";
+import ChartBarMultiple from "@/components/ui/cypher/blocks/chart-bar";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
+} from "@/components/ui/cypher/card";
 import {
   Sidebar,
   SidebarContent,

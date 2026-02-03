@@ -4,11 +4,11 @@ import { useThemeConfig } from "@/components/active-theme";
 import CodeSnippet from "@/components/code-snippet";
 import InstallationCommands from "@/components/installation-commands";
 import { SelectThemeDropdown } from "@/components/select-theme-dropdown";
-import { Badge } from "@/components/ui/8bit/badge";
+import { Badge } from "@/components/ui/cypher/badge";
 import { Theme } from "@/lib/themes";
 
-import { Button } from "../ui/8bit/button";
-import { Separator } from "../ui/8bit/separator";
+import { Button } from "../ui/cypher/button";
+import { Separator } from "../ui/cypher/separator";
 
 export default function ThemeSelectorExample() {
   const { activeTheme, setActiveTheme } = useThemeConfig();

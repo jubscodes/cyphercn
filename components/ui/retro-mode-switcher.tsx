@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import { cn } from "@/lib/utils";
 
 interface RetroModeSwitcherProps {

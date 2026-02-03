@@ -1,11 +1,11 @@
-import { Badge } from "@/components/ui/8bit/badge";
+import { Badge } from "@/components/ui/cypher/badge";
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
+} from "@/components/ui/cypher/card";
 
 export function SectionCards() {
   return (

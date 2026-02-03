@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Badge } from "./ui/8bit/badge";
+import { Badge } from "./ui/cypher/badge";
 import { SidebarMenuButton, SidebarMenuItem } from "./ui/sidebar";
 
 interface SidebarItemProps {

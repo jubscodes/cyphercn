@@ -3,7 +3,7 @@
 import {
   type SaveSlot,
   SaveSlots,
-} from "@/components/ui/8bit/blocks/save-slots";
+} from "@/components/ui/cypher/blocks/save-slots";
 
 const exampleSlots: SaveSlot[] = [
   {

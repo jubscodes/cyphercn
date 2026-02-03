@@ -12,7 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/8bit/navigation-menu";
+} from "@/components/ui/cypher/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
   {

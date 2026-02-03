@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Dialog,
   DialogContent,
@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/8bit/dialog";
+} from "@/components/ui/cypher/dialog";
 
 import CodeSnippet from "./code-snippet";
 
@@ -33,7 +33,7 @@ export default function CopyProfileCardDialog({ code }: ProfileCardProps) {
         </p>
 
         <CodeSnippet>
-          pnpm dlx shadcn@latest add @8bitcn/profile-card
+          pnpm dlx shadcn@latest add @cyphercn/profile-card
         </CodeSnippet>
 
         <p className="text-muted-foreground text-xs">

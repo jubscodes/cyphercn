@@ -7,7 +7,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { SubmitSuccessCard } from "@/components/submit-success-card";
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Card,
   CardContent,
@@ -15,8 +15,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
-import { Input } from "@/components/ui/8bit/input";
+} from "@/components/ui/cypher/card";
+import { Input } from "@/components/ui/cypher/input";
 import {
   Field,
   FieldDescription,

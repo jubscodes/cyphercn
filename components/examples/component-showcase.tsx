@@ -3,16 +3,16 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/components/ui/8bit/alert";
-import { Badge } from "@/components/ui/8bit/badge";
-import AudioSettings from "@/components/ui/8bit/blocks/audio-settings";
+} from "@/components/ui/cypher/alert";
+import { Badge } from "@/components/ui/cypher/badge";
+import AudioSettings from "@/components/ui/cypher/blocks/audio-settings";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
-import { Checkbox } from "@/components/ui/8bit/checkbox";
+} from "@/components/ui/cypher/card";
+import { Checkbox } from "@/components/ui/cypher/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,9 +22,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/components/ui/8bit/dropdown-menu";
-import { Input } from "@/components/ui/8bit/input";
-import { Label } from "@/components/ui/8bit/label";
+} from "@/components/ui/cypher/dropdown-menu";
+import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
 import {
   Menubar,
   MenubarContent,
@@ -33,32 +33,32 @@ import {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-} from "@/components/ui/8bit/menubar";
+} from "@/components/ui/cypher/menubar";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/8bit/select";
+} from "@/components/ui/cypher/select";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/8bit/tabs";
-import { Textarea } from "@/components/ui/8bit/textarea";
+} from "@/components/ui/cypher/tabs";
+import { Textarea } from "@/components/ui/cypher/textarea";
 
-import ChapterIntro from "../ui/8bit/blocks/chapter-intro";
-import Dialogue from "../ui/8bit/blocks/dialogue";
-import DifficultySelect from "../ui/8bit/blocks/difficulty-select";
-import GameOver from "../ui/8bit/blocks/game-over";
-import GameProgress from "../ui/8bit/blocks/game-progress";
-import MainMenu from "../ui/8bit/blocks/main-menu";
-import { Button } from "../ui/8bit/button";
-import EnemyHealthDisplay from "../ui/8bit/enemy-health-display";
-import ManaBar from "../ui/8bit/mana-bar";
-import { Spinner } from "../ui/8bit/spinner";
+import ChapterIntro from "../ui/cypher/blocks/chapter-intro";
+import Dialogue from "../ui/cypher/blocks/dialogue";
+import DifficultySelect from "../ui/cypher/blocks/difficulty-select";
+import GameOver from "../ui/cypher/blocks/game-over";
+import GameProgress from "../ui/cypher/blocks/game-progress";
+import MainMenu from "../ui/cypher/blocks/main-menu";
+import { Button } from "../ui/cypher/button";
+import EnemyHealthDisplay from "../ui/cypher/enemy-health-display";
+import ManaBar from "../ui/cypher/mana-bar";
+import { Spinner } from "../ui/cypher/spinner";
 import { DatePicker } from "./date-picker";
 import { DrawerExample } from "./drawer";
 
@@ -104,7 +104,7 @@ export default function ComponentShowcase() {
           </AlertDescription>
         </Alert>
 
-        <Alert variant="destructive">
+        <Alert variant="warning">
           <AlertTitle>Warning</AlertTitle>
           <AlertDescription>
             Low health! Find a health potion quickly.
@@ -255,7 +255,7 @@ export default function ComponentShowcase() {
                 level={25}
                 maxHealth={1000}
               />
-              <ManaBar className="mt-5" value={75} variant="retro" />
+              <ManaBar className="mt-5" value={75} variant="bar" />
             </div>
           </CardContent>
         </Card>

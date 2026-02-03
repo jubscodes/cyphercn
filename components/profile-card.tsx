@@ -4,16 +4,16 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/ui/8bit/avatar";
-import { Badge } from "@/components/ui/8bit/badge";
-import { Button } from "@/components/ui/8bit/button";
+} from "@/components/ui/cypher/avatar";
+import { Badge } from "@/components/ui/cypher/badge";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
+} from "@/components/ui/cypher/card";
 
 const WHITESPACE_REGEX = /\s+/;
 
@@ -43,7 +43,6 @@ export default function ProfileCard({
   name,
   avatarUrl,
   badgeTitle,
-  isRetroAvatar,
   safeGithubUrl,
   safeXUrl,
   description,
@@ -51,7 +50,7 @@ export default function ProfileCard({
   return (
     <Card className="w-full max-w-md">
       <CardHeader className="flex flex-col items-center gap-2">
-        <Avatar className="size-20" variant={isRetroAvatar ? "pixel" : "retro"}>
+        <Avatar className="size-20">
           <AvatarImage alt={name || "Avatar"} src={avatarUrl} />
           <AvatarFallback>{getInitials(name)}</AvatarFallback>
         </Avatar>

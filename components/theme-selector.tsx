@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,14 +8,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/8bit/dialog";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/cypher/dialog";
 import { getThemeCode } from "@/lib/themes";
 
 import { useThemeConfig } from "./active-theme";
 import CodeSnippet from "./code-snippet";
 import { SelectThemeDropdown } from "./select-theme-dropdown";
-import { ScrollArea } from "./ui/8bit/scroll-area";
+import { ScrollArea } from "./ui/cypher/scroll-area";
 
 export function ThemeSelector() {
   const { activeTheme, setActiveTheme } = useThemeConfig();

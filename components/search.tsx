@@ -12,7 +12,7 @@ import {
   type SharedProps,
 } from "fumadocs-ui/components/dialog/search";
 import { useI18n } from "fumadocs-ui/contexts/i18n";
-import { Kbd } from "./ui/8bit/kbd";
+import { Kbd } from "./ui/cypher/kbd";
 
 const searchDialogItems = [
   {

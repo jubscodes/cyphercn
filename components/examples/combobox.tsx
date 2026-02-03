@@ -2,7 +2,7 @@
 
 import { ChevronsUpDown } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Command,
   CommandEmpty,
@@ -10,12 +10,12 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/8bit/command";
+} from "@/components/ui/cypher/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/8bit/popover";
+} from "@/components/ui/cypher/popover";
 import { cn } from "@/lib/utils";
 
 const frameworks = [

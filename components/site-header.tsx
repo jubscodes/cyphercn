@@ -6,7 +6,7 @@ import { navItems } from "@/config/nav-items";
 
 import MobileNav from "./mobile-nav";
 import { SearchDocumentation } from "./search-documentation";
-import { Skeleton } from "./ui/8bit/skeleton";
+import { Skeleton } from "./ui/cypher/skeleton";
 import { RetroModeSwitcher } from "./ui/retro-mode-switcher";
 
 export function SiteHeader() {

@@ -2,9 +2,8 @@
 
 import { Check, Clipboard } from "lucide-react";
 import { useState } from "react";
-
-import { toast } from "@/components/ui/8bit/toast";
 import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/cypher/toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface InstallationCommandsProps {
@@ -15,7 +14,7 @@ export default function InstallationCommands({
   packageName,
 }: InstallationCommandsProps) {
   const [command, setCommand] = useState(
-    `pnpm dlx shadcn@latest add @8bitcn/${packageName}`
+    `pnpm dlx shadcn@latest add @cyphercn/${packageName}`
   );
   const [copied, setCopied] = useState(false);
 
@@ -39,7 +38,7 @@ export default function InstallationCommands({
                 className="rounded-none px-2 data-[state=active]:border-x-2 data-[state=active]:border-b-2 data-[state=active]:border-b-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none"
                 onClick={() =>
                   setCommand(
-                    `pnpm dlx shadcn@latest add @8bitcn/${packageName}`
+                    `pnpm dlx shadcn@latest add @cyphercn/${packageName}`
                   )
                 }
                 value="pnpm"
@@ -49,7 +48,7 @@ export default function InstallationCommands({
               <TabsTrigger
                 className="rounded-none px-2 data-[state=active]:border-b-2 data-[state=active]:border-b-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none"
                 onClick={() =>
-                  setCommand(`npx shadcn@latest add @8bitcn/${packageName}`)
+                  setCommand(`npx shadcn@latest add @cyphercn/${packageName}`)
                 }
                 value="npm"
               >
@@ -59,7 +58,7 @@ export default function InstallationCommands({
                 className="rounded-none px-2 data-[state=active]:border-b-2 data-[state=active]:border-b-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none"
                 onClick={() =>
                   setCommand(
-                    `yarn dlx shadcn@latest add @8bitcn/${packageName}`
+                    `yarn dlx shadcn@latest add @cyphercn/${packageName}`
                   )
                 }
                 value="yarn"
@@ -70,7 +69,7 @@ export default function InstallationCommands({
                 className="rounded-none px-2 data-[state=active]:border-b-2 data-[state=active]:border-b-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none"
                 onClick={() =>
                   setCommand(
-                    `bunx --bun shadcn@latest add @8bitcn/${packageName}`
+                    `bunx --bun shadcn@latest add @cyphercn/${packageName}`
                   )
                 }
                 value="bun"
@@ -95,25 +94,25 @@ export default function InstallationCommands({
 
           <TabsContent className="p-4 pt-2" value="pnpm">
             <div className="font-mono text-sm">
-              pnpm dlx shadcn@latest add @8bitcn/{packageName}
+              pnpm dlx shadcn@latest add @cyphercn/{packageName}
             </div>
           </TabsContent>
 
           <TabsContent className="p-4 pt-2" value="npm">
             <div className="font-mono text-sm">
-              npx shadcn@latest add @8bitcn/{packageName}
+              npx shadcn@latest add @cyphercn/{packageName}
             </div>
           </TabsContent>
 
           <TabsContent className="p-4 pt-2" value="yarn">
             <div className="font-mono text-sm">
-              yarn dlx shadcn@latest add @8bitcn/{packageName}
+              yarn dlx shadcn@latest add @cyphercn/{packageName}
             </div>
           </TabsContent>
 
           <TabsContent className="p-4 pt-2" value="bun">
             <div className="font-mono text-sm">
-              bunx --bun shadcn@latest add @8bitcn/{packageName}
+              bunx --bun shadcn@latest add @cyphercn/{packageName}
             </div>
           </TabsContent>
         </Tabs>

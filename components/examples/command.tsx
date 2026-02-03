@@ -9,7 +9,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/components/ui/8bit/command";
+} from "@/components/ui/cypher/command";
 
 const suggestionCommands = [
   {

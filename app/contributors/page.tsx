@@ -7,9 +7,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/ui/8bit/avatar";
-import { Badge } from "@/components/ui/8bit/badge";
-import { Button } from "@/components/ui/8bit/button";
+} from "@/components/ui/cypher/avatar";
+import { Badge } from "@/components/ui/cypher/badge";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Card,
   CardContent,
@@ -17,7 +17,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
+} from "@/components/ui/cypher/card";
 
 export const metadata: Metadata = {
   title: "Contributors",

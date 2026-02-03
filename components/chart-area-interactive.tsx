@@ -8,14 +8,14 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
+} from "@/components/ui/cypher/card";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/8bit/chart";
-import { ActivityIcon } from "@/components/ui/8bit/icons";
+} from "@/components/ui/cypher/chart";
+import { ActivityIcon } from "@/components/ui/cypher/icons";
 
 export const description = "A step area chart";
 

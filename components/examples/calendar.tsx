@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Calendar } from "../ui/8bit/calendar";
+import { Calendar } from "../ui/cypher/calendar";
 
 export function CalendarExample() {
   const [date, setDate] = useState<Date | undefined>(() => new Date());

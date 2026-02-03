@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import type { DateRange } from "react-day-picker";
 
-import { Calendar } from "@/components/ui/8bit/calendar";
+import { Calendar } from "@/components/ui/cypher/calendar";
 
 export function RangeCalendar() {
   const [date, setDate] = useState<DateRange | undefined>(() => ({

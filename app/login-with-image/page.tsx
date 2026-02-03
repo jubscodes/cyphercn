@@ -1,4 +1,4 @@
-import { LoginForm } from "@/components/ui/8bit/blocks/login-form-with-image";
+import { LoginForm } from "@/components/ui/cypher/blocks/login-form-with-image";
 
 export default function LoginWithImagePage() {
   return (

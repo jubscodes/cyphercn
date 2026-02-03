@@ -48,15 +48,15 @@ import { useId, useMemo, useState } from "react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 import { toast } from "sonner";
 import { z } from "zod";
-import { Badge } from "@/components/ui/8bit/badge";
-import { Button } from "@/components/ui/8bit/button";
+import { Badge } from "@/components/ui/cypher/badge";
+import { Button } from "@/components/ui/cypher/button";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/8bit/chart";
-import { Checkbox } from "@/components/ui/8bit/checkbox";
+} from "@/components/ui/cypher/chart";
+import { Checkbox } from "@/components/ui/cypher/checkbox";
 import {
   Drawer,
   DrawerClose,
@@ -66,7 +66,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/8bit/drawer";
+} from "@/components/ui/cypher/drawer";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -74,17 +74,17 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/8bit/dropdown-menu";
-import { Input } from "@/components/ui/8bit/input";
-import { Label } from "@/components/ui/8bit/label";
+} from "@/components/ui/cypher/dropdown-menu";
+import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/8bit/select";
-import { Separator } from "@/components/ui/8bit/separator";
+} from "@/components/ui/cypher/select";
+import { Separator } from "@/components/ui/cypher/separator";
 import {
   Table,
   TableBody,
@@ -92,13 +92,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/8bit/table";
+} from "@/components/ui/cypher/table";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/8bit/tabs";
+} from "@/components/ui/cypher/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export const schema = z.object({
@@ -630,7 +630,10 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
   return (
     <Drawer direction={isMobile ? "bottom" : "right"}>
       <DrawerTrigger asChild>
-        <Button className="w-fit px-0 text-left text-foreground" variant="link">
+        <Button
+          className="w-fit px-0 text-left text-foreground hover:underline"
+          variant="ghost"
+        >
           {item.header}
         </Button>
       </DrawerTrigger>
