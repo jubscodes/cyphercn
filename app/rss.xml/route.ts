@@ -26,10 +26,10 @@ export async function GET(request: NextRequest) {
       return `docs/blocks/${category}/${item.name}`;
     }) as UrlResolverByItem,
     rss: {
-      title: "8bitcn",
+      title: "cyphercn",
       description:
-        "A set of 8-bit styled components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
-      link: "https://www.8bitcn.com/",
+        "A terminal-styled component library with a cyberpunk aesthetic. Works with your favorite frameworks. Open Source. Open Code.",
+      link: "https://www.cyphercn.com/",
       endpoint: "/rss.xml",
       pubDateStrategy: "githubLastEdit",
     },
@@ -37,8 +37,8 @@ export async function GET(request: NextRequest) {
       path: "r/registry.json",
     },
     github: {
-      owner: "TheOrcDev",
-      repo: "8bitcn-ui",
+      owner: "jubscodes",
+      repo: "cyphercn-ui",
       /**
        *
        * You need to enter your GitHub token here.
