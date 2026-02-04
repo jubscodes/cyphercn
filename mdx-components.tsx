@@ -8,7 +8,6 @@ import {
   isValidElement,
   type ReactNode,
 } from "react";
-import { Kbd } from "@/components/ui/8bit/kbd";
 import {
   Accordion,
   AccordionContent,
@@ -18,6 +17,7 @@ import {
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
+import { Kbd } from "@/components/ui/cypher/kbd";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 

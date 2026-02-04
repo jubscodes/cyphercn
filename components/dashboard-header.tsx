@@ -88,7 +88,7 @@ export function DashboardHeader() {
         </Button>
 
         <div className="ml-auto flex items-center gap-2">
-          <Link href="https://github.com/TheOrcDev/8bitcn-ui" target="_blank">
+          <Link href="https://github.com/jubscodes/cyphercn-ui" target="_blank">
             <Button
               className="retro flex items-center gap-2"
               size="sm"

@@ -16,7 +16,7 @@ export default function SiteFooter() {
           . Forked from{" "}
           <Link
             className="underline"
-            href="https://github.com/TheOrcDev/8bitcn-ui"
+            href="https://github.com/jubscodes/cyphercn-ui"
             target="_blank"
           >
             8bitcn/ui

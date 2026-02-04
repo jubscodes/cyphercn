@@ -52,7 +52,7 @@ export default async function ContributorsPage() {
 
   try {
     const data = await fetch(
-      "https://api.github.com/repos/TheOrcDev/8bitcn-ui/contributors"
+      "https://api.github.com/repos/jubscodes/cyphercn-ui/contributors"
     );
 
     if (data.ok) {
@@ -146,7 +146,7 @@ export default async function ContributorsPage() {
               <Button asChild>
                 <Link
                   className="flex items-center gap-2"
-                  href="https://github.com/TheOrcDev/8bitcn-ui"
+                  href="https://github.com/jubscodes/cyphercn-ui"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -162,7 +162,7 @@ export default async function ContributorsPage() {
               </Button>
               <Button asChild variant="outline">
                 <Link
-                  href="https://github.com/TheOrcDev/8bitcn-ui/blob/main/contributing.md"
+                  href="https://github.com/jubscodes/cyphercn-ui/blob/main/contributing.md"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
