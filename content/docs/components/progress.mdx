@@ -1,21 +1,21 @@
 ---
 title: Progress
-description: Displays an 8-bit progress component.
+description: A terminal-styled progress component.
 ---
 
-import { Progress } from "@/components/ui/8bit/progress";
+import { Progress } from "@/components/ui/cypher/progress";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/progress"
-    command="pnpm dlx shadcn@latest add @8bitcn/progress"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/progress"
+    command="pnpm dlx shadcn@latest add @cyphercn/progress"
   />
 </div>
 
-<ComponentPreview title="8-bit Progress component" name="progress">
+<ComponentPreview title="CypherCN Progress" name="progress">
   <div className="flex flex-col gap-5 w-96">
     <Progress value={70} />
     <Progress value={70} variant="retro" />
@@ -33,7 +33,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Progress } from "@/components/ui/8bit/progress"
+import { Progress } from "@/components/ui/cypher/progress"
 ```
 
 ```tsx

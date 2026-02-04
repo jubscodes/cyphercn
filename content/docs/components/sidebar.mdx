@@ -1,6 +1,6 @@
 ---
 title: Sidebar
-description: Displays a simple 8-bit sidebar component.
+description: A terminal-styled sidebar component.
 ---
 
 import CopyCommandButton from "@/components/copy-command-button";
@@ -10,12 +10,12 @@ import { SidebarExample } from "@/components/examples/sidebar"
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/sidebar"
-    command="pnpm dlx shadcn@latest add @8bitcn/sidebar"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/sidebar"
+    command="pnpm dlx shadcn@latest add @cyphercn/sidebar"
   />
 </div>
 
-<ComponentPreview title="8-bit Sidebar component" name="sidebar">
+<ComponentPreview title="CypherCN Sidebar" name="sidebar">
   <SidebarExample />
 </ComponentPreview>
 
@@ -29,7 +29,7 @@ import { SidebarExample } from "@/components/examples/sidebar"
 
 ---
 
-8-bit sidebar is using Shadcn sidebar component. All you need to do is replace your app sidebar with 8bit sidebar.
+CypherCN sidebar is using Shadcn sidebar component. All you need to do is replace your app sidebar with CypherCN sidebar.
 
 For more information, check out the [Shadcn Sidebar documentation](https://ui.shadcn.com/docs/components/sidebar).
 
@@ -37,7 +37,7 @@ For more information, check out the [Shadcn Sidebar documentation](https://ui.sh
 
 ```tsx
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/ui/8bit/blocks/sidebar"
+import { AppSidebar } from "@/components/ui/cypher/blocks/sidebar"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

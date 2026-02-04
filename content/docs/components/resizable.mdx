@@ -1,25 +1,25 @@
 ---
 title: Resizable
-description: Displays an 8-bit resizable panel component.
+description: A terminal-styled resizable panel component.
 ---
 
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/components/ui/8bit/resizable";
+} from "@/components/ui/cypher/resizable";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/resizable"
-    command="pnpm dlx shadcn@latest add @8bitcn/resizable"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/resizable"
+    command="pnpm dlx shadcn@latest add @cyphercn/resizable"
   />
 </div>
 
-<ComponentPreview title="8-bit Resizable component" name="resizable">
+<ComponentPreview title="CypherCN Resizable" name="resizable">
   <ResizablePanelGroup direction="horizontal" className="max-w-md rounded-lg border">
     <ResizablePanel defaultSize={50}>
       <div className="flex h-[200px] items-center justify-center p-6">
@@ -50,7 +50,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/components/ui/8bit/resizable"
+} from "@/components/ui/cypher/resizable"
 ```
 
 ```tsx

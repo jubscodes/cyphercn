@@ -1,21 +1,21 @@
 ---
 title: Enemy Health Display
-description: A retro-styled enemy health display component with health bar, name, and level.
+description: A terminal-styled enemy health display component with health bar, name, and level.
 ---
 
-import EnemyHealthDisplay from "@/components/ui/8bit/enemy-health-display";
+import EnemyHealthDisplay from "@/components/ui/cypher/enemy-health-display";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/enemy-health-display"
-    command="pnpm dlx shadcn@latest add @8bitcn/enemy-health-display"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/enemy-health-display"
+    command="pnpm dlx shadcn@latest add @cyphercn/enemy-health-display"
   />
 </div>
 
-<ComponentPreview title="8-bit Enemy Health Display component" name="enemy-health-display">
+<ComponentPreview title="CypherCN Enemy Health Display" name="enemy-health-display">
   <div className="w-full max-w-md space-y-6">
     <EnemyHealthDisplay
       enemyName="Fire Dragon"
@@ -49,7 +49,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import EnemyHealthDisplay from "@/components/ui/8bit/enemy-health-display"
+import EnemyHealthDisplay from "@/components/ui/cypher/enemy-health-display"
 ```
 
 ```tsx

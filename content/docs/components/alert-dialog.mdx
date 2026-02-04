@@ -1,6 +1,6 @@
 ---
 title: Alert Dialog
-description: Displays an 8-bit alert dialog component.
+description: A terminal-styled alert dialog component.
 ---
 
 import {
@@ -13,30 +13,29 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/8bit/alert-dialog";
-import { Button } from "@/components/ui/8bit/button";
+} from "@/components/ui/cypher/alert-dialog";
+import { Button } from "@/components/ui/cypher/button";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/alert-dialog"
-    command="pnpm dlx shadcn@latest add @8bitcn/alert-dialog"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/alert-dialog"
+    command="pnpm dlx shadcn@latest add @cyphercn/alert-dialog"
   />
 </div>
 
-<ComponentPreview title="8-bit Alert Dialog component" name="alert-dialog">
+<ComponentPreview title="CypherCN Alert Dialog" name="alert-dialog">
   <AlertDialog>
-    <AlertDialogTrigger>
+    <AlertDialogTrigger asChild>
       <Button variant="outline">Open</Button>
     </AlertDialogTrigger>
     <AlertDialogContent>
       <AlertDialogHeader>
         <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
         <AlertDialogDescription>
-          This action cannot be undone. This will permanently delete
-          your account and remove your data from our servers.
+          {"This action cannot be undone. This will permanently delete your account and remove your data from our servers."}
         </AlertDialogDescription>
       </AlertDialogHeader>
       <AlertDialogFooter>
@@ -68,12 +67,14 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/8bit/alert-dialog"
+} from "@/components/ui/cypher/alert-dialog"
 ```
 
 ```tsx
 <AlertDialog>
-  <AlertDialogTrigger><Button variant="outline">Open</Button></AlertDialogTrigger>
+  <AlertDialogTrigger asChild>
+    <Button variant="outline">Open</Button>
+  </AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogHeader>
       <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>

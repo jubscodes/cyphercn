@@ -1,6 +1,6 @@
 ---
 title: Combo Box
-description: Displays an 8-bit combo box component.
+description: A terminal-styled combo box component.
 ---
 
 import CopyCommandButton from "@/components/copy-command-button";
@@ -10,12 +10,12 @@ import { ComboBoxExample } from "@/components/examples/combobox";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/combo-box"
-    command="pnpm dlx shadcn@latest add @8bitcn/combo-box"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/combo-box"
+    command="pnpm dlx shadcn@latest add @cyphercn/combo-box"
   />
 </div>
 
-<ComponentPreview title="8-bit Combo Box component" name="combo-box">
+<ComponentPreview title="CypherCN Combo Box" name="combo-box">
   <ComboBoxExample />
 </ComponentPreview>
 
@@ -36,12 +36,12 @@ import * as React from "react"
 import { ChevronsUpDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/8bit/button"
+import { Button } from "@/components/ui/cypher/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/8bit/popover"
+} from "@/components/ui/cypher/popover"
 import {
   Command,
   CommandEmpty,

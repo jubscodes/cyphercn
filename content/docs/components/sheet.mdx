@@ -1,11 +1,11 @@
 ---
 title: Sheet
-description: Displays an 8-bit sheet component.
+description: A terminal-styled sheet component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
-import { Input } from "@/components/ui/8bit/input";
-import { Label } from "@/components/ui/8bit/label";
+import { Button } from "@/components/ui/cypher/button";
+import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
 import {
   Sheet,
   SheetClose,
@@ -15,19 +15,19 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/8bit/sheet";
+} from "@/components/ui/cypher/sheet";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/sheet"
-    command="pnpm dlx shadcn@latest add @8bitcn/sheet"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/sheet"
+    command="pnpm dlx shadcn@latest add @cyphercn/sheet"
   />
 </div>
 
-<ComponentPreview title="8-bit Sheet component" name="sheet">
+<ComponentPreview title="CypherCN Sheet" name="sheet">
   <Sheet>
     <SheetTrigger asChild>
       <Button variant="outline">Open</Button>
@@ -70,7 +70,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/8bit/sheet"
+} from "@/components/ui/cypher/sheet"
 ```
 
 ```tsx

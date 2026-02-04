@@ -1,29 +1,29 @@
 ---
 title: Context Menu
-description: Displays an 8-bit context menu component.
+description: A terminal-styled context menu component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   ContextMenu,
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuTrigger,
-} from "@/components/ui/8bit/context-menu";
+} from "@/components/ui/cypher/context-menu";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/context-menu"
-    command="pnpm dlx shadcn@latest add @8bitcn/context-menu"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/context-menu"
+    command="pnpm dlx shadcn@latest add @cyphercn/context-menu"
   />
 </div>
 
-<ComponentPreview title="8-bit Context Menu component" name="context-menu">
+<ComponentPreview title="CypherCN Context Menu" name="context-menu">
   <ContextMenu>
-    <ContextMenuTrigger>
+    <ContextMenuTrigger asChild>
       <Button>Right click me</Button>
     </ContextMenuTrigger>
     <ContextMenuContent>
@@ -46,7 +46,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { ContextMenu } from "@/components/ui/8bit/context-menu"
+import { ContextMenu } from "@/components/ui/cypher/context-menu"
 ```
 
 ```tsx

@@ -1,28 +1,28 @@
 ---
 title: Popover
-description: Displays an 8-bit popover component.
+description: A terminal-styled popover component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
-import { Input } from "@/components/ui/8bit/input";
-import { Label } from "@/components/ui/8bit/label";
+import { Button } from "@/components/ui/cypher/button";
+import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/8bit/popover";
+} from "@/components/ui/cypher/popover";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/popover"
-    command="pnpm dlx shadcn@latest add @8bitcn/popover"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/popover"
+    command="pnpm dlx shadcn@latest add @cyphercn/popover"
   />
 </div>
 
-<ComponentPreview title="8-bit Popover component" name="popover">
+<ComponentPreview title="CypherCN Popover" name="popover">
   <Popover>
     <PopoverTrigger asChild>
       <Button variant="outline">Open popover</Button>
@@ -65,7 +65,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/8bit/popover"
+} from "@/components/ui/cypher/popover"
 ```
 
 ```tsx

@@ -1,28 +1,28 @@
 ---
 title: Hover Card
-description: Displays an 8-bit hover card component.
+description: A terminal-styled hover card component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/8bit/hover-card";
+} from "@/components/ui/cypher/hover-card";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/hover-card"
-    command="pnpm dlx shadcn@latest add @8bitcn/hover-card"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/hover-card"
+    command="pnpm dlx shadcn@latest add @cyphercn/hover-card"
   />
 </div>
 
-<ComponentPreview title="8-bit Hover Card component" name="hover-card">
+<ComponentPreview title="CypherCN Hover Card" name="hover-card">
   <HoverCard>
-    <HoverCardTrigger>
+    <HoverCardTrigger asChild>
       <Button variant="link">Hover</Button>
     </HoverCardTrigger>
     <HoverCardContent className="w-80">
@@ -46,12 +46,12 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/8bit/hover-card"
+} from "@/components/ui/cypher/hover-card"
 ```
 
 ```tsx
 <HoverCard>
-  <HoverCardTrigger>
+  <HoverCardTrigger asChild>
     <Button variant="link">Hover</Button>
   </HoverCardTrigger>
   <HoverCardContent>For the Horde! ⚔️</HoverCardContent>

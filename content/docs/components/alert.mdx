@@ -1,25 +1,25 @@
 ---
 title: Alert
-description: Displays an 8-bit alert component.
+description: A terminal-styled alert component.
 ---
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/components/ui/8bit/alert";
+} from "@/components/ui/cypher/alert";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/alert"
-    command="pnpm dlx shadcn@latest add @8bitcn/alert"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/alert"
+    command="pnpm dlx shadcn@latest add @cyphercn/alert"
   />
 </div>
 
-<ComponentPreview title="8-bit Alert component" name="alert">
+<ComponentPreview title="CypherCN Alert" name="alert">
   <Alert>
     <AlertTitle>Heads up!</AlertTitle>
     <AlertDescription>
@@ -39,7 +39,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/8bit/alert"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/cypher/alert"
 ```
 
 ```tsx

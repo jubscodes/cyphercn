@@ -1,6 +1,6 @@
 ---
 title: Input OTP
-description: Displays an 8-bit OTP input component.
+description: A terminal-styled OTP input component.
 ---
 
 import {
@@ -8,19 +8,19 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/components/ui/8bit/input-otp";
+} from "@/components/ui/cypher/input-otp";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/input-otp"
-    command="pnpm dlx shadcn@latest add @8bitcn/input-otp"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/input-otp"
+    command="pnpm dlx shadcn@latest add @cyphercn/input-otp"
   />
 </div>
 
-<ComponentPreview title="8-bit Input OTP component" name="input-otp">
+<ComponentPreview title="CypherCN Input OTP" name="input-otp">
   <InputOTP maxLength={6}>
     <InputOTPGroup>
       <InputOTPSlot index={0} />
@@ -52,7 +52,7 @@ import {
   InputOTPGroup,
   InputOTPSlot,
   InputOTPSeparator
-} from "@/components/ui/8bit/input-otp"
+} from "@/components/ui/cypher/input-otp"
 ```
 
 ```tsx

@@ -1,6 +1,6 @@
 ---
 title: Toast
-description: Displays an 8-bit toast component.
+description: A terminal-styled toast component.
 ---
 
 import CopyCommandButton from "@/components/copy-command-button";
@@ -10,12 +10,12 @@ import { ToastExample } from "@/components/examples/toast";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/toast"
-    command="pnpm dlx shadcn@latest add @8bitcn/toast"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/toast"
+    command="pnpm dlx shadcn@latest add @cyphercn/toast"
   />
 </div>
 
-<ComponentPreview title="8-bit Toast component" name="toast">
+<ComponentPreview title="CypherCN Toast" name="toast">
   <ToastExample />
 </ComponentPreview>
 
@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
 ---
 
 ```tsx
-import { toast } from "@/components/ui/8bit/toast"
+import { toast } from "@/components/ui/cypher/toast"
 ```
 
 ```tsx

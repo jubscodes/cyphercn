@@ -1,9 +1,9 @@
 ---
 title: Calendar
-description: Displays an 8-bit calendar component.
+description: A terminal-styled calendar component.
 ---
 
-import { Calendar } from "@/components/ui/8bit/calendar";
+import { Calendar } from "@/components/ui/cypher/calendar";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
@@ -11,12 +11,12 @@ import { CalendarExample } from "@/components/examples/calendar";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/calendar"
-    command="pnpm dlx shadcn@latest add @8bitcn/calendar"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/calendar"
+    command="pnpm dlx shadcn@latest add @cyphercn/calendar"
   />
 </div>
 
-<ComponentPreview title="8-bit Calendar component" name="calendar">
+<ComponentPreview title="CypherCN Calendar" name="calendar">
   <CalendarExample />
 </ComponentPreview>
 
@@ -31,7 +31,7 @@ import { CalendarExample } from "@/components/examples/calendar";
 ---
 
 ```tsx
-import { Calendar } from "@/components/ui/8bit/calendar"
+import { Calendar } from "@/components/ui/cypher/calendar"
 ```
 
 ```tsx

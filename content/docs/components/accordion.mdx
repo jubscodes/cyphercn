@@ -1,6 +1,6 @@
 ---
 title: Accordion
-description: Displays an 8-bit Accordion component.
+description: A terminal-styled Accordion component.
 ---
 
 import {
@@ -8,19 +8,19 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/8bit/accordion";
+} from "@/components/ui/cypher/accordion";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/accordion"
-    command="pnpm dlx shadcn@latest add @8bitcn/accordion"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/accordion"
+    command="pnpm dlx shadcn@latest add @cyphercn/accordion"
   />
 </div>
 
-<ComponentPreview title="8-bit Accordion component" name="accordion">
+<ComponentPreview title="CypherCN Accordion" name="accordion">
   <Accordion type="single" collapsible className="lg:w-xl">
     <AccordionItem value="item-1">
       <AccordionTrigger>Is it accessible?</AccordionTrigger>
@@ -56,7 +56,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/8bit/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/cypher/accordion"
 ```
 
 ```tsx

@@ -1,6 +1,6 @@
 ---
 title: Pagination
-description: Displays an 8-bit pagination component.
+description: A terminal-styled pagination component.
 ---
 
 import {
@@ -11,19 +11,19 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/8bit/pagination";
+} from "@/components/ui/cypher/pagination";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/pagination"
-    command="pnpm dlx shadcn@latest add @8bitcn/pagination"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/pagination"
+    command="pnpm dlx shadcn@latest add @cyphercn/pagination"
   />
 </div>
 
-<ComponentPreview title="8-bit Pagination component" name="pagination">
+<ComponentPreview title="CypherCN Pagination" name="pagination">
   <Pagination>
     <PaginationContent>
       <PaginationItem>
@@ -69,7 +69,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/8bit/pagination"
+} from "@/components/ui/cypher/pagination"
 ```
 
 ```tsx

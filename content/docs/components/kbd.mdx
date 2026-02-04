@@ -1,22 +1,22 @@
 ---
 title: Kbd
-description: Used to display textual user input from keyboard.
+description: A terminal-styled keyboard input display component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
-import { Kbd, KbdGroup } from "@/components/ui/8bit/kbd";
+import { Button } from "@/components/ui/cypher/button";
+import { Kbd, KbdGroup } from "@/components/ui/cypher/kbd";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/kbd"
-    command="pnpm dlx shadcn@latest add @8bitcn/kbd"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/kbd"
+    command="pnpm dlx shadcn@latest add @cyphercn/kbd"
   />
 </div>
 
-<ComponentPreview title="8-bit Kbd component" name="kbd">
+<ComponentPreview title="CypherCN Kbd" name="kbd">
   <div className="flex flex-col items-center gap-4">
     <KbdGroup>
       <Kbd>↑</Kbd>
@@ -45,7 +45,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Kbd } from "@/components/ui/8bit/kbd"
+import { Kbd } from "@/components/ui/cypher/kbd"
 ```
 
 ```tsx

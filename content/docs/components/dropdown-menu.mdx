@@ -1,9 +1,9 @@
 ---
 title: Dropdown Menu
-description: Displays an 8-bit dropdown menu component.
+description: A terminal-styled dropdown menu component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,19 +13,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/components/ui/8bit/dropdown-menu";
+} from "@/components/ui/cypher/dropdown-menu";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/dropdown-menu"
-    command="pnpm dlx shadcn@latest add @8bitcn/dropdown-menu"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/dropdown-menu"
+    command="pnpm dlx shadcn@latest add @cyphercn/dropdown-menu"
   />
 </div>
 
-<ComponentPreview title="8-bit Dropdown Menu component" name="dropdown-menu">
+<ComponentPreview title="CypherCN Dropdown Menu" name="dropdown-menu">
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button variant="outline">Open</Button>
@@ -76,7 +76,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/components/ui/8bit/dropdown-menu"
+} from "@/components/ui/cypher/dropdown-menu"
 ```
 
 ```tsx

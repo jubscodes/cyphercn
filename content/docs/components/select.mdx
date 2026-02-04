@@ -1,6 +1,6 @@
 ---
 title: Select
-description: Displays an 8-bit select component.
+description: A terminal-styled select component.
 ---
 
 import {
@@ -9,19 +9,19 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/8bit/select";
+} from "@/components/ui/cypher/select";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/select"
-    command="pnpm dlx shadcn@latest add @8bitcn/select"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/select"
+    command="pnpm dlx shadcn@latest add @cyphercn/select"
   />
 </div>
 
-<ComponentPreview title="8-bit Select component" name="select">
+<ComponentPreview title="CypherCN Select" name="select">
   <Select>
     <SelectTrigger className="w-[180px]">
       <SelectValue placeholder="Theme" />
@@ -51,7 +51,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/8bit/select"
+} from "@/components/ui/cypher/select"
 ```
 
 ```tsx

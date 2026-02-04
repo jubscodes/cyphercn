@@ -1,6 +1,6 @@
 ---
 title: Carousel
-description: A carousel with motion and swipe built using Embla.
+description: A terminal-styled carousel with motion and swipe built using Embla.
 ---
 
 import {
@@ -9,20 +9,20 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/8bit/carousel";
-import { Card, CardContent } from "@/components/ui/8bit/card";
+} from "@/components/ui/cypher/carousel";
+import { Card, CardContent } from "@/components/ui/cypher/card";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/carousel"
-    command="pnpm dlx shadcn@latest add @8bitcn/carousel"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/carousel"
+    command="pnpm dlx shadcn@latest add @cyphercn/carousel"
   />
 </div>
 
-<ComponentPreview title="8-bit Carousel component" name="carousel">
+<ComponentPreview title="CypherCN Carousel" name="carousel">
   <Carousel className="w-full max-w-xs">
     <CarouselContent>
       {Array.from({ length: 5 }).map((_, index) => (

@@ -1,21 +1,21 @@
 ---
 title: Mana Bar
-description: Displays an 8-bit mana bar component.
+description: A terminal-styled mana bar component.
 ---
 
-import ManaBar from "@/components/ui/8bit/mana-bar";
+import ManaBar from "@/components/ui/cypher/mana-bar";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/mana-bar"
-    command="pnpm dlx shadcn@latest add @8bitcn/mana-bar"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/mana-bar"
+    command="pnpm dlx shadcn@latest add @cyphercn/mana-bar"
   />
 </div>
 
-<ComponentPreview title="8-bit Mana Bar component" name="mana-bar">
+<ComponentPreview title="CypherCN Mana Bar" name="mana-bar">
   <div className="md:min-w-[300px] min-w-[200px] flex flex-col gap-8">
     <div>
       <p className="text-sm text-muted-foreground mb-2">
@@ -51,7 +51,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { ManaBar } from "@/components/ui/8bit/mana-bar"
+import { ManaBar } from "@/components/ui/cypher/mana-bar"
 ```
 
 ```tsx

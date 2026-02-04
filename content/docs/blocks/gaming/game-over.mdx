@@ -1,21 +1,21 @@
 ---
 title: Game Over
-description: Displays an 8-bit game over screen with retry options.
+description: A terminal-styled game over screen with retry options.
 ---
 
-import GameOver from "@/components/ui/8bit/blocks/game-over";
+import GameOver from "@/components/ui/cypher/blocks/game-over";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/game-over"
-    command="pnpm dlx shadcn@latest add @8bitcn/game-over"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/game-over"
+    command="pnpm dlx shadcn@latest add @cyphercn/game-over"
   />
 </div>
 
-<ComponentPreview title="8-bit Game Over block" name="game-over">
+<ComponentPreview title="CypherCN Game Over" name="game-over">
   <GameOver className="w-full max-w-[600px]" />
 </ComponentPreview>
 
@@ -30,10 +30,9 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import GameOver from "@/components/ui/8bit/blocks/game-over"
+import GameOver from "@/components/ui/cypher/blocks/game-over"
 ```
 
 ```tsx
 <GameOver className="w-full max-w-[600px]" />
 ```
-

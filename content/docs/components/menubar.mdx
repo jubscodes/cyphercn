@@ -1,6 +1,6 @@
 ---
 title: Menubar
-description: Displays an 8-bit menubar component.
+description: A terminal-styled menubar component.
 ---
 
 import {
@@ -17,19 +17,19 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/components/ui/8bit/menubar";
+} from "@/components/ui/cypher/menubar";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/menubar"
-    command="pnpm dlx shadcn@latest add @8bitcn/menubar"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/menubar"
+    command="pnpm dlx shadcn@latest add @cyphercn/menubar"
   />
 </div>
 
-<ComponentPreview title="8-bit Menubar component" name="menubar">
+<ComponentPreview title="CypherCN Menubar" name="menubar">
   <Menubar>
     <MenubarMenu>
       <MenubarTrigger>File</MenubarTrigger>
@@ -91,7 +91,7 @@ import {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-} from "@/components/ui/8bit/menubar"
+} from "@/components/ui/cypher/menubar"
 ```
 
 ```tsx

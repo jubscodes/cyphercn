@@ -1,6 +1,6 @@
 ---
 title: Date Picker
-description: Displays an 8-bit date picker component.
+description: A terminal-styled date picker component.
 ---
 
 import CopyCommandButton from "@/components/copy-command-button";
@@ -10,12 +10,12 @@ import { DatePicker } from "@/components/examples/date-picker";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/date-picker"
-    command="pnpm dlx shadcn@latest add @8bitcn/date-picker"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/date-picker"
+    command="pnpm dlx shadcn@latest add @cyphercn/date-picker"
   />
 </div>
 
-<ComponentPreview title="8-bit Date Picker component" name="date-picker">
+<ComponentPreview title="CypherCN Date Picker" name="date-picker">
   <DatePicker />
 </ComponentPreview>
 
@@ -37,13 +37,13 @@ import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/8bit/button";
-import { Calendar } from "@/components/ui/8bit/calendar";
+import { Button } from "@/components/ui/cypher/button";
+import { Calendar } from "@/components/ui/cypher/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/8bit/popover";
+} from "@/components/ui/cypher/popover";
 
 export function DatePicker() {
   const [date, setDate] = React.useState<Date>();

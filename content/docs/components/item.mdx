@@ -1,9 +1,9 @@
 ---
 title: Item
-description: Displays an 8-bit item component.
+description: A terminal-styled item component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Item,
   ItemActions,
@@ -12,19 +12,19 @@ import {
   ItemGroup,
   ItemSeparator,
   ItemTitle,
-} from "@/components/ui/8bit/item";
+} from "@/components/ui/cypher/item";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/item"
-    command="pnpm dlx shadcn@latest add @8bitcn/item"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/item"
+    command="pnpm dlx shadcn@latest add @cyphercn/item"
   />
 </div>
 
-<ComponentPreview title="8-bit Item component" name="item">
+<ComponentPreview title="CypherCN Item" name="item">
   <ItemGroup>
     <Item variant="outline">
       <ItemContent>
@@ -69,7 +69,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Button } from "@/components/ui/8bit/button"
+import { Button } from "@/components/ui/cypher/button"
 import {
   Item,
   ItemActions,
@@ -78,7 +78,7 @@ import {
   ItemGroup,
   ItemSeparator,
   ItemTitle,
-} from "@/components/ui/8bit/item"
+} from "@/components/ui/cypher/item"
 ```
 
 ```tsx

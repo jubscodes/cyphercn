@@ -1,21 +1,21 @@
 ---
 title: Leaderboard
-description: Displays an 8-bit high score ranking table.
+description: A terminal-styled high score ranking table.
 ---
 
-import { Leaderboard } from "@/components/ui/8bit/blocks/leaderboard";
+import { Leaderboard } from "@/components/ui/cypher/blocks/leaderboard";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/leaderboard"
-    command="pnpm dlx shadcn@latest add @8bitcn/leaderboard"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/leaderboard"
+    command="pnpm dlx shadcn@latest add @cyphercn/leaderboard"
   />
 </div>
 
-<ComponentPreview title="8-bit Leaderboard block" name="leaderboard">
+<ComponentPreview title="CypherCN Leaderboard block" name="leaderboard">
   <Leaderboard
     players={[
       {
@@ -70,7 +70,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Leaderboard } from "@/components/ui/8bit/blocks/leaderboard"
+import { Leaderboard } from "@/components/ui/cypher/blocks/leaderboard"
 ```
 
 ```tsx

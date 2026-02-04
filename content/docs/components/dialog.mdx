@@ -1,9 +1,9 @@
 ---
 title: Dialog
-description: Displays an 8-bit dialog component.
+description: A terminal-styled dialog component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Dialog,
   DialogContent,
@@ -12,21 +12,21 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/8bit/dialog";
-import { Input } from "@/components/ui/8bit/input";
-import { Label } from "@/components/ui/8bit/label";
+} from "@/components/ui/cypher/dialog";
+import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/dialog"
-    command="pnpm dlx shadcn@latest add @8bitcn/dialog"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/dialog"
+    command="pnpm dlx shadcn@latest add @cyphercn/dialog"
   />
 </div>
 
-<ComponentPreview title="8-bit Dialog component" name="dialog">
+<ComponentPreview title="CypherCN Dialog" name="dialog">
   <Dialog>
     <DialogTrigger asChild>
       <Button variant="outline">Open Dialog</Button>
@@ -67,7 +67,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/8bit/dialog"
+} from "@/components/ui/cypher/dialog"
 ```
 
 ```tsx

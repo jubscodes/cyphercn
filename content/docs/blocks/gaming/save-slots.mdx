@@ -1,21 +1,21 @@
 ---
 title: Save Slots
-description: Displays an 8-bit save/load game interface with slot previews and timestamps.
+description: A terminal-styled save/load game interface with slot previews and timestamps.
 ---
 
-import { SaveSlots } from "@/components/ui/8bit/blocks/save-slots";
+import { SaveSlots } from "@/components/ui/cypher/blocks/save-slots";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/save-slots"
-    command="pnpm dlx shadcn@latest add @8bitcn/save-slots"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/save-slots"
+    command="pnpm dlx shadcn@latest add @cyphercn/save-slots"
   />
 </div>
 
-<ComponentPreview title="8-bit Save Slots block" name="save-slots">
+<ComponentPreview title="CypherCN Save Slots block" name="save-slots">
   <SaveSlots
     slots={[
       {
@@ -67,7 +67,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { SaveSlots } from "@/components/ui/8bit/blocks/save-slots"
+import { SaveSlots } from "@/components/ui/cypher/blocks/save-slots"
 ```
 
 ```tsx

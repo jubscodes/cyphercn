@@ -1,23 +1,23 @@
 ---
 title: Spinner
-description: Displays an 8-bit spinner component.
+description: A terminal-styled spinner component.
 ---
 
-import { Spinner } from "@/components/ui/8bit/spinner";
-import { Button } from "@/components/ui/8bit/button";
-import { Badge } from "@/components/ui/8bit/badge";
+import { Spinner } from "@/components/ui/cypher/spinner";
+import { Button } from "@/components/ui/cypher/button";
+import { Badge } from "@/components/ui/cypher/badge";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/spinner"
-    command="pnpm dlx shadcn@latest add @8bitcn/spinner"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/spinner"
+    command="pnpm dlx shadcn@latest add @cyphercn/spinner"
   />
 </div>
 
-<ComponentPreview title="8-bit Spinner component" name="spinner">
+<ComponentPreview title="CypherCN Spinner" name="spinner">
   <div className="flex gap-8 items-center">
     <div className="flex flex-col items-center">
       <Spinner />
@@ -41,7 +41,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import { Spinner } from "@/components/ui/8bit/spinner"
+import { Spinner } from "@/components/ui/cypher/spinner"
 ```
 
 ```tsx

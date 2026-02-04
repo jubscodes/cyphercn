@@ -1,9 +1,9 @@
 ---
 title: Empty
-description: Displays an 8-bit empty component.
+description: A terminal-styled empty component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Empty,
   EmptyContent,
@@ -11,19 +11,19 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/components/ui/8bit/empty";
+} from "@/components/ui/cypher/empty";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/empty"
-    command="pnpm dlx shadcn@latest add @8bitcn/empty"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/empty"
+    command="pnpm dlx shadcn@latest add @cyphercn/empty"
   />
 </div>
 
-<ComponentPreview title="8-bit Empty component" name="empty">
+<ComponentPreview title="CypherCN Empty" name="empty">
   <Empty>
     <EmptyHeader>
       <EmptyTitle>No Characters Yet</EmptyTitle>
@@ -59,7 +59,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/components/ui/8bit/empty"
+} from "@/components/ui/cypher/empty"
 ```
 
 ```tsx

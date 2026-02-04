@@ -1,21 +1,21 @@
 ---
 title: XP Bar
-description: Displays an 8-bit XP bar component with level up animation.
+description: A terminal-styled XP bar component with level up animation.
 ---
 
-import XpBar from "@/components/ui/8bit/xp-bar";
+import XpBar from "@/components/ui/cypher/xp-bar";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/xp-bar"
-    command="pnpm dlx shadcn@latest add @8bitcn/xp-bar"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/xp-bar"
+    command="pnpm dlx shadcn@latest add @cyphercn/xp-bar"
   />
 </div>
 
-<ComponentPreview title="8-bit XP Bar component" name="xp-bar">
+<ComponentPreview title="CypherCN XP Bar" name="xp-bar">
   <div className="md:min-w-[300px] min-w-[200px] flex flex-col gap-8">
     <div>
       <p className="text-sm text-muted-foreground mb-2">Default XP bar</p>
@@ -55,7 +55,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import XpBar from "@/components/ui/8bit/xp-bar";
+import XpBar from "@/components/ui/cypher/xp-bar";
 ```
 
 ```tsx

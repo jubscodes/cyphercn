@@ -1,9 +1,9 @@
 ---
 title: Tabs
-description: Displays an 8-bit tabs component.
+description: A terminal-styled tabs component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Card,
   CardContent,
@@ -11,27 +11,27 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/8bit/card";
-import { Input } from "@/components/ui/8bit/input";
-import { Label } from "@/components/ui/8bit/label";
+} from "@/components/ui/cypher/card";
+import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/8bit/tabs";
+} from "@/components/ui/cypher/tabs";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/tabs"
-    command="pnpm dlx shadcn@latest add @8bitcn/tabs"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/tabs"
+    command="pnpm dlx shadcn@latest add @cyphercn/tabs"
   />
 </div>
 
-<ComponentPreview title="8-bit Tabs component" name="tabs">
+<ComponentPreview title="CypherCN Tabs" name="tabs">
   <Tabs defaultValue="account" className="w-[400px]">
     <TabsList className="grid w-full grid-cols-2">
       <TabsTrigger value="account">Account</TabsTrigger>
@@ -94,7 +94,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/8bit/tabs"
+} from "@/components/ui/cypher/tabs"
 ```
 
 ```tsx

@@ -1,21 +1,21 @@
 ---
 title: Main Menu
-description: Displays an 8-bit game main menu interface.
+description: A terminal-styled game main menu interface.
 ---
 
-import MainMenu from "@/components/ui/8bit/blocks/main-menu";
+import MainMenu from "@/components/ui/cypher/blocks/main-menu";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/main-menu"
-    command="pnpm dlx shadcn@latest add @8bitcn/main-menu"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/main-menu"
+    command="pnpm dlx shadcn@latest add @cyphercn/main-menu"
   />
 </div>
 
-<ComponentPreview title="8-bit Main Menu block" name="main-menu">
+<ComponentPreview title="CypherCN Main Menu block" name="main-menu">
   <MainMenu className="w-full max-w-[400px]" />
 </ComponentPreview>
 
@@ -30,7 +30,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import MainMenu from "@/components/ui/8bit/blocks/main-menu"
+import MainMenu from "@/components/ui/cypher/blocks/main-menu"
 ```
 
 ```tsx

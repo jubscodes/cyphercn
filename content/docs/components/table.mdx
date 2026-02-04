@@ -1,6 +1,6 @@
 ---
 title: Table
-description: Displays an 8-bit table component.
+description: A terminal-styled table component.
 ---
 
 import {
@@ -11,19 +11,19 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/8bit/table";
+} from "@/components/ui/cypher/table";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/table"
-    command="pnpm dlx shadcn@latest add @8bitcn/table"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/table"
+    command="pnpm dlx shadcn@latest add @cyphercn/table"
   />
 </div>
 
-<ComponentPreview title="8-bit Table component" name="table">
+<ComponentPreview title="CypherCN Table" name="table">
   <Table className="w-60 md:w-auto">
     <TableCaption className="text-xs md:text-sm">
       A list of your recent invoices.
@@ -78,7 +78,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/8bit/table"
+} from "@/components/ui/cypher/table"
 ```
 
 ```tsx

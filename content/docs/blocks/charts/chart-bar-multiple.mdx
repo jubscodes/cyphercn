@@ -1,22 +1,22 @@
 ---
 title: Multiple Bar Chart
-description: Displays an 8-bit grouped bar chart for comparison.
+description: A terminal-styled grouped bar chart for comparison.
 ---
 
-import ChartBarMultiple from "@/components/ui/8bit/blocks/chart-bar";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/8bit/card";
+import ChartBarMultiple from "@/components/ui/cypher/blocks/chart-bar";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/cypher/card";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/chart-bar"
-    command="pnpm dlx shadcn@latest add @8bitcn/chart-bar"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/chart-bar"
+    command="pnpm dlx shadcn@latest add @cyphercn/chart-bar"
   />
 </div>
 
-<ComponentPreview title="8-bit Multiple Bar Chart block" name="chart-bar">
+<ComponentPreview title="CypherCN Multiple Bar Chart block" name="chart-bar">
   <Card className="w-full max-w-[600px]">
     <CardHeader>
       <CardTitle className="text-sm font-medium">
@@ -40,7 +40,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import ChartBarMultiple from "@/components/ui/8bit/blocks/chart-bar"
+import ChartBarMultiple from "@/components/ui/cypher/blocks/chart-bar"
 ```
 
 ```tsx

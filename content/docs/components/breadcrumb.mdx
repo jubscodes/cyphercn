@@ -1,6 +1,6 @@
 ---
 title: Breadcrumb
-description: Displays an 8-bit breadcrumb component.
+description: A terminal-styled breadcrumb component.
 ---
 
 import {
@@ -11,19 +11,19 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/8bit/breadcrumb";
+} from "@/components/ui/cypher/breadcrumb";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/breadcrumb"
-    command="pnpm dlx shadcn@latest add @8bitcn/breadcrumb"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/breadcrumb"
+    command="pnpm dlx shadcn@latest add @cyphercn/breadcrumb"
   />
 </div>
 
-<ComponentPreview title="8-bit Breadcrumb component" name="breadcrumb">
+<ComponentPreview title="CypherCN Breadcrumb" name="breadcrumb">
   <Breadcrumb>
     <BreadcrumbList>
       <BreadcrumbItem>
@@ -60,7 +60,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/8bit/breadcrumb"
+} from "@/components/ui/cypher/breadcrumb"
 ```
 
 ```tsx

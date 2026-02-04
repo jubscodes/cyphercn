@@ -1,6 +1,6 @@
 ---
 title: Range Calendar
-description: Displays an 8-bit calendar with date range selection.
+description: A terminal-styled calendar with date range selection.
 ---
 
 import CopyCommandButton from "@/components/copy-command-button";
@@ -10,12 +10,12 @@ import { RangeCalendar } from "@/components/examples/range-calendar";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/calendar"
-    command="pnpm dlx shadcn@latest add @8bitcn/calendar"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/calendar"
+    command="pnpm dlx shadcn@latest add @cyphercn/calendar"
   />
 </div>
 
-<ComponentPreview title="8-bit Range Calendar block" name="calendar-range">
+<ComponentPreview title="CypherCN Range Calendar block" name="calendar-range">
   <RangeCalendar />
 </ComponentPreview>
 
@@ -30,7 +30,7 @@ import { RangeCalendar } from "@/components/examples/range-calendar";
 ---
 
 ```tsx
-import { Calendar } from "@/components/ui/8bit/calendar"
+import { Calendar } from "@/components/ui/cypher/calendar"
 import type { DateRange } from "react-day-picker"
 ```
 

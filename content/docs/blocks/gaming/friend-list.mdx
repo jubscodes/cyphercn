@@ -1,21 +1,21 @@
 ---
 title: Friend List
-description: Displays an 8-bit simple friend list.
+description: A terminal-styled simple friend list.
 ---
 
-import FriendList from "@/components/ui/8bit/blocks/friend-list";
+import FriendList from "@/components/ui/cypher/blocks/friend-list";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/friend-list"
-    command="pnpm dlx shadcn@latest add @8bitcn/friend-list"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/friend-list"
+    command="pnpm dlx shadcn@latest add @cyphercn/friend-list"
   />
 </div>
 
-<ComponentPreview title="8-bit Friend list" name="friend-list">
+<ComponentPreview title="CypherCN Friend List" name="friend-list">
   <FriendList
 
     players = {[
@@ -86,7 +86,7 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import FriendList from "@/components/ui/8bit/blocks/friend-list";
+import FriendList from "@/components/ui/cypher/blocks/friend-list";
 ```
 
 ```tsx

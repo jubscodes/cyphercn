@@ -1,21 +1,21 @@
 ---
 title: Difficulty Select
-description: Displays an 8-bit game difficulty selection screen.
+description: A terminal-styled game difficulty selection screen.
 ---
 
-import DifficultySelect from "@/components/ui/8bit/blocks/difficulty-select";
+import DifficultySelect from "@/components/ui/cypher/blocks/difficulty-select";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/difficulty-select"
-    command="pnpm dlx shadcn@latest add @8bitcn/difficulty-select"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/difficulty-select"
+    command="pnpm dlx shadcn@latest add @cyphercn/difficulty-select"
   />
 </div>
 
-<ComponentPreview title="8-bit Difficulty Select block" name="difficulty-select">
+<ComponentPreview title="CypherCN Difficulty Select" name="difficulty-select">
   <DifficultySelect className="w-full max-w-[400px]" />
 </ComponentPreview>
 
@@ -30,10 +30,9 @@ import ComponentPreview from "@/components/component-preview";
 ---
 
 ```tsx
-import DifficultySelect from "@/components/ui/8bit/blocks/difficulty-select"
+import DifficultySelect from "@/components/ui/cypher/blocks/difficulty-select"
 ```
 
 ```tsx
 <DifficultySelect className="w-full max-w-[400px]" />
 ```
-

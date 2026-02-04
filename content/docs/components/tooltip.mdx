@@ -1,30 +1,30 @@
 ---
 title: Tooltip
-description: Displays an 8-bit tooltip component.
+description: A terminal-styled tooltip component.
 ---
 
-import { Button } from "@/components/ui/8bit/button";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/8bit/tooltip";
+} from "@/components/ui/cypher/tooltip";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/tooltip"
-    command="pnpm dlx shadcn@latest add @8bitcn/tooltip"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/tooltip"
+    command="pnpm dlx shadcn@latest add @cyphercn/tooltip"
   />
 </div>
 
-<ComponentPreview title="8-bit Tooltip component" name="tooltip">
+<ComponentPreview title="CypherCN Tooltip" name="tooltip">
   <TooltipProvider>
     <Tooltip delayDuration={500}>
-      <TooltipTrigger>
+      <TooltipTrigger asChild>
         <Button variant="outline">Hover</Button>
       </TooltipTrigger>
       <TooltipContent>
@@ -50,13 +50,13 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/8bit/tooltip"
+} from "@/components/ui/cypher/tooltip"
 ```
 
 ```tsx
 <TooltipProvider>
   <Tooltip delayDuration={500}>
-    <TooltipTrigger>
+    <TooltipTrigger asChild>
       <Button variant="outline">Hover</Button>
     </TooltipTrigger>
     <TooltipContent>

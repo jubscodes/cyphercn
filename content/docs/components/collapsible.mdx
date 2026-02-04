@@ -1,25 +1,25 @@
 ---
 title: Collapsible
-description: Displays an 8-bit collapsible component.
+description: A terminal-styled collapsible component.
 ---
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/8bit/collapsible";
+} from "@/components/ui/cypher/collapsible";
 import CopyCommandButton from "@/components/copy-command-button";
 import InstallationCommands from "@/components/installation-commands";
 import ComponentPreview from "@/components/component-preview";
 
 <div className="flex flex-col md:flex-row items-center justify-end gap-2 mb-2">
   <CopyCommandButton
-    copyCommand="pnpm dlx shadcn@latest add @8bitcn/collapsible"
-    command="pnpm dlx shadcn@latest add @8bitcn/collapsible"
+    copyCommand="pnpm dlx shadcn@latest add @cyphercn/collapsible"
+    command="pnpm dlx shadcn@latest add @cyphercn/collapsible"
   />
 </div>
 
-<ComponentPreview title="8-bit Collapsible component" name="collapsible">
+<ComponentPreview title="CypherCN Collapsible" name="collapsible">
   <Collapsible>
     <CollapsibleTrigger>Can I use this in my project?</CollapsibleTrigger>
     <CollapsibleContent>
@@ -44,7 +44,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/8bit/collapsible"
+} from "@/components/ui/cypher/collapsible"
 ```
 
 ```tsx
