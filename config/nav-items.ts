@@ -245,10 +245,6 @@ export const navItems = {
       label: "Themes",
       href: "/themes",
     },
-    {
-      label: "Sponsors",
-      href: "/sponsors",
-    },
   ],
   navMain: [
     {
