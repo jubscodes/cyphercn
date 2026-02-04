@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "8bitcn",
-  "homepage": "https://8bitcn.com",
+  "name": "cyphercn",
+  "homepage": "https://cyphercn.com",
   "items": [
     {
       "name": "chapter-intro",
@@ -12,19 +12,19 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/chapter-intro.tsx",
+          "path": "components/ui/cypher/blocks/chapter-intro.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/chapter-intro.tsx"
+          "target": "components/ui/cypher/blocks/chapter-intro.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         }
       ]
     },
@@ -36,14 +36,14 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -55,14 +55,14 @@
       "registryDependencies": ["input"],
       "files": [
         {
-          "path": "components/ui/8bit/input.tsx",
+          "path": "components/ui/cypher/input.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/input.tsx"
+          "target": "components/ui/cypher/input.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -74,14 +74,14 @@
       "registryDependencies": ["sonner"],
       "files": [
         {
-          "path": "components/ui/8bit/toast.tsx",
+          "path": "components/ui/cypher/toast.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/toast.tsx"
+          "target": "components/ui/cypher/toast.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -93,14 +93,14 @@
       "registryDependencies": ["input-otp"],
       "files": [
         {
-          "path": "components/ui/8bit/input-otp.tsx",
+          "path": "components/ui/cypher/input-otp.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/input-otp.tsx"
+          "target": "components/ui/cypher/input-otp.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -112,14 +112,14 @@
       "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -131,14 +131,14 @@
       "registryDependencies": ["textarea"],
       "files": [
         {
-          "path": "components/ui/8bit/textarea.tsx",
+          "path": "components/ui/cypher/textarea.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/textarea.tsx"
+          "target": "components/ui/cypher/textarea.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -150,14 +150,14 @@
       "registryDependencies": ["calendar"],
       "files": [
         {
-          "path": "components/ui/8bit/calendar.tsx",
+          "path": "components/ui/cypher/calendar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/calendar.tsx"
+          "target": "components/ui/cypher/calendar.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -172,32 +172,32 @@
         {
           "path": "components/examples/date-picker.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/date-picker.tsx"
+          "target": "components/ui/cypher/date-picker.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/calendar.tsx",
+          "path": "components/ui/cypher/calendar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/calendar.tsx"
+          "target": "components/ui/cypher/calendar.tsx"
         },
         {
-          "path": "components/ui/8bit/popover.tsx",
+          "path": "components/ui/cypher/popover.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/popover.tsx"
+          "target": "components/ui/cypher/popover.tsx"
         },
         {
-          "path": "components/ui/8bit/select.tsx",
+          "path": "components/ui/cypher/select.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/select.tsx"
+          "target": "components/ui/cypher/select.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -209,14 +209,14 @@
       "registryDependencies": ["card"],
       "files": [
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -228,14 +228,14 @@
       "registryDependencies": ["carousel"],
       "files": [
         {
-          "path": "components/ui/8bit/carousel.tsx",
+          "path": "components/ui/cypher/carousel.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/carousel.tsx"
+          "target": "components/ui/cypher/carousel.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -247,14 +247,14 @@
       "registryDependencies": ["dialog"],
       "files": [
         {
-          "path": "components/ui/8bit/dialog.tsx",
+          "path": "components/ui/cypher/dialog.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/dialog.tsx"
+          "target": "components/ui/cypher/dialog.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -266,14 +266,14 @@
       "registryDependencies": ["dropdown-menu"],
       "files": [
         {
-          "path": "components/ui/8bit/dropdown-menu.tsx",
+          "path": "components/ui/cypher/dropdown-menu.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/dropdown-menu.tsx"
+          "target": "components/ui/cypher/dropdown-menu.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -285,14 +285,14 @@
       "registryDependencies": ["hover-card"],
       "files": [
         {
-          "path": "components/ui/8bit/hover-card.tsx",
+          "path": "components/ui/cypher/hover-card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/hover-card.tsx"
+          "target": "components/ui/cypher/hover-card.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -304,14 +304,14 @@
       "registryDependencies": ["popover"],
       "files": [
         {
-          "path": "components/ui/8bit/popover.tsx",
+          "path": "components/ui/cypher/popover.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/popover.tsx"
+          "target": "components/ui/cypher/popover.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -323,14 +323,14 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/resizable.tsx",
+          "path": "components/ui/cypher/resizable.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/resizable.tsx"
+          "target": "components/ui/cypher/resizable.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -342,14 +342,14 @@
       "registryDependencies": ["select"],
       "files": [
         {
-          "path": "components/ui/8bit/select.tsx",
+          "path": "components/ui/cypher/select.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/select.tsx"
+          "target": "components/ui/cypher/select.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -361,14 +361,14 @@
       "registryDependencies": ["sheet"],
       "files": [
         {
-          "path": "components/ui/8bit/sheet.tsx",
+          "path": "components/ui/cypher/sheet.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/sheet.tsx"
+          "target": "components/ui/cypher/sheet.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -380,14 +380,14 @@
       "registryDependencies": ["label"],
       "files": [
         {
-          "path": "components/ui/8bit/label.tsx",
+          "path": "components/ui/cypher/label.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/label.tsx"
+          "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -399,14 +399,14 @@
       "registryDependencies": ["checkbox"],
       "files": [
         {
-          "path": "components/ui/8bit/checkbox.tsx",
+          "path": "components/ui/cypher/checkbox.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/checkbox.tsx"
+          "target": "components/ui/cypher/checkbox.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -419,14 +419,14 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/scroll-area.tsx",
+          "path": "components/ui/cypher/scroll-area.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/scroll-area.tsx"
+          "target": "components/ui/cypher/scroll-area.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -438,14 +438,14 @@
       "registryDependencies": ["switch"],
       "files": [
         {
-          "path": "components/ui/8bit/switch.tsx",
+          "path": "components/ui/cypher/switch.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/switch.tsx"
+          "target": "components/ui/cypher/switch.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -457,14 +457,14 @@
       "registryDependencies": ["alert"],
       "files": [
         {
-          "path": "components/ui/8bit/alert.tsx",
+          "path": "components/ui/cypher/alert.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/alert.tsx"
+          "target": "components/ui/cypher/alert.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -476,14 +476,14 @@
       "registryDependencies": ["alert-dialog"],
       "files": [
         {
-          "path": "components/ui/8bit/alert-dialog.tsx",
+          "path": "components/ui/cypher/alert-dialog.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/alert-dialog.tsx"
+          "target": "components/ui/cypher/alert-dialog.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -495,14 +495,14 @@
       "registryDependencies": ["tooltip"],
       "files": [
         {
-          "path": "components/ui/8bit/tooltip.tsx",
+          "path": "components/ui/cypher/tooltip.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/tooltip.tsx"
+          "target": "components/ui/cypher/tooltip.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -514,14 +514,14 @@
       "registryDependencies": ["avatar"],
       "files": [
         {
-          "path": "components/ui/8bit/avatar.tsx",
+          "path": "components/ui/cypher/avatar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/avatar.tsx"
+          "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -533,14 +533,14 @@
       "registryDependencies": ["skeleton"],
       "files": [
         {
-          "path": "components/ui/8bit/skeleton.tsx",
+          "path": "components/ui/cypher/skeleton.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/skeleton.tsx"
+          "target": "components/ui/cypher/skeleton.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -552,14 +552,14 @@
       "registryDependencies": ["breadcrumb"],
       "files": [
         {
-          "path": "components/ui/8bit/breadcrumb.tsx",
+          "path": "components/ui/cypher/breadcrumb.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/breadcrumb.tsx"
+          "target": "components/ui/cypher/breadcrumb.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -571,14 +571,14 @@
       "registryDependencies": ["collapsible"],
       "files": [
         {
-          "path": "components/ui/8bit/collapsible.tsx",
+          "path": "components/ui/cypher/collapsible.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/collapsible.tsx"
+          "target": "components/ui/cypher/collapsible.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -591,14 +591,14 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -610,24 +610,24 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/enemy-health-display.tsx",
+          "path": "components/ui/cypher/enemy-health-display.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/enemy-health-display.tsx"
+          "target": "components/ui/cypher/enemy-health-display.tsx"
         },
         {
-          "path": "components/ui/8bit/health-bar.tsx",
+          "path": "components/ui/cypher/health-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/health-bar.tsx"
+          "target": "components/ui/cypher/health-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -639,19 +639,19 @@
       "registryDependencies": ["progress"],
       "files": [
         {
-          "path": "components/ui/8bit/health-bar.tsx",
+          "path": "components/ui/cypher/health-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/health-bar.tsx"
+          "target": "components/ui/cypher/health-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -663,19 +663,19 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/mana-bar.tsx",
+          "path": "components/ui/cypher/mana-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/mana-bar.tsx"
+          "target": "components/ui/cypher/mana-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -687,19 +687,19 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/xp-bar.tsx",
+          "path": "components/ui/cypher/xp-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/xp-bar.tsx"
+          "target": "components/ui/cypher/xp-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -713,29 +713,29 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/game-progress.tsx",
+          "path": "components/ui/cypher/blocks/game-progress.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/game-progress.tsx"
+          "target": "components/ui/cypher/blocks/game-progress.tsx"
         },
         {
-          "path": "components/ui/8bit/health-bar.tsx",
+          "path": "components/ui/cypher/health-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/health-bar.tsx"
+          "target": "components/ui/cypher/health-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/mana-bar.tsx",
+          "path": "components/ui/cypher/mana-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/mana-bar.tsx"
+          "target": "components/ui/cypher/mana-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -749,24 +749,24 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/dialogue.tsx",
+          "path": "components/ui/cypher/blocks/dialogue.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/dialogue.tsx"
+          "target": "components/ui/cypher/blocks/dialogue.tsx"
         },
         {
-          "path": "components/ui/8bit/alert.tsx",
+          "path": "components/ui/cypher/alert.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/alert.tsx"
+          "target": "components/ui/cypher/alert.tsx"
         },
         {
-          "path": "components/ui/8bit/avatar.tsx",
+          "path": "components/ui/cypher/avatar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/avatar.tsx"
+          "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -779,29 +779,29 @@
       "dependencies": ["@radix-ui/react-avatar"],
       "files": [
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/avatar.tsx",
+          "path": "components/ui/cypher/avatar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/avatar.tsx"
+          "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -813,14 +813,14 @@
       "registryDependencies": ["slider"],
       "files": [
         {
-          "path": "components/ui/8bit/slider.tsx",
+          "path": "components/ui/cypher/slider.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/slider.tsx"
+          "target": "components/ui/cypher/slider.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -832,14 +832,14 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/context-menu.tsx",
+          "path": "components/ui/cypher/context-menu.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/context-menu.tsx"
+          "target": "components/ui/cypher/context-menu.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -851,14 +851,14 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/menubar.tsx",
+          "path": "components/ui/cypher/menubar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/menubar.tsx"
+          "target": "components/ui/cypher/menubar.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -870,14 +870,14 @@
       "registryDependencies": ["toggle"],
       "files": [
         {
-          "path": "components/ui/8bit/toggle.tsx",
+          "path": "components/ui/cypher/toggle.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/toggle.tsx"
+          "target": "components/ui/cypher/toggle.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -889,14 +889,14 @@
       "registryDependencies": ["table"],
       "files": [
         {
-          "path": "components/ui/8bit/table.tsx",
+          "path": "components/ui/cypher/table.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/table.tsx"
+          "target": "components/ui/cypher/table.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -908,14 +908,14 @@
       "registryDependencies": ["tabs"],
       "files": [
         {
-          "path": "components/ui/8bit/tabs.tsx",
+          "path": "components/ui/cypher/tabs.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/tabs.tsx"
+          "target": "components/ui/cypher/tabs.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -927,19 +927,19 @@
       "registryDependencies": ["command", "popover", "button"],
       "files": [
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/popover.tsx",
+          "path": "components/ui/cypher/popover.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/popover.tsx"
+          "target": "components/ui/cypher/popover.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -951,19 +951,19 @@
       "registryDependencies": ["command"],
       "files": [
         {
-          "path": "components/ui/8bit/command.tsx",
+          "path": "components/ui/cypher/command.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/command.tsx"
+          "target": "components/ui/cypher/command.tsx"
         },
         {
-          "path": "components/ui/8bit/separator.tsx",
+          "path": "components/ui/cypher/separator.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/separator.tsx"
+          "target": "components/ui/cypher/separator.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -975,9 +975,9 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/separator.tsx",
+          "path": "components/ui/cypher/separator.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/separator.tsx"
+          "target": "components/ui/cypher/separator.tsx"
         }
       ]
     },
@@ -989,14 +989,14 @@
       "registryDependencies": ["radio-group"],
       "files": [
         {
-          "path": "components/ui/8bit/radio-group.tsx",
+          "path": "components/ui/cypher/radio-group.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/radio-group.tsx"
+          "target": "components/ui/cypher/radio-group.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1008,14 +1008,14 @@
       "registryDependencies": ["pagination"],
       "files": [
         {
-          "path": "components/ui/8bit/pagination.tsx",
+          "path": "components/ui/cypher/pagination.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/pagination.tsx"
+          "target": "components/ui/cypher/pagination.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1027,29 +1027,29 @@
       "registryDependencies": ["scroll-area", "card", "avatar"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/friend-list.tsx",
+          "path": "components/ui/cypher/blocks/friend-list.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/friend-list.tsx"
+          "target": "components/ui/cypher/blocks/friend-list.tsx"
         },
         {
-          "path": "components/ui/8bit/scroll-area.tsx",
+          "path": "components/ui/cypher/scroll-area.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/scroll-area.tsx"
+          "target": "components/ui/cypher/scroll-area.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/avatar.tsx",
+          "path": "components/ui/cypher/avatar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/avatar.tsx"
+          "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1062,34 +1062,34 @@
       "categories": ["authentication"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/login-form.tsx",
+          "path": "components/ui/cypher/blocks/login-form.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/login-form.tsx"
+          "target": "components/ui/cypher/blocks/login-form.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/input.tsx",
+          "path": "components/ui/cypher/input.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/input.tsx"
+          "target": "components/ui/cypher/input.tsx"
         },
         {
-          "path": "components/ui/8bit/label.tsx",
+          "path": "components/ui/cypher/label.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/label.tsx"
+          "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1102,34 +1102,34 @@
       "categories": ["authentication"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/login-form-2.tsx",
+          "path": "components/ui/cypher/blocks/login-form-2.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/login-form-2.tsx"
+          "target": "components/ui/cypher/blocks/login-form-2.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/input.tsx",
+          "path": "components/ui/cypher/input.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/input.tsx"
+          "target": "components/ui/cypher/input.tsx"
         },
         {
-          "path": "components/ui/8bit/label.tsx",
+          "path": "components/ui/cypher/label.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/label.tsx"
+          "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1142,34 +1142,34 @@
       "categories": ["authentication"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/login-form-with-image.tsx",
+          "path": "components/ui/cypher/blocks/login-form-with-image.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/login-form-with-image.tsx"
+          "target": "components/ui/cypher/blocks/login-form-with-image.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/input.tsx",
+          "path": "components/ui/cypher/input.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/input.tsx"
+          "target": "components/ui/cypher/input.tsx"
         },
         {
-          "path": "components/ui/8bit/label.tsx",
+          "path": "components/ui/cypher/label.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/label.tsx"
+          "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1187,34 +1187,34 @@
           "target": "app/login/page.tsx"
         },
         {
-          "path": "components/ui/8bit/blocks/login-form.tsx",
+          "path": "components/ui/cypher/blocks/login-form.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/login-form.tsx"
+          "target": "components/ui/cypher/blocks/login-form.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/input.tsx",
+          "path": "components/ui/cypher/input.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/input.tsx"
+          "target": "components/ui/cypher/input.tsx"
         },
         {
-          "path": "components/ui/8bit/label.tsx",
+          "path": "components/ui/cypher/label.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/label.tsx"
+          "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1227,19 +1227,19 @@
       "categories": ["charts"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/chart.tsx",
+          "path": "components/ui/cypher/blocks/chart.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/chart.tsx"
+          "target": "components/ui/cypher/blocks/chart.tsx"
         },
         {
-          "path": "components/ui/8bit/chart.tsx",
+          "path": "components/ui/cypher/chart.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/chart.tsx"
+          "target": "components/ui/cypher/chart.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1252,19 +1252,19 @@
       "categories": ["charts"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/chart-bar.tsx",
+          "path": "components/ui/cypher/blocks/chart-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/chart-bar.tsx"
+          "target": "components/ui/cypher/blocks/chart-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/chart.tsx",
+          "path": "components/ui/cypher/chart.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/chart.tsx"
+          "target": "components/ui/cypher/chart.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1277,19 +1277,19 @@
       "categories": ["charts"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/chart-area-step.tsx",
+          "path": "components/ui/cypher/blocks/chart-area-step.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/chart-area-step.tsx"
+          "target": "components/ui/cypher/blocks/chart-area-step.tsx"
         },
         {
-          "path": "components/ui/8bit/chart.tsx",
+          "path": "components/ui/cypher/chart.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/chart.tsx"
+          "target": "components/ui/cypher/chart.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1302,24 +1302,24 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/main-menu.tsx",
+          "path": "components/ui/cypher/blocks/main-menu.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/main-menu.tsx"
+          "target": "components/ui/cypher/blocks/main-menu.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         }
       ]
     },
@@ -1332,24 +1332,24 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/pause-menu.tsx",
+          "path": "components/ui/cypher/blocks/pause-menu.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/pause-menu.tsx"
+          "target": "components/ui/cypher/blocks/pause-menu.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         }
       ]
     },
@@ -1362,24 +1362,24 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/game-over.tsx",
+          "path": "components/ui/cypher/blocks/game-over.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/game-over.tsx"
+          "target": "components/ui/cypher/blocks/game-over.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         }
       ]
     },
@@ -1393,34 +1393,34 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/audio-settings.tsx",
+          "path": "components/ui/cypher/blocks/audio-settings.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/audio-settings.tsx"
+          "target": "components/ui/cypher/blocks/audio-settings.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/switch.tsx",
+          "path": "components/ui/cypher/switch.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/switch.tsx"
+          "target": "components/ui/cypher/switch.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/slider.tsx",
+          "path": "components/ui/cypher/slider.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/slider.tsx"
+          "target": "components/ui/cypher/slider.tsx"
         },
         {
-          "path": "components/ui/8bit/label.tsx",
+          "path": "components/ui/cypher/label.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/label.tsx"
+          "target": "components/ui/cypher/label.tsx"
         }
       ]
     },
@@ -1432,14 +1432,14 @@
       "registryDependencies": ["toggle-group"],
       "files": [
         {
-          "path": "components/ui/8bit/toggle-group.tsx",
+          "path": "components/ui/cypher/toggle-group.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/toggle-group.tsx"
+          "target": "components/ui/cypher/toggle-group.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1452,14 +1452,14 @@
       "categories": ["sidebar"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/sidebar.tsx",
+          "path": "components/ui/cypher/blocks/sidebar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/sidebar.tsx"
+          "target": "components/ui/cypher/blocks/sidebar.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1471,14 +1471,14 @@
       "registryDependencies": ["accordion"],
       "files": [
         {
-          "path": "components/ui/8bit/accordion.tsx",
+          "path": "components/ui/cypher/accordion.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/accordion.tsx"
+          "target": "components/ui/cypher/accordion.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1490,14 +1490,14 @@
       "registryDependencies": ["drawer"],
       "files": [
         {
-          "path": "components/ui/8bit/drawer.tsx",
+          "path": "components/ui/cypher/drawer.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/drawer.tsx"
+          "target": "components/ui/cypher/drawer.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1509,14 +1509,14 @@
       "registryDependencies": ["navigation-menu"],
       "files": [
         {
-          "path": "components/ui/8bit/navigation-menu.tsx",
+          "path": "components/ui/cypher/navigation-menu.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/navigation-menu.tsx"
+          "target": "components/ui/cypher/navigation-menu.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1529,24 +1529,24 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/difficulty-select.tsx",
+          "path": "components/ui/cypher/blocks/difficulty-select.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/difficulty-select.tsx"
+          "target": "components/ui/cypher/blocks/difficulty-select.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         }
       ]
     },
@@ -1559,34 +1559,34 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/leaderboard.tsx",
+          "path": "components/ui/cypher/blocks/leaderboard.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/leaderboard.tsx"
+          "target": "components/ui/cypher/blocks/leaderboard.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/avatar.tsx",
+          "path": "components/ui/cypher/avatar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/avatar.tsx"
+          "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/separator.tsx",
+          "path": "components/ui/cypher/separator.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/separator.tsx"
+          "target": "components/ui/cypher/separator.tsx"
         }
       ]
     },
@@ -1599,44 +1599,44 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/player-profile-card.tsx",
+          "path": "components/ui/cypher/blocks/player-profile-card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/player-profile-card.tsx"
+          "target": "components/ui/cypher/blocks/player-profile-card.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/avatar.tsx",
+          "path": "components/ui/cypher/avatar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/avatar.tsx"
+          "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/health-bar.tsx",
+          "path": "components/ui/cypher/health-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/health-bar.tsx"
+          "target": "components/ui/cypher/health-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/mana-bar.tsx",
+          "path": "components/ui/cypher/mana-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/mana-bar.tsx"
+          "target": "components/ui/cypher/mana-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1649,34 +1649,34 @@
       "categories": ["gaming"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/quest-log.tsx",
+          "path": "components/ui/cypher/blocks/quest-log.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/quest-log.tsx"
+          "target": "components/ui/cypher/blocks/quest-log.tsx"
         },
         {
-          "path": "components/ui/8bit/accordion.tsx",
+          "path": "components/ui/cypher/accordion.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/accordion.tsx"
+          "target": "components/ui/cypher/accordion.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/scroll-area.tsx",
+          "path": "components/ui/cypher/scroll-area.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/scroll-area.tsx"
+          "target": "components/ui/cypher/scroll-area.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1689,34 +1689,34 @@
       "registryDependencies": ["card", "badge", "button", "separator"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/save-slots.tsx",
+          "path": "components/ui/cypher/blocks/save-slots.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/save-slots.tsx"
+          "target": "components/ui/cypher/blocks/save-slots.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/separator.tsx",
+          "path": "components/ui/cypher/separator.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/separator.tsx"
+          "target": "components/ui/cypher/separator.tsx"
         }
       ]
     },
@@ -1780,79 +1780,79 @@
           "target": "components/data-table.tsx"
         },
         {
-          "path": "components/ui/8bit/blocks/chart-bar.tsx",
+          "path": "components/ui/cypher/blocks/chart-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/chart-bar.tsx"
+          "target": "components/ui/cypher/blocks/chart-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/skeleton.tsx",
+          "path": "components/ui/cypher/skeleton.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/skeleton.tsx"
+          "target": "components/ui/cypher/skeleton.tsx"
         },
         {
-          "path": "components/ui/8bit/chart.tsx",
+          "path": "components/ui/cypher/chart.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/chart.tsx"
+          "target": "components/ui/cypher/chart.tsx"
         },
         {
-          "path": "components/ui/8bit/checkbox.tsx",
+          "path": "components/ui/cypher/checkbox.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/checkbox.tsx"
+          "target": "components/ui/cypher/checkbox.tsx"
         },
         {
-          "path": "components/ui/8bit/drawer.tsx",
+          "path": "components/ui/cypher/drawer.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/drawer.tsx"
+          "target": "components/ui/cypher/drawer.tsx"
         },
         {
-          "path": "components/ui/8bit/dropdown-menu.tsx",
+          "path": "components/ui/cypher/dropdown-menu.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/dropdown-menu.tsx"
+          "target": "components/ui/cypher/dropdown-menu.tsx"
         },
         {
-          "path": "components/ui/8bit/input.tsx",
+          "path": "components/ui/cypher/input.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/input.tsx"
+          "target": "components/ui/cypher/input.tsx"
         },
         {
-          "path": "components/ui/8bit/label.tsx",
+          "path": "components/ui/cypher/label.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/label.tsx"
+          "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/8bit/select.tsx",
+          "path": "components/ui/cypher/select.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/select.tsx"
+          "target": "components/ui/cypher/select.tsx"
         },
         {
-          "path": "components/ui/8bit/separator.tsx",
+          "path": "components/ui/cypher/separator.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/separator.tsx"
+          "target": "components/ui/cypher/separator.tsx"
         },
         {
-          "path": "components/ui/8bit/table.tsx",
+          "path": "components/ui/cypher/table.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/table.tsx"
+          "target": "components/ui/cypher/table.tsx"
         },
         {
-          "path": "components/ui/8bit/tabs.tsx",
+          "path": "components/ui/cypher/tabs.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/tabs.tsx"
+          "target": "components/ui/cypher/tabs.tsx"
         },
         {
           "path": "components/ui/sidebar.tsx",
@@ -1860,9 +1860,9 @@
           "target": "components/ui/sidebar.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1889,14 +1889,14 @@
           "target": "lib/themes.ts"
         },
         {
-          "path": "components/ui/8bit/select.tsx",
+          "path": "components/ui/cypher/select.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/select.tsx"
+          "target": "components/ui/cypher/select.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         },
         {
           "path": "app/retro-globals.css",
@@ -1913,9 +1913,9 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/spinner.tsx",
+          "path": "components/ui/cypher/spinner.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/spinner.tsx"
+          "target": "components/ui/cypher/spinner.tsx"
         }
       ]
     },
@@ -1927,14 +1927,14 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/kbd.tsx",
+          "path": "components/ui/cypher/kbd.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/kbd.tsx"
+          "target": "components/ui/cypher/kbd.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1952,9 +1952,9 @@
           "target": "components/ui/retro-mode-switcher.tsx"
         },
         {
-          "path": "components/ui/8bit/button.tsx",
+          "path": "components/ui/cypher/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/button.tsx"
+          "target": "components/ui/cypher/button.tsx"
         },
         {
           "path": "components/theme-provider.tsx",
@@ -1962,9 +1962,9 @@
           "target": "components/theme-provider.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -1976,9 +1976,9 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/8bit/empty.tsx",
+          "path": "components/ui/cypher/empty.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/empty.tsx"
+          "target": "components/ui/cypher/empty.tsx"
         }
       ]
     },
@@ -1990,9 +1990,9 @@
       "registryDependencies": ["separator"],
       "files": [
         {
-          "path": "components/ui/8bit/item.tsx",
+          "path": "components/ui/cypher/item.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/item.tsx"
+          "target": "components/ui/cypher/item.tsx"
         }
       ]
     },
@@ -2011,49 +2011,49 @@
       ],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/character-sheet.tsx",
+          "path": "components/ui/cypher/blocks/character-sheet.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/blocks/character-sheet.tsx"
+          "target": "components/ui/cypher/blocks/character-sheet.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/avatar.tsx",
+          "path": "components/ui/cypher/avatar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/avatar.tsx"
+          "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/8bit/badge.tsx",
+          "path": "components/ui/cypher/badge.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/badge.tsx"
+          "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/8bit/health-bar.tsx",
+          "path": "components/ui/cypher/health-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/health-bar.tsx"
+          "target": "components/ui/cypher/health-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/mana-bar.tsx",
+          "path": "components/ui/cypher/mana-bar.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/mana-bar.tsx"
+          "target": "components/ui/cypher/mana-bar.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/separator.tsx",
+          "path": "components/ui/cypher/separator.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/separator.tsx"
+          "target": "components/ui/cypher/separator.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -2066,29 +2066,29 @@
       "registryDependencies": ["item", "card", "alert"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/victory-screen.tsx",
+          "path": "components/ui/cypher/blocks/victory-screen.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/victory-screen.tsx"
+          "target": "components/ui/cypher/blocks/victory-screen.tsx"
         },
         {
-          "path": "components/ui/8bit/item.tsx",
+          "path": "components/ui/cypher/item.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/item.tsx"
+          "target": "components/ui/cypher/item.tsx"
         },
         {
-          "path": "components/ui/8bit/card.tsx",
+          "path": "components/ui/cypher/card.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/card.tsx"
+          "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/8bit/alert.tsx",
+          "path": "components/ui/cypher/alert.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/alert.tsx"
+          "target": "components/ui/cypher/alert.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     },
@@ -2101,19 +2101,19 @@
       "registryDependencies": ["progress"],
       "files": [
         {
-          "path": "components/ui/8bit/blocks/loading-screen.tsx",
+          "path": "components/ui/cypher/blocks/loading-screen.tsx",
           "type": "registry:block",
-          "target": "components/ui/8bit/blocks/loading-screen.tsx"
+          "target": "components/ui/cypher/blocks/loading-screen.tsx"
         },
         {
-          "path": "components/ui/8bit/progress.tsx",
+          "path": "components/ui/cypher/progress.tsx",
           "type": "registry:component",
-          "target": "components/ui/8bit/progress.tsx"
+          "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/8bit/styles/retro.css",
+          "path": "components/ui/cypher/styles/retro.css",
           "type": "registry:component",
-          "target": "components/ui/8bit/styles/retro.css"
+          "target": "components/ui/cypher/styles/retro.css"
         }
       ]
     }
