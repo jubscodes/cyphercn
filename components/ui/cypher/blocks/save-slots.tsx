@@ -131,7 +131,7 @@ function SlotPreview({
             {isEmpty ? (
                 <div className="flex flex-col items-center gap-0.5 sm:gap-1">
                     <FloppyIcon className="size-5 sm:size-8 text-muted-foreground/50" />
-                    <span className="retro text-[8px] sm:text-[10px] text-muted-foreground/50">
+                    <span className="cyphercn text-[8px] sm:text-[10px] text-muted-foreground/50">
                         {slotNumber}
                     </span>
                 </div>
@@ -145,7 +145,7 @@ function SlotPreview({
             ) : (
                 <div className="flex flex-col items-center gap-0.5 sm:gap-1">
                     <FloppyIcon className="size-5 sm:size-8 text-muted-foreground" />
-                    <span className="retro text-[8px] sm:text-[10px] text-muted-foreground">
+                    <span className="cyphercn text-[8px] sm:text-[10px] text-muted-foreground">
                         {slotNumber}
                     </span>
                 </div>
@@ -207,14 +207,14 @@ function SlotItem({
                 <div className="flex items-center gap-1 sm:gap-2">
                     <h3
                         className={cn(
-                            "retro text-[10px] sm:text-xs md:text-sm font-medium truncate flex-1 min-w-0",
+                            "cyphercn text-[10px] sm:text-xs md:text-sm font-medium truncate flex-1 min-w-0",
                             slot.isEmpty && "text-muted-foreground"
                         )}
                     >
                         {slot.isEmpty ? `EMPTY ${slotNumber}` : displayName}
                     </h3>
                     {!slot.isEmpty && (
-                        <Badge className="text-[7px] sm:text-[9px] retro shrink-0 hidden sm:inline-flex" variant="secondary">
+                        <Badge className="text-[7px] sm:text-[9px] cyphercn shrink-0 hidden sm:inline-flex" variant="secondary">
                             SAVED
                         </Badge>
                     )}
@@ -228,7 +228,7 @@ function SlotItem({
                             </p>
                         )}
                         {showTimestamp && slot.timestamp && (
-                            <p className="text-[8px] sm:text-[10px] text-muted-foreground/70 retro">
+                            <p className="text-[8px] sm:text-[10px] text-muted-foreground/70 cyphercn">
                                 {formatTimestamp(slot.timestamp)}
                             </p>
                         )}
@@ -236,7 +236,7 @@ function SlotItem({
                 )}
 
                 {slot.isEmpty && (
-                    <p className="text-[9px] sm:text-xs text-muted-foreground/60 retro">
+                    <p className="text-[9px] sm:text-xs text-muted-foreground/60 cyphercn-normal">
                         Click to save
                     </p>
                 )}
@@ -299,7 +299,7 @@ export function SaveSlots({
         <div className={containerClassName}>
             {displaySlots.length === 0 ? (
                 <div className="text-center py-8 text-muted-foreground col-span-full">
-                    <p className="retro text-sm">No save slots available</p>
+                    <p className="cyphercn-normal text-sm">No save slots available</p>
                 </div>
             ) : (
                 displaySlots.map((slot, index) => (
@@ -320,7 +320,7 @@ export function SaveSlots({
         <Card
             className={className}
             data-slot="save-slots"
-            font="retro"
+           
             {...props}
         >
             {title && (
@@ -353,7 +353,7 @@ export function SaveSlots({
                         <Separator />
                         <div className="mt-4 pt-4">
                             <p
-                                className={cn("text-xs text-muted-foreground text-center retro")}
+                                className={cn("text-xs text-muted-foreground text-center cyphercn-normal")}
                             >
                                 {savedCount} of {displaySlots.length} slots used
                             </p>

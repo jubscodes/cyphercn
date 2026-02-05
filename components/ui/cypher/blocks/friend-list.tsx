@@ -126,17 +126,17 @@ export default function FriendList({
                         className="size-6 md:size-10"
                       >
                         <AvatarImage src={player.avatar} alt={player.name} />
-                        <AvatarFallback className="retro text-[5px] md:text-sm">
+                        <AvatarFallback className="cyphercn text-[5px] md:text-sm">
                           {player.avatarFallback ||
                             player.name?.charAt(0).toUpperCase()}
                         </AvatarFallback>
                       </Avatar>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-4">
-                          <span className="font-medium truncate retro text-xs hidden sm:inline">
+                          <span className="font-medium truncate cyphercn text-xs hidden sm:inline">
                             {truncate(player.name, 20)}
                           </span>
-                          <span className="font-medium truncate retro sm:hidden text-xs md:text-sm">
+                          <span className="font-medium truncate cyphercn sm:hidden text-xs md:text-sm">
                             {truncate(player.name, 12)}
                           </span>
                         </div>
@@ -155,7 +155,7 @@ export default function FriendList({
                           {showstatus && (
                             <span
                               className={cn(
-                                `uppercase font-retro mr-1 mt-1 text-[9px] `
+                                `uppercase cyphercn mr-1 mt-1 text-[9px] `
                               )}
                             >
                               {player.status?.toUpperCase()}

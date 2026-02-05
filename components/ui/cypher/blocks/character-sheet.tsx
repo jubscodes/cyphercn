@@ -190,7 +190,7 @@ export function CharacterSheet({
                   <span className="text-sm font-medium text-red-500">
                     Health
                   </span>
-                  <span className="text-xs text-muted-foreground retro">
+                  <span className="text-xs text-muted-foreground cyphercn-normal">
                     {health.current}/{health.max}
                   </span>
                 </div>
@@ -208,7 +208,7 @@ export function CharacterSheet({
                   <span className="text-sm font-medium text-blue-500">
                     Mana
                   </span>
-                  <span className="text-xs text-muted-foreground retro">
+                  <span className="text-xs text-muted-foreground cyphercn-normal">
                     {mana.current}/{mana.max}
                   </span>
                 </div>
@@ -226,7 +226,7 @@ export function CharacterSheet({
                   <span className="text-sm font-medium text-yellow-500">
                     Experience
                   </span>
-                  <span className="text-xs text-muted-foreground retro">
+                  <span className="text-xs text-muted-foreground cyphercn-normal">
                     {experience.current}/{experience.max} XP
                   </span>
                 </div>

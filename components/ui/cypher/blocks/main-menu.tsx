@@ -37,7 +37,7 @@ export default function MainMenu({
     <Card className={cn(className)} {...props}>
       <CardHeader className="flex flex-col items-center justify-center gap-2">
         <CardTitle>Main Menu</CardTitle>
-        <CardDescription>Retro 8-bit Quest</CardDescription>
+        <CardDescription>COMMAND CENTER</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col gap-4">
