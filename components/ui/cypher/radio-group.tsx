@@ -15,11 +15,11 @@ export const radioGroupVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 

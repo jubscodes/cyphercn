@@ -1,103 +1,219 @@
-import * as ProgressPrimitive from "@radix-ui/react-progress";
-import { type VariantProps, cva } from "class-variance-authority";
+"use client";
 
+import * as React from "react";
 import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
-export const progressVariants = cva("", {
-  variants: {
-    variant: {
-      default: "",
-      retro: "retro",
-    },
-    font: {
-      normal: "",
-      retro: "retro",
-    },
-  },
-  defaultVariants: {
-    font: "retro",
-  },
-});
+// =============================================================================
+// Progress Component - ASCII character variants
+// =============================================================================
 
-export interface BitProgressProps
-  extends React.ComponentProps<typeof ProgressPrimitive.Root>,
-    VariantProps<typeof progressVariants> {
-  className?: string;
-  font?: VariantProps<typeof progressVariants>["font"];
-  progressBg?: string;
+export interface CypherProgressProps extends React.HTMLAttributes<HTMLDivElement> {
+  value?: number;
+  max?: number;
+  width?: number;
+  showPercentage?: boolean;
+  glow?: boolean;
+  variant?: "default" | "ascii" | "blocks" | "dots" | "bar";
+  label?: string;
+  progressBg?: string; // Custom fill color class (e.g., "bg-red-500")
 }
 
-function Progress({
-  className,
-  font,
-  variant,
-  value,
-  progressBg,
-  ...props
-}: BitProgressProps) {
-  // Extract height from className if present
-  const heightMatch = className?.match(/h-(\d+|\[.*?\])/);
-  const heightClass = heightMatch ? heightMatch[0] : "h-2";
+const progressChars = {
+  default: { filled: "█", empty: "░" },
+  ascii: { filled: "#", empty: "-" },
+  blocks: { filled: "■", empty: "□" },
+  dots: { filled: "●", empty: "○" },
+};
 
-  return (
-    <div className={cn("relative w-full", className)}>
-      <ProgressPrimitive.Root
-        data-slot="progress"
-        className={cn(
-          "bg-primary/20 relative w-full overflow-hidden",
-          heightClass,
-          font !== "normal" && "retro"
-        )}
-        value={value}
+function Progress({
+  value = 0,
+  max = 100,
+  width = 20,
+  showPercentage = true,
+  glow = false,
+  variant = "default",
+  label,
+  progressBg,
+  className,
+  ...props
+}: CypherProgressProps) {
+  const percentage = Math.min(100, Math.max(0, (value / max) * 100));
+  const filled = Math.round((percentage / 100) * width);
+  const empty = width - filled;
+
+  // Bar variant uses thin CSS bar instead of ASCII
+  if (variant === "bar") {
+    return (
+      <div
+        className={cn("cyphercn space-y-1", className)}
+        role="progressbar"
+        aria-valuenow={value}
+        aria-valuemin={0}
+        aria-valuemax={max}
         {...props}
       >
-        <ProgressPrimitive.Indicator
-          data-slot="progress-indicator"
+        {label && (
+          <div className="flex justify-between text-xs">
+            <span>{label}</span>
+            <span>{Math.round(percentage)}%</span>
+          </div>
+        )}
+        <div
           className={cn(
-            "h-full transition-all",
-            variant === "retro" ? "flex w-full" : "w-full flex-1",
-            variant !== "retro" && (progressBg || "bg-primary")
+            "h-2 border border-foreground bg-transparent overflow-hidden",
+            glow && "phosphor-border-glow"
           )}
-          style={
-            variant === "retro"
-              ? undefined
-              : { transform: `translateX(-${100 - (value || 0)}%)` }
-          }
         >
-          {variant === "retro" && (
-            <div className="flex w-full">
-              {Array.from({ length: 20 }).map((_, i) => {
-                const filledSquares = Math.round(((value || 0) / 100) * 20);
-                return (
-                  <div
-                    key={i}
-                    className={cn(
-                      "flex-1 h-full mx-[1px]",
-                      i < filledSquares
-                        ? progressBg || "bg-primary"
-                        : "bg-transparent"
-                    )}
-                  />
-                );
-              })}
-            </div>
-          )}
-        </ProgressPrimitive.Indicator>
-      </ProgressPrimitive.Root>
+          <div
+            className={cn("h-full transition-all duration-300", progressBg || "bg-foreground")}
+            style={{ width: `${percentage}%` }}
+          />
+        </div>
+      </div>
+    );
+  }
 
-      <div
-        className="absolute inset-0 border-y-4 -my-1 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
+  const { filled: filledChar, empty: emptyChar } = progressChars[variant] || progressChars.default;
 
-      <div
-        className="absolute inset-0 border-x-4 -mx-1 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
+  return (
+    <div
+      className={cn(
+        "cyphercn flex items-center gap-2 text-sm",
+        glow && "phosphor-glow",
+        className
+      )}
+      role="progressbar"
+      aria-valuenow={value}
+      aria-valuemin={0}
+      aria-valuemax={max}
+      {...props}
+    >
+      {label && <span className="text-foreground/70 shrink-0">{label}</span>}
+      <span className="text-foreground/70">[</span>
+      <span className="text-foreground">
+        {filledChar.repeat(filled)}
+        <span className="text-foreground/30">{emptyChar.repeat(empty)}</span>
+      </span>
+      <span className="text-foreground/70">]</span>
+      {showPercentage && (
+        <span className="text-foreground/70 min-w-[4ch] text-right tabular-nums">
+          {Math.round(percentage)}%
+        </span>
+      )}
     </div>
   );
 }
 
-export { Progress };
+// =============================================================================
+// ProgressBar Component - Thin bar variant with label
+// =============================================================================
+
+export interface CypherProgressBarProps extends React.HTMLAttributes<HTMLDivElement> {
+  value?: number;
+  max?: number;
+  glow?: boolean;
+  label?: string;
+  progressBg?: string;
+}
+
+function ProgressBar({
+  value = 0,
+  max = 100,
+  glow = false,
+  label,
+  progressBg,
+  className,
+  ...props
+}: CypherProgressBarProps) {
+  const percentage = Math.min(100, Math.max(0, (value / max) * 100));
+
+  return (
+    <div
+      className={cn("cyphercn space-y-1", className)}
+      role="progressbar"
+      aria-valuenow={value}
+      aria-valuemin={0}
+      aria-valuemax={max}
+      {...props}
+    >
+      {label && (
+        <div className="flex justify-between text-xs">
+          <span>{label}</span>
+          <span>{Math.round(percentage)}%</span>
+        </div>
+      )}
+      <div
+        className={cn(
+          "h-2 border border-foreground bg-transparent overflow-hidden",
+          glow && "phosphor-border-glow"
+        )}
+      >
+        <div
+          className={cn("h-full transition-all duration-300", progressBg || "bg-foreground")}
+          style={{ width: `${percentage}%` }}
+        />
+      </div>
+    </div>
+  );
+}
+
+// =============================================================================
+// Spinner Component - ASCII loading spinner
+// =============================================================================
+
+export interface CypherSpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
+  glow?: boolean;
+}
+
+function Spinner({ glow = false, className, ...props }: CypherSpinnerProps) {
+  const [frame, setFrame] = React.useState(0);
+  const frames = ["◐", "◓", "◑", "◒"];
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setFrame((f) => (f + 1) % frames.length);
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span
+      className={cn("cyphercn inline-block", glow && "phosphor-glow", className)}
+      role="status"
+      aria-label="Loading"
+      {...props}
+    >
+      {frames[frame]}
+    </span>
+  );
+}
+
+// =============================================================================
+// LoadingDots Component - Animated dots
+// =============================================================================
+
+function LoadingDots({ glow = false, className, ...props }: CypherSpinnerProps) {
+  const [dots, setDots] = React.useState(0);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setDots((d) => (d + 1) % 4);
+    }, 300);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span
+      className={cn("cyphercn inline-block min-w-[3ch]", glow && "phosphor-glow", className)}
+      role="status"
+      aria-label="Loading"
+      {...props}
+    >
+      {".".repeat(dots)}
+    </span>
+  );
+}
+
+export { Progress, ProgressBar, Spinner, LoadingDots };

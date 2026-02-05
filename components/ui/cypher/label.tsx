@@ -15,11 +15,11 @@ export const inputVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -32,7 +32,7 @@ interface BitLabelProps
 function Label({ className, font, ...props }: BitLabelProps) {
   return (
     <ShadcnLabel
-      className={cn(className, font !== "normal" && "retro")}
+      className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     />
   );

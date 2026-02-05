@@ -18,7 +18,7 @@ export const paginationVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
     variant: {
       default: "text-card-foreground",
@@ -41,7 +41,7 @@ function Pagination({ ...props }: BitPaginationProps<"nav">) {
       {...props}
       className={cn(
         paginationVariants({ variant }),
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
     />
@@ -137,7 +137,7 @@ function PaginationContent({ ...props }: BitPaginationProps<"ul">) {
   const { className, font } = props;
   return (
     <ShadcnPaginationContent
-      className={cn("gap-2", font !== "normal" && "retro", className)}
+      className={cn("gap-2", font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
       {...props}
     />
   );
@@ -147,7 +147,7 @@ function PaginationItem({ ...props }: BitPaginationProps<"li">) {
   const { className, font } = props;
   return (
     <ShadcnPaginationItem
-      className={cn(font !== "normal" && "retro", className)}
+      className={cn(font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
       {...props}
     />
   );
@@ -163,7 +163,7 @@ function PaginationLink({ ...props }: PaginationLinkProps) {
   return (
     <ShadcnPaginationLink
       className={cn(
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className,
         "relative group",
         "bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent",
@@ -226,7 +226,7 @@ function PaginationPrevious({
         "hover:border-foreground focus:border-foreground active:border-transparent",
         "dark:hover:border-ring dark:focus:border-ring",
         "data-[active=true]:border-none aria-[current=page]:border-none",
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
       {...props}
@@ -253,7 +253,7 @@ function PaginationNext({
         "dark:hover:border-ring dark:focus:border-ring",
         "data-[active=true]:border-none aria-[current=page]:border-none",
         "flex flex-row text-sm w-full",
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
       {...props}
@@ -269,10 +269,10 @@ function PaginationEllipsis({ ...props }: BitPaginationProps<"span">) {
 
   return (
     <ShadcnPaginationEllipsis
-      className={cn(font !== "normal" && "retro", className)}
+      className={cn(font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
       {...props}
     >
-      <MoreHorizontal className={cn("size-7", "retro")} />
+      <MoreHorizontal className={cn("size-7", "cyphercn")} />
       <span className="sr-only">More pages</span>
     </ShadcnPaginationEllipsis>
   );

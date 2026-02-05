@@ -11,7 +11,7 @@ import "./styles/cyberpunk.css";
 
 export const toggleGroupVariants = cva("", {
   variants: {
-    font: { normal: "", retro: "retro" },
+    font: { normal: "", cyphercn: "cyphercn" },
     variant: {
       default: "bg-transparent",
       outline:
@@ -23,7 +23,7 @@ export const toggleGroupVariants = cva("", {
       lg: "h-10 px-2.5 min-w-10",
     },
   },
-  defaultVariants: { variant: "default", font: "retro", size: "default" },
+  defaultVariants: { variant: "default", font: "cyphercn", size: "default" },
 });
 
 export type BitToggleGroupProps = React.ComponentPropsWithoutRef<
@@ -41,7 +41,7 @@ function ToggleGroup({ ...props }: BitToggleGroupProps) {
 
   return (
     <ShadcnToggleGroup
-      className={cn("gap-3", className, font !== "normal" && "retro")}
+      className={cn("gap-3", className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     >
       {" "}
@@ -56,7 +56,7 @@ function ToggleGroupItem({ ...props }: BitToggleGroupItemProps) {
       className={cn(
         "relative transition-transform active:translate-x-1 active:translate-y-1",
         className,
-        font !== "normal" && "retro"
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal"
       )}
       {...props}
     >

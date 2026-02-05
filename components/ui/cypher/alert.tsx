@@ -1,63 +1,77 @@
-import { type VariantProps, cva } from "class-variance-authority";
+"use client";
 
+import * as React from "react";
+import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-import {
-  Alert as ShadcnAlert,
-  AlertDescription as ShadcnAlertDescription,
-  AlertTitle as ShadcnAlertTitle,
-} from "@/components/ui/alert";
+import "./styles/cyberpunk.css";
 
-export const alertVariants = cva("", {
-  variants: {
-    font: {
-      normal: "",
-      retro: "retro",
+// =============================================================================
+// Alert Component - MS-DOS terminal style with [PREFIX] indicators
+// =============================================================================
+
+export const alertVariants = cva(
+  "cyphercn border border-foreground p-3 text-sm",
+  {
+    variants: {
+      variant: {
+        default: "",
+        info: "",
+        success: "border-foreground text-foreground",
+        warning: "border-yellow-500 text-yellow-500",
+        error: "border-red-500 text-red-500",
+        destructive: "border-red-500 text-red-500",
+      },
+      glow: {
+        true: "phosphor-border-glow",
+        false: "",
+      },
     },
-    variant: {
-      default: "bg-card text-card-foreground",
-      destructive:
-        "text-destructive bg-card [&>svg]:text-current *:data-[slot=alert-description]:text-destructive/90",
+    defaultVariants: {
+      variant: "default",
+      glow: false,
     },
-  },
-  defaultVariants: {
-    variant: "default",
-  },
-});
+  }
+);
 
-export interface BitAlertProps
-  extends React.ComponentProps<"div">,
-    VariantProps<typeof alertVariants> {}
+const variantPrefixes = {
+  default: "[INFO]",
+  info: "[INFO]",
+  success: "[OK]",
+  warning: "[WARN]",
+  error: "[ERROR]",
+  destructive: "[ERROR]",
+};
 
-function Alert({ children, ...props }: BitAlertProps) {
-  const { variant, className, font } = props;
+export interface CypherAlertProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof alertVariants> {
+  title?: string;
+}
 
+function Alert({
+  variant = "default",
+  title,
+  glow = false,
+  className,
+  children,
+  ...props
+}: CypherAlertProps) {
   return (
-    <div className={cn("relative m-1.5", className)}>
-      <ShadcnAlert
-        {...props}
-        variant={variant}
-        className={cn(
-          "relative rounded-none border-none bg-background",
-          font !== "normal" && "retro",
-          className
-        )}
-      >
-        {children}
-      </ShadcnAlert>
-
-      <div className="absolute -top-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -bottom-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -bottom-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-1.5 -left-1.5 h-1/2 w-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-1.5 -left-1.5 h-1/2 w-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-1.5 -right-1.5 h-1/2 w-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-1.5 -right-1.5 h-1/2 w-1.5 bg-foreground dark:bg-ring" />
+    <div
+      role="alert"
+      className={cn(alertVariants({ variant, glow }), className)}
+      {...props}
+    >
+      <div className="flex items-start gap-2">
+        <span className="font-bold shrink-0">
+          {variantPrefixes[variant || "default"]}
+        </span>
+        <div className="flex-1 cyphercn-normal">
+          {title && <div className="font-semibold mb-1 uppercase">{title}</div>}
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
@@ -65,10 +79,10 @@ function Alert({ children, ...props }: BitAlertProps) {
 function AlertTitle({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+}: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <ShadcnAlertTitle
-      className={cn("line-clamp-1 font-medium tracking-tight", className)}
+    <h5
+      className={cn("cyphercn font-semibold tracking-wider uppercase mb-1", className)}
       {...props}
     />
   );
@@ -77,16 +91,105 @@ function AlertTitle({
 function AlertDescription({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+}: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <ShadcnAlertDescription
-      className={cn(
-        "text-muted-foreground grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed",
-        className
-      )}
+    <p
+      className={cn("cyphercn-normal text-sm", className)}
       {...props}
     />
   );
 }
 
-export { Alert, AlertTitle, AlertDescription };
+// =============================================================================
+// LogEntry Component - Transmission log style
+// =============================================================================
+
+export interface CypherLogEntryProps extends React.HTMLAttributes<HTMLDivElement> {
+  timestamp?: string;
+  level?: "info" | "warn" | "error" | "debug";
+  glow?: boolean;
+}
+
+const levelColors = {
+  info: "text-foreground",
+  warn: "text-yellow-500",
+  error: "text-red-500",
+  debug: "text-foreground/50",
+};
+
+const levelLabels = {
+  info: "INFO",
+  warn: "WARN",
+  error: "ERR!",
+  debug: "DBUG",
+};
+
+function LogEntry({
+  timestamp,
+  level = "info",
+  glow = false,
+  className,
+  children,
+  ...props
+}: CypherLogEntryProps) {
+  return (
+    <div
+      className={cn(
+        "cyphercn-normal text-xs flex items-start gap-2",
+        levelColors[level],
+        glow && "phosphor-glow",
+        className
+      )}
+      {...props}
+    >
+      {timestamp && (
+        <span className="text-foreground/50 shrink-0">[{timestamp}]</span>
+      )}
+      <span className="shrink-0">[{levelLabels[level]}]</span>
+      <span className="flex-1">{children}</span>
+    </div>
+  );
+}
+
+// =============================================================================
+// Status Component - System status indicator
+// =============================================================================
+
+export interface CypherStatusProps extends React.HTMLAttributes<HTMLDivElement> {
+  status: "online" | "offline" | "warning" | "processing";
+  label?: string;
+  glow?: boolean;
+}
+
+const statusIndicators = {
+  online: { symbol: "●", class: "text-foreground" },
+  offline: { symbol: "○", class: "text-foreground/30" },
+  warning: { symbol: "◐", class: "text-yellow-500 animate-pulse" },
+  processing: { symbol: "◌", class: "text-foreground animate-spin" },
+};
+
+function Status({
+  status,
+  label,
+  glow = false,
+  className,
+  ...props
+}: CypherStatusProps) {
+  const { symbol, class: statusClass } = statusIndicators[status];
+
+  return (
+    <div
+      className={cn(
+        "cyphercn flex items-center gap-2 text-sm",
+        glow && "phosphor-glow",
+        className
+      )}
+      {...props}
+    >
+      <span className={statusClass}>{symbol}</span>
+      {label && <span className="uppercase">{label}</span>}
+    </div>
+  );
+}
+
+export { Alert, AlertTitle, AlertDescription, LogEntry, Status };

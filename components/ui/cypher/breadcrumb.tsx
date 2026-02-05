@@ -19,7 +19,7 @@ export const breadcrumbVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
     variant: {
       default: "text-card-foreground",
@@ -92,7 +92,7 @@ function Breadcrumb({ children, ...props }: BitBreadcrumbNavigationProps) {
         className={cn(
           "relative rounded-none border-none bg-background",
           breadcrumbVariants({ variant }),
-          font !== "normal" && "retro",
+          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
           className
         )}
       >
@@ -107,7 +107,7 @@ function BreadcrumbList({ ...props }: BitBreadcrumbOrderedListProps) {
 
   return (
     <ShadcnBreadcrumbList
-      className={cn(className, font !== "normal" && "retro")}
+      className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     />
   );
@@ -118,7 +118,7 @@ function BreadcrumbItem({ ...props }: BitBreadcrumbListItemProps) {
 
   return (
     <ShadcnBreadcrumbItem
-      className={cn(className, font !== "normal" && "retro")}
+      className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     />
   );
@@ -137,7 +137,7 @@ function BreadcrumbLink({
   return (
     <Comp
       data-slot="breadcrumb-link"
-      className={cn(className, font !== "normal" && "retro")}
+      className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     />
   );
@@ -148,7 +148,7 @@ function BreadcrumbPage({ ...props }: BitBreadcrumbSpanProps) {
 
   return (
     <ShadcnBreadcrumbPage
-      className={cn(className, font !== "normal" && "retro")}
+      className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     />
   );
@@ -159,7 +159,7 @@ function BreadcrumbSeparator({ ...props }: BitBreadcrumbListItemProps) {
 
   return (
     <ShadcnBreadcrumbSeparator
-      className={cn(className, font !== "normal" && "retro", "[&>svg]:size-7")}
+      className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal", "[&>svg]:size-7")}
       {...props}
     >
       {children ?? <ChevronRight />}
@@ -172,10 +172,10 @@ function BreadcrumbEllipsis({ ...props }: BitBreadcrumbSpanProps) {
 
   return (
     <ShadcnBreadcrumbEllipsis
-      className={cn(className, font !== "normal" && "retro")}
+      className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     >
-      <MoreHorizontal className={cn("size-7", "retro")} />
+      <MoreHorizontal className={cn("size-7", "cyphercn")} />
       <span className="sr-only">More</span>
     </ShadcnBreadcrumbEllipsis>
   );

@@ -82,11 +82,11 @@ export const dropDownVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -99,7 +99,7 @@ function DropdownMenuSubContent({
   return (
     <ShadcnDropdownMenuSubContent
       {...props}
-      className={cn("bg-popover", font !== "normal" && "retro", className)}
+      className={cn("bg-popover", font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
     >
       {children}
 
@@ -127,7 +127,7 @@ function DropdownMenuContent({
 }: BitDropownMenuContentProps) {
   return (
     <ShadcnDropdownMenuContent
-      className={cn("mt-1 py-2", font !== "normal" && "retro", className)}
+      className={cn("mt-1 py-2", font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
       {...props}
     >
       {children}

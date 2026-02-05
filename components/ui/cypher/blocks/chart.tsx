@@ -35,7 +35,7 @@ export function ChartExample() {
   return (
     <ChartContainer
       config={chartConfig}
-      className={`min-h-[200px] w-full ${"retro"}`}
+      className={`min-h-[200px] w-full ${"cyphercn"}`}
     >
       <AreaChart accessibilityLayer data={chartData}>
         <CartesianGrid />

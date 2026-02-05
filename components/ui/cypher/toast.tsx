@@ -19,7 +19,7 @@ function Toast(props: ToastProps) {
   const { title } = props;
 
   return (
-    <div className={`relative ${"retro"}`}>
+    <div className={`relative ${"cyphercn"}`}>
       <div className="flex rounded-lg bg-background shadow-lg ring-1 ring-black/5 w-full md:max-w-[364px] items-center p-4">
         <div className="flex flex-1 items-center">
           <div className="w-full">

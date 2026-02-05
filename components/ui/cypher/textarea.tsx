@@ -10,11 +10,11 @@ export const inputVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -33,7 +33,7 @@ function Textarea({ ...props }: BitTextareaProps) {
         {...props}
         className={cn(
           "rounded-none transition-transform ring-0 border-0",
-          font !== "normal" && "retro",
+          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
           className
         )}
       />

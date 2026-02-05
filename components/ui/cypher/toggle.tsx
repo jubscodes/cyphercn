@@ -15,7 +15,7 @@ const toggleVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
     variant: {
       default: "bg-transparent",
@@ -30,7 +30,7 @@ const toggleVariants = cva("", {
   },
   defaultVariants: {
     variant: "default",
-    font: "retro",
+    font: "cyphercn",
     size: "default",
   },
 });
@@ -48,7 +48,7 @@ function Toggle({ children, font, ...props }: BitToggleProps) {
       className={cn(
         "rounded-none active:translate-y-1 transition-transform relative border-none active:translate-x-1",
         "data-[state=on]:bg-primary data-[state=on]:text-primary-foreground",
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
     >

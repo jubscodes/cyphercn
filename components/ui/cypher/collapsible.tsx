@@ -21,7 +21,7 @@ function Collapsible({ children, ...props }: BitCollapsibleProps) {
 
   return (
     <div className={cn("relative", className)}>
-      <ShadcnCollapsible {...props} className={cn(className, "retro")}>
+      <ShadcnCollapsible {...props} className={cn(className, "cyphercn")}>
         {children}
       </ShadcnCollapsible>
     </div>
@@ -36,7 +36,7 @@ function CollapsibleTrigger({
   return (
     <ShadcnCollapsibleTrigger
       data-slot="collapsible-trigger"
-      className={cn(className, "retro")}
+      className={cn(className, "cyphercn")}
       {...props}
     >
       {children}
@@ -52,7 +52,7 @@ function CollapsibleContent({
   return (
     <ShadcnCollapsibleContent
       data-slot="collapsible-content"
-      className={cn(className, "retro")}
+      className={cn(className, "cyphercn")}
       {...props}
     >
       {children}

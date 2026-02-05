@@ -35,7 +35,7 @@ function DialogTitle({ ...props }: BitDialogProps) {
   const { className, font } = props;
   return (
     <ShadcnDialogTitle
-      className={cn(font !== "normal" && "retro", className)}
+      className={cn(font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
       {...props}
     />
   );
@@ -45,11 +45,11 @@ export const dialogContentVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -63,7 +63,7 @@ function DialogContent({
     <ShadcnDialogContent
       className={cn(
         "bg-card rounded-none border-none",
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
       {...props}

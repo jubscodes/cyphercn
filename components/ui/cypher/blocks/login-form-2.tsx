@@ -91,7 +91,7 @@ export function LoginForm({
         </CardContent>
       </Card>
       <div
-        className={`${"retro"} text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary`}
+        className={`${"cyphercn"} text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary`}
       >
         <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
       </div>

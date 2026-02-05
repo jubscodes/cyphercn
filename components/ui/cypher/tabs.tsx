@@ -16,15 +16,15 @@ export const tabsVariants = cva("", {
   variants: {
     variant: {
       default: "bg-primary",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -40,7 +40,7 @@ function Tabs({ className, ...props }: BitTabsProps) {
   return (
     <ShadcnTabs
       {...props}
-      className={cn("relative", font !== "normal" && "retro", className)}
+      className={cn("relative", font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
     />
   );
 }

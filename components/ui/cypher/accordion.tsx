@@ -40,7 +40,7 @@ function AccordionItem({
 
 export interface BitAccordionTriggerProps
   extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> {
-  font?: "normal" | "retro";
+  font?: "cyphercn" | "normal";
 }
 
 function AccordionTrigger({
@@ -51,7 +51,7 @@ function AccordionTrigger({
 }: BitAccordionTriggerProps) {
   return (
     <ShadcnAccordionTrigger
-      className={cn(font !== "normal" && "retro", className)}
+      className={cn(font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
       {...props}
     >
       {children}
@@ -61,7 +61,7 @@ function AccordionTrigger({
 
 export interface BitAccordionContentProps
   extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> {
-  font?: "normal" | "retro";
+  font?: "cyphercn" | "normal";
 }
 
 function AccordionContent({
@@ -75,7 +75,7 @@ function AccordionContent({
       <ShadcnAccordionContent
         className={cn(
           "overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
-          font !== "normal" && "retro",
+          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
           className
         )}
         {...props}

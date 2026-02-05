@@ -15,11 +15,11 @@ export const inputVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -36,7 +36,7 @@ interface InputOTPProps {
   onChange?: (value: string) => unknown;
   children?: React.ReactNode;
   className?: string;
-  font?: "normal" | "retro";
+  font?: "normal" | "cyphercn";
 }
 
 export const InputOTP = ({
@@ -55,7 +55,7 @@ export const InputOTP = ({
         value={value}
         onChange={onChange}
         {...otherProps}
-        className={cn(font !== "normal" && "retro", className)}
+        className={cn(font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
       >
         {children}
       </ShadcnInputOTP>
@@ -82,7 +82,7 @@ export const InputOTPSlot = ({
         {...props}
         className={cn(
           "pl-1 size-full text-center text-xl tracking-widest z-0 ring-0 border-transparent ",
-          font !== "normal" && "retro",
+          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
           className
         )}
       />

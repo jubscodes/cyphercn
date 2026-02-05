@@ -22,11 +22,11 @@ export const inputVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -57,7 +57,7 @@ function SelectValue({ ...props }: BitSelectValueProps) {
 
   return (
     <ShadcnSelectValue
-      className={cn(font !== "normal" && "retro")}
+      className={cn(font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}
       {...props}
     />
   );
@@ -77,7 +77,7 @@ function SelectTrigger({ children, ...props }: BitSelectTriggerProps) {
       className={cn(
         "relative border-y-6 border-foreground dark:border-ring",
         className,
-        font !== "normal" && "retro"
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal"
       )}
     >
       <ShadcnSelectTrigger
@@ -111,7 +111,7 @@ function SelectContent({
   return (
     <ShadcnSelectContent
       className={cn(
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className,
         "relative rounded-none border-4 border-foreground dark:border-ring -ml-1 mt-1"
       )}

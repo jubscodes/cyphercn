@@ -1,17 +1,17 @@
-import { type BitProgressProps, Progress } from "@/components/ui/cypher/progress";
+import { type CypherProgressProps, Progress } from "@/components/ui/cypher/progress";
 import { cn } from "@/lib/utils";
 
 interface XpBarProps extends React.ComponentProps<"div"> {
   className?: string;
-  props?: BitProgressProps;
-  variant?: "retro" | "default";
+  props?: CypherProgressProps;
+  variant?: CypherProgressProps["variant"];
   value?: number;
   levelUpMessage?: string;
 }
 
 export default function XpBar({
   className,
-  variant,
+  variant = "bar",
   value,
   levelUpMessage = "LEVEL UP!",
   ...props
@@ -30,7 +30,7 @@ export default function XpBar({
       {isLevelUp && (
         <div
           className={cn(
-            "retro",
+            "cyphercn",
             "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
             "text-[0.625rem] text-black",
             "pointer-events-none whitespace-nowrap z-10",

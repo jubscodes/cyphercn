@@ -1,97 +1,89 @@
-import { type VariantProps, cva } from "class-variance-authority";
+"use client";
 
+import * as React from "react";
+import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-import { Badge as ShadcnBadge } from "@/components/ui/badge";
+import "./styles/cyberpunk.css";
 
-export const badgeVariants = cva("", {
-  variants: {
-    font: {
-      normal: "",
-      retro: "retro",
-    },
-    variant: {
-      default: "border-primary bg-primary",
-      destructive: "border-destructive bg-destructive",
-      outline: "border-background bg-background",
-      secondary: "border-secondary bg-secondary",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-  },
-});
+// =============================================================================
+// Badge Component - MS-DOS terminal style with multiple variants
+// =============================================================================
 
-export interface BitButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+export const badgeVariants = cva(
+  "cyphercn inline-flex items-center text-xs uppercase tracking-wider",
+  {
+    variants: {
+      variant: {
+        default: "border border-foreground px-2 py-0.5",
+        outline: "border border-foreground/50 px-2 py-0.5 text-foreground/70",
+        filled: "bg-foreground text-background px-2 py-0.5",
+        secondary: "border border-secondary bg-secondary/20 px-2 py-0.5",
+        destructive: "border border-red-500 text-red-500 px-2 py-0.5",
+        // Terminal-style variants
+        bracket: "before:content-['['] after:content-[']'] px-1",
+        tag: "before:content-['<'] after:content-['>'] px-0.5 text-foreground/70",
+        dot: "gap-1.5",
+      },
+      glow: {
+        true: "phosphor-glow",
+        false: "",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      glow: false,
+    },
+  }
+);
+
+export interface CypherBadgeProps
+  extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof badgeVariants> {
-  asChild?: boolean;
+  status?: "active" | "inactive" | "warning" | "error";
 }
 
+const statusColors = {
+  active: "text-foreground",
+  inactive: "text-foreground/30",
+  warning: "text-yellow-500",
+  error: "text-red-500",
+};
+
+const statusDotColors = {
+  active: "bg-foreground",
+  inactive: "bg-foreground/30",
+  warning: "bg-yellow-500 animate-pulse",
+  error: "bg-red-500",
+};
+
 function Badge({
-  children,
-  className = "",
-  font,
+  className,
   variant,
+  glow = false,
+  status,
+  children,
   ...props
-}: BitButtonProps) {
-  const color = badgeVariants({ variant, font });
-
-  const classes = className.split(" ");
-
-  // visual classes for badge and sidebars
-  const visualClasses = classes.filter(
-    (c) =>
-      c.startsWith("bg-") ||
-      c.startsWith("border-") ||
-      c.startsWith("text-") ||
-      c.startsWith("rounded-")
-  );
-
-  // Container should accept all non-visual utility classes (e.g., size, spacing, layout)
-  const containerClasses = classes.filter(
-    (c) =>
-      !(
-        c.startsWith("bg-") ||
-        c.startsWith("border-") ||
-        c.startsWith("text-") ||
-        c.startsWith("rounded-")
-      )
-  );
-
+}: CypherBadgeProps) {
   return (
-    <div className={cn("relative inline-flex items-stretch", containerClasses)}>
-      <ShadcnBadge
-        {...props}
-        className={cn(
-          "h-full",
-          "rounded-none",
-          "w-full",
-          font !== "normal" && "retro",
-          visualClasses
-        )}
-        variant={variant}
-      >
-        {children}
-      </ShadcnBadge>
-
-      {/* Left pixel bar */}
-      <div
-        className={cn(
-          "-left-1.5 absolute inset-y-[4px] w-1.5",
-          color,
-          visualClasses
-        )}
-      />
-      {/* Right pixel bar */}
-      <div
-        className={cn(
-          "-right-1.5 absolute inset-y-[4px] w-1.5",
-          color,
-          visualClasses
-        )}
-      />
-    </div>
+    <span
+      className={cn(
+        badgeVariants({ variant, glow }),
+        status && statusColors[status],
+        className
+      )}
+      {...props}
+    >
+      {variant === "dot" && (
+        <span
+          className={cn(
+            "inline-block w-1.5 h-1.5 rounded-full",
+            status ? statusDotColors[status] : "bg-foreground"
+          )}
+        />
+      )}
+      {children}
+    </span>
   );
 }
 

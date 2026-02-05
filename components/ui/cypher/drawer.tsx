@@ -31,7 +31,7 @@ function DrawerTitle({
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Title>) {
   return (
-    <ShadcnDrawerTitle className={cn(className, "retro")} {...props}>
+    <ShadcnDrawerTitle className={cn(className, "cyphercn")} {...props}>
       {children}
     </ShadcnDrawerTitle>
   );
@@ -43,7 +43,7 @@ function DrawerDescription({
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Description>) {
   return (
-    <ShadcnDrawerDescription className={cn(className, "retro")} {...props}>
+    <ShadcnDrawerDescription className={cn(className, "cyphercn")} {...props}>
       {children}
     </ShadcnDrawerDescription>
   );
@@ -62,7 +62,7 @@ function DrawerTrigger({
         !asChild &&
           "border-foreground dark:border-ring hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-4 focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
         className,
-        "retro"
+        "cyphercn"
       )}
       asChild={asChild}
       {...props}
@@ -76,11 +76,11 @@ export const drawerVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -110,7 +110,7 @@ function DrawerContent({
           side === "bottom" &&
             "border-t-4 data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom inset-x-0 bottom-0 h-auto",
           className,
-          "retro"
+          "cyphercn"
         )}
         {...props}
       >
@@ -127,7 +127,7 @@ function DrawerHeader({
   ...props
 }: React.ComponentProps<"div">) {
   return (
-    <ShadcnDrawerHeader className={cn("", className, "retro")} {...props}>
+    <ShadcnDrawerHeader className={cn("", className, "cyphercn")} {...props}>
       {children}
     </ShadcnDrawerHeader>
   );
@@ -139,7 +139,7 @@ function DrawerFooter({
   ...props
 }: React.ComponentProps<"div">) {
   return (
-    <ShadcnDrawerFooter className={cn("", className, "retro")} {...props}>
+    <ShadcnDrawerFooter className={cn("", className, "cyphercn")} {...props}>
       {children}
     </ShadcnDrawerFooter>
   );

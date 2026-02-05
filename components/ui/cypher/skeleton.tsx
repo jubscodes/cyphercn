@@ -15,7 +15,7 @@ function Skeleton({ children, ...props }: BitSkeletonProp) {
     <div className={cn("relative animate-pulse", className)}>
       <ShadcnSkeleton
         {...props}
-        className={cn("rounded-none border-none bg-accent", "retro", className)}
+        className={cn("rounded-none border-none bg-accent", "cyphercn", className)}
       >
         {children}
       </ShadcnSkeleton>

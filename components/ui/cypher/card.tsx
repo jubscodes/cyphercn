@@ -1,126 +1,144 @@
+"use client";
+
+import * as React from "react";
 import { type VariantProps, cva } from "class-variance-authority";
-
 import { cn } from "@/lib/utils";
-
-import {
-  Card as ShadcnCard,
-  CardAction as ShadcnCardAction,
-  CardContent as ShadcnCardContent,
-  CardDescription as ShadcnCardDescription,
-  CardFooter as ShadcnCardFooter,
-  CardHeader as ShadcnCardHeader,
-  CardTitle as ShadcnCardTitle,
-} from "@/components/ui/card";
 
 import "./styles/cyberpunk.css";
 
-export const cardVariants = cva("", {
-  variants: {
-    font: {
-      normal: "",
-      retro: "retro",
-    },
-  },
-  defaultVariants: {
-    font: "retro",
-  },
-});
+// =============================================================================
+// Card Component - MS-DOS panel style with title over border
+// =============================================================================
 
-export interface BitCardProps
-  extends React.ComponentProps<"div">,
+export const cardVariants = cva(
+  "cyphercn relative border border-foreground bg-background p-4",
+  {
+    variants: {
+      variant: {
+        default: "",
+        double: "border-2 border-double",
+        glow: "phosphor-border-glow",
+      },
+      scanlines: {
+        true: "crt-scanlines-subtle overflow-hidden",
+        false: "",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      scanlines: false,
+    },
+  }
+);
+
+export interface CypherCardProps
+  extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof cardVariants> {
-  asChild?: boolean;
+  title?: string;
+  glow?: boolean;
 }
 
-function Card({ ...props }: BitCardProps) {
-  const { className, font } = props;
-
+function Card({
+  className,
+  title,
+  variant,
+  glow = false,
+  scanlines = false,
+  children,
+  ...props
+}: CypherCardProps) {
   return (
     <div
       className={cn(
-        "relative border-y-6 border-foreground dark:border-ring !p-0",
+        cardVariants({ variant, scanlines }),
+        glow && "phosphor-border-glow",
         className
       )}
+      {...props}
     >
-      <ShadcnCard
-        {...props}
-        className={cn(
-          "rounded-none border-0 !w-full",
-          font !== "normal" && "retro",
-          className
-        )}
-      />
-
-      <div
-        className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
+      {title && (
+        <div className="dos-panel-title bg-background text-foreground/70 text-xs uppercase tracking-wider">
+          {title}
+        </div>
+      )}
+      {children}
     </div>
   );
 }
 
-function CardHeader({ ...props }: BitCardProps) {
-  const { className, font } = props;
-
+function CardHeader({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <ShadcnCardHeader
-      className={cn(font !== "normal" && "retro", className)}
+    <div
+      className={cn(
+        "cyphercn flex flex-col gap-1.5 pb-3 mb-3 border-b border-foreground/30",
+        className
+      )}
       {...props}
     />
   );
 }
 
-function CardTitle({ ...props }: BitCardProps) {
-  const { className, font } = props;
-
+function CardTitle({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <ShadcnCardTitle
-      className={cn(font !== "normal" && "retro", className)}
+    <h3
+      className={cn(
+        "cyphercn text-sm font-semibold tracking-wider uppercase phosphor-glow",
+        className
+      )}
       {...props}
     />
   );
 }
 
-function CardDescription({ ...props }: BitCardProps) {
-  const { className, font } = props;
-
+function CardDescription({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <ShadcnCardDescription
-      className={cn(font !== "normal" && "retro", className)}
+    <p
+      className={cn("cyphercn-normal text-xs text-muted-foreground", className)}
       {...props}
     />
   );
 }
 
-function CardAction({ ...props }: BitCardProps) {
-  const { className, font } = props;
-
+function CardContent({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <ShadcnCardAction
-      className={cn(font !== "normal" && "retro", className)}
+    <div className={cn("cyphercn-normal text-sm", className)} {...props} />
+  );
+}
+
+function CardFooter({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      className={cn(
+        "cyphercn flex items-center gap-2 pt-3 mt-3 border-t border-foreground/30",
+        className
+      )}
       {...props}
     />
   );
 }
 
-function CardContent({ ...props }: BitCardProps) {
-  const { className, font } = props;
-
+function CardAction({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <ShadcnCardContent
-      className={cn(font !== "normal" && "retro", className)}
-      {...props}
-    />
-  );
-}
-
-function CardFooter({ ...props }: BitCardProps) {
-  const { className, font } = props;
-
-  return (
-    <ShadcnCardFooter
-      data-slot="card-footer"
-      className={cn(font !== "normal" && "retro", className)}
+    <div
+      className={cn("cyphercn flex items-center gap-2", className)}
       {...props}
     />
   );
@@ -129,9 +147,9 @@ function CardFooter({ ...props }: BitCardProps) {
 export {
   Card,
   CardHeader,
-  CardFooter,
   CardTitle,
-  CardAction,
   CardDescription,
   CardContent,
+  CardFooter,
+  CardAction,
 };

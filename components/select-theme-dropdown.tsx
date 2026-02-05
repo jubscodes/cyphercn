@@ -31,7 +31,7 @@ export function SelectThemeDropdown({
       value={activeTheme}
     >
       <SelectTrigger className="w-full">
-        <SelectValue font="retro" placeholder="Select theme" />
+        <SelectValue font="cyphercn" placeholder="Select theme" />
       </SelectTrigger>
       <SelectContent>
         {themes.map((theme) => (

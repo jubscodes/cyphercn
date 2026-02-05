@@ -13,11 +13,11 @@ export const checkboxVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -38,7 +38,7 @@ function Checkbox({ className, font, ...props }: BitCheckboxProps) {
       <ShadcnCheckbox
         className={cn(
           "rounded-none size-5 ring-0 border-none",
-          font !== "normal" && "retro",
+          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
           className
         )}
         {...props}

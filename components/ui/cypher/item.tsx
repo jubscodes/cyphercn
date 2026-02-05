@@ -48,13 +48,13 @@ const itemVariants = cva(
       },
       font: {
         normal: "",
-        retro: "retro",
+        cyphercn: "cyphercn",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
-      font: "retro",
+      font: "cyphercn",
     },
   }
 );
@@ -63,7 +63,7 @@ function Item({
   className,
   variant = "default",
   size = "default",
-  font = "retro",
+  font = "cyphercn",
   asChild = false,
   ...props
 }: React.ComponentProps<"div"> &

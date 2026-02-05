@@ -10,7 +10,7 @@ export const enemyHealthDisplayVariants = cva("", {
   variants: {
     variant: {
       default: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
     size: {
       sm: "text-xs",
@@ -27,7 +27,7 @@ export const enemyHealthDisplayVariants = cva("", {
     },
   },
   defaultVariants: {
-    variant: "retro",
+    variant: "cyphercn",
     size: "md",
     textColor: "red",
   },
@@ -42,7 +42,7 @@ export interface EnemyHealthDisplayProps
   maxHealth: number;
   showLevel?: boolean;
   showHealthText?: boolean;
-  healthBarVariant?: "retro" | "default";
+  healthBarVariant?: "default" | "ascii" | "blocks" | "dots" | "bar";
   healthBarColor?: string;
   enemyNameColor?: string;
 }
@@ -58,7 +58,7 @@ export default function EnemyHealthDisplay({
   maxHealth,
   showLevel = true,
   showHealthText = true,
-  healthBarVariant = "retro",
+  healthBarVariant = "bar",
   healthBarColor = "bg-red-500",
   enemyNameColor = "text-foreground",
   ...props
@@ -100,8 +100,8 @@ export default function EnemyHealthDisplay({
           props={{ progressBg: healthBarColor }}
         />
 
-        {/* Health percentage overlay for retro variant */}
-        {healthBarVariant === "retro" && (
+        {/* Health percentage overlay for bar variant */}
+        {healthBarVariant === "bar" && (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-xs font-bold text-white drop-shadow-lg bg-black/50 px-1">
               {Math.round(healthPercentage)}%

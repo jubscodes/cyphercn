@@ -1,15 +1,15 @@
-import { type BitProgressProps, Progress } from "@/components/ui/cypher/progress";
+import { type CypherProgressProps, Progress } from "@/components/ui/cypher/progress";
 
 interface ManaBarProps extends React.ComponentProps<"div"> {
   className?: string;
-  props?: BitProgressProps;
-  variant?: "retro" | "default";
+  props?: CypherProgressProps;
+  variant?: CypherProgressProps["variant"];
   value?: number;
 }
 
 export default function ManaBar({
   className,
-  variant,
+  variant = "bar",
   value,
   ...props
 }: ManaBarProps) {

@@ -22,11 +22,11 @@ export const popOverVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -44,7 +44,7 @@ function PopoverContent({
     <ShadcnPopoverContent
       className={cn(
         "relative bg-card border-y-6 border-foreground dark:border-ring rounded-none mt-1",
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
       {...props}

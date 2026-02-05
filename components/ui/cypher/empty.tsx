@@ -16,12 +16,12 @@ const emptyMediaVariants = cva(
       },
       font: {
         normal: "",
-        retro: "retro",
+        cyphercn: "cyphercn",
       },
     },
     defaultVariants: {
       variant: "default",
-      font: "retro",
+      font: "cyphercn",
     },
   }
 );
@@ -30,13 +30,13 @@ function Empty({
   className,
   font,
   ...props
-}: React.ComponentProps<"div"> & { font?: "normal" | "retro" }) {
+}: React.ComponentProps<"div"> & { font?: "normal" | "cyphercn" }) {
   return (
     <div
       data-slot="empty"
       className={cn(
         "flex min-w-0 flex-1 flex-col items-center justify-center gap-6 rounded-lg border-dashed p-6 text-center text-balance md:p-12",
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
       {...props}
