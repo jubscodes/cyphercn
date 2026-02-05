@@ -14,8 +14,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-border border-b bg-background/95">
       <div className="flex h-full w-full max-w-[1400px] items-center gap-2 px-2 md:mx-auto md:gap-5 md:px-6">
         <Link className="hidden items-center gap-2 md:flex" href="/">
-          <h2 className={`${"retro"} hidden font-bold text-xs md:inline-block`}>
-            cyphercn
+          <h2
+            className={`${"cyphercn"} hidden font-bold text-xs md:inline-block`}
+          >
+            CypherCN
           </h2>
         </Link>
 
@@ -67,7 +69,7 @@ export async function StarsCount() {
   const stars = json.stargazers_count ?? 0;
 
   return (
-    <span className="retro mt-0.5 w-12 text-muted-foreground text-xs tabular-nums">
+    <span className="cyphercn mt-0.5 w-12 text-muted-foreground text-xs tabular-nums">
       {stars >= 1000 ? `${(stars / 1000).toFixed(1)}k` : stars.toLocaleString()}
     </span>
   );

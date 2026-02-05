@@ -50,31 +50,70 @@
   line-height: 1.5;
 }
 
+/* Legacy aliases - map old class names to new terminal styles */
+.retro {
+  font-family: var(--font-mono), 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.font-retro {
+  font-family: var(--font-mono), 'Courier New', monospace;
+}
+
 /* ==========================================================================
    Phosphor Glow Effects
+
+   Uses --phosphor-glow from globals.css theme (50% opacity color).
+   Three intensity levels: subtle (default), medium, intense.
    ========================================================================== */
 
+/* Subtle glow - soft halo, good for text and borders */
 .phosphor-glow {
   text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px var(--glow-color, currentColor),
-    0 0 82px var(--glow-color, currentColor);
+    0 0 2px var(--phosphor-glow, currentColor),
+    0 0 4px var(--phosphor-glow, currentColor);
 }
 
-.phosphor-glow-subtle {
+/* Medium glow - visible aura */
+.phosphor-glow-medium {
+  text-shadow:
+    0 0 4px var(--phosphor-glow, currentColor),
+    0 0 8px var(--phosphor-glow, currentColor),
+    0 0 12px var(--phosphor-glow, currentColor);
+}
+
+/* Intense glow - full neon effect (use sparingly) */
+.phosphor-glow-intense {
   text-shadow:
     0 0 5px #fff,
-    0 0 10px var(--glow-color, currentColor),
-    0 0 20px var(--glow-color, currentColor);
+    0 0 10px var(--phosphor-glow, currentColor),
+    0 0 20px var(--phosphor-glow, currentColor),
+    0 0 40px var(--phosphor-glow, currentColor);
 }
 
+/* Legacy alias for subtle */
+.phosphor-glow-subtle {
+  text-shadow:
+    0 0 2px var(--phosphor-glow, currentColor),
+    0 0 4px var(--phosphor-glow, currentColor);
+}
+
+/* Border glow - subtle box-shadow for cards/panels */
 .phosphor-border-glow {
   box-shadow:
-    0 0 5px var(--glow-color, currentColor),
-    0 0 10px var(--glow-color, currentColor),
-    inset 0 0 10px var(--glow-color, currentColor);
+    0 0 4px var(--phosphor-glow, currentColor),
+    0 0 8px var(--phosphor-glow, currentColor);
+  border: 1px solid currentColor;
+}
+
+/* Border glow - medium intensity */
+.phosphor-border-glow-medium {
+  box-shadow:
+    0 0 6px var(--phosphor-glow, currentColor),
+    0 0 12px var(--phosphor-glow, currentColor),
+    inset 0 0 4px var(--phosphor-glow, currentColor);
   border: 1px solid currentColor;
 }
 
@@ -196,24 +235,33 @@
   @keyframes phosphor-pulse {
     0%, 100% {
       text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px var(--glow-color, currentColor),
-        0 0 82px var(--glow-color, currentColor);
+        0 0 2px var(--phosphor-glow, currentColor),
+        0 0 6px var(--phosphor-glow, currentColor);
     }
     50% {
       text-shadow:
-        0 0 5px #fff,
-        0 0 7px #fff,
-        0 0 15px #fff,
-        0 0 30px var(--glow-color, currentColor),
-        0 0 60px var(--glow-color, currentColor);
+        0 0 4px var(--phosphor-glow, currentColor),
+        0 0 10px var(--phosphor-glow, currentColor),
+        0 0 16px var(--phosphor-glow, currentColor);
     }
   }
 
   .phosphor-pulse {
     animation: phosphor-pulse 2s ease-in-out infinite;
+  }
+
+  /* Subtle pulse animation */
+  @keyframes phosphor-pulse-subtle {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .phosphor-pulse-subtle {
+    animation: phosphor-pulse-subtle 3s ease-in-out infinite;
   }
 }
 

@@ -9,7 +9,7 @@ export function DashboardHeader() {
   const { toggleSidebar, open } = useSidebar();
 
   return (
-    <header className="sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-foreground border-b-4 bg-background/95 dark:border-ring">
+    <header className="sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-foreground border-b bg-background/95 dark:border-ring">
       <div className="flex h-full w-full items-center gap-4 pr-4 md:pr-6">
         <Button onClick={toggleSidebar} variant="ghost">
           {open ? (
@@ -90,7 +90,7 @@ export function DashboardHeader() {
         <div className="ml-auto flex items-center gap-2">
           <Link href="https://github.com/jubscodes/cyphercn-ui" target="_blank">
             <Button
-              className="retro flex items-center gap-2"
+              className="cyphercn flex items-center gap-2"
               size="sm"
               variant="ghost"
             >

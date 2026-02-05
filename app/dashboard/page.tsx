@@ -63,7 +63,7 @@ export default function Page() {
       }
     >
       <div className="flex h-screen w-full border">
-        <Sidebar className="retro border-foreground border-r-4 dark:border-ring">
+        <Sidebar className="cyphercn border-foreground border-r dark:border-ring">
           <SidebarContent>
             <SidebarGroup>
               <SidebarGroupLabel>Application</SidebarGroupLabel>

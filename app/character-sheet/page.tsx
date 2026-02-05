@@ -5,11 +5,12 @@ export default function CharacterSheetPage() {
     <div className="min-h-svh bg-background p-4 md:p-8 lg:p-12">
       <div className="mx-auto max-w-4xl">
         <div className="mb-8 text-center">
-          <h1 className="retro mb-2 font-bold text-3xl">
+          <h1 className="cyphercn mb-2 font-bold text-3xl">
             Character Sheet Demo
           </h1>
           <p className="text-muted-foreground">
-            A full-page view of the 8-bit RPG character sheet component
+            A full-page view of the terminal-styled RPG character sheet
+            component
           </p>
         </div>
 

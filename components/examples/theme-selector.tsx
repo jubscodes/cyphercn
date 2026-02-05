@@ -19,7 +19,7 @@ export default function ThemeSelectorExample() {
         <div className="space-y-2">
           <div className="font-medium text-sm">Theme Selector</div>
           <p className="text-muted-foreground text-xs">
-            Theme selector with retro themes dropdown
+            Theme selector with terminal themes dropdown
           </p>
           <div className="w-64">
             <SelectThemeDropdown
@@ -44,7 +44,7 @@ export default function ThemeSelectorExample() {
       </div>
 
       {/* Available Themes Grid */}
-      <div className="retro space-y-4">
+      <div className="cyphercn space-y-4">
         <h4 className="font-medium text-md">Available Themes</h4>
         <p className="text-muted-foreground text-sm">
           Click on any theme below to switch to it instantly

@@ -252,7 +252,7 @@ export default function ProfileCard() {
   return (
     <Card className="min-w-sm max-w-md">
       <CardHeader className="flex flex-col items-center gap-2">
-         <Avatar className="size-20" variant="${profile.isRetroAvatar ? "pixel" : "retro"}">
+         <Avatar className="size-20" variant="${profile.isRetroAvatar ? "framed" : "default"}">
           <AvatarImage src="${valueForAttr(avatarSrcForCode)}" alt="${valueForAttr(profile.name || "Avatar")}" />
           <AvatarFallback>{getInitials("${valueForAttr(profile.name)}")}</AvatarFallback>
         </Avatar>
@@ -342,11 +342,13 @@ export default function ProfileCard() {
   const [, setUrlTheme] = useUrlTheme();
 
   return (
-    <div className="retro space-y-6 p-4 md:p-6">
+    <div className="cyphercn space-y-6 p-4 md:p-6">
       <div className="space-y-2">
-        <h1 className="retro font-bold text-xl md:text-2xl">Profile Creator</h1>
+        <h1 className="cyphercn font-bold text-xl md:text-2xl">
+          Profile Creator
+        </h1>
         <p className="max-w-2xl text-muted-foreground text-sm">
-          Fill the form to preview your retro profile card. Use full URLs or
+          Fill the form to preview your terminal profile card. Use full URLs or
           just usernames for GitHub and X.
         </p>
       </div>

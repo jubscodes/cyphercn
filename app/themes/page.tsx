@@ -6,14 +6,14 @@ import { ThemeSelector } from "@/components/theme-selector";
 export const metadata: Metadata = {
   title: "Themes",
   description:
-    "8-bit retro themes to give your designs that nostalgic edge. 👾 Paired with 8-bit components, they're the perfect combo.",
+    "Terminal themes for your command center interface. Paired with CypherCN components for the authentic MS-DOS aesthetic.",
 };
 
 export default function ThemesPage() {
   return (
     <>
       <div className="flex flex-col gap-5 p-4 py-10">
-        <h1 className={"retro font-bold md:text-2xl"}>
+        <h1 className={"cyphercn font-bold md:text-2xl"}>
           Add colors. Make it yours.
         </h1>
         <p className="max-w-2xl text-sm md:text-base">
