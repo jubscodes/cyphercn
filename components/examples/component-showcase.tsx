@@ -104,7 +104,7 @@ export default function ComponentShowcase() {
           </AlertDescription>
         </Alert>
 
-        <Alert variant="warning">
+        <Alert variant="destructive">
           <AlertTitle>Warning</AlertTitle>
           <AlertDescription>
             Low health! Find a health potion quickly.
@@ -255,7 +255,7 @@ export default function ComponentShowcase() {
                 level={25}
                 maxHealth={1000}
               />
-              <ManaBar className="mt-5" value={75} variant="bar" />
+              <ManaBar className="mt-5" value={75} variant="default" />
             </div>
           </CardContent>
         </Card>
