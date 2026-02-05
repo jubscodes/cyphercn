@@ -1,0 +1,227 @@
+/**
+ * CypherCN Cyberpunk Stylesheet
+ *
+ * Terminal-aesthetic CSS foundation for the CypherCN component library.
+ * All colors use OKLCH for perceptually uniform brightness across variants.
+ */
+
+/* ==========================================================================
+   CSS Custom Properties
+   ========================================================================== */
+
+:root {
+  /* Z-index scale for layered effects */
+  --z-scanlines: 10;
+  --z-vignette: 20;
+  --z-reflection: 21;
+
+  /* Monochrome phosphor variants (OKLCH at 65% lightness for uniform brightness) */
+  --phosphor-green: oklch(65% 0.25 145);
+  --phosphor-amber: oklch(65% 0.20 85);
+  --phosphor-cyan: oklch(65% 0.20 195);
+  --phosphor-red: oklch(65% 0.25 25);
+  --phosphor-white: oklch(65% 0 0);
+  --phosphor-orange: oklch(65% 0.22 55);
+
+  /* RGB fallbacks for older browsers (Safari <15.4, older Chrome) */
+  --phosphor-green-fallback: rgb(0, 255, 136);
+  --phosphor-amber-fallback: rgb(255, 191, 0);
+  --phosphor-cyan-fallback: rgb(0, 255, 255);
+  --phosphor-red-fallback: rgb(255, 77, 77);
+  --phosphor-white-fallback: rgb(229, 229, 229);
+  --phosphor-orange-fallback: rgb(255, 153, 51);
+}
+
+/* ==========================================================================
+   Typography Classes
+   ========================================================================== */
+
+.cyphercn {
+  font-family: var(--font-mono), 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.cyphercn-normal {
+  font-family: var(--font-mono), 'Courier New', monospace;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Phosphor Glow Effects
+   ========================================================================== */
+
+.phosphor-glow {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--glow-color, currentColor),
+    0 0 82px var(--glow-color, currentColor);
+}
+
+.phosphor-glow-subtle {
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px var(--glow-color, currentColor),
+    0 0 20px var(--glow-color, currentColor);
+}
+
+.phosphor-border-glow {
+  box-shadow:
+    0 0 5px var(--glow-color, currentColor),
+    0 0 10px var(--glow-color, currentColor),
+    inset 0 0 10px var(--glow-color, currentColor);
+  border: 1px solid currentColor;
+}
+
+/* ==========================================================================
+   CRT Scanline Overlays
+   ========================================================================== */
+
+.crt-scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-scanlines::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: var(--z-scanlines, 10);
+  pointer-events: none;
+}
+
+.crt-scanlines-subtle {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-scanlines-subtle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.1) 50%
+  );
+  background-size: 100% 2px;
+  z-index: var(--z-scanlines, 10);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Theme Utility Classes
+   ========================================================================== */
+
+.theme-green {
+  color: var(--phosphor-green-fallback);
+  color: var(--phosphor-green);
+  --glow-color: var(--phosphor-green);
+}
+
+.theme-amber {
+  color: var(--phosphor-amber-fallback);
+  color: var(--phosphor-amber);
+  --glow-color: var(--phosphor-amber);
+}
+
+.theme-cyan {
+  color: var(--phosphor-cyan-fallback);
+  color: var(--phosphor-cyan);
+  --glow-color: var(--phosphor-cyan);
+}
+
+.theme-red {
+  color: var(--phosphor-red-fallback);
+  color: var(--phosphor-red);
+  --glow-color: var(--phosphor-red);
+}
+
+.theme-white {
+  color: var(--phosphor-white-fallback);
+  color: var(--phosphor-white);
+  --glow-color: var(--phosphor-white);
+}
+
+.theme-orange {
+  color: var(--phosphor-orange-fallback);
+  color: var(--phosphor-orange);
+  --glow-color: var(--phosphor-orange);
+}
+
+/* ==========================================================================
+   DOS Panel Title Utility
+   ========================================================================== */
+
+.dos-panel-title {
+  position: absolute;
+  top: -0.5em;
+  left: 1em;
+  padding: 0 0.5em;
+}
+
+/* ==========================================================================
+   Box-Drawing Character Support
+   ========================================================================== */
+
+.box-drawing {
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Animated Glow with Accessibility
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes phosphor-pulse {
+    0%, 100% {
+      text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px var(--glow-color, currentColor),
+        0 0 82px var(--glow-color, currentColor);
+    }
+    50% {
+      text-shadow:
+        0 0 5px #fff,
+        0 0 7px #fff,
+        0 0 15px #fff,
+        0 0 30px var(--glow-color, currentColor),
+        0 0 60px var(--glow-color, currentColor);
+    }
+  }
+
+  .phosphor-pulse {
+    animation: phosphor-pulse 2s ease-in-out infinite;
+  }
+}
+
+/* ==========================================================================
+   Pixelated Image Rendering
+   ========================================================================== */
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
