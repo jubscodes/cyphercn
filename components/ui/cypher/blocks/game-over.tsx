@@ -192,12 +192,15 @@ export default function GameOver({
               <span>Exit</span>
             </Button>
           </div>
-          <div className="relative hidden bg-muted md:block">
-            <img
-              src="/images/8-bit-skull.png"
-              alt="Image"
-              className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale opacity-70"
-            />
+          <div className="relative hidden bg-muted md:flex md:items-center md:justify-center">
+            <pre className="text-foreground font-mono text-xs leading-none">
+{`    ___
+   /   \\
+  | x x |
+  |  ^  |
+  | \\_/ |
+   \\___/`}
+            </pre>
           </div>
         </CardContent>
       </Card>
