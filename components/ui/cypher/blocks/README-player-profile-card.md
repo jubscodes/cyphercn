@@ -1,12 +1,12 @@
 # Player Profile Card Component
 
-A comprehensive, reusable Player Profile Card component for the 8bitcn UI library that displays detailed player information in a retro, 8-bit style.
+A comprehensive, reusable Player Profile Card component for the CypherCN UI library that displays detailed player information in a terminal-styled aesthetic.
 
 ## Features
 
-- **Retro 8-bit Design**: Consistent with 8bitcn visual style using pixel borders and retro fonts
-- **Player Avatar**: Uses the 8bitcn Avatar component with pixel frame styling
-- **Comprehensive Stats Display**: Health, Mana, and Experience bars with retro styling
+- **Terminal-Styled Design**: Consistent with CypherCN visual style using thin double borders and monospace fonts
+- **Player Avatar**: Uses the CypherCN Avatar component with framed styling
+- **Comprehensive Stats Display**: Health, Mana, and Experience bars with terminal styling
 - **Multiple Variants**: Default, Compact, and Detailed layouts
 - **Custom Stats Support**: Add custom stat bars with configurable colors
 - **Responsive Design**: Adapts to different screen sizes
@@ -29,7 +29,7 @@ import PlayerProfileCard from "@/components/ui/cypher/blocks/player-profile-card
     mana: { current: 320, max: 400 },
     experience: { current: 7500, max: 10000 }
   }}
-  bio="A legendary pixel warrior who has conquered countless dungeons."
+  bio="A legendary thin warrior who has conquered countless dungeons."
 />
 
 // Compact variant
@@ -115,7 +115,7 @@ interface CustomStat {
   value: number; // Current value
   max?: number; // Maximum value (for percentage calculation)
   color?: string; // Background color class (e.g., "bg-red-500")
-  variant?: "retro" | "default"; // Progress bar variant
+  variant?: "terminal" | "default"; // Progress bar variant
 }
 ```
 
@@ -141,13 +141,13 @@ interface CustomStat {
 
 ## Styling
 
-The component uses the 8bitcn design system:
+The component uses the CypherCN design system:
 
-- **Retro Font**: All text uses the retro font class
-- **Pixel Borders**: Card uses the 8bitcn Card component with pixel borders
-- **Progress Bars**: Health, Mana, and Experience use the 8bitcn Progress component with retro variant
-- **Avatar**: Uses the 8bitcn Avatar component with pixel frame styling
-- **Badge**: Level display uses the 8bitcn Badge component
+- **Terminal Font**: All text uses the terminal font class
+- **Terminal Borders**: Card uses the CypherCN Card component with thin borders
+- **Progress Bars**: Health, Mana, and Experience use the CypherCN Progress component with terminal variant
+- **Avatar**: Uses the CypherCN Avatar component with thin frame styling
+- **Badge**: Level display uses the CypherCN Badge component
 
 ## Responsive Behavior
 
@@ -171,7 +171,7 @@ The component uses the 8bitcn design system:
     mana: { current: 320, max: 400 },
     experience: { current: 7500, max: 10000 },
   }}
-  bio="A legendary pixel warrior who has conquered countless dungeons and defeated the most fearsome bosses."
+  bio="A legendary thin warrior who has conquered countless dungeons and defeated the most fearsome bosses."
 />
 ```
 
@@ -201,8 +201,8 @@ The component uses the 8bitcn design system:
 
 ## Dependencies
 
-- `@/components/ui/cypher/avatar` - Avatar component with pixel styling
-- `@/components/ui/cypher/card` - Card component with retro borders
+- `@/components/ui/cypher/avatar` - Avatar component with thin styling
+- `@/components/ui/cypher/card` - Card component with terminal borders
 - `@/components/ui/cypher/badge` - Badge component for level display
 - `@/components/ui/cypher/health-bar` - Health bar component
 - `@/components/ui/cypher/mana-bar` - Mana bar component
@@ -212,9 +212,9 @@ The component uses the 8bitcn design system:
 ## Installation
 
 ```bash
-pnpm dlx shadcn@latest add @8bitcn/player-profile-card
+pnpm dlx shadcn@latest add @CypherCN/player-profile-card
 ```
 
 ## License
 
-Part of the 8bitcn UI library. See the main project license for details.
+Part of the CypherCN UI library. See the main project license for details.
