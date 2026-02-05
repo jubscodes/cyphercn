@@ -94,7 +94,7 @@ export default function LoadingScreen({
       {/* Title */}
       <h2
         className={cn(
-          "retro text-xl md:text-2xl text-center",
+          "cyphercn text-xl md:text-2xl text-center",
           "animate-pulse"
         )}
       >
@@ -105,14 +105,14 @@ export default function LoadingScreen({
       <div className="w-full max-w-md space-y-2">
         {showPercentage && (
           <div className="flex justify-end">
-            <span className="retro text-xs text-muted-foreground">
+            <span className="cyphercn text-xs text-muted-foreground">
               {Math.round(displayProgress)}%
             </span>
           </div>
         )}
         <Progress
           value={displayProgress}
-          variant="retro"
+          variant="default"
           progressBg="bg-primary"
           className="h-4"
         />
@@ -121,7 +121,7 @@ export default function LoadingScreen({
       {/* Tips section */}
       {tips.length > 0 && (
         <div className="w-full max-w-md min-h-16 flex items-center justify-center">
-          <p className="retro text-[0.625rem] md:text-xs text-center text-muted-foreground leading-relaxed animate-pulse">
+          <p className="cyphercn text-[0.625rem] md:text-xs text-center text-muted-foreground leading-relaxed animate-pulse">
             {tips[currentTipIndex]}
           </p>
         </div>
