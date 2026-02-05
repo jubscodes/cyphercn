@@ -118,7 +118,7 @@ export default function PlayerProfileCard({
           <div className="space-y-1">
             <div className="flex justify-between items-center">
               <span className="text-sm font-medium">Health</span>
-              <span className="text-[9px] sm:text-xs text-muted-foreground retro">
+              <span className="text-[9px] sm:text-xs text-muted-foreground cyphercn-normal">
                 {stats.health.current}/{stats.health.max}
               </span>
             </div>
@@ -135,7 +135,7 @@ export default function PlayerProfileCard({
           <div className="space-y-1">
             <div className="flex justify-between items-center">
               <span className="text-sm font-medium">Mana</span>
-              <span className="text-[9px] sm:text-xs text-muted-foreground retro">
+              <span className="text-[9px] sm:text-xs text-muted-foreground cyphercn-normal">
                 {stats.mana.current}/{stats.mana.max}
               </span>
             </div>
@@ -148,7 +148,7 @@ export default function PlayerProfileCard({
           <div className="space-y-1">
             <div className="flex justify-between items-center">
               <span className="text-sm font-medium">Experience</span>
-              <span className="text-[9px] sm:text-xs text-muted-foreground retro">
+              <span className="text-[9px] sm:text-xs text-muted-foreground cyphercn-normal">
                 {stats.experience.current}/{stats.experience.max} XP
               </span>
             </div>
@@ -173,7 +173,7 @@ export default function PlayerProfileCard({
                 <div key={index} className="space-y-1">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">{stat.label}</span>
-                    <span className="text-[9px] sm:text-xs text-muted-foreground retro">
+                    <span className="text-[9px] sm:text-xs text-muted-foreground cyphercn-normal">
                       {stat.value}
                       {stat.max ? `/${stat.max}` : ""}
                     </span>

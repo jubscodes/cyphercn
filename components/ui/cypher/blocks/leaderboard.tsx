@@ -150,7 +150,7 @@ export function Leaderboard({
         <div className="space-y-2">
           {sortedPlayers.length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
-              <p className="retro text-sm">No players yet</p>
+              <p className="cyphercn text-sm">No players yet</p>
             </div>
           ) : (
             sortedPlayers.map((player) => {
@@ -173,7 +173,7 @@ export function Leaderboard({
                         {player.avatar && (
                           <AvatarImage src={player.avatar} alt={player.name} />
                         )}
-                        <AvatarFallback className="retro text-xs">
+                        <AvatarFallback className="cyphercn text-xs">
                           {player.avatarFallback ||
                             player.name.charAt(0).toUpperCase()}
                         </AvatarFallback>
@@ -194,7 +194,7 @@ export function Leaderboard({
                       <div className="flex items-center gap-4">
                         <span
                           className={cn(
-                            "font-medium truncate retro text-xs md:text-sm",
+                            "font-medium truncate cyphercn text-xs md:text-sm",
                             player.isCurrentPlayer && "text-primary font-bold"
                           )}
                         >
@@ -210,7 +210,7 @@ export function Leaderboard({
                   <div className="flex items-center gap-2">
                     <span
                       className={cn(
-                        "font-bold retro text-xs md:text-sm",
+                        "font-bold cyphercn-normal text-xs md:text-sm",
                         rankVariant === "first" && "text-yellow-600",
                         rankVariant === "second" && "text-gray-600",
                         rankVariant === "third" && "text-amber-700",
@@ -231,7 +231,7 @@ export function Leaderboard({
         {sortedPlayers.length > 0 && (
           <div className="mt-4 pt-4">
             <p
-              className={cn("text-xs text-muted-foreground text-center retro")}
+              className={cn("text-xs text-muted-foreground text-center cyphercn-normal")}
             >
               Showing top {Math.min(sortedPlayers.length, maxPlayers)} players
             </p>
