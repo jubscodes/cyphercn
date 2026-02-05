@@ -27,11 +27,11 @@ export const alertDialogVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -87,7 +87,7 @@ function AlertDialogContent({
         <ShadcnAlertDialogContent
           className={cn(
             "rounded-none border-y-6 border-foreground dark:border-ring",
-            font !== "normal" && "retro",
+            font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
             className
           )}
           {...props}
@@ -151,7 +151,7 @@ function AlertDialogAction({
       {...props}
     >
       {props.children}
-      {/* Pixelated border */}
+      {/* Terminal border */}
       <div className="absolute -top-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
       <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
       <div className="absolute -bottom-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />

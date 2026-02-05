@@ -44,7 +44,6 @@ export default function ChapterIntro({
             src={backgroundSrc}
             alt=""
             className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.7]"
-            style={{ imageRendering: "pixelated" }}
           />
 
           {/* Darken/gradient overlay for readability */}

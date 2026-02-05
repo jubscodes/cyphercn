@@ -110,7 +110,7 @@ function VictoryScreen({
                             className="size-8 object-contain rounded-full"
                           />
                         )}
-                        <ItemTitle className="leading-normal retro">
+                        <ItemTitle className="leading-normal cyphercn">
                           {item.name}{" "}
                         </ItemTitle>
                       </div>
