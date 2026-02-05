@@ -11,7 +11,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 // Menu items.
 const items = [

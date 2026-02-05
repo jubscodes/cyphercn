@@ -10,7 +10,7 @@ import {
   PopoverTrigger as ShadcnPopoverTrigger,
 } from "@/components/ui/popover";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 const Popover = ShadcnPopover;
 

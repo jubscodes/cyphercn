@@ -19,7 +19,7 @@ import {
   DropdownMenuTrigger as ShadcnDropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 const DropdownMenu = ShadcnDropdownMenu;
 

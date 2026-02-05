@@ -8,7 +8,7 @@ import { Circle } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const menubarVariants = cva("", {
   variants: {

@@ -23,7 +23,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 function Command({
   className,

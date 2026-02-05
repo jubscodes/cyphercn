@@ -18,7 +18,7 @@ import {
   CardTitle,
 } from "@/components/ui/cypher/card";
 import { ScrollArea } from "@/components/ui/cypher/scroll-area";
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export type QuestStatus = "active" | "completed" | "failed" | "pending";
 

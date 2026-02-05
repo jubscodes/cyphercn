@@ -4,7 +4,7 @@ import React from "react";
 
 import { toast as sonnerToast } from "sonner";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export function toast(toast: string) {
   return sonnerToast.custom((id) => <Toast id={id} title={toast} />);

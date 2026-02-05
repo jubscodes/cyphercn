@@ -6,7 +6,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 import { Separator } from "./separator";
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 function ItemGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (

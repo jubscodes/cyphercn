@@ -13,7 +13,7 @@ import {
   AccordionTrigger as ShadcnAccordionTrigger,
 } from "@/components/ui/accordion";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export interface BitAccordionItemProps
   extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {

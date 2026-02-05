@@ -9,7 +9,7 @@ import {
   InputOTPSlot as ShadcnInputOTPSlot,
 } from "@/components/ui/input-otp";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const inputVariants = cva("", {
   variants: {

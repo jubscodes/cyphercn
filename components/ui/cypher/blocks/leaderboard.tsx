@@ -17,7 +17,7 @@ import {
   CardTitle,
 } from "@/components/ui/cypher/card";
 import { Separator } from "@/components/ui/cypher/separator";
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export interface LeaderboardPlayer {
   id: string;

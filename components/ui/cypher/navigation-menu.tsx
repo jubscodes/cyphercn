@@ -14,7 +14,7 @@ import {
   NavigationMenuTrigger as ShadcnNavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 

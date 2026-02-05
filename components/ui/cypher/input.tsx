@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 import { Input as ShadcnInput } from "@/components/ui/input";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const inputVariants = cva("", {
   variants: {

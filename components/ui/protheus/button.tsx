@@ -2,7 +2,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
 
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export const buttonVariants = cva(
   "cyphercn inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 outline-none uppercase tracking-wider",

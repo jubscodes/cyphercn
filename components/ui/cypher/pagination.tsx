@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/pagination";
 
 import type { Button } from "../button";
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const paginationVariants = cva("", {
   variants: {

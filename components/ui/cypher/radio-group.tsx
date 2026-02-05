@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 import { RadioGroup as ShadcnRadioGroup } from "@/components/ui/radio-group";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const radioGroupVariants = cva("", {
   variants: {

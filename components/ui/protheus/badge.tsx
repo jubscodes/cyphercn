@@ -1,7 +1,7 @@
 import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export const badgeVariants = cva(
   "cyphercn inline-flex items-center text-xs uppercase tracking-wider",

@@ -13,7 +13,7 @@ import {
   BreadcrumbSeparator as ShadcnBreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const breadcrumbVariants = cva("", {
   variants: {

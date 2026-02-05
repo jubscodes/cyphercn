@@ -12,7 +12,7 @@ import {
   CardTitle as ShadcnCardTitle,
 } from "@/components/ui/card";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const cardVariants = cva("", {
   variants: {

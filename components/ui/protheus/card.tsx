@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export interface CyphercnCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;

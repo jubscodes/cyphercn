@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 import { Button as ShadcnButton } from "@/components/ui/button";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const buttonVariants = cva("", {
   variants: {

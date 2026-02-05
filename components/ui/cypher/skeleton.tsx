@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 import { Skeleton as ShadcnSkeleton } from "@/components/ui/skeleton";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export interface BitSkeletonProp extends React.ComponentProps<"div"> {
   asChild?: boolean;

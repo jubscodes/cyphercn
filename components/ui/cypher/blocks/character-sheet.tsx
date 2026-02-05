@@ -15,7 +15,7 @@ import HealthBar from "@/components/ui/cypher/health-bar";
 import ManaBar from "@/components/ui/cypher/mana-bar";
 import { Progress } from "@/components/ui/cypher/progress";
 import { Separator } from "@/components/ui/cypher/separator";
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export interface PrimaryAttribute {
   name: string;

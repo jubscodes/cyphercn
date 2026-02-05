@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/cypher/input";
 import { Label } from "@/components/ui/cypher/label";
 
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export function LoginForm({
   className,

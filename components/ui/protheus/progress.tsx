@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export interface CyphercnProgressProps extends React.HTMLAttributes<HTMLDivElement> {
   value?: number;

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 import { Textarea as ShadcnTextarea } from "@/components/ui/textarea";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const inputVariants = cva("", {
   variants: {

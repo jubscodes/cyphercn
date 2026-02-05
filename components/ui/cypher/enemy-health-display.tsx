@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 import HealthBar from "@/components/ui/cypher/health-bar";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const enemyHealthDisplayVariants = cva("", {
   variants: {

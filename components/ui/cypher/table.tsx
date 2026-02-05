@@ -17,7 +17,7 @@ import {
   TableRow as ShadcnTableRow,
 } from "@/components/ui/table";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const tableVariants = cva("", {
   variants: {

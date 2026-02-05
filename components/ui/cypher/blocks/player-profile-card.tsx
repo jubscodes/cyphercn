@@ -12,7 +12,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/cypher/card";
 import HealthBar from "@/components/ui/cypher/health-bar";
 import ManaBar from "@/components/ui/cypher/mana-bar";
 import { Progress } from "@/components/ui/cypher/progress";
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export interface PlayerStats {
   health?: {

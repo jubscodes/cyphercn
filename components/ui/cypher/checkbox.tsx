@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { Checkbox as ShadcnCheckbox } from "@/components/ui/checkbox";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const checkboxVariants = cva("", {
   variants: {

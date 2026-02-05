@@ -13,7 +13,7 @@ import {
   TooltipTrigger as ShadcnTooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const tooltipVariants = cva("", {
   variants: {

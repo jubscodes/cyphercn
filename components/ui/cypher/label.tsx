@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 import { Label as ShadcnLabel } from "@/components/ui/label";
 
-import "./styles/retro.css";
+import "./styles/cyberpunk.css";
 
 export const inputVariants = cva("", {
   variants: {
