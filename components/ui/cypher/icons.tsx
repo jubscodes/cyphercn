@@ -15,7 +15,7 @@ export function HomeIcon({ className = "", size = 16 }: IconProps) {
       xmlns="http://www.w3.org/2000/svg"
       stroke="currentColor"
       strokeWidth="0.25"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       aria-label="home"
     >
       <rect x="192" y="192" width="14" height="14" rx="1"></rect>
@@ -116,7 +116,7 @@ export function InboxIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <rect
@@ -141,7 +141,7 @@ export function CalendarIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <rect
@@ -172,7 +172,7 @@ export function SearchIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <circle
@@ -201,7 +201,7 @@ export function SettingsIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <rect x="6" y="2" width="4" height="2" fill="currentColor" />
@@ -220,7 +220,7 @@ export function ActivityIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <rect x="2" y="12" width="2" height="2" fill="currentColor" />
@@ -237,7 +237,7 @@ export function MenuIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <rect x="2" y="3" width="12" height="2" fill="currentColor" />
@@ -253,7 +253,7 @@ export function SunIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <circle cx="8" cy="8" r="3" fill="currentColor" />
@@ -275,7 +275,7 @@ export function MoonIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <path
@@ -292,7 +292,7 @@ export function PanelLeftIcon({ className = "", size = 16 }: IconProps) {
       width={size}
       height={size}
       viewBox="0 0 16 16"
-      className={`retro ${className}`}
+      className={`cyphercn ${className}`}
       fill="currentColor"
     >
       <rect x="2" y="2" width="6" height="12" fill="currentColor" />
