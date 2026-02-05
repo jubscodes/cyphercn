@@ -17,9 +17,9 @@
           "target": "components/ui/cypher/blocks/chapter-intro.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/card.tsx",
@@ -41,9 +41,9 @@
           "target": "components/ui/cypher/button.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -60,9 +60,9 @@
           "target": "components/ui/cypher/input.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -79,9 +79,9 @@
           "target": "components/ui/cypher/toast.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -98,9 +98,9 @@
           "target": "components/ui/cypher/input-otp.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -117,9 +117,9 @@
           "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -136,9 +136,9 @@
           "target": "components/ui/cypher/textarea.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -155,9 +155,9 @@
           "target": "components/ui/cypher/calendar.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -195,9 +195,9 @@
           "target": "components/ui/cypher/select.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -214,9 +214,9 @@
           "target": "components/ui/cypher/card.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -233,9 +233,9 @@
           "target": "components/ui/cypher/carousel.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -252,9 +252,9 @@
           "target": "components/ui/cypher/dialog.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -271,9 +271,9 @@
           "target": "components/ui/cypher/dropdown-menu.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -290,9 +290,9 @@
           "target": "components/ui/cypher/hover-card.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -309,9 +309,9 @@
           "target": "components/ui/cypher/popover.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -328,9 +328,9 @@
           "target": "components/ui/cypher/resizable.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -347,9 +347,9 @@
           "target": "components/ui/cypher/select.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -366,9 +366,9 @@
           "target": "components/ui/cypher/sheet.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -385,9 +385,9 @@
           "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -404,9 +404,9 @@
           "target": "components/ui/cypher/checkbox.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -424,9 +424,9 @@
           "target": "components/ui/cypher/scroll-area.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -443,9 +443,9 @@
           "target": "components/ui/cypher/switch.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -462,9 +462,9 @@
           "target": "components/ui/cypher/alert.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -481,9 +481,9 @@
           "target": "components/ui/cypher/alert-dialog.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -500,9 +500,9 @@
           "target": "components/ui/cypher/tooltip.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -519,9 +519,9 @@
           "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -538,9 +538,9 @@
           "target": "components/ui/cypher/skeleton.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -557,9 +557,9 @@
           "target": "components/ui/cypher/breadcrumb.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -576,9 +576,9 @@
           "target": "components/ui/cypher/collapsible.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -596,9 +596,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -625,9 +625,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -649,9 +649,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -673,9 +673,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -697,9 +697,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -733,9 +733,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -764,9 +764,9 @@
           "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -799,9 +799,9 @@
           "target": "components/ui/cypher/badge.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -818,9 +818,9 @@
           "target": "components/ui/cypher/slider.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -837,9 +837,9 @@
           "target": "components/ui/cypher/context-menu.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -856,9 +856,9 @@
           "target": "components/ui/cypher/menubar.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -875,9 +875,9 @@
           "target": "components/ui/cypher/toggle.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -894,9 +894,9 @@
           "target": "components/ui/cypher/table.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -913,9 +913,9 @@
           "target": "components/ui/cypher/tabs.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -937,9 +937,9 @@
           "target": "components/ui/cypher/popover.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -961,9 +961,9 @@
           "target": "components/ui/cypher/separator.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -994,9 +994,9 @@
           "target": "components/ui/cypher/radio-group.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1013,9 +1013,9 @@
           "target": "components/ui/cypher/pagination.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1047,9 +1047,9 @@
           "target": "components/ui/cypher/avatar.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1087,9 +1087,9 @@
           "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1127,9 +1127,9 @@
           "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1167,9 +1167,9 @@
           "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1212,9 +1212,9 @@
           "target": "components/ui/cypher/label.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1237,9 +1237,9 @@
           "target": "components/ui/cypher/chart.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1262,9 +1262,9 @@
           "target": "components/ui/cypher/chart.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1287,9 +1287,9 @@
           "target": "components/ui/cypher/chart.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1307,9 +1307,9 @@
           "target": "components/ui/cypher/blocks/main-menu.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/button.tsx",
@@ -1337,9 +1337,9 @@
           "target": "components/ui/cypher/blocks/pause-menu.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/button.tsx",
@@ -1367,9 +1367,9 @@
           "target": "components/ui/cypher/blocks/game-over.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/button.tsx",
@@ -1398,9 +1398,9 @@
           "target": "components/ui/cypher/blocks/audio-settings.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/switch.tsx",
@@ -1437,9 +1437,9 @@
           "target": "components/ui/cypher/toggle-group.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1457,9 +1457,9 @@
           "target": "components/ui/cypher/blocks/sidebar.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1476,9 +1476,9 @@
           "target": "components/ui/cypher/accordion.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1495,9 +1495,9 @@
           "target": "components/ui/cypher/drawer.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1514,9 +1514,9 @@
           "target": "components/ui/cypher/navigation-menu.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1534,9 +1534,9 @@
           "target": "components/ui/cypher/blocks/difficulty-select.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/button.tsx",
@@ -1564,9 +1564,9 @@
           "target": "components/ui/cypher/blocks/leaderboard.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/card.tsx",
@@ -1634,9 +1634,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1674,9 +1674,9 @@
           "target": "components/ui/cypher/scroll-area.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1694,9 +1694,9 @@
           "target": "components/ui/cypher/blocks/save-slots.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "components/ui/cypher/card.tsx",
@@ -1860,9 +1860,9 @@
           "target": "components/ui/sidebar.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1894,9 +1894,9 @@
           "target": "components/ui/cypher/select.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         },
         {
           "path": "app/retro-globals.css",
@@ -1932,9 +1932,9 @@
           "target": "components/ui/cypher/kbd.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -1962,9 +1962,9 @@
           "target": "components/theme-provider.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -2051,9 +2051,9 @@
           "target": "components/ui/cypher/separator.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -2086,9 +2086,9 @@
           "target": "components/ui/cypher/alert.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     },
@@ -2111,9 +2111,9 @@
           "target": "components/ui/cypher/progress.tsx"
         },
         {
-          "path": "components/ui/cypher/styles/retro.css",
+          "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
-          "target": "components/ui/cypher/styles/retro.css"
+          "target": "components/ui/cypher/styles/cyberpunk.css"
         }
       ]
     }

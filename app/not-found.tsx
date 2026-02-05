@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/cypher/button";
-import "@/components/ui/cypher/styles/retro.css";
+import "@/components/ui/cypher/styles/cyberpunk.css";
 
 export const metadata: Metadata = {
   title: "404 | 8bitcn/ui",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className="retro grid h-screen w-full place-content-center gap-5 bg-background px-4 text-center">
+    <div className="cyphercn grid h-screen w-full place-content-center gap-5 bg-background px-4 text-center">
       <Image
         alt="Pixel Orc 404"
         height={300}
