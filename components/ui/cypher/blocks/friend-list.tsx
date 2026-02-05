@@ -111,15 +111,11 @@ export default function FriendList({
               {players.map((player) => (
                 <div
                   key={player.id}
-                  className="relative rounded-none border-y-4 border-foreground dark:border-ring"
+                  className={cn(
+                    playerCardVariants({ status: "default" }),
+                    "rounded-none border border-foreground dark:border-ring"
+                  )}
                 >
-                  <div
-                    className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-                    aria-hidden="true"
-                  />
-                  <div
-                    className={cn(playerCardVariants({ status: "default" }))}
-                  >
                     <div className="flex items-center gap-3">
                       <Avatar
                         variant="framed"
@@ -181,7 +177,6 @@ export default function FriendList({
                       </div>
                     </div>
                   </div>
-                </div>
               ))}
             </div>
           </ScrollArea>

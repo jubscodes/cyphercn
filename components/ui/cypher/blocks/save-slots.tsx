@@ -56,7 +56,7 @@ const slotItemVariants = cva(
 );
 
 const previewFrameVariants = cva(
-    "flex items-center justify-center border-4 overflow-hidden flex-shrink-0",
+    "flex items-center justify-center border overflow-hidden flex-shrink-0",
     {
         variants: {
             state: {

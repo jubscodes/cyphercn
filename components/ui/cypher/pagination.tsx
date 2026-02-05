@@ -164,50 +164,18 @@ function PaginationLink({ ...props }: PaginationLinkProps) {
     <ShadcnPaginationLink
       className={cn(
         font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
-        className,
         "relative group",
         "bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent",
-        "rounded-none border-dashed border-y-4 border-transparent",
+        "rounded-none border-dashed border border-transparent",
         "dark:hover:border-ring dark:focus:border-ring",
         "hover:border-foreground focus:border-foreground",
         "active:border-transparent",
-        "data-[active=true]:border-none aria-[current=page]:border-none"
+        isActive && "border-foreground dark:border-ring border-solid",
+        className
       )}
       {...props}
     >
       {children}
-
-      {isActive && (
-        <div
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          style={{ zIndex: 10 }}
-        >
-          <div
-            className="absolute top-0 left-0 w-full h-1.5 bg-foreground dark:bg-ring pointer-events-none"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute left-0 bottom-0 w-full h-1.5 bg-foreground dark:bg-ring pointer-events-none"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute top-1 -left-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute bottom-1 -left-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute top-1 -right-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute bottom-1 -right-1 w-1.5 h-1/2 bg-foreground dark:bg-ring pointer-events-none"
-            aria-hidden="true"
-          />
-        </div>
-      )}
     </ShadcnPaginationLink>
   );
 }
@@ -219,13 +187,11 @@ function PaginationPrevious({
   return (
     <PaginationLink
       className={cn(
-        "relative group",
         "flex flex-row w-full text-sm",
         "bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent",
-        "rounded-none border-dashed border-y-4 border-transparent",
+        "rounded-none border-dashed border border-transparent",
         "hover:border-foreground focus:border-foreground active:border-transparent",
         "dark:hover:border-ring dark:focus:border-ring",
-        "data-[active=true]:border-none aria-[current=page]:border-none",
         font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
@@ -245,14 +211,11 @@ function PaginationNext({
   return (
     <PaginationLink
       className={cn(
-        "relative group",
         "flex flex-row w-full text-sm",
         "bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent",
-        "rounded-none border-dashed border-y-4 border-transparent",
+        "rounded-none border-dashed border border-transparent",
         "hover:border-foreground focus:border-foreground active:border-transparent",
         "dark:hover:border-ring dark:focus:border-ring",
-        "data-[active=true]:border-none aria-[current=page]:border-none",
-        "flex flex-row text-sm w-full",
         font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}

@@ -28,26 +28,14 @@ function Textarea({ ...props }: BitTextareaProps) {
   const { className, font } = props;
 
   return (
-    <div className={cn("relative w-full", className)}>
-      <ShadcnTextarea
-        {...props}
-        className={cn(
-          "rounded-none transition-transform ring-0 border-0",
-          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
-          className
-        )}
-      />
-
-      <div
-        className="absolute inset-0 border-y-6 -my-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
-
-      <div
-        className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
-    </div>
+    <ShadcnTextarea
+      {...props}
+      className={cn(
+        "rounded-none transition-transform ring-0 border border-foreground dark:border-ring",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
+        className
+      )}
+    />
   );
 }
 

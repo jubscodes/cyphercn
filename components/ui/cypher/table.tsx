@@ -22,7 +22,7 @@ import "./styles/cyberpunk.css";
 export const tableVariants = cva("", {
   variants: {
     variant: {
-      default: "p-4 py-2.5 border-y-6 border-foreground dark:border-ring",
+      default: "p-4 py-2.5 border border-foreground dark:border-ring",
       borderless: "",
     },
     font: {
@@ -48,18 +48,11 @@ function Table({
   return (
     <div
       className={cn(
-        "relative flex justify-center w-fit",
+        "flex justify-center w-fit",
         tableVariants({ font, variant })
       )}
     >
       <ShadcnTable className={className} {...props} />
-
-      {variant !== "borderless" && (
-        <div
-          className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-          aria-hidden="true"
-        />
-      )}
     </div>
   );
 }
@@ -67,7 +60,7 @@ function Table({
 function TableHeader({ className, ...props }: React.ComponentProps<"thead">) {
   return (
     <ShadcnTableHeader
-      className={cn(className, "border-b-4 border-foreground dark:border-ring")}
+      className={cn(className, "border-b border-foreground dark:border-ring")}
       {...props}
     />
   );
@@ -86,7 +79,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
     <ShadcnTableRow
       className={cn(
         className,
-        "border-dashed border-b-4 border-foreground dark:border-ring"
+        "border-dashed border-b border-foreground dark:border-ring"
       )}
       {...props}
     />

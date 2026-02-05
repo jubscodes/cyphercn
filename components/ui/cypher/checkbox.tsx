@@ -29,26 +29,14 @@ export interface BitCheckboxProps
 
 function Checkbox({ className, font, ...props }: BitCheckboxProps) {
   return (
-    <div
+    <ShadcnCheckbox
       className={cn(
-        "relative flex items-center justify-center border-y-6 border-foreground dark:border-ring",
+        "rounded-none size-5 ring-0 border border-foreground dark:border-ring",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
-    >
-      <ShadcnCheckbox
-        className={cn(
-          "rounded-none size-5 ring-0 border-none",
-          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
-          className
-        )}
-        {...props}
-      />
-
-      <div
-        className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
-    </div>
+      {...props}
+    />
   );
 }
 

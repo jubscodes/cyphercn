@@ -47,7 +47,7 @@ function DropdownMenuSubTrigger({
   return (
     <ShadcnDropdownMenuSubTrigger
       className={cn(
-        "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-dashed border-y-4 border-transparent focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
+        "hover:bg-transparent active:bg-transparent focus:bg-transparent rounded-none border-dashed border border-transparent focus:border-foreground hover:border-foreground dark:focus:border-ring bg-transparent data-[state=open]:bg-transparent data-[state=open]:border-foreground dark:data-[state=open]:border-ring",
         className
       )}
       {...props}
@@ -99,18 +99,13 @@ function DropdownMenuSubContent({
   return (
     <ShadcnDropdownMenuSubContent
       {...props}
-      className={cn("bg-popover", font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
+      className={cn(
+        "bg-popover rounded-none border border-foreground dark:border-ring",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
+        className
+      )}
     >
       {children}
-
-      <div
-        className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0 border-y-6 -my-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
     </ShadcnDropdownMenuSubContent>
   );
 }
@@ -127,19 +122,14 @@ function DropdownMenuContent({
 }: BitDropownMenuContentProps) {
   return (
     <ShadcnDropdownMenuContent
-      className={cn("mt-1 py-2", font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
+      className={cn(
+        "mt-1 py-2 rounded-none border border-foreground dark:border-ring",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
+        className
+      )}
       {...props}
     >
       {children}
-
-      <div
-        className="mt-2.5 absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="mt-1 absolute inset-0 border-y-6 -my-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
     </ShadcnDropdownMenuContent>
   );
 }

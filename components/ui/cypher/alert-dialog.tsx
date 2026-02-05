@@ -83,23 +83,16 @@ function AlertDialogContent({
   return (
     <AlertDialogPortal>
       <AlertDialogOverlay />
-      <>
-        <ShadcnAlertDialogContent
-          className={cn(
-            "rounded-none border-y-6 border-foreground dark:border-ring",
-            font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
-            className
-          )}
-          {...props}
-        >
-          {children}
-
-          <div
-            className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-            aria-hidden="true"
-          />
-        </ShadcnAlertDialogContent>
-      </>
+      <ShadcnAlertDialogContent
+        className={cn(
+          "rounded-none border border-foreground dark:border-ring",
+          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </ShadcnAlertDialogContent>
     </AlertDialogPortal>
   );
 }
@@ -144,31 +137,11 @@ function AlertDialogAction({
   return (
     <ShadcnAlertDialogAction
       className={cn(
-        "rounded-none active:translate-y-1 transition-transform relative bg-primary",
-        "ring-0 border-none",
+        "rounded-none active:translate-y-1 transition-transform bg-primary border border-foreground dark:border-ring",
         className
       )}
       {...props}
-    >
-      {props.children}
-      {/* Terminal border */}
-      <div className="absolute -top-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -bottom-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -bottom-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-1.5 -left-1.5 h-2/3 w-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-1.5 -right-1.5 h-2/3 w-1.5 bg-foreground dark:bg-ring" />
-      {/* Top shadow */}
-      <div className="absolute top-0 left-0 w-full h-1.5 bg-foreground/20" />
-      <div className="absolute top-1.5 left-0 w-3 h-1.5 bg-foreground/20" />
-      {/* Bottom shadow */}
-      <div className="absolute bottom-0 left-0 w-full h-1.5 bg-foreground/20" />
-      <div className="absolute bottom-1.5 right-0 w-3 h-1.5 bg-foreground/20" />
-    </ShadcnAlertDialogAction>
+    />
   );
 }
 
@@ -179,24 +152,11 @@ function AlertDialogCancel({
   return (
     <ShadcnAlertDialogCancel
       className={cn(
-        "rounded-none active:translate-y-1 transition-transform relative bg-background",
-        "ring-0 border-none",
+        "rounded-none active:translate-y-1 transition-transform bg-background border border-foreground dark:border-ring",
         className
       )}
       {...props}
-    >
-      {props.children}
-      <div className="absolute -top-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -top-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -bottom-1.5 w-1/2 left-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute -bottom-1.5 w-1/2 right-1.5 h-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 left-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute bottom-0 right-0 size-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-1.5 -left-1.5 h-2/3 w-1.5 bg-foreground dark:bg-ring" />
-      <div className="absolute top-1.5 -right-1.5 h-2/3 w-1.5 bg-foreground dark:bg-ring" />
-    </ShadcnAlertDialogCancel>
+    />
   );
 }
 

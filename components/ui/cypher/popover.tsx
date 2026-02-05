@@ -43,18 +43,13 @@ function PopoverContent({
   return (
     <ShadcnPopoverContent
       className={cn(
-        "relative bg-card border-y-6 border-foreground dark:border-ring rounded-none mt-1",
+        "bg-card border border-foreground dark:border-ring rounded-none mt-1",
         font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
       {...props}
     >
       {children}
-
-      <div
-        className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
     </ShadcnPopoverContent>
   );
 }

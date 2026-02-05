@@ -76,22 +76,15 @@ export const InputOTPSlot = ({
   ...props
 }: SharedProps & { index?: number }) => {
   return (
-    <div className="relative size-12 border-y-6 border-foreground dark:border-ring">
-      <ShadcnInputOTPSlot
-        index={index}
-        {...props}
-        className={cn(
-          "pl-1 size-full text-center text-xl tracking-widest z-0 ring-0 border-transparent ",
-          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
-          className
-        )}
-      />
-
-      <div
-        className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
-      />
-    </div>
+    <ShadcnInputOTPSlot
+      index={index}
+      {...props}
+      className={cn(
+        "size-12 text-center text-xl tracking-widest ring-0 border border-foreground dark:border-ring rounded-none",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
+        className
+      )}
+    />
   );
 };
 

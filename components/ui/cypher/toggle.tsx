@@ -46,29 +46,14 @@ function Toggle({ children, font, ...props }: BitToggleProps) {
     <ShadcnToggle
       {...props}
       className={cn(
-        "rounded-none active:translate-y-1 transition-transform relative border-none active:translate-x-1",
+        "rounded-none active:translate-y-1 transition-transform relative active:translate-x-1",
         "data-[state=on]:bg-primary data-[state=on]:text-primary-foreground",
+        variant === "outline" && "border border-foreground dark:border-ring",
         font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
     >
       {children}
-
-      <>
-        {variant === "outline" && (
-          <>
-            <div
-              className="absolute inset-0 border-y-6 -my-1.5 border-foreground dark:border-ring pointer-events-none"
-              aria-hidden="true"
-            />
-
-            <div
-              className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-              aria-hidden="true"
-            />
-          </>
-        )}
-      </>
     </ShadcnToggle>
   );
 }

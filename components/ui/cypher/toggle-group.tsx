@@ -54,27 +54,14 @@ function ToggleGroupItem({ ...props }: BitToggleGroupItemProps) {
   return (
     <ShadcnToggleGroupItem
       className={cn(
-        "relative transition-transform active:translate-x-1 active:translate-y-1",
-        className,
-        font === "cyphercn" ? "cyphercn" : "cyphercn-normal"
+        "relative transition-transform active:translate-x-1 active:translate-y-1 rounded-none",
+        variant === "outline" && "border border-foreground dark:border-ring",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
+        className
       )}
       {...props}
     >
-      {" "}
-      {children}{" "}
-      {variant === "outline" && (
-        <>
-          {" "}
-          <div
-            className="absolute inset-0 -my-1.5 border-y-6 border-foreground dark:border-ring pointer-events-none"
-            aria-hidden="true"
-          />{" "}
-          <div
-            className="absolute inset-0 -mx-1.5 border-x-6 border-foreground dark:border-ring pointer-events-none"
-            aria-hidden="true"
-          />{" "}
-        </>
-      )}{" "}
+      {children}
     </ShadcnToggleGroupItem>
   );
 }

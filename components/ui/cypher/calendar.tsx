@@ -34,7 +34,7 @@ function Calendar({ className, classNames, font, ...props }: CalendarProps) {
   return (
     <div
       className={cn(
-        "bg-popover relative border-y-6 border-foreground dark:border-ring w-max",
+        "bg-popover border border-foreground dark:border-ring w-max",
         className
       )}
     >
@@ -206,11 +206,6 @@ function Calendar({ className, classNames, font, ...props }: CalendarProps) {
           },
         }}
         {...props}
-      />
-
-      <div
-        className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-        aria-hidden="true"
       />
     </div>
   );
