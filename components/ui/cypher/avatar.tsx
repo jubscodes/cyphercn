@@ -12,89 +12,37 @@ export const avatarVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
     variant: {
       default: "",
-      retro: "",
-      pixel: "",
+      cyphercn: "",
+      framed: "",
     },
   },
   defaultVariants: {
-    font: "retro",
-    variant: "pixel",
+    font: "cyphercn",
+    variant: "framed",
   },
 });
 
 const Avatar = forwardRef<
   React.ComponentRef<typeof AvatarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> & {
-    font?: "normal" | "retro";
-    variant?: "default" | "retro" | "pixel";
+    font?: "normal" | "cyphercn";
+    variant?: "default" | "cyphercn" | "framed";
   }
->(({ className = "", font, variant = "pixel", ...props }, ref) => {
-  const isPixel = variant === "pixel";
+>(({ className = "", font, variant = "framed", ...props }, ref) => {
+  const isFramed = variant === "framed";
 
   return (
     <div className={cn("relative size-max", className)}>
-      {/* Pixel frame (only show if pixel variant) */}
-      {isPixel && (
+      {/* Double border frame (only show if framed variant) */}
+      {isFramed && (
         <div
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="absolute inset-0 pointer-events-none border-2 border-double border-foreground dark:border-ring rounded-full"
           style={{ zIndex: 10 }}
-        >
-          {/* Top section - Row 1 */}
-          <div className="absolute top-0 left-[23%] right-[23%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Top section - Row 2 */}
-          <div className="absolute top-[6.25%] left-[17%] right-[17%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Top section - Row 3 */}
-          <div className="absolute top-[12.5%] left-[11%] h-[7%] bg-foreground dark:bg-ring w-[20%]"></div>
-          <div className="absolute top-[12.5%] right-[11%] h-[7%] bg-foreground dark:bg-ring w-[20%]"></div>
-
-          {/* Top section - Row 4 */}
-          <div className="absolute top-[18.75%] left-[5%] w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[18.75%] right-[5%] w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Top section - Row 5 */}
-          <div className="absolute top-[25%] left-0 w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[25%] right-0 w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Top section - Rows 6-7 */}
-          <div className="absolute top-[31.25%] left-0 w-[13.5%] h-[13%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[31.25%] right-0 w-[13.5%] h-[13%] bg-foreground dark:bg-ring"></div>
-
-          {/* Top section - Rows 8-10 */}
-          <div className="absolute top-[43.75%] left-0 w-[13.5%] h-[7%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[43.75%] right-0 w-[13.5%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Bottom section - Rows 8-10 (mirror) */}
-          <div className="absolute top-[50%] left-0 w-[13.5%] h-[7%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[50%] right-0 w-[13.5%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Bottom section - Rows 6-7 (mirror) */}
-          <div className="absolute top-[56.25%] left-0 w-[13.5%] h-[13%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[56.25%] right-0 w-[13.5%] h-[13%] bg-foreground dark:bg-ring"></div>
-
-          {/* Bottom section - Row 5 (mirror) */}
-          <div className="absolute top-[68.75%] left-0 w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[68.75%] right-0 w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Bottom section - Row 4 (mirror) */}
-          <div className="absolute top-[75%] left-[5%] w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-          <div className="absolute top-[75%] right-[5%] w-[20%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Bottom section - Row 3 (mirror) */}
-          <div className="absolute top-[81.25%] left-[11%] h-[7%] bg-foreground dark:bg-ring w-[20%]"></div>
-          <div className="absolute top-[81.25%] right-[11%] h-[7%] bg-foreground dark:bg-ring w-[20%]"></div>
-
-          {/* Bottom section - Row 2 (mirror) */}
-          <div className="absolute top-[87.5%] left-[17%] right-[17%] h-[7%] bg-foreground dark:bg-ring"></div>
-
-          {/* Bottom section - Row 1 (mirror) */}
-          <div className="absolute bottom-0 left-[23%] right-[23%] h-[7%] bg-foreground dark:bg-ring"></div>
-        </div>
+        />
       )}
 
       <AvatarPrimitive.Root
@@ -102,17 +50,17 @@ const Avatar = forwardRef<
         data-slot="avatar"
         className={cn(
           "relative flex size-10 shrink-0 overflow-hidden text-xs",
-          !isPixel && "rounded-none",
-          isPixel && "rounded-full",
-          font !== "normal" && "retro",
-          variant === "retro" && "image-rendering-pixelated",
+          !isFramed && "rounded-none",
+          isFramed && "rounded-full",
+          font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
+          variant === "cyphercn" && "image-rendering-pixelated",
           className
         )}
         {...props}
       />
 
-      {/* Original border styling (only show if not pixel variant) */}
-      {!isPixel && (
+      {/* Thin border styling (default and cyphercn variants) */}
+      {!isFramed && (
         <>
           <div className="absolute top-0 left-0 w-full h-1.5 bg-foreground dark:bg-ring pointer-events-none" />
           <div className="absolute bottom-0 w-full h-1.5 bg-foreground dark:bg-ring pointer-events-none" />
@@ -129,8 +77,8 @@ Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 interface BitAvatarImageProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
-  font?: "normal" | "retro";
-  variant?: "default" | "retro" | "pixel";
+  font?: "normal" | "cyphercn";
+  variant?: "default" | "cyphercn" | "framed";
 }
 
 const AvatarImage = forwardRef<
@@ -143,7 +91,7 @@ const AvatarImage = forwardRef<
       data-slot="avatar-image"
       className={cn(
         "aspect-square h-full w-full",
-        font === "retro" && "retro",
+        font === "cyphercn" && "cyphercn",
         className
       )}
       {...props}

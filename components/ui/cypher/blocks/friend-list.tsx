@@ -92,7 +92,7 @@ export default function FriendList({
       className={cn("flex flex-col gap-6 w-full h-full", className)}
       {...props}
     >
-      <Card data-slot="friend-list" font={"retro"}>
+      <Card data-slot="friend-list">
         <CardHeader>
           <CardTitle className="text-xl sm:text-2xl  text-center gap-2">
             Friends (
@@ -122,8 +122,7 @@ export default function FriendList({
                   >
                     <div className="flex items-center gap-3">
                       <Avatar
-                        variant="pixel"
-                        font="retro"
+                        variant="framed"
                         className="size-6 md:size-10"
                       >
                         <AvatarImage src={player.avatar} alt={player.name} />

@@ -48,7 +48,7 @@ export interface PlayerProfileCardProps {
     value: number;
     max?: number;
     color?: string;
-    variant?: "retro" | "default";
+    variant?: "bar" | "default";
   }>;
 }
 
@@ -83,7 +83,7 @@ export default function PlayerProfileCard({
     <Card className={cn("w-full max-w-md", className)} {...props}>
       <CardHeader className="pb-4">
         <div className="flex items-center gap-4">
-          <Avatar className="size-16" variant="pixel" font="retro">
+          <Avatar className="size-16" variant="framed">
             <AvatarImage src={avatarSrc} alt={playerName} />
             <AvatarFallback className="text-lg">
               {avatarFallback || playerName.charAt(0).toUpperCase()}
@@ -124,7 +124,7 @@ export default function PlayerProfileCard({
             </div>
             <HealthBar
               value={healthPercentage}
-              variant="retro"
+              variant="default"
               className="h-3"
             />
           </div>
@@ -139,7 +139,7 @@ export default function PlayerProfileCard({
                 {stats.mana.current}/{stats.mana.max}
               </span>
             </div>
-            <ManaBar value={manaPercentage} variant="retro" className="h-3" />
+            <ManaBar value={manaPercentage} variant="default" className="h-3" />
           </div>
         )}
 
@@ -154,7 +154,7 @@ export default function PlayerProfileCard({
             </div>
             <Progress
               value={experiencePercentage}
-              variant="retro"
+              variant="default"
               progressBg="bg-yellow-500"
               className="h-3"
             />
@@ -180,7 +180,7 @@ export default function PlayerProfileCard({
                   </div>
                   <Progress
                     value={percentage}
-                    variant={stat.variant || "retro"}
+                    variant={stat.variant || "bar"}
                     progressBg={stat.color || "bg-primary"}
                     className="h-3"
                   />

@@ -31,7 +31,7 @@ export default function Dialogue({
   return (
     <div className={cn("flex gap-3", className)} {...props}>
       {player && (
-        <Avatar variant="retro" className="size-16">
+        <Avatar variant="framed" className="size-16">
           <AvatarImage src={avatarSrc} alt={avatarFallback} />
           <AvatarFallback>{avatarFallback}</AvatarFallback>
         </Avatar>
@@ -42,7 +42,7 @@ export default function Dialogue({
       </Alert>
 
       {!player && (
-        <Avatar variant="retro" className="size-16">
+        <Avatar variant="framed" className="size-16">
           <AvatarImage src={avatarSrc} alt={avatarFallback} />
           <AvatarFallback>{avatarFallback}</AvatarFallback>
         </Avatar>

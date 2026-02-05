@@ -50,11 +50,11 @@ export const characterSheetVariants = cva("", {
   variants: {
     font: {
       normal: "",
-      retro: "retro",
+      cyphercn: "cyphercn",
     },
   },
   defaultVariants: {
-    font: "retro",
+    font: "cyphercn",
   },
 });
 
@@ -143,7 +143,7 @@ export function CharacterSheet({
     <Card
       className={cn(
         "w-full",
-        font !== "normal" && "retro",
+        font === "cyphercn" ? "cyphercn" : "cyphercn-normal",
         className
       )}
       {...props}
@@ -152,7 +152,7 @@ export function CharacterSheet({
       <CardHeader className="pb-4">
         <div className="flex sm:flex-row flex-col items-start gap-4">
           {showAvatar && (
-            <Avatar className="size-20" variant="pixel" font="retro">
+            <Avatar className="size-20" variant="framed">
               <AvatarImage src={avatarSrc} alt={characterName} />
               <AvatarFallback className="text-xl">
                 {avatarFallback || characterName.charAt(0).toUpperCase()}
@@ -196,7 +196,7 @@ export function CharacterSheet({
                 </div>
                 <HealthBar
                   value={healthPercentage}
-                  variant="retro"
+                  variant="default"
                   className="h-3"
                 />
               </div>
@@ -214,7 +214,7 @@ export function CharacterSheet({
                 </div>
                 <ManaBar
                   value={manaPercentage}
-                  variant="retro"
+                  variant="default"
                   className="h-3"
                 />
               </div>
@@ -232,7 +232,7 @@ export function CharacterSheet({
                 </div>
                 <Progress
                   value={experiencePercentage}
-                  variant="retro"
+                  variant="default"
                   progressBg="bg-yellow-500"
                   className="h-3"
                 />

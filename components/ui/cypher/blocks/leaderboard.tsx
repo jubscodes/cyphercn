@@ -137,7 +137,7 @@ export function Leaderboard({
     <Card
       data-slot="leaderboard"
       className={className}
-      font={"retro"}
+     
       {...props}
     >
       {title && (
@@ -164,12 +164,12 @@ export function Leaderboard({
                   key={player.id}
                   className={cn(
                     playerItemVariants({ rank: rankVariant }),
-                    "retro"
+                    "cyphercn"
                   )}
                 >
                   <div className="flex items-center gap-3">
                     {showAvatar && (
-                      <Avatar variant="pixel" font="retro" className="size-10">
+                      <Avatar variant="framed" className="size-10">
                         {player.avatar && (
                           <AvatarImage src={player.avatar} alt={player.name} />
                         )}
