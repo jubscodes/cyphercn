@@ -58,6 +58,19 @@ import {
   TabsTrigger,
 } from "@/components/ui/cypher/tabs";
 import { Textarea } from "@/components/ui/cypher/textarea";
+// Protheus terminal components
+import {
+  Line,
+  LogEntry,
+  Panel,
+  PanelWithHeader,
+  ProgressBar,
+  Alert as ProtheusAlert,
+  Badge as ProtheusBadge,
+  Progress as ProtheusProgress,
+  Separator as ProtheusSeparator,
+  Status,
+} from "@/components/ui/protheus";
 
 function Section({
   title,
@@ -145,6 +158,168 @@ export default function ComponentShowcase() {
                 </MenubarContent>
               </MenubarMenu>
             </Menubar>
+          </CardContent>
+        </Card>
+      </Section>
+
+      {/* Terminal Utilities Section - DOS Panel Styles */}
+      <Section
+        description="MS-DOS terminal panels, status indicators, and system logging components."
+        title="TERMINAL UTILITIES"
+      >
+        {/* Panel Variants */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:col-span-3">
+          <Panel title="SINGLE BORDER" variant="single">
+            Standard panel with single-line box-drawing characters for terminal
+            displays.
+          </Panel>
+          <Panel glow title="DOUBLE BORDER" variant="double">
+            Enhanced panel with double-line border and phosphor glow effect.
+          </Panel>
+          <Panel title="ASCII BORDER" variant="ascii">
+            Fallback ASCII characters (+, -, |) for maximum compatibility.
+          </Panel>
+        </div>
+
+        {/* Panel with Header */}
+        <div className="lg:col-span-2">
+          <PanelWithHeader glow title="SYSTEM MONITOR" variant="double">
+            <div className="space-y-2">
+              <Status label="NETWORK" status="online" />
+              <Status label="CPU" status="processing" />
+              <Status label="MEMORY" status="warning" />
+              <Status label="BACKUP" status="offline" />
+            </div>
+          </PanelWithHeader>
+        </div>
+
+        {/* Log Entries */}
+        <Card>
+          <CardHeader>
+            <CardTitle>System Log</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-1">
+            <LogEntry level="info" timestamp="14:32:01">
+              System initialized
+            </LogEntry>
+            <LogEntry level="debug" timestamp="14:32:02">
+              Loading modules...
+            </LogEntry>
+            <LogEntry level="warn" timestamp="14:32:03">
+              High memory usage
+            </LogEntry>
+            <LogEntry level="error" timestamp="14:32:04">
+              Connection timeout
+            </LogEntry>
+          </CardContent>
+        </Card>
+
+        {/* Progress Variants */}
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardTitle>Progress Variants</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div>
+              <span className="cyphercn mb-1 block text-xs">DEFAULT:</span>
+              <ProtheusProgress value={75} variant="default" />
+            </div>
+            <div>
+              <span className="cyphercn mb-1 block text-xs">ASCII:</span>
+              <ProtheusProgress value={45} variant="ascii" />
+            </div>
+            <div>
+              <span className="cyphercn mb-1 block text-xs">BLOCKS:</span>
+              <ProtheusProgress value={60} variant="blocks" />
+            </div>
+            <div>
+              <span className="cyphercn mb-1 block text-xs">DOTS:</span>
+              <ProtheusProgress value={30} variant="dots" />
+            </div>
+            <ProtheusSeparator variant="dashed" />
+            <ProgressBar glow label="DOWNLOAD PROGRESS" value={65} />
+          </CardContent>
+        </Card>
+
+        {/* Loading States - Using cypher Spinner */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Loading States</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-col items-center gap-2">
+              <Spinner className="size-6" variant="diamond" />
+              <span className="text-muted-foreground text-xs">Diamond</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Spinner className="size-6" variant="classic" />
+              <span className="text-muted-foreground text-xs">Classic</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <span className="cyphercn phosphor-glow text-lg">◐◓◑◒</span>
+              <span className="text-muted-foreground text-xs">
+                ASCII Frames
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Separator Variants */}
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardTitle>Separators</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <ProtheusSeparator variant="line" />
+            <ProtheusSeparator variant="double" />
+            <ProtheusSeparator variant="dashed" />
+            <ProtheusSeparator label="SECTION" variant="ascii" />
+            <ProtheusSeparator variant="dots" />
+            <Line glow />
+          </CardContent>
+        </Card>
+
+        {/* Terminal Alerts */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Terminal Alerts</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <ProtheusAlert variant="default">
+              Standard informational message.
+            </ProtheusAlert>
+            <ProtheusAlert glow variant="success">
+              All systems operational.
+            </ProtheusAlert>
+            <ProtheusAlert title="CAUTION" variant="warning">
+              Memory threshold exceeded.
+            </ProtheusAlert>
+            <ProtheusAlert title="CRITICAL" variant="error">
+              Security breach detected.
+            </ProtheusAlert>
+          </CardContent>
+        </Card>
+
+        {/* Terminal Badges */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Terminal Badges</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap items-center gap-3">
+            <ProtheusBadge>DEFAULT</ProtheusBadge>
+            <ProtheusBadge variant="outline">OUTLINE</ProtheusBadge>
+            <ProtheusBadge variant="filled">FILLED</ProtheusBadge>
+            <ProtheusBadge variant="bracket">BRACKET</ProtheusBadge>
+            <ProtheusBadge variant="tag">TAG</ProtheusBadge>
+            <ProtheusBadge status="active" variant="dot">
+              ACTIVE
+            </ProtheusBadge>
+            <ProtheusBadge status="inactive" variant="dot">
+              INACTIVE
+            </ProtheusBadge>
+            <ProtheusBadge status="warning" variant="dot">
+              WARNING
+            </ProtheusBadge>
           </CardContent>
         </Card>
       </Section>
