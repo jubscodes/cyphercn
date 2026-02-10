@@ -1,17 +1,39 @@
 import { CommandExample } from "@/components/examples/command";
+import { DatePicker } from "@/components/examples/date-picker";
+import { DrawerExample } from "@/components/examples/drawer";
 import {
   Alert,
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/cypher/alert";
+import { Badge } from "@/components/ui/cypher/badge";
 import AudioSettings from "@/components/ui/cypher/blocks/audio-settings";
+import ChapterIntro from "@/components/ui/cypher/blocks/chapter-intro";
+import Dialogue from "@/components/ui/cypher/blocks/dialogue";
+import DifficultySelect from "@/components/ui/cypher/blocks/difficulty-select";
+import GameOver from "@/components/ui/cypher/blocks/game-over";
+import GameProgress from "@/components/ui/cypher/blocks/game-progress";
+import MainMenu from "@/components/ui/cypher/blocks/main-menu";
+import { Button } from "@/components/ui/cypher/button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/cypher/card";
+import { Checkbox } from "@/components/ui/cypher/checkbox";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/cypher/dropdown-menu";
+import EnemyHealthDisplay from "@/components/ui/cypher/enemy-health-display";
 import { Input } from "@/components/ui/cypher/input";
+import { Label } from "@/components/ui/cypher/label";
+import ManaBar from "@/components/ui/cypher/mana-bar";
 import {
   Menubar,
   MenubarContent,
@@ -21,16 +43,21 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/cypher/menubar";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/cypher/select";
+import { Spinner } from "@/components/ui/cypher/spinner";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/cypher/tabs";
 import { Textarea } from "@/components/ui/cypher/textarea";
-
-import ChapterIntro from "../ui/cypher/blocks/chapter-intro";
-import Dialogue from "../ui/cypher/blocks/dialogue";
-import DifficultySelect from "../ui/cypher/blocks/difficulty-select";
-import GameOver from "../ui/cypher/blocks/game-over";
-import GameProgress from "../ui/cypher/blocks/game-progress";
-import MainMenu from "../ui/cypher/blocks/main-menu";
-import EnemyHealthDisplay from "../ui/cypher/enemy-health-display";
-import ManaBar from "../ui/cypher/mana-bar";
 
 function Section({
   title,
@@ -303,6 +330,169 @@ export default function ComponentShowcase() {
         <Card>
           <CardContent className="pt-6">
             <AudioSettings />
+          </CardContent>
+        </Card>
+      </Section>
+
+      {/* Base Components Section */}
+      <Section
+        description="Core UI primitives for building terminal interfaces."
+        title="BASE COMPONENTS"
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle>Button</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-2">
+            <Button>Default</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="terminal">Terminal</Button>
+            <Button variant="destructive">Destructive</Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Drawer</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <DrawerExample />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Dropdown Menu</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline">Actions</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuLabel>MENU</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Profile</DropdownMenuItem>
+                <DropdownMenuItem>Settings</DropdownMenuItem>
+                <DropdownMenuItem>Logout</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Input</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-3">
+            <Input placeholder="Enter username..." />
+            <Input placeholder="Enter password..." type="password" />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Select</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Select>
+              <SelectTrigger>
+                <SelectValue placeholder="Select class..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="warrior">Warrior</SelectItem>
+                <SelectItem value="mage">Mage</SelectItem>
+                <SelectItem value="rogue">Rogue</SelectItem>
+                <SelectItem value="paladin">Paladin</SelectItem>
+              </SelectContent>
+            </Select>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Date Picker</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <DatePicker />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Checkbox</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-3">
+            <div className="flex items-center space-x-2">
+              <Checkbox defaultChecked id="sound" />
+              <Label htmlFor="sound">Sound Effects</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox defaultChecked id="music" />
+              <Label htmlFor="music">Music</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox id="vibration" />
+              <Label htmlFor="vibration">Vibration</Label>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Spinner</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-4">
+            <div className="flex flex-col items-center gap-2">
+              <Spinner className="size-6" variant="diamond" />
+              <span className="text-muted-foreground text-xs">Diamond</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Spinner className="size-6" variant="classic" />
+              <span className="text-muted-foreground text-xs">Classic</span>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Badge</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-2">
+            <Badge>Level 42</Badge>
+            <Badge variant="outline">Warrior</Badge>
+            <Badge variant="destructive">Critical</Badge>
+            <Badge variant="bracket">Achievement</Badge>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Tabs</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Tabs className="w-full" defaultValue="items">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="items">Items</TabsTrigger>
+                <TabsTrigger value="skills">Skills</TabsTrigger>
+                <TabsTrigger value="stats">Stats</TabsTrigger>
+              </TabsList>
+              <TabsContent value="items">
+                <p className="text-muted-foreground text-sm">
+                  Your inventory items appear here.
+                </p>
+              </TabsContent>
+              <TabsContent value="skills">
+                <p className="text-muted-foreground text-sm">
+                  Your learned skills appear here.
+                </p>
+              </TabsContent>
+              <TabsContent value="stats">
+                <p className="text-muted-foreground text-sm">
+                  Your character stats appear here.
+                </p>
+              </TabsContent>
+            </Tabs>
           </CardContent>
         </Card>
       </Section>
