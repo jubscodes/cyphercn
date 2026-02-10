@@ -58,7 +58,7 @@ export default function EnemyHealthDisplay({
   maxHealth,
   showLevel = true,
   showHealthText = true,
-  healthBarVariant = "bar",
+  healthBarVariant = "default", // Terminal ASCII (█░) is the primary aesthetic
   healthBarColor = "bg-red-500",
   enemyNameColor = "text-foreground",
   ...props

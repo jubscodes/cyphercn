@@ -39,19 +39,20 @@ export interface LeaderboardProps extends React.ComponentProps<"div"> {
   currentPlayerId?: string;
 }
 
+// Terminal-style player items with thin borders instead of gradients
 const playerItemVariants = cva(
-  "flex items-center justify-between p-3 rounded-lg transition-all duration-200",
+  "flex items-center justify-between p-3 transition-all duration-200",
   {
     variants: {
       rank: {
-        default: "bg-muted/50 hover:bg-muted",
+        default: "bg-muted/30 border border-foreground/30 hover:border-foreground/50",
         first:
-          "bg-gradient-to-r from-yellow-400/20 to-yellow-600/20 border-2 border-yellow-400 hover:from-yellow-400/30 hover:to-yellow-600/30",
+          "border border-foreground hover:bg-foreground/10 phosphor-border-glow",
         second:
-          "bg-gradient-to-r from-gray-300/20 to-gray-500/20 border-2 border-gray-400 hover:from-gray-300/30 hover:to-gray-500/30",
+          "border border-foreground/70 hover:bg-foreground/10",
         third:
-          "bg-gradient-to-r from-amber-600/20 to-amber-800/20 border-2 border-amber-600 hover:from-amber-600/30 hover:to-amber-800/30",
-        current: "bg-primary/20 border-2 border-primary hover:bg-primary/30",
+          "border border-foreground/50 hover:bg-foreground/10",
+        current: "border-2 border-foreground bg-foreground/10 hover:bg-foreground/20",
       },
     },
     defaultVariants: {
@@ -60,19 +61,20 @@ const playerItemVariants = cva(
   }
 );
 
+// Terminal-style rank badges with borders instead of gradients
 const rankBadgeVariants = cva(
-  "flex items-center justify-center size-8 text-sm font-bold",
+  "flex items-center justify-center size-8 text-sm font-bold cyphercn",
   {
     variants: {
       rank: {
-        default: "bg-muted text-muted-foreground",
+        default: "border border-foreground/30 text-muted-foreground",
         first:
-          "bg-gradient-to-br from-yellow-400 to-yellow-600 text-yellow-900 shadow-lg",
+          "border-2 border-foreground text-foreground phosphor-glow",
         second:
-          "bg-gradient-to-br from-gray-300 to-gray-500 text-gray-900 shadow-lg",
+          "border border-foreground/70 text-foreground/80",
         third:
-          "bg-gradient-to-br from-amber-600 to-amber-800 text-amber-100 shadow-lg",
-        current: "bg-primary text-primary-foreground",
+          "border border-foreground/50 text-foreground/60",
+        current: "border-2 border-foreground bg-foreground text-background",
       },
     },
     defaultVariants: {
@@ -96,16 +98,17 @@ function formatScore(score: number): string {
   return score.toLocaleString();
 }
 
+// Terminal-style rank indicators (no emojis)
 function getRankIcon(rank: number): string {
   switch (rank) {
     case 1:
-      return "🥇";
+      return "#1";
     case 2:
-      return "🥈";
+      return "#2";
     case 3:
-      return "🥉";
+      return "#3";
     default:
-      return rank.toString();
+      return `#${rank}`;
   }
 }
 
@@ -210,11 +213,9 @@ export function Leaderboard({
                   <div className="flex items-center gap-2">
                     <span
                       className={cn(
-                        "font-bold cyphercn-normal text-xs md:text-sm",
-                        rankVariant === "first" && "text-yellow-600",
-                        rankVariant === "second" && "text-gray-600",
-                        rankVariant === "third" && "text-amber-700",
-                        player.isCurrentPlayer && "text-primary"
+                        "font-bold cyphercn text-xs md:text-sm",
+                        rankVariant === "first" && "phosphor-glow",
+                        player.isCurrentPlayer && "phosphor-glow"
                       )}
                     >
                       {formatScore(player.score)}

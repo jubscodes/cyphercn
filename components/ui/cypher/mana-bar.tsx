@@ -9,7 +9,7 @@ interface ManaBarProps extends React.ComponentProps<"div"> {
 
 export default function ManaBar({
   className,
-  variant = "bar",
+  variant = "default", // Terminal ASCII (█░) is the primary aesthetic
   value,
   ...props
 }: ManaBarProps) {

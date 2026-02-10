@@ -9,7 +9,7 @@ interface HealthBarProps extends React.ComponentProps<"div"> {
 
 export default function HealthBar({
   className,
-  variant = "bar",
+  variant = "default", // Terminal ASCII (█░) is the primary aesthetic
   value,
   ...props
 }: HealthBarProps) {
