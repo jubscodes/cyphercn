@@ -4,7 +4,6 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/cypher/alert";
-import { Badge } from "@/components/ui/cypher/badge";
 import AudioSettings from "@/components/ui/cypher/blocks/audio-settings";
 import {
   Card,
@@ -12,19 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/cypher/card";
-import { Checkbox } from "@/components/ui/cypher/checkbox";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuTrigger,
-} from "@/components/ui/cypher/dropdown-menu";
 import { Input } from "@/components/ui/cypher/input";
-import { Label } from "@/components/ui/cypher/label";
 import {
   Menubar,
   MenubarContent,
@@ -34,19 +21,6 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/cypher/menubar";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/cypher/select";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/cypher/tabs";
 import { Textarea } from "@/components/ui/cypher/textarea";
 
 import ChapterIntro from "../ui/cypher/blocks/chapter-intro";
@@ -55,61 +29,97 @@ import DifficultySelect from "../ui/cypher/blocks/difficulty-select";
 import GameOver from "../ui/cypher/blocks/game-over";
 import GameProgress from "../ui/cypher/blocks/game-progress";
 import MainMenu from "../ui/cypher/blocks/main-menu";
-import { Button } from "../ui/cypher/button";
 import EnemyHealthDisplay from "../ui/cypher/enemy-health-display";
 import ManaBar from "../ui/cypher/mana-bar";
-import { Spinner } from "../ui/cypher/spinner";
-import { DatePicker } from "./date-picker";
-import { DrawerExample } from "./drawer";
+
+function Section({
+  title,
+  description,
+  children,
+}: {
+  title: string;
+  description: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="py-8">
+      <div className="mb-6">
+        <h2 className="cyphercn font-bold text-xl">{title}</h2>
+        <p className="text-muted-foreground text-sm">{description}</p>
+      </div>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {children}
+      </div>
+    </section>
+  );
+}
 
 export default function ComponentShowcase() {
   return (
-    <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {/* Column 1 */}
-      <div className="flex flex-col gap-1">
-        <div className="flex flex-col gap-1">
-          <Button>Button</Button>
+    <div className="space-y-8">
+      {/* Command Center Section */}
+      <Section
+        description="Terminal interface components for data input, command execution, and system alerts."
+        title="COMMAND CENTER"
+      >
+        <Card>
+          <CardContent className="flex flex-col gap-3 pt-6">
+            <Alert>
+              <AlertTitle>Info</AlertTitle>
+              <AlertDescription>
+                Your game progress has been saved successfully.
+              </AlertDescription>
+            </Alert>
 
-          <DrawerExample />
+            <Alert variant="destructive">
+              <AlertTitle>Warning</AlertTitle>
+              <AlertDescription>
+                Low health! Find a health potion quickly.
+              </AlertDescription>
+            </Alert>
+          </CardContent>
+        </Card>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline">Dropdown Menu</Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuGroup>
-                <DropdownMenuItem>
-                  Profile
-                  <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  Billing
-                  <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-                </DropdownMenuItem>
-              </DropdownMenuGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
+        <Card>
+          <CardContent className="pt-6">
+            <CommandExample />
+          </CardContent>
+        </Card>
 
-        <AudioSettings className="mt-1" />
+        <Card>
+          <CardContent className="flex flex-col gap-3 pt-6">
+            <Input placeholder="Enter your name" />
+            <Textarea className="min-h-32" placeholder="Enter description..." />
+          </CardContent>
+        </Card>
 
-        <MainMenu />
-
-        <Alert>
-          <AlertTitle>Info</AlertTitle>
-          <AlertDescription>
-            Your game progress has been saved successfully.
-          </AlertDescription>
-        </Alert>
-
-        <Alert variant="destructive">
-          <AlertTitle>Warning</AlertTitle>
-          <AlertDescription>
-            Low health! Find a health potion quickly.
-          </AlertDescription>
-        </Alert>
+        <Card>
+          <CardContent className="pt-6">
+            <Menubar>
+              <MenubarMenu>
+                <MenubarTrigger>File</MenubarTrigger>
+                <MenubarContent>
+                  <MenubarItem>
+                    New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+                  </MenubarItem>
+                  <MenubarItem>New Window</MenubarItem>
+                  <MenubarSeparator />
+                  <MenubarItem>Share</MenubarItem>
+                  <MenubarSeparator />
+                  <MenubarItem>Print</MenubarItem>
+                </MenubarContent>
+              </MenubarMenu>
+              <MenubarMenu>
+                <MenubarTrigger>Edit</MenubarTrigger>
+                <MenubarContent>
+                  <MenubarItem>Undo</MenubarItem>
+                  <MenubarItem>Redo</MenubarItem>
+                  <MenubarSeparator />
+                </MenubarContent>
+              </MenubarMenu>
+            </Menubar>
+          </CardContent>
+        </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -212,56 +222,53 @@ export default function ComponentShowcase() {
             </p>
           </CardContent>
         </Card>
+      </Section>
 
-        {/* Badge Examples */}
+      {/* Cyber Games Section */}
+      <Section
+        description="Game interface blocks for menus, dialogue, health bars, and narrative elements."
+        title="CYBER GAMES"
+      >
         <Card>
-          <CardHeader>
-            <CardTitle className="font-medium text-sm">Player Status</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-wrap gap-5">
-            <Badge>Level 42</Badge>
-            <Badge>Warrior</Badge>
-            <Badge>Critical</Badge>
-            <Badge>Online</Badge>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Column 2 */}
-      <div className="flex flex-col gap-1 lg:col-span-2">
-        <Card>
-          <CardContent className="flex flex-col gap-4">
-            <div className="flex flex-wrap gap-4">
-              <Spinner className="size-10" variant="diamond" />
-              <Spinner className="size-10" variant="classic" />
-              <Select>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <div className="flex items-center justify-center">
-                <DatePicker className="w-[300px]" />
-              </div>
-
-              <EnemyHealthDisplay
-                currentHealth={850}
-                enemyName="Fire Dragon"
-                level={25}
-                maxHealth={1000}
-              />
-              <ManaBar className="mt-5" value={75} variant="default" />
-            </div>
+          <CardContent className="pt-6">
+            <MainMenu />
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="flex flex-col gap-4">
+          <CardContent className="pt-6">
+            <GameOver />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="pt-6">
+            <DifficultySelect />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="pt-6">
+            <ChapterIntro
+              align="center"
+              backgroundSrc="/images/forest-goblins.png"
+              className="mx-auto w-full text-white"
+              darken={0.5}
+              height="md"
+              subtitle="Defeat the goblins to pass through the forest."
+              title="LEVEL 2: GOBLINS"
+            />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="pt-6">
+            <GameProgress />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="flex flex-col gap-4 pt-6">
             <Dialogue
               avatarFallback="Orc"
               avatarSrc="/images/pixelized-8bitcnorc.jpg"
@@ -281,165 +288,24 @@ export default function ComponentShowcase() {
           </CardContent>
         </Card>
 
-        <GameOver />
-
-        <ChapterIntro
-          align="center"
-          backgroundSrc="/images/forest-goblins.png"
-          className="mx-auto w-full text-white md:w-full"
-          darken={0.5}
-          height="md"
-          subtitle="Defeat the goblins to pass through the forest."
-          title="LEVEL 2: GOBLINS"
-        />
-
-        <GameProgress />
-
-        {/* Tabs Example */}
         <Card>
-          <CardHeader>
-            <CardTitle className="font-medium text-sm">Game Menu</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Tabs className="w-full" defaultValue="inventory">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="inventory">Items</TabsTrigger>
-                <TabsTrigger value="skills">Skills</TabsTrigger>
-                <TabsTrigger value="stats">Stats</TabsTrigger>
-              </TabsList>
-              <TabsContent className="mt-4" value="inventory">
-                <p className="text-muted-foreground text-sm">
-                  Your inventory contains 15 items including potions and
-                  weapons.
-                </p>
-              </TabsContent>
-              <TabsContent className="mt-4" value="skills">
-                <p className="text-muted-foreground text-sm">
-                  You have learned 8 skills. 3 skill points available.
-                </p>
-              </TabsContent>
-              <TabsContent className="mt-4" value="stats">
-                <p className="text-muted-foreground text-sm">
-                  Strength: 25, Agility: 18, Intelligence: 22
-                </p>
-              </TabsContent>
-            </Tabs>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Column 3 */}
-      <div className="flex w-full flex-col gap-1">
-        <Input placeholder="Enter your name" />
-
-        <Menubar>
-          <MenubarMenu>
-            <MenubarTrigger>File</MenubarTrigger>
-            <MenubarContent>
-              <MenubarItem>
-                New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-              </MenubarItem>
-              <MenubarItem>New Window</MenubarItem>
-              <MenubarSeparator />
-              <MenubarItem>Share</MenubarItem>
-              <MenubarSeparator />
-              <MenubarItem>Print</MenubarItem>
-            </MenubarContent>
-          </MenubarMenu>
-          <MenubarMenu>
-            <MenubarTrigger>Edit</MenubarTrigger>
-            <MenubarContent>
-              <MenubarItem>Undo</MenubarItem>
-              <MenubarItem>Redo</MenubarItem>
-              <MenubarSeparator />
-            </MenubarContent>
-          </MenubarMenu>
-        </Menubar>
-
-        <DifficultySelect />
-
-        {/* TODO: Command has some problem with spacing, check it out */}
-        <div className="my-1">
-          <CommandExample />
-        </div>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="font-medium text-sm">
-              Product Details
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-6">
-              <div className="grid gap-3">
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  className="w-full"
-                  defaultValue="Gamer Gear"
-                  id="name"
-                  type="text"
-                />
-              </div>
-              <div className="grid gap-3">
-                <Label htmlFor="description">Description</Label>
-                <Textarea
-                  className="min-h-32"
-                  defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl nec nunc."
-                  id="description"
-                />
-              </div>
-            </div>
+          <CardContent className="flex flex-col gap-4 pt-6">
+            <EnemyHealthDisplay
+              currentHealth={850}
+              enemyName="Fire Dragon"
+              level={25}
+              maxHealth={1000}
+            />
+            <ManaBar value={75} variant="default" />
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader>
-            <CardTitle className="font-medium text-sm">Game Options</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <div className="flex items-center gap-4">
-              <Checkbox defaultChecked id="autosave" />
-              <Label htmlFor="autosave">Auto-save enabled</Label>
-            </div>
-            <div className="flex items-center gap-4">
-              <Checkbox id="notifications" />
-              <Label htmlFor="notifications">Show notifications</Label>
-            </div>
-            <div className="flex items-center gap-4">
-              <Checkbox defaultChecked id="fullscreen" />
-              <Label htmlFor="fullscreen">Fullscreen mode</Label>
-            </div>
-            <div className="flex items-center gap-4">
-              <Checkbox id="hardcore" />
-              <Label htmlFor="hardcore">Hardcore mode</Label>
-            </div>
+          <CardContent className="pt-6">
+            <AudioSettings />
           </CardContent>
         </Card>
-
-        <Card>
-          <CardHeader className="flex">
-            <CardTitle className="font-medium text-sm">Warriors</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="font-bold text-2xl">+100</div>
-            <p className="text-muted-foreground text-xs">
-              +42% since last month
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex">
-            <CardTitle className="font-medium text-sm">Wizards</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="font-bold text-2xl">+1000</div>
-            <p className="text-muted-foreground text-xs">
-              +31% since last month
-            </p>
-          </CardContent>
-        </Card>
-      </div>
+      </Section>
     </div>
   );
 }
