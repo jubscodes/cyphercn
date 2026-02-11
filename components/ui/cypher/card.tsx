@@ -7,17 +7,20 @@ import { cn } from "@/lib/utils";
 import "./styles/cyberpunk.css";
 
 // =============================================================================
-// Card Component - MS-DOS panel style with title over border
+// Card Component - MS-DOS panel style with CSS or terminal box-drawing borders
 // =============================================================================
 
 export const cardVariants = cva(
-  "cyphercn relative border border-foreground bg-background p-4",
+  "cyphercn relative bg-background",
   {
     variants: {
       variant: {
-        default: "",
-        double: "border-2 border-double",
-        glow: "phosphor-border-glow",
+        default: "border border-foreground p-4",
+        double: "border-2 border-double border-foreground p-4",
+        glow: "border border-foreground p-4 phosphor-border-glow",
+        terminal: "", // Uses box-drawing characters
+        terminalDouble: "", // Uses double box-drawing characters
+        terminalAscii: "", // Uses ASCII characters (+, -, |)
       },
       scanlines: {
         true: "crt-scanlines-subtle overflow-hidden",
@@ -38,6 +41,104 @@ export interface CypherCardProps
   glow?: boolean;
 }
 
+// CSS border styles for terminal and terminalDouble variants
+const terminalBorderStyles = {
+  terminal: "border border-foreground", // Single line
+  terminalDouble: "border-[3px] border-double border-foreground", // Double line
+};
+
+// Terminal-style Card with CSS borders
+function TerminalCard({
+  title,
+  glow,
+  scanlines,
+  className,
+  children,
+  charSet,
+  ...props
+}: CypherCardProps & { charSet: "terminal" | "terminalDouble" }) {
+  const borderStyle = terminalBorderStyles[charSet];
+
+  return (
+    <div
+      className={cn(
+        "cyphercn relative w-full",
+        borderStyle,
+        scanlines && "crt-scanlines-subtle overflow-hidden",
+        glow && "phosphor-glow",
+        className
+      )}
+      {...props}
+    >
+      {title && (
+        <div className="absolute -top-[0.6em] left-3 bg-background px-1 text-xs uppercase tracking-wider text-foreground">
+          {title}
+        </div>
+      )}
+      <div className="px-3 py-2 text-sm cyphercn-normal">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+// ASCII Card with +--+ characters for top/bottom, CSS borders for sides
+function AsciiCard({
+  title,
+  glow,
+  scanlines,
+  className,
+  children,
+  ...props
+}: CypherCardProps) {
+  return (
+    <div
+      className={cn(
+        "cyphercn relative w-full font-mono",
+        scanlines && "crt-scanlines-subtle overflow-hidden",
+        glow && "phosphor-glow",
+        className
+      )}
+      {...props}
+    >
+      {/* Top border with + corners and - line */}
+      <div className="flex w-full leading-none tracking-[0] text-foreground">
+        <span className="shrink-0">+</span>
+        {title ? (
+          <>
+            <span className="shrink-0">--</span>
+            <span className="shrink-0 px-1 text-xs uppercase tracking-wider">
+              {title}
+            </span>
+            <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-right">
+              {"-".repeat(100)}
+            </span>
+          </>
+        ) : (
+          <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-right">
+            {"-".repeat(100)}
+          </span>
+        )}
+        <span className="shrink-0">+</span>
+      </div>
+
+      {/* Content with CSS side borders - margins align border with + center */}
+      <div className="border-x border-foreground mx-[0.4ch] px-2 py-2 text-sm cyphercn-normal">
+        {children}
+      </div>
+
+      {/* Bottom border with + corners and - line */}
+      <div className="flex w-full leading-none tracking-[0] text-foreground">
+        <span className="shrink-0">+</span>
+        <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-right">
+          {"-".repeat(100)}
+        </span>
+        <span className="shrink-0">+</span>
+      </div>
+    </div>
+  );
+}
+
 function Card({
   className,
   title,
@@ -47,6 +148,38 @@ function Card({
   children,
   ...props
 }: CypherCardProps) {
+  // Route to ASCII card for character-based borders
+  if (variant === "terminalAscii") {
+    return (
+      <AsciiCard
+        title={title}
+        glow={glow}
+        scanlines={scanlines}
+        className={className}
+        {...props}
+      >
+        {children}
+      </AsciiCard>
+    );
+  }
+
+  // Route to terminal-style card for CSS border variants
+  if (variant === "terminal" || variant === "terminalDouble") {
+    return (
+      <TerminalCard
+        title={title}
+        glow={glow}
+        scanlines={scanlines}
+        className={className}
+        charSet={variant}
+        {...props}
+      >
+        {children}
+      </TerminalCard>
+    );
+  }
+
+  // CSS border card (default, double, glow)
   return (
     <div
       className={cn(

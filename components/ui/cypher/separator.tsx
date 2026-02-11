@@ -86,17 +86,17 @@ function Separator({
         role="separator"
         aria-orientation="horizontal"
         className={cn(
-          "cyphercn flex items-center gap-2 text-foreground/50 text-xs",
+          "cyphercn flex w-full items-center gap-2 text-xs text-foreground/50",
           glow && "phosphor-glow",
           className
         )}
         {...props}
       >
-        <span className="flex-1 overflow-hidden whitespace-nowrap">
+        <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap">
           {horizontalPatterns[variant].repeat(50)}
         </span>
         <span className="shrink-0 uppercase tracking-wider">{label}</span>
-        <span className="flex-1 overflow-hidden whitespace-nowrap">
+        <span className="min-w-0 flex-1 overflow-hidden whitespace-nowrap">
           {horizontalPatterns[variant].repeat(50)}
         </span>
       </div>
@@ -109,13 +109,13 @@ function Separator({
       role="separator"
       aria-orientation="horizontal"
       className={cn(
-        "cyphercn w-full text-foreground/50 overflow-hidden whitespace-nowrap",
+        "cyphercn w-full overflow-hidden whitespace-nowrap text-foreground/50",
         glow && "phosphor-glow",
         className
       )}
       {...props}
     >
-      {horizontalPatterns[variant].repeat(100)}
+      {horizontalPatterns[variant].repeat(50)}
     </div>
   );
 }
