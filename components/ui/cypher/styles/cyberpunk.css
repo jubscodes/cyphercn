@@ -168,40 +168,42 @@
 }
 
 /* ==========================================================================
-   Theme Utility Classes
+   Phosphor Color Utility Classes
+   Note: Renamed from .theme-* to .phosphor-* to avoid collision with
+   full theme classes in globals.css (e.g., .theme-amber)
    ========================================================================== */
 
-.theme-green {
+.phosphor-green {
   color: var(--phosphor-green-fallback);
   color: var(--phosphor-green);
   --glow-color: var(--phosphor-green);
 }
 
-.theme-amber {
+.phosphor-amber {
   color: var(--phosphor-amber-fallback);
   color: var(--phosphor-amber);
   --glow-color: var(--phosphor-amber);
 }
 
-.theme-cyan {
+.phosphor-cyan {
   color: var(--phosphor-cyan-fallback);
   color: var(--phosphor-cyan);
   --glow-color: var(--phosphor-cyan);
 }
 
-.theme-red {
+.phosphor-red {
   color: var(--phosphor-red-fallback);
   color: var(--phosphor-red);
   --glow-color: var(--phosphor-red);
 }
 
-.theme-white {
+.phosphor-white {
   color: var(--phosphor-white-fallback);
   color: var(--phosphor-white);
   --glow-color: var(--phosphor-white);
 }
 
-.theme-orange {
+.phosphor-orange {
   color: var(--phosphor-orange-fallback);
   color: var(--phosphor-orange);
   --glow-color: var(--phosphor-orange);
