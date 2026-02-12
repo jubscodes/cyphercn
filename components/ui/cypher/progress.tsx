@@ -80,7 +80,7 @@ function Progress({
   return (
     <div
       className={cn(
-        "cyphercn flex items-center gap-2 text-sm",
+        "cyphercn flex items-center gap-2 text-sm min-w-0",
         glow && "phosphor-glow",
         className
       )}
@@ -91,14 +91,14 @@ function Progress({
       {...props}
     >
       {label && <span className="text-foreground/70 shrink-0">{label}</span>}
-      <span className="text-foreground/70">[</span>
-      <span className="text-foreground">
+      <span className="text-foreground/70 shrink-0">[</span>
+      <span className="text-foreground min-w-0 overflow-hidden">
         {filledChar.repeat(filled)}
         <span className="text-foreground/30">{emptyChar.repeat(empty)}</span>
       </span>
-      <span className="text-foreground/70">]</span>
+      <span className="text-foreground/70 shrink-0">]</span>
       {showPercentage && (
-        <span className="text-foreground/70 min-w-[4ch] text-right tabular-nums">
+        <span className="text-foreground/70 min-w-[4ch] shrink-0 text-right tabular-nums">
           {Math.round(percentage)}%
         </span>
       )}
