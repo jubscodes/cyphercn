@@ -11,54 +11,53 @@ import {
 import { Input } from "@/components/ui/cypher/input";
 import { Label } from "@/components/ui/cypher/label";
 
+import "@/components/ui/cypher/styles/cyberpunk.css";
+
 export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={cn("flex flex-col gap-6 cyphercn", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
+          <CardTitle className="text-2xl">TERMINAL ACCESS</CardTitle>
           <CardDescription className="text-xs">
-            Enter your email below to login to your account
+            Enter credentials to authenticate
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form>
             <div className="flex flex-col gap-6">
               <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">EMAIL</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder="user@terminal.sys"
                   required
                 />
               </div>
               <div className="grid gap-2">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">PASSWORD</Label>
                   <a
                     href="#"
                     className="inline-block text-xs underline-offset-4 hover:underline"
                   >
-                    Forgot password?
+                    FORGOT CREDENTIALS?
                   </a>
                 </div>
                 <Input id="password" type="password" required />
               </div>
               <Button type="submit" className="w-full">
-                Login
-              </Button>
-              <Button variant="outline" className="w-full">
-                Login with Google
+                [ AUTHENTICATE ]
               </Button>
             </div>
             <div className="mt-4 text-center text-xs">
-              Don&apos;t have an account?{" "}
+              No access?{" "}
               <a href="#" className="underline underline-offset-4">
-                Sign up
+                REQUEST ACCESS
               </a>
             </div>
           </form>
