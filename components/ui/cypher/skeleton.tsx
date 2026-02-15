@@ -4,11 +4,11 @@ import { Skeleton as ShadcnSkeleton } from "@/components/ui/skeleton";
 
 import "./styles/cyberpunk.css";
 
-export interface BitSkeletonProp extends React.ComponentProps<"div"> {
+export interface BitSkeletonProps extends React.ComponentProps<"div"> {
   asChild?: boolean;
 }
 
-function Skeleton({ children, ...props }: BitSkeletonProp) {
+function Skeleton({ children, ...props }: BitSkeletonProps) {
   const { className } = props;
 
   return (
