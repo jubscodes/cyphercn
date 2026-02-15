@@ -1,181 +1,169 @@
 # Technology Stack
 
-**Analysis Date:** 2026-01-31
+**Analysis Date:** 2026-02-15
 
 ## Languages
 
 **Primary:**
-- TypeScript 5.9.3 - Full application codebase (app/, components/, lib/, server/, db/)
-- JSX/TSX - React components throughout
+- TypeScript 5.9.3 - All application code, components, configuration
+- JSX/TSX 19 - React component syntax throughout the codebase
+- CSS/Tailwind - Styling with Tailwind CSS 4.1.18
 
 **Secondary:**
-- JavaScript - Configuration files (postcss.config.mjs)
-- JSON - Registry and configuration files
+- JavaScript (ES2017 target) - Configuration files
+- MDX - Documentation content in `content/docs`
 
 ## Runtime
 
 **Environment:**
-- Node.js (version not explicitly specified, inferred from Next.js 16.1.4 requirements)
+- Node.js 24.3.0 (current development)
+- React 19.2.3 (latest)
+- React DOM 19.2.3
 
 **Package Manager:**
-- pnpm 9.15.4 - Specified in package.json packageManager field
-- Lockfile: Present (pnpm-lock.yaml or similar)
+- pnpm 9.15.4 (enforced in package.json packageManager field)
+- Lockfile: `pnpm-lock.yaml` (present)
 
 ## Frameworks
 
 **Core:**
-- Next.js 16.1.4 - Full-stack React framework for pages, routing, API routes
-- React 19.2.3 - UI library for components
-- React DOM 19.2.3 - DOM rendering
+- Next.js 16.1.4 - Full-stack React framework with App Router
+- React 19.2.3 - UI library
 
-**Documentation & Content:**
-- fumadocs-core 16.4.7 - Documentation content management and search
-- fumadocs-mdx 14.2.6 - MDX integration for documentation
-- fumadocs-ui 16.4.7 - Pre-built documentation UI components
-
-**UI Components:**
-- Radix UI (multiple packages) - Accessible component primitives (@radix-ui/react-*)
-- shadcn/ui (3.7.0) - Copy-paste component library base
-
-**Forms & Validation:**
-- @tanstack/react-form 1.27.7 - Headless form state management
-- zod 4.3.5 - Runtime schema validation for TypeScript
-
-**Tables & Data:**
-- @tanstack/react-table 8.21.3 - Headless table component library
+**UI & Component:**
+- Radix UI (collection of primitive components: accordion, dialog, dropdown-menu, select, tabs, tooltip, etc.) - Unstyled accessible components
+- shadcn/ui derived components - Pre-built styled components in `components/ui/`
+- Fumadocs UI 16.4.7 - Documentation site framework
+- Fumadocs MDX 14.2.6 - MDX compilation for docs
+- Class Variance Authority 0.7.1 - Component variant management
 
 **Styling:**
 - Tailwind CSS 4.1.18 - Utility-first CSS framework
-- @tailwindcss/postcss 4.1.18 - PostCSS plugin for Tailwind v4
-- class-variance-authority 0.7.1 - CSS component variant management
-- tailwind-merge 3.4.0 - Tailwind class merging utility
-- clsx 2.1.1 - Conditional className utility
+- @tailwindcss/postcss 4.1.18 - PostCSS plugin for Tailwind
 
-**Drag & Drop:**
-- @dnd-kit/core 6.3.1 - Drag and drop primitives
-- @dnd-kit/sortable 10.0.0 - Sortable collections
-- @dnd-kit/modifiers 9.0.0 - Transform modifiers
-- @dnd-kit/utilities 3.2.2 - Utility functions
-
-**Charting & Visualization:**
-- recharts 2.15.4 - Composable chart library
-- three 0.182.0 - 3D graphics library
-
-**UI Utilities & Components:**
-- lucide-react 0.562.0 - Icon library
-- embla-carousel-react 8.6.0 - Carousel component
-- react-resizable-panels 3.0.6 - Resizable panel layouts
-- react-day-picker 9.13.0 - Date picker
-- cmdk 1.1.1 - Command/search component
-- input-otp 1.4.2 - OTP input component
-- sonner 2.0.7 - Toast notifications
-- vaul 1.1.2 - Drawer component
-- date-fns 4.1.0 - Date utility functions
-
-**Syntax Highlighting:**
-- shiki 3.21.0 - Syntax highlighter
-- react-shiki 0.9.1 - Shiki React integration
-
-**URL/Query State:**
-- nuqs 2.8.6 - Next.js URL/query state management
-
-**Theming:**
-- next-themes 0.4.6 - Theme provider and utilities
-
-**Image Processing:**
-- @origin-space/image-cropper 0.1.9 - Image cropping component
+**Data Visualization:**
+- Recharts 2.15.4 - Charting library
+- Three.js 0.182.0 - 3D graphics library
 - html-to-image 1.11.13 - HTML to image conversion
-- html2canvas 1.4.1 - HTML canvas rendering (dev dependency)
 
-**Markdown & Content:**
-- front-matter 4.0.2 - Front matter parsing
-- @types/mdx 2.0.13 - MDX type definitions
+**Tables & Data:**
+- @tanstack/react-table 8.21.3 - Headless table library
+- @tanstack/react-form 1.27.7 - Form state management
 
-**Analytics:**
-- @vercel/analytics 1.6.1 - Vercel analytics integration
-- @vercel/speed-insights 1.3.1 - Vercel Core Web Vitals monitoring
-- @wandry/analytics-sdk 1.16.0 - Custom analytics SDK for component registry
+**Carousel & Interaction:**
+- Embla Carousel React 8.6.0 - Carousel component
+- React Resizable Panels 3.0.6 - Resizable panel layout
+- dnd-kit (6.3.1, sortable 10.0.0, utilities 3.2.2) - Drag and drop
 
-## Database
+**Forms & Input:**
+- Zod 4.3.5 - TypeScript-first schema validation
+- input-otp 1.4.2 - OTP input component
+- cmdk 1.1.1 - Command menu component
 
-**ORM:**
-- drizzle-orm 0.45.1 - Lightweight TypeScript ORM
-- drizzle-kit 0.31.8 - Drizzle schema migrations and codegen
+**Icons & UI Utilities:**
+- Lucide React 0.562.0 - Icon library
+- @tabler/icons-react 3.36.1 - Icon set
+- Sonner 2.0.7 - Toast notifications
+- Vaul 1.1.2 - Drawer component
 
-**Database Driver:**
-- @neondatabase/serverless 1.0.2 - Serverless PostgreSQL client for Neon
+**Utilities:**
+- date-fns 4.1.0 - Date utility library
+- clsx 2.1.1 - Conditional CSS class management
+- tailwind-merge 3.4.0 - Merge Tailwind CSS classes
+- tw-animate-css 1.4.0 - Animation utilities
+- nuqs 2.8.6 - URL search params management
+- next-themes 0.4.6 - Theme management for Next.js
 
-**Database Type:**
-- PostgreSQL - Configured in `drizzle.config.ts` with dialect: "postgresql"
-- Connection: Neon serverless PostgreSQL via DATABASE_URL environment variable
+**Syntax Highlighting & Code:**
+- Shiki 3.21.0 - Syntax highlighter
+- react-shiki 0.9.1 - React component for Shiki
+- front-matter 4.0.2 - Parse YAML front matter
 
-## Build & Development
+**Image & Media:**
+- @origin-space/image-cropper 0.1.9 - Image cropping component
+- html2canvas 1.4.1 - Screenshot tool (dev dependency)
 
-**Linting & Formatting:**
-- @biomejs/biome 2.3.11 - Code formatter and linter (combined ESLint + Prettier alternative)
-- ultracite 7.0.12 - Biome configuration preset extending core, next, and react rules
+**Query & Navigation:**
+- react-day-picker 9.13.0 - Date picker component
+- next/font/google - Font optimization
+
+## Testing & Linting
+
+**Code Quality:**
+- @biomejs/biome 2.3.11 - Linter, formatter, and bundler (ultracite wrapper uses this)
+- Ultracite 7.0.12 - Code check and fix tool (custom linter wrapper)
+- Husky 9.1.7 - Git hooks
 - lint-staged 16.2.7 - Run linters on staged files
 
-**Type Checking:**
-- TypeScript 5.9.3 - Static type checking
+## Build & Dev Tools
 
-**Git Hooks:**
-- husky 9.1.7 - Git hooks runner
-- lint-staged integration for pre-commit linting
+**Build:**
+- Next.js built-in build system (webpack-based)
+
+**Database:**
+- Drizzle ORM 0.45.1 - SQL ORM for type-safe database queries
+- drizzle-kit 0.31.8 - CLI tool for schema migrations and introspection
+- @neondatabase/serverless 1.0.2 - Neon database driver for serverless
+
+**DevDependencies:**
+- @types/node 25.0.9 - Node.js type definitions
+- @types/react 19.2.9 - React type definitions
+- @types/react-dom 19.2.3 - React DOM type definitions
+- @types/three 0.182.0 - Three.js type definitions
+- @types/mdx 2.0.13 - MDX type definitions
 
 ## Configuration
 
 **TypeScript:**
-- `tsconfig.json` - Configured with:
-  - Target: ES2017
-  - Module: esnext
-  - Strict mode enabled
-  - Path aliases: `@/*` (root), `fumadocs-mdx:collections/*` (.source/)
-  - JSX: react-jsx
+- Config: `tsconfig.json`
+- Target: ES2017
+- Module resolution: bundler
+- Strict mode: enabled (strict: true, strictNullChecks: true)
+- Path aliases: `@/*` maps to project root, `fumadocs-mdx:collections/*` for documentation
 
-**Build:**
-- `next.config.ts` - Next.js configuration with:
-  - MDX support via fumadocs
-  - Component caching enabled
-  - File tracing includes for documentation content
-  - Output file tracking for `/docs/**/*` paths
+**Next.js:**
+- Config: `next.config.ts`
+- Features: MDX support via Fumadocs, component caching enabled
+- Entry point: `app/layout.tsx` (App Router)
 
 **PostCSS:**
-- `postcss.config.mjs` - Configured with @tailwindcss/postcss plugin
+- Config: `postcss.config.mjs`
+- Uses @tailwindcss/postcss plugin
 
-**Code Quality:**
-- `biome.jsonc` - Biome configuration extending ultracite presets
-  - Excludes: public/, components/ui, hooks/use-mobile.ts, lib/utils.ts, .source
+**Database:**
+- Config: `drizzle.config.ts`
+- Dialect: PostgreSQL
+- Schema location: `db/schema.ts`
+- Migrations: `db/migrations/`
 
-**Drizzle:**
-- `drizzle.config.ts` - Configured with:
-  - Schema: `./db/schema.ts`
-  - Output: `./db/migrations`
-  - Dialect: postgresql
-  - Requires DATABASE_URL environment variable
+**Documentation:**
+- Config: `source.config.ts`
+- Fumadocs MDX configuration
 
-**Components Registry:**
-- `components.json` - shadcn/ui component registry configuration
+## Scripts
 
-## Environment & Deployment
+**Development:**
+```bash
+npm run dev           # Start Next.js dev server on port 3000
+npm run build         # Build for production
+npm run start         # Start production server
+npm run check         # Run ultracite linting checks
+npm run fix           # Auto-fix code issues with ultracite
+npm run prepare       # Install husky git hooks
+```
 
-**Runtime Environment:**
-- Node.js (latest compatible with Next.js 16.1.4)
+## Platform Requirements
 
-**Deployment:**
-- Vercel (inferred from analytics SDKs and next.config.ts)
+**Development:**
+- Node.js 24.3.0+ (no .nvmrc enforced, but v24 currently used)
+- pnpm 9.15.4+ (enforced in packageManager field)
+- Git (for husky hooks)
 
-**Environment Variables Required:**
-- `DATABASE_URL` - PostgreSQL connection string for Neon
-- `GITHUB_TOKEN` - GitHub API token for RSS feed generation (app/rss.xml/route.ts)
-- `NEXT_PUBLIC_BASE_URL` - Public base URL for absolute URL generation (lib/utils.ts)
-- `NODE_ENV` - Automatically set (production/development)
-- `APP_ENV` - Custom environment flag (development detection in app/layout.tsx)
-
-**Build Outputs:**
-- `.next/` - Next.js build output directory
-- `db/migrations/` - Drizzle ORM migration files (generated)
+**Production:**
+- Deployment platform must support Node.js runtime
+- Environment variables: `DATABASE_URL`, `GITHUB_TOKEN`, `NEXT_PUBLIC_BASE_URL`, `NEXT_PUBLIC_WANDRY_ANALYTICS_TOKEN`
+- PostgreSQL database (via Neon)
 
 ---
 
-*Stack analysis: 2026-01-31*
+*Stack analysis: 2026-02-15*

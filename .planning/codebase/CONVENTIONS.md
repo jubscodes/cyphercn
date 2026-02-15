@@ -1,226 +1,204 @@
 # Coding Conventions
 
-**Analysis Date:** 2026-01-31
+**Analysis Date:** 2026-02-15
 
 ## Naming Patterns
 
 **Files:**
-- React components: PascalCase (`ProfileCard.tsx`, `DataTable.tsx`, `ActiveTheme.tsx`)
-- Hooks: camelCase prefixed with `use-` (`use-mobile.ts`)
-- Utilities: camelCase (`utils.ts`, `themes.ts`)
-- Pages/routes: lowercase with hyphens in directories (`app/profile-creator/page.tsx`)
-- Example components in subdirectories: camelCase (`calendar.tsx`, `command.tsx`)
+- Components: PascalCase (e.g., `NavMain`, `ThemeSelector`, `SubmitProjectForm`)
+- Hooks: camelCase with `use` prefix (e.g., `useCopyToClipboard`, `useIsMobile`)
+- Utilities: camelCase (e.g., `getThemeCode`, `cn`, `absoluteUrl`)
+- UI Components: PascalCase with nested component exports (e.g., `Card`, `CardHeader`, `CardContent`)
+- API routes: lowercase with hyphens in directory names (e.g., `/app/api/search/route.ts`)
+- Constants: SCREAMING_SNAKE_CASE (e.g., `MOBILE_BREAKPOINT`, `MIN_PROJECT_NAME_LENGTH`, `MAX_PROJECT_NAME_LENGTH`)
 
 **Functions:**
-- Component functions: PascalCase (`function ProfileCreator()`, `export function DataTable()`)
-- Regular functions: camelCase (`function handleDragEnd()`, `const getThemeCode = ...`)
-- Handler functions: prefixed with `handle` or `get/set` (`handleDragEnd`, `getImage`, `setProfileImage`)
+- Exported functions use camelCase (e.g., `cn()`, `useForm()`, `getThemeCode()`)
+- React components use PascalCase
+- Event handlers: `handle[EventName]` pattern (e.g., `handleSubmit()`, `handleDragEnd()`, `handleChange()`)
+- Getter/setter prefixes: `use` for hooks, `get` for pure functions
 
 **Variables:**
-- Constants: camelCase for regular constants, UPPER_SNAKE_CASE for configuration constants
-  - `const MOBILE_BREAKPOINT = 768`
-  - `const COOKIE_NAME = "active_theme"`
-  - `const DEFAULT_THEME = Theme.Default`
-- Regular variables: camelCase (`activeTheme`, `tempImage`, `rowSelection`)
-- State variables: camelCase with descriptive names (`isMobile`, `isDragging`, `isRetroAvatar`)
+- camelCase for all variables (e.g., `isMobile`, `isSubmitting`, `activeTheme`, `isInvalid`)
+- State variables using hooks: `[state, setState]` pattern
+- Boolean variables prefixed with `is`, `has`, `should`, `can` (e.g., `isCopied`, `isSubmited`, `hasData`)
 
 **Types:**
-- Type names: PascalCase (`ThemeContextType`, `InsertProject`, `SelectProject`)
-- Enum-like objects: PascalCase for properties (`Theme.Default`, `Theme.Sega`)
-- Zod schemas: lowercase (`schema`)
+- Interfaces: PascalCase (exported from external libraries via `type` imports)
+- Type aliases: PascalCase (e.g., `Theme`)
+- Generic parameters: Single uppercase letter or descriptive PascalCase (e.g., `T`, `Row`)
 
 ## Code Style
 
 **Formatting:**
-- Tool: Biome v2.3.11 (configured in `biome.jsonc`)
-- Configuration extends: `ultracite/core`, `ultracite/next`, `ultracite/react`
-- Line length: No explicit specification, but code follows standard formatting
-- Indentation: 2 spaces (inferred from patterns)
+- Tool: Biome (biomejs)
+- Config: `biome.jsonc` at root
+- Line length: Default Biome settings
+- Indentation: 2 spaces (enforced by Biome)
+- Semicolons: Required (enforced by Biome)
 
 **Linting:**
-- Tool: Biome for linting and formatting
-- Commands:
-  ```bash
-  pnpm check    # Run Biome checks
-  pnpm fix      # Auto-fix Biome issues
-  ```
-- Configuration location: `/Users/jubs/Development/8bitcn-ui/biome.jsonc`
-- Ignored paths: `public/`, `components/ui/`, `hooks/use-mobile.ts`, `lib/utils.ts`, `.source/`
+- Tool: Biome (extends `ultracite/core`, `ultracite/next`, `ultracite/react`)
+- Config: `biome.jsonc` with custom includes/excludes
+- Excluded paths: `!public`, `!components/ui`, `!hooks/use-mobile.ts`, `!lib/utils.ts`, `!.source`
+- Run command: `pnpm check` (checks and validates)
+- Fix command: `pnpm fix` (applies fixes)
+- Pre-commit hook: `lint-staged` runs `pnpm check` on staged files
 
-**Biome ignore directives:**
-- Used for specific lint rule suppressions: `// biome-ignore lint/<rule-path>: <reason>`
-  - Example: `// biome-ignore lint/suspicious/noDocumentCookie: Cookie Store API is not widely supported yet`
-  - Example: `// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: This function generates HTML code...`
-  - Example: `// biome-ignore lint/performance/noNamespaceImport: html-to-image library exports are designed...`
+**Ignored in linting:**
+- shadcn UI components and utilities (marked with `// biome-ignore-all` when necessary)
+- Third-party UI library components
 
 ## Import Organization
 
 **Order:**
-1. React and Next.js imports (`"use client"` at top of client components)
-2. Third-party library imports (grouped by package)
-3. Internal component imports from `@/components`
-4. Internal utility/hook imports from `@/lib`, `@/hooks`, `@/db`, etc.
-5. Type imports (using `type` keyword)
-
-**Pattern:**
-```typescript
-"use client";
-
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { parseAsString, useQueryState } from "nuqs";
-
-import { Button } from "@/components/ui/8bit/button";
-import { useThemeConfig } from "@/components/active-theme";
-import { cn } from "@/lib/utils";
-import type { Theme } from "@/lib/themes";
-```
+1. Node.js built-in modules (e.g., `import * as React from "react"`)
+2. Third-party packages (e.g., `@tabler/icons-react`, `zod`, `next/link`)
+3. Radix UI and component libraries (e.g., `@radix-ui/react-slot`)
+4. Type imports from external libraries (e.g., `type Icon from "@tabler/icons-react"`)
+5. Local utility imports (e.g., `@/lib/utils`)
+6. Local component imports (e.g., `@/components/ui/button`)
+7. Server action imports (e.g., `@/server/projects`)
+8. Custom hooks (e.g., `./active-theme`)
+9. Sibling components in same directory (e.g., `./CodeSnippet`)
 
 **Path Aliases:**
-- `@/*` points to project root (configured in `tsconfig.json`)
-- Used consistently throughout codebase for clean imports
-- Barrel files created in some directories but not consistently used
+- `@/*` maps to root directory (configured in `tsconfig.json`)
+- Used consistently throughout codebase (e.g., `@/components`, `@/lib`, `@/hooks`, `@/server`)
+- Never use relative imports; always use path aliases
 
 ## Error Handling
 
 **Patterns:**
-- Try-catch blocks for async operations:
-  ```typescript
+- Try-catch blocks used selectively, mainly in API routes and server actions
+- Error logging: `console.error()` in catch blocks for non-critical errors
+- User-facing errors: Return error strings or use `toast.error()` for user notification (see `SubmitProjectForm`)
+- Async functions in forms: Wrapped in try-catch with error state management
+- Promise handling: `.catch()` chains with `console.error()` for analytics/tracking errors
+- Validation: Zod schemas for form/data validation, with errors displayed via UI components
+
+**Example from `submit-project-form.tsx`:**
+```typescript
+onSubmit: async ({ value }) => {
   try {
-    const [newProject] = await db.insert(projects).values(project).returning();
-    return newProject;
+    const newProject = await createProject({
+      name: value.projectName,
+      url: value.url,
+    });
+
+    if (typeof newProject === "string") {
+      toast.error(newProject);
+      return;
+    }
+
+    toast.success("Project submitted successfully. Good luck!");
   } catch {
     throw new Error("Failed to create project");
   }
-  ```
-
-- Error returns (dual return values):
-  ```typescript
-  export async function createProject(
-    project: InsertProject
-  ): Promise<string | SelectProject> {
-    const check = await db.query.projects.findFirst({...});
-    if (check) {
-      return "Project already added.";  // Returns error string
-    }
-    // ... rest of logic
-  }
-  ```
-
-- Toast notifications for user-facing errors:
-  ```typescript
-  import { toast } from "sonner";
-  toast.promise(new Promise(...), {
-    loading: "Loading...",
-    success: "Done",
-    error: "Error",
-  });
-  ```
-  Or catch errors:
-  ```typescript
-  catch (e) {
-    console.error("html-to-image failed", e);
-    toast("Failed to generate profile card, try with manual upload.");
-  }
-  ```
-
-- Conditional rendering for missing data:
-  ```typescript
-  if (!node) {
-    return;
-  }
-  ```
+}
+```
 
 ## Logging
 
-**Framework:** `console.error()` for error logging
+**Framework:** `console` (native browser/Node.js APIs)
 
 **Patterns:**
-- Error logging: `console.error("context or library failed", error)`
-- Example: `console.error("html-to-image failed", e);`
+- `console.error()` for error logging in catch blocks
+- `console.warn()` for warnings (e.g., missing data validation)
+- No structured logging library in use
+- Errors in try-catch blocks in API routes and server actions logged to console
+- Analytics tracking wrapped in try-catch to prevent blocking main operations (see `registry.json/route.ts`)
+
+**When to log:**
+- Only in error/catch scenarios for user-facing operations
+- In API routes when errors occur during external service calls
+- Not in component render paths (avoid console logs in production React code)
 
 ## Comments
 
 **When to Comment:**
-- Complex logic explanations (e.g., microtask queue deferring for URL synchronization)
-- Workarounds and why they exist (see `active-theme.tsx` for URL sync comments)
-- HTML generation code with inline comments for conditionals
-- Suppress specific linter warnings with explanation
+- Explain complex business logic or domain-specific decisions
+- Document workarounds or non-obvious implementations
+- In comments within form validation or configuration objects (see `submit-project-form.tsx` with URL regex explanation)
+- Multi-line comments for complex algorithm explanations
 
 **JSDoc/TSDoc:**
-- Not consistently used
-- When present, focuses on function purpose and parameters
-- Example comment pattern: `// Note: when a file is uploaded we convert it to a data URL...`
+- Minimal usage; types are preferred over JSDoc for documentation
+- Component props documented through TypeScript types rather than JSDoc comments
+- Used selectively for complex utility functions
+
+**Ignore directives:**
+- `// biome-ignore-all` used in shadcn UI components to skip linting
+- `// eslint-disable-next-line react-hooks/incompatible-library` used for specific hook warnings
 
 ## Function Design
 
-**Size:** Functions are moderately sized, with complex logic broken into smaller components
-- Example: `generateProfileCardCode()` in `profile-creator.tsx` is 150+ lines for HTML generation
-- Helper functions like `DragHandle()` extracted for clarity in `data-table.tsx`
+**Size:**
+- Prefer smaller, focused functions
+- Components with complex logic extracted into separate functions (see `DragHandle`, `DraggableRow` in `data-table.tsx`)
+- Event handlers kept inline or extracted if reused
 
 **Parameters:**
-- Use destructuring for object parameters: `function DragHandle({ id }: { id: number })`
-- Use type definitions for parameters: `data: z.infer<typeof schema>[]`
-- Props in components use interface pattern: `{ data: z.infer<typeof schema>[] }`
+- Use destructured object parameters for components (see `NavMain` component takes `{ items }` object)
+- Function parameters typed explicitly with TypeScript
+- Default parameters used (e.g., `timeout = 2000` in `useCopyToClipboard`)
+- Optional parameters marked with `?` in TypeScript
 
 **Return Values:**
-- Components return JSX elements
-- Functions return typed values: `Promise<string | SelectProject>`
-- Nullable returns use `| undefined` or `| null`
-- Complex returns use union types
+- Components return JSX
+- Hooks return state and handlers (tuple pattern for simple hooks)
+- Utility functions explicit about return types
+- API routes return `NextResponse.json()`
+- Server actions return data or error strings for error handling
 
 ## Module Design
 
 **Exports:**
-- Named exports for utilities and functions: `export function cn(...)`
-- Default exports for page components: `export default function Home()`
-- Default exports for feature components: `export default function ProfileCreator()`
-- Named exports for smaller reusable components: `export function CalendarExample()`
+- Named exports preferred over default exports
+- Multiple related exports grouped (e.g., Card subcomponents: `CardHeader`, `CardContent`, `CardFooter`)
+- Re-exports from `index.ts` files in component directories (e.g., `components/ui/cypher/index.ts`)
+- Type exports use `export type` syntax
 
 **Barrel Files:**
-- UI components often imported directly: `@/components/ui/8bit/button`
-- No observable use of barrel index.ts files in main codebase
-- lib utilities imported individually: `@/lib/utils`, `@/lib/themes`
+- Used in `components/ui/` for consistent exports
+- Not used in simpler directories like `lib/` or `hooks/`
+- Example: `components/ui/cypher/index.ts` exports multiple component variants
 
-**File Organization:**
-- Related functionality grouped in same directory (e.g., `components/examples/`)
-- UI component library in `components/ui/8bit/`
-- Shared utilities in `lib/`
-- Server actions in `server/`
-- Database logic in `db/`
+**Component Composition:**
+- UI components composed from Radix UI primitives
+- Radix `Slot` component used for polymorphic component behavior (e.g., `asChild` prop)
+- Class merging with `cn()` utility (combines `clsx` and `tailwind-merge`)
+- Data slot attributes used on elements for styling targeting (e.g., `data-slot="card"`)
 
-## TypeScript Usage
+## TypeScript
 
-**Strict Mode:** Enabled in `tsconfig.json`
-- `strict: true`
-- `strictNullChecks: true`
+**Configuration:**
+- Target: `ES2017`
+- `strict: true` and `strictNullChecks: true`
+- Module resolution: `bundler` (for Next.js)
+- JSX: `react-jsx`
 
-**Typing Patterns:**
-- Zod for schema validation and type inference: `z.infer<typeof schema>`
-- Interface definitions for context types: `interface ThemeContextType`
-- Type assertions in event handlers: `const node = document.getElementById(...) as HTMLElement | null`
-- Union types for flexible returns: `Promise<string | SelectProject>`
+**Usage Patterns:**
+- Explicit type annotations on function parameters
+- Inferred return types where obvious
+- `type` imports for TypeScript-only constructs
+- Union types for variant props (see `buttonVariants` in button component)
+- `z.infer<typeof schema>` for deriving types from Zod schemas
 
-## React Patterns
+**Null Safety:**
+- Strict null checks enforced
+- Optional chaining and nullish coalescing used
+- Type guards for conditional rendering (e.g., `if (isAssigned) return` pattern in data table)
 
-**Client Components:**
-- Marked with `"use client"` directive at file top
-- Used for interactive components and hooks
+## File Structure Conventions
 
-**Server Components:**
-- Page components and layout files use server rendering by default
-- Example: `app/layout.tsx`, `app/page.tsx`
+**Co-location:**
+- Component files with related styles/types in same directory
+- UI component variants organized under `components/ui/cypher/` for terminal-styled variants
+- Examples organized under `components/examples/`
+- Forms organized under `components/forms/`
 
-**Hooks:**
-- Custom hooks stored in `hooks/` directory
-- Standard React hooks imported from `"react"`
-- Hooks follow naming convention `use*`
-
-**State Management:**
-- `useState` for local component state
-- Context API with `createContext` and `useContext` for theme management
-- URL state with `useQueryStates` from `nuqs` library
-
----
-
-*Convention analysis: 2026-01-31*
+**Naming consistency:**
+- Dashboard, page, and layout files follow Next.js conventions
+- API route files named `route.ts` in their respective directories
+- Test files would be named `[filename].test.ts` or `[filename].spec.ts` (currently no tests)

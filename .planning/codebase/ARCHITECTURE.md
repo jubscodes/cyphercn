@@ -1,249 +1,168 @@
 # Architecture
 
-**Analysis Date:** 2026-01-31
+**Analysis Date:** 2026-02-15
 
 ## Pattern Overview
 
-**Overall:** Next.js 16 full-stack web application with component library registry and static site generation.
+**Overall:** Next.js App Router with Component Library + Documentation Site hybrid. The application serves dual purposes: (1) a shareable component library distribution platform (`CypherCN`) and (2) a component showcase/documentation site built with the components themselves.
 
 **Key Characteristics:**
-- Next.js App Router with file-based routing
-- Component-centric architecture with 8-bit retro styling layer
-- Hybrid rendering: Server components for documentation, client components for interactive features
-- Static component registry available via JSON API endpoints
-- Documentation-first design with MDX content source
+- Next.js 16 App Router (SSR/SSG hybrid)
+- Component-driven UI with Radix UI primitives as foundation
+- Terminal/cyberpunk aesthetic applied as styling layer over standard components
+- MDX-based documentation (Fumadocs integration)
+- Server actions for database operations
+- Database persistence for user submissions (projects)
+- Client-side theme management with next-themes
+- No traditional API layer - uses Fumadocs search API
 
 ## Layers
 
-**Presentation Layer:**
-- Purpose: Render UI components and pages to users
-- Location: `app/`, `components/`
-- Contains: Page components, layout components, UI components (shadcn/ui-based with 8-bit styling)
-- Depends on: Component library, utilities, theme providers
-- Used by: Next.js routing system, browser rendering
+**Presentation Layer (Client & Server Components):**
+- Purpose: Render UI to users, handle interactions, manage visual state
+- Location: `app/` (Next.js pages), `components/` (reusable UI)
+- Contains: Page components, layout wrappers, UI component implementations
+- Depends on: Radix UI primitives, theme utilities, form handling (TanStack Form)
+- Used by: Browser/HTTP clients
 
-**Component Library:**
-- Purpose: Provide reusable UI components with 8-bit retro aesthetics
-- Location: `components/ui/`, `components/ui/8bit/`
-- Contains: Base UI components (button, card, input, etc.), specialized components (data-table, profile-creator), blocks (reusable component patterns)
-- Depends on: Radix UI primitives, TailwindCSS, class-variance-authority
-- Used by: Pages, examples, and external consumers via registry
+**Component Library Layer:**
+- Purpose: Provide reusable, themed UI components for both internal use and external distribution
+- Location: `components/ui/` with `cypher/` (terminal-styled) and `protheus/` (alternative theme) subdirectories
+- Contains: CVA-based component variants, styled primitives, game-themed components (health bars, mana bars)
+- Depends on: Radix UI, class-variance-authority, Tailwind CSS
+- Used by: All page components and documentation examples
 
-**Application Layer:**
-- Purpose: Handle page-specific logic, data fetching, and state management
-- Location: `app/dashboard/`, `app/profile-creator/`, `app/character-sheet/`, etc.
-- Contains: Page components, form components, interactive features
-- Depends on: Component library, server actions, client-side hooks
-- Used by: Next.js routing
+**Business Logic & Data Access:**
+- Purpose: Handle server-side operations, database queries, data validation
+- Location: `server/` (server actions), `db/` (Drizzle ORM + schema)
+- Contains: `createProject()` server action, Drizzle schema definitions
+- Depends on: Neon serverless database, Drizzle ORM, Zod validation
+- Used by: Form submissions (profile creator, project submissions)
 
-**Server Layer:**
-- Purpose: Handle server-side operations and database interactions
-- Location: `server/`
-- Contains: Server actions (`"use server"`), database operations via Drizzle ORM
-- Depends on: Database connection, Drizzle ORM schema
-- Used by: Client components via form actions and async operations
+**Documentation & Content:**
+- Purpose: Provide searchable, browseable documentation for components and patterns
+- Location: `content/docs/` (MDX), `lib/source.ts` (Fumadocs loader)
+- Contains: Component docs, block patterns, integration guides
+- Depends on: Fumadocs core, MDX processing
+- Used by: `/docs` routes, search functionality
 
-**Data Layer:**
-- Purpose: Manage database schema and connections
-- Location: `db/`
-- Contains: Drizzle ORM schema definitions, database client initialization
-- Depends on: Neon serverless PostgreSQL
-- Used by: Server actions and server-side queries
-
-**Documentation Layer:**
-- Purpose: Provide searchable documentation and component showcase
-- Location: `content/docs/`, `app/docs/`
-- Contains: MDX content files, fumadocs configuration, doc page rendering
-- Depends on: fumadocs-mdx, fumadocs-ui, Shiki syntax highlighting
-- Used by: Documentation pages and search functionality
-
-**Registry/Distribution Layer:**
-- Purpose: Distribute components as JSON packages for external consumption
-- Location: `app/r/[component]/route.ts`, `lib/package.ts`
-- Contains: Component registry endpoints, package building logic
-- Depends on: Component system, registry.json data
-- Used by: External tools (Cursor, v0, shadcn-ui CLI)
-
-**Utilities & Shared Logic:**
-- Purpose: Provide common utilities and helper functions
-- Location: `lib/`, `hooks/`, `config/`
-- Contains: Theme management, metadata, code highlighting, responsive utilities
-- Depends on: Next.js APIs, React
-- Used by: All other layers
+**Utilities & Configuration:**
+- Purpose: Cross-cutting concerns - theming, styling, metadata, code highlighting
+- Location: `lib/` (utilities), `config/` (navigation), `types/`
+- Contains: `cn()` merge utility, theme definitions, syntax highlighting, metadata templates
+- Depends on: clsx, tailwind-merge, Shiki
+- Used by: All components
 
 ## Data Flow
 
 **Component Showcase Flow:**
+1. User visits `/` (home page)
+2. `app/page.tsx` renders `ComponentShowcase` from `components/examples/`
+3. Examples display terminal-styled components using `cypher/` variants
+4. Styling applied via CVA and Tailwind, with cyberpunk animations
 
-1. User visits home page (`app/page.tsx`)
-2. `ComponentShowcase` component renders example components from `components/examples/`
-3. Examples use UI components from `components/ui/8bit/` with theme from `active-theme` context
-4. TailwindCSS applies retro styling via `components/ui/8bit/styles/retro.css`
-5. Browser renders pixelated borders and retro visual effects
+**Project Submission Flow:**
+1. User navigates to `/submit-project`
+2. `app/submit-project/page.tsx` renders `SubmitProjectForm`
+3. Form uses TanStack Form + Zod validation
+4. On submit, calls server action `createProject()` in `server/projects.ts`
+5. Server action queries database via Drizzle ORM
+6. Returns success or error message via toast notification (Sonner)
 
-**Documentation Flow:**
+**Documentation Browse Flow:**
+1. User navigates to `/docs` or uses search dialog
+2. `app/docs/layout.tsx` loads page tree from `lib/source.ts`
+3. Fumadocs processes MDX from `content/docs/`
+4. Page renders with sidebar navigation
+5. Code examples execute via `ComponentShowcase` and example components
 
-1. User navigates to `/docs/[...slug]` or uses search
-2. `app/docs/[[...slug]]/page.tsx` fetches page from fumadocs source
-3. Page metadata extracted, MDX compiled to React components
-4. `mdx-components.tsx` maps MDX elements to UI components (8-bit styled where applicable)
-5. Syntax highlighting via react-shiki with Shiki engine
-6. Page rendered with table of contents, navigation breadcrumbs, sponsor cards
+**Search Flow:**
+1. User opens search dialog (keyboard shortcut or header button)
+2. `SearchDialog` component uses Fumadocs search integration
+3. `/api/search` route uses Orama (full-text search) over Fumadocs source
+4. Results filtered to component docs, blocks, and guides
 
-**Registry Download Flow:**
-
-1. External tool (Cursor, v0, shadcn-ui) requests `GET /r/[component].json`
-2. `app/r/[component]/route.ts` receives request
-3. `getPackage()` from `lib/package.ts` loads component code and metadata
-4. Component payload serialized to JSON and returned
-5. Vercel Analytics tracks download event
-6. External tool installs component in user's project
-
-**Profile Creator Interactive Flow:**
-
-1. User navigates to `/profile-creator`
-2. `profile-creator.tsx` component initializes with URL search params via `nuqs`
-3. User modifies form fields (name, avatar, bio, socials)
-4. `useQueryStates` hook syncs state to URL
-5. Live preview updates via `ProfileCard` component
-6. User triggers download or copy-code action
-7. `html-to-image` library converts preview to PNG image
-8. Code snippet displays raw HTML/React code for component
-
-**Server Action Flow (Project Submission):**
-
-1. User submits project form on `/submit-project`
-2. Form submission calls `createProject()` server action (`server/projects.ts`)
-3. Server action validates against existing projects in database
-4. Drizzle ORM inserts new project into PostgreSQL `projects` table
-5. Success toast notification displayed via Sonner
-6. User redirected to success page
-
-**Theme Switching Flow:**
-
-1. `ThemeProvider` at root (next-themes) manages theme state
-2. `ActiveThemeProvider` reads user's theme preference from localStorage
-3. Theme selection updates context state
-4. UI components subscribe to theme context and apply variant CSS
-5. 8-bit components update border colors and effects based on theme
-6. CSS variables in tailwind config updated (dark mode detection)
-
-**State Management:**
-
-- Theme: Managed by `next-themes` + `ActiveThemeProvider` context
-- URL query params: Managed by `nuqs` for shareable state (profile creator, filters)
-- Form state: Managed by TanStack Form for validation and submission
-- Table state: Managed by TanStack Table (sorting, filtering, pagination, column visibility)
-- Toast notifications: Managed by Sonner toast system
-- Client-side component state: React hooks (useState, useMemo, useCallback)
+**State Management Flow:**
+1. Theme state: `ActiveThemeProvider` + `next-themes` in `components/theme-provider.tsx`
+2. URL state: `useQueryStates()` from `nuqs` for profile creator customization
+3. Form state: TanStack Form for submit-project and profile creation forms
+4. No global client state management - primarily URL and provider-based
 
 ## Key Abstractions
 
-**UI Component Wrapper Pattern:**
+**CVA Variant System:**
+- Purpose: Define component styling variations cleanly and type-safely
+- Examples: `components/ui/cypher/button.tsx`, `components/ui/cypher/card.tsx`
+- Pattern: Export `buttonVariants = cva()` with variants object, use in component props
+- Applied to: Buttons (size, variant, font, glow), cards (terminal, ASCII, double borders), progress bars
 
-- Base Radix UI components wrapped in 8-bit styled versions
-- Location: `components/ui/8bit/` files
-- Pattern: Import shadcn/ui component, compose with CVA (class-variance-authority) for retro styling
-- Example: `components/ui/8bit/button.tsx` wraps shadcn Button with pixelated borders
-- Used for: Consistent styling across entire app while maintaining accessibility
+**Terminal Styling Layer:**
+- Purpose: Apply retro/cyberpunk aesthetic consistently across components
+- Examples: `components/ui/cypher/styles/cyberpunk.css`, Phosphor glow effects, scanlines
+- Pattern: CSS utility classes applied to components, font variants (cyphercn, cyphercn-normal)
+- Used by: All cypher/* components, theme system
 
-**Component Registry System:**
+**Server Actions Pattern:**
+- Purpose: Safely call database operations from client components
+- Examples: `server/projects.ts::createProject()`
+- Pattern: Mark function with `"use server"`, take validated input, return result or error string
+- Security: Server actions validate with Zod, prevent duplicate entries
 
-- Components are discoverable via static JSON registry
-- Location: `registry.json` at project root
-- Pattern: Component metadata includes name, description, dependencies, code snippets
-- Registry generated at build time and served via API routes
-- Enables external tools to install components
-
-**Page Layout Pattern:**
-
-- Root layout (`app/layout.tsx`) establishes provider hierarchy:
-  1. `NuqsAdapter` for URL state management
-  2. `RootProvider` from fumadocs (search, navigation)
-  3. `ThemeProvider` from next-themes (dark/light mode)
-  4. `ActiveThemeProvider` (custom theme variants)
-- Child layouts and pages inherit provider context
-- Used for: Consistent theme, search, and navigation across all pages
-
-**Server Action Pattern:**
-
-- Data mutations via Next.js server actions marked with `"use server"`
-- Located in `server/` directory
-- Pattern: Async function that runs on server, validates input, returns result
-- Used for: Form submissions, database writes, secure operations
-- Example: `createProject()` validates and inserts project to database
-
-**Content Source Pattern:**
-
-- MDX documents stored in `content/docs/`
-- fumadocs-mdx configuration transforms to pages
-- Static params generated at build time for all docs routes
-- Dynamic metadata generation per page
-- Used for: Scalable documentation without database
+**Component Showcases:**
+- Purpose: Live examples of components in the documentation
+- Examples: `components/examples/component-showcase.tsx`, `components/examples/theme-selector.tsx`
+- Pattern: Standalone React components that render component variations
+- Integration: Embedded in documentation pages and home page
 
 ## Entry Points
 
-**Application Entry:**
-- Location: `app/layout.tsx`
-- Triggers: Server startup, page navigation
-- Responsibilities: Initialize providers (theme, search, URL state), set up global layout structure, load analytics
-
-**Homepage:**
+**Home/Marketing:**
 - Location: `app/page.tsx`
-- Triggers: Navigation to `/`
-- Responsibilities: Display welcome message, show component showcase, promotion cards, sponsor section
+- Triggers: Direct visit to `/`
+- Responsibilities: Display value proposition, component showcase, project submission CTA
 
-**Component Registry API:**
-- Location: `app/r/[component]/route.ts`
-- Triggers: HTTP GET request to `/r/{name}.json`
-- Responsibilities: Load component package, validate request, track analytics, return JSON response
+**Documentation:**
+- Location: `app/docs/layout.tsx`, `app/docs/[[...slug]]/page.tsx`
+- Triggers: Navigate to `/docs/*`
+- Responsibilities: Load and render MDX content, sidebar navigation, code examples
 
-**Documentation Pages:**
-- Location: `app/docs/[[...slug]]/page.tsx`
-- Triggers: Navigation to `/docs` or `/docs/...`
-- Responsibilities: Fetch MDX page, generate metadata, render with TOC and navigation
+**Component Gallery:**
+- Location: `app/r/[component]/page.tsx`
+- Triggers: Navigate to `/r/{component-name}`
+- Responsibilities: Display individual component docs from registry
 
-**Interactive Tools:**
-- Location: `app/profile-creator/page.tsx`, `app/character-sheet/page.tsx`, `app/dashboard/page.tsx`
-- Triggers: User navigation
-- Responsibilities: Manage client-side state, handle form submission to server actions, render real-time previews
+**Dashboard:**
+- Location: `app/dashboard/page.tsx`
+- Triggers: Navigate to `/dashboard`
+- Responsibilities: Demonstrate sidebar layout, data table, charts using cypher components
+
+**Special Pages:**
+- Theme Selector: `app/themes/page.tsx` - demonstrates all available theme variants
+- Profile Creator: `app/profile-creator/page.tsx` - interactive profile card builder
+- Character Sheet: `app/character-sheet/page.tsx` - gaming-themed form example
+- Submit Project: `app/submit-project/page.tsx` - project submission form
 
 ## Error Handling
 
-**Strategy:** Fallback UI and graceful degradation
+**Strategy:** Client-side toasts for user feedback, server-side try-catch with error messages returned to client.
 
 **Patterns:**
-
-- Next.js `notFound()` for 404 scenarios (missing docs, components)
-- Try-catch blocks in server actions with error messages returned to client
-- Sonner toast for user-facing error notifications
-- Console error logging for server-side issues
-- Skeleton loading states during async operations
-- Suspense boundaries for lazy-loaded content
+- Form validation: Zod schema validation before submission, field-level error display
+- Server errors: Try-catch in server actions, return error string to client
+- Toast notifications: Sonner toast for success/error feedback
+- Duplicate entries: Database check before insert, returns error message
+- Not found: `app/not-found.tsx` with terminal-styled fallback UI
 
 ## Cross-Cutting Concerns
 
-**Logging:**
-- Browser console for development
-- Server-side console.error in catch blocks
-- Vercel Analytics for production events
+**Logging:** Console-based (development) and Vercel analytics (production via `@vercel/analytics`)
 
-**Validation:**
-- Zod schema validation in server actions
-- Form validation via TanStack Form
-- URL param parsing via nuqs with type safety
+**Validation:** Zod schemas for form inputs (project name, URL validation with regex), database schema validation via Drizzle
 
-**Authentication:**
-- Not currently implemented
-- Login pages exist (`app/login/`, `app/login-with-image/`) but appear to be placeholder examples
+**Authentication:** Not implemented - project submissions are unauthenticated but rate-limited by database constraints (duplicate check)
 
-**CSS Architecture:**
-- TailwindCSS for base utility styling
-- CSS modules and class-variance-authority for component variants
-- Custom retro CSS file (`components/ui/8bit/styles/retro.css`) for pixelated effects
-- CSS variables in tailwind config for theme colors
-- Dark mode support via next-themes class strategy
+**Theming:** next-themes provider wraps entire app, stores preference in localStorage, supports system theme detection. CypherCN variants applied as CSS classes.
 
 ---
 
-*Architecture analysis: 2026-01-31*
+*Architecture analysis: 2026-02-15*

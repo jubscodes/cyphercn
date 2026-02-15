@@ -42,6 +42,3 @@ next-env.d.ts
 
 # Fumadocs
 .source
-
-# GSD planning docs (local only)
-.planning/

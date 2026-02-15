@@ -1,175 +1,139 @@
 # External Integrations
 
-**Analysis Date:** 2026-01-31
+**Analysis Date:** 2026-02-15
 
 ## APIs & External Services
 
-**Analytics & Monitoring:**
-- Vercel Analytics - Web analytics tracking for user interactions
-  - SDK: @vercel/analytics 1.6.1
-  - Implementation: `app/layout.tsx` (Analytics component)
-  - Tracking API: Used in `app/r/[component]/route.ts` with `track()` function for registry downloads
+**GitHub API:**
+- Contributors endpoint - Fetches repository contributors for display
+  - Endpoint: `https://api.github.com/repos/jubscodes/cyphercn-ui/contributors`
+  - Usage: `app/contributors/page.tsx` - Displays list of project contributors
+  - Auth: OAuth token via `GITHUB_TOKEN` env var
+  - SDK/Client: Native fetch API (no SDK)
 
-- Vercel Speed Insights - Core Web Vitals monitoring
-  - SDK: @vercel/speed-insights 1.3.1
-  - Implementation: `app/layout.tsx` (SpeedInsights component)
-
-- Wandry Analytics SDK - Custom registry and component analytics
-  - SDK: @wandry/analytics-sdk 1.16.0
-  - Implementation: `app/rss.xml/route.ts`
-  - Purpose: Generates RSS feed for component registry with analytics
-
-**GitHub Integration:**
-- GitHub API
-  - Purpose: RSS feed generation requires last commit date for registry items
-  - Token: `GITHUB_TOKEN` environment variable (required in `app/rss.xml/route.ts`)
-  - Repository: TheOrcDev/8bitcn-ui
-  - Endpoint: `https://api.github.com/repos/TheOrcDev/8bitcn-ui/contributors` (used in `app/contributors/page.tsx`)
-  - Usage: Fetch contributor list, commit metadata for RSS publishing dates
+**Wandry Analytics:**
+- RSS feed generation for component registry
+  - Package: `@wandry/analytics-sdk` 1.16.0
+  - Usage: `app/rss.xml/route.ts` - Generates RSS feed with component metadata
+  - Purpose: Track and publish component library updates
+  - Requires: GitHub integration for last-edit metadata
 
 ## Data Storage
 
-**Primary Database:**
-- **PostgreSQL (Neon Serverless)**
-  - Connection: `DATABASE_URL` environment variable required
-  - Client: @neondatabase/serverless 1.0.2
-  - ORM: drizzle-orm 0.45.1
-  - Location: `db/drizzle.ts` - Database client initialization
-  - Schema: `db/schema.ts`
-  - Tables:
-    - `projects` - User-submitted projects with id (uuid), name, url, createdAt, updatedAt
+**Databases:**
+- PostgreSQL (Neon Serverless)
+  - Connection: Via `DATABASE_URL` environment variable
+  - Client: `@neondatabase/serverless` 1.0.2 (HTTP-based serverless driver)
+  - ORM: Drizzle ORM 0.45.1
+  - Schema location: `db/schema.ts`
+  - Tables: `projects` table (id, name, url, createdAt, updatedAt)
+  - Client instance: Initialized in `db/drizzle.ts` with neon HTTP client
 
 **File Storage:**
 - Local filesystem only
-  - `registry.json` - Component registry metadata read by `lib/package.ts`
-  - Configuration files and documentation content stored in version control
+  - User assets: `public/` directory
+  - Content: `content/docs/` for MDX documentation
+  - Component registry: `registry.json` file
+
+**Search/Indexing:**
+- Orama (embedded indexing via Fumadocs)
+  - Documentation: Referenced in `app/api/search/route.ts`
+  - Purpose: Full-text search for documentation
+  - SDK/Integration: Via Fumadocs search plugin (`fumadocs-core/search/server`)
+  - Language support: English configured
 
 **Caching:**
-- Next.js built-in caching
-  - Component caching enabled in `next.config.ts` (cacheComponents: true)
-  - RSS feed response caching: max-age=3600, s-maxage=3600, stale-while-revalidate=86400
+- None detected - HTTP caching headers used for API responses
 
 ## Authentication & Identity
 
 **Auth Provider:**
-- None - Public application without user authentication
-
-**Authorization:**
-- Anonymous access to all pages and APIs
-- Project submission requires no authentication (form validation only via Zod)
-
-## Content Management
-
-**Documentation:**
-- fumadocs-core 16.4.7 - Content loading and search
-  - Implementation: `lib/source.ts` - Source loader with Fumadocs
-  - Search API: `app/api/search/route.ts` - Full-text search via Orama
-  - Language: English
-  - Content location: `.source/` directory (fumadocs-mdx:collections mapping)
-
-**Component Registry:**
-- shadcn/ui compatible registry format
-  - Location: `registry.json` (root)
-  - Components served via: `app/r/[component]/route.ts`
-  - Registry metadata endpoint: `app/r/registry.json/route.ts`
-  - Static generation for all components via `generateStaticParams()`
+- None detected - No authentication framework integrated
+- GitHub authentication: OAuth-style token-based (GitHub API only, not for user login)
+- No user login system - Public access only with GitHub API integration for metadata
 
 ## Monitoring & Observability
 
-**Error Tracking:**
-- None dedicated - Errors logged to console
-  - Error handling: try-catch blocks in async operations
+**Analytics:**
+- Vercel Analytics 1.6.1
+  - Package: `@vercel/analytics/react`
+  - Loaded in: `app/layout.tsx`
+  - Purpose: Web vitals and performance tracking
+
+- Speed Insights 1.3.1
+  - Package: `@vercel/speed-insights/next`
+  - Loaded in: `app/layout.tsx`
+  - Purpose: Core Web Vitals monitoring
 
 **Logs:**
-- Browser console logging (client-side)
-- Server console logging (errors in routes: `app/r/[component]/route.ts`, `app/rss.xml/route.ts`)
-- Environment flag: `APP_ENV` for development debug features
+- Console-based logging (no external logging service detected)
+- Development: `APP_ENV === "development"` check in `app/layout.tsx`
+
+**Error Tracking:**
+- None detected - No error tracking service (Sentry, Rollbar, etc.) integrated
 
 ## CI/CD & Deployment
 
-**Hosting Platform:**
-- Vercel (inferred from analytics SDKs and next.config.ts patterns)
+**Hosting:**
+- Assumed Vercel (based on @vercel packages and Next.js optimization)
+- Git-based deployment (supports typical Vercel/GitHub integration)
 
-**CI/CD Pipeline:**
-- GitHub Actions (configured in `.github/` directory)
-- Pre-commit hooks via husky for lint-staged checks
+**CI Pipeline:**
+- Husky 9.1.7 - Git pre-commit hooks
+  - Config: `.husky/` directory
+  - Usage: Runs linters via lint-staged on staged files before commit
 
-**Build Process:**
-- Next.js build: `next build`
-- Development: `next dev`
-- Production start: `next start`
-- Code checks: `ultracite check` (Biome-based linting)
-- Code fixing: `ultracite fix`
+- Lint-staged 16.2.7 - Staged file linting
+  - Config: `lint-staged` field in package.json
+  - Runs: `ultracite check` on staged TypeScript, JavaScript, JSON, CSS, and Markdown files
+
+**Environment Configuration:**
+
+**Required env vars:**
+- `DATABASE_URL` - PostgreSQL connection string (required, throws error if missing in `drizzle.config.ts`)
+- `GITHUB_TOKEN` - GitHub API token for last-edit tracking in RSS feed (used in `app/rss.xml/route.ts`)
+
+**Optional env vars:**
+- `NEXT_PUBLIC_BASE_URL` - Base URL for documentation (referenced in `app/rss.xml/route.ts`)
+- `NEXT_PUBLIC_WANDRY_ANALYTICS_TOKEN` - Wandry Analytics token (loaded in `app/layout.tsx` analytics)
+- `APP_ENV` - Environment detection ("development" checked in `app/layout.tsx`)
+
+**Secrets location:**
+- Environment variables stored in deployment platform (likely Vercel environment config)
+- No `.env` files committed to repository
+- `.env*` files are ignored/not present in working directory
 
 ## Webhooks & Callbacks
 
 **Incoming:**
-- None configured
+- None detected
 
 **Outgoing:**
-- GitHub API calls for:
-  - Contributor list fetching (`app/contributors/page.tsx`)
-  - RSS feed commit date metadata (`app/rss.xml/route.ts`)
+- None detected
 
-## RSS & Syndication
+## Registry & Component Distribution
 
-**RSS Feed:**
-- Endpoint: `/rss.xml` (route: `app/rss.xml/route.ts`)
-- Format: RSS/Atom feed
-- Content: Component registry items with metadata
-- Generation: Dynamic with Wandry Analytics SDK
-- Caching: 1 hour (max-age), up to 24 hours stale-while-revalidate
-- Metadata Strategy: GitHub last commit date for publishing
-- URL Resolver: Maps categories from registry items to doc URLs
+**Component Registry:**
+- `registry.json` - Component package registry file
+- API route: `app/r/registry.json/route.ts` - Serves component registry
+- Usage: Component installation and distribution (shadcn/ui compatible format)
 
-## Font Services
+**Component Retrieval:**
+- API route: `app/r/[component]/route.ts` - Serves individual component code
+- Format: Compatible with shadcn/ui CLI for component installation
 
-**Google Fonts:**
-- Geist Sans and Geist Mono fonts loaded via Next.js font optimization
-- Implementation: `app/layout.tsx`
-- Subsets: latin
+## Documentation & Content
 
-## Environment Configuration
+**Documentation Framework:**
+- Fumadocs MDX 14.2.6 - MDX-based documentation site
+- Source: `content/docs/` directory
+- Configuration: `source.config.ts` and `.source/source.config.mjs`
+- Deployed at: `/docs` URL path with search capability
 
-**Required Environment Variables:**
-- `DATABASE_URL` - PostgreSQL connection string (Neon serverless)
-- `GITHUB_TOKEN` - GitHub API token for RSS feed generation and contributor data
-- `NEXT_PUBLIC_BASE_URL` - Public base URL for absolute URL generation (used in `lib/utils.ts`)
-
-**Optional Environment Variables:**
-- `NODE_ENV` - Set automatically (production/development)
-- `APP_ENV` - Development flag (checked in `app/layout.tsx` for debug features)
-
-**Secrets Location:**
-- Environment variables configured via Vercel deployment platform
-- `.env.local` for local development (not committed)
-
-## Dependency Locations by Purpose
-
-**Core Application:**
-- Next.js, React, React DOM: `app/`, `components/`, `lib/`
-
-**Form Handling:**
-- TanStack Form: `components/forms/submit-project-form.tsx`
-
-**Database Operations:**
-- Drizzle ORM: `db/drizzle.ts`, `db/schema.ts`
-- Drizzle Kit: Configuration in `drizzle.config.ts`
-
-**Documentation:**
-- Fumadocs: `lib/source.ts`, `app/api/search/route.ts`
-
-**Styling:**
-- Tailwind CSS: Global styles in `app/globals.css`, component classes throughout
-
-**UI Components:**
-- Radix UI: Component primitives throughout `components/`
-- shadcn/ui: Copied components in `components/ui/8bit/` and `components/ui/`
-
-**Icons:**
-- Lucide React: Used in components across the app
-- Tabler Icons: `@tabler/icons-react` dependency
+**Fonts:**
+- Google Fonts via Next.js optimization (`next/font/google`)
+- Fonts: Geist Sans, IBM Plex Mono (loaded in `app/layout.tsx`)
 
 ---
 
-*Integration audit: 2026-01-31*
+*Integration audit: 2026-02-15*

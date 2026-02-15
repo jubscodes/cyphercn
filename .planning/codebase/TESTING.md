@@ -1,185 +1,208 @@
 # Testing Patterns
 
-**Analysis Date:** 2026-01-31
+**Analysis Date:** 2026-02-15
 
 ## Test Framework
 
-**Status:** No testing framework configured or in use
+**Current Status:** No testing framework currently configured or in use.
 
-The codebase does not have any testing infrastructure set up. No Jest, Vitest, or other test runners are configured.
+**Runner:**
+- Not applicable (no tests exist in codebase)
 
-**package.json devDependencies:** No testing-related packages found (jest, vitest, mocha, chai, testing-library, etc.)
+**Assertion Library:**
+- Not applicable
 
-**Configuration files:** None detected (jest.config.*, vitest.config.*, etc.)
+**Run Commands:**
+```bash
+# No test commands configured
+# pnpm check       # Runs Biome linting/formatting check (not unit tests)
+# pnpm fix         # Runs Biome formatter/linter
+```
 
-## No Test Files Found
+## Test File Organization
 
-The project contains no `.test.ts`, `.test.tsx`, `.spec.ts`, or `.spec.tsx` files in the application code.
+**Current Approach:**
+- No test files present (verified with file search)
+- No `jest.config.js`, `vitest.config.ts`, or similar test runner config
 
-Search results:
-- `/Users/jubs/Development/8bitcn-ui/app/` - No test files
-- `/Users/jubs/Development/8bitcn-ui/components/` - No test files
-- `/Users/jubs/Development/8bitcn-ui/lib/` - No test files
-- `/Users/jubs/Development/8bitcn-ui/server/` - No test files
+**Expected Structure (if tests were added):**
+- Test files would likely use `.test.ts` or `.spec.ts` suffix
+- Co-located with source files (e.g., `components/button.test.tsx` next to `components/button.tsx`)
+- Or in separate `__tests__` directories following Next.js conventions
 
-Tests found in `node_modules/` only (from dependencies like `@mswjs/interceptors`, `until-async`, etc.)
+**Recommended Setup (Future):**
+- Framework: Vitest (lightweight, fast, Vite-native) or Jest
+- Location: Alongside source files with `.test.ts` suffix
+- Coverage tool: Vitest with `@vitest/coverage-v8`
 
-## Recommendation for Future Testing Implementation
+## Test Coverage Gaps
 
-Should testing be required in the future, the following approach is recommended based on codebase structure:
+**Untested Areas:**
+- **React Components:** All components lack unit tests
+  - Files: `components/ui/*.tsx`, `components/forms/*.tsx`, `components/examples/*.tsx`
+  - Risk: Component behavior changes go undetected; visual regression not caught
+  - Priority: High - UI components are critical and frequently modified
 
-**Suggested Stack:**
-- **Test Runner:** Vitest (modern, Fast, Vite-native)
-- **React Testing:** React Testing Library (user-centric testing)
-- **Mocking:** MSW (Mock Service Worker) for API mocking
-- **Assertion Library:** Vitest built-in assertions (compatible with Jest)
+- **Custom Hooks:** All custom hooks untested
+  - Files: `hooks/use-mobile.ts`, `components/hooks/use-copy-to-clipboard.ts`
+  - Risk: Hook state management bugs, lifecycle issues in production
+  - Priority: High - hooks control state across multiple components
 
-**Example Setup (for future reference):**
+- **API Routes:** No API route tests
+  - Files: `app/api/search/route.ts`, `app/r/registry.json/route.ts`, `app/r/[component]/route.ts`
+  - Risk: API contract changes, error handling failures, tracking failures
+  - Priority: Medium - limited external dependencies but critical for distribution
 
+- **Server Actions:** Form submission action untested
+  - Files: `server/projects.ts` (import in `submit-project-form.tsx`)
+  - Risk: Data validation failures, project creation bugs
+  - Priority: High - user-facing critical path
+
+- **Utility Functions:** No tests for helpers
+  - Files: `lib/utils.ts` (the `cn()` function), `lib/themes.ts`, `lib/source.ts`
+  - Risk: Class merging or theme selection bugs across entire application
+  - Priority: Medium - utilities are widely used
+
+- **Form Validation:** Zod schema validation untested
+  - Files: `components/forms/submit-project-form.tsx` (embedded `formSchema`)
+  - Risk: Invalid data submitted to backend, client-side validation bypassed
+  - Priority: High - data validation is critical
+
+## Why Tests Are Missing
+
+**No Testing Infrastructure:**
+- No test runner dependencies in `package.json` (dev or otherwise)
+- No test configuration files present
+- No pre-commit hooks running tests
+- `biome.jsonc` configured for linting only, not testing
+
+**Development Stage:**
+- Project appears to be in active development/refactoring phase (see git history with recent refactors)
+- Focus has been on UI/UX and component design rather than test coverage
+- Contributing guide mentions component development but doesn't mention testing requirements
+
+## Recommended Testing Strategy
+
+**Phase 1: Foundation (Highest Priority)**
+1. Set up test runner (recommend Vitest for Next.js projects)
+2. Write tests for critical hooks:
+   - `useIsMobile()` - test media query listener behavior
+   - `useCopyToClipboard()` - test clipboard API, timeout handling
+3. Add tests for utility functions:
+   - `cn()` function - test class merging with Tailwind
+   - `getThemeCode()` - test theme resolution
+
+**Phase 2: Component Testing (Medium Priority)**
+1. Test form components:
+   - `SubmitProjectForm` - test validation, submission, error states
+   - Form field components - test input handling, error display
+2. Test UI components:
+   - `Button` - test variants and sizes
+   - `Card` and subcomponents - test composition
+3. Test interactive components:
+   - `DataTable` - test sorting, filtering, pagination, drag-and-drop
+   - `ThemeSelector` - test theme switching
+
+**Phase 3: Integration/E2E (Lower Priority)**
+1. API route testing (MSW for mocking)
+2. Form submission flow (component + server action)
+3. Page-level interactions
+
+## Testing Patterns to Adopt
+
+**Hook Testing Pattern:**
 ```typescript
-// vitest.config.ts (to create)
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+// Example for useIsMobile hook testing
+import { renderHook, waitFor } from '@testing-library/react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
-export default defineConfig({
-  plugins: [react()],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./vitest.setup.ts'],
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './'),
-    },
-  },
+describe('useIsMobile', () => {
+  it('returns false for desktop viewport', () => {
+    // Mock window.innerWidth
+    // Mock matchMedia
+  });
+
+  it('updates on resize', async () => {
+    // Test media query listener
+  });
 });
 ```
 
-**Test File Location Pattern:**
+**Component Testing Pattern (TanStack Form Example):**
+```typescript
+// Components using @tanstack/react-form need form context
+import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { SubmitProjectForm } from '@/components/forms/submit-project-form';
+
+describe('SubmitProjectForm', () => {
+  it('validates project name length', async () => {
+    render(<SubmitProjectForm />);
+    const input = screen.getByPlaceholderText('project name');
+    await userEvent.type(input, 'ab'); // < MIN_PROJECT_NAME_LENGTH
+    // Expect validation error
+  });
+});
 ```
-components/
-├── button.tsx
-├── button.test.tsx        # Co-located tests
-└── ...
 
-lib/
-├── utils.ts
-├── utils.test.ts          # Co-located tests
-└── ...
+**API Route Testing Pattern:**
+```typescript
+// Using MSW for mocking external calls
+import { describe, it, expect, beforeAll, afterEach } from 'vitest';
+import { server } from '@/mocks/server';
+import { GET } from '@/app/api/search/route';
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+
+describe('GET /api/search', () => {
+  it('returns registry JSON', async () => {
+    const response = await GET(new Request('http://localhost/api/search'));
+    const json = await response.json();
+    expect(json).toHaveProperty('components');
+  });
+});
 ```
 
-## Current Code Quality Approach
+**Component Snapshot Testing (with Caution):**
+- Can be used for UI components to catch unintended visual changes
+- Not recommended for snapshot testing of complex interactive components
+- Use more specific assertions for behavior testing
 
-**Linting & Formatting:**
-- Biome v2.3.11 handles code quality checks
-- Run with: `pnpm check` (verify) and `pnpm fix` (auto-fix)
-- Covers TypeScript, JSX, JSON, CSS, and Markdown files
+## Code Quality Tools (Current)
 
-**Type Safety:**
-- TypeScript strict mode enabled (`strict: true`, `strictNullChecks: true`)
-- Zod for runtime schema validation: `z.infer<typeof schema>`
-- Type-safe database operations with Drizzle ORM
+**Biome (Linting & Formatting):**
+- Configured via `biome.jsonc`
+- Runs on pre-commit via `lint-staged`
+- Command: `pnpm check` (validate), `pnpm fix` (apply fixes)
+- Covers code style, but NOT functionality testing
 
 **Pre-commit Hooks:**
-- Husky v9.1.7 configured
-- lint-staged v16.2.7 for staged file linting
-- Configuration in `package.json`:
-  ```json
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx,json,css,md}": "pnpm check"
-  }
-  ```
+- `lint-staged` configured in `package.json`
+- Runs `pnpm check` on `*.{js,ts,jsx,tsx,json,css,md}` files
+- No test execution currently
 
-## Areas Lacking Test Coverage
+## Future Considerations
 
-Critical areas that would benefit from unit and integration tests:
+**Testing Framework Choice:**
+- **Vitest:** Modern, fast, ESM-native, great Next.js support
+- **Jest:** Industry standard, more mature ecosystem, slower
+- Recommendation: Vitest for this Next.js project
 
-### High Priority:
+**Additional Tools:**
+- `@testing-library/react` for component testing
+- `@testing-library/user-event` for realistic user interactions
+- `msw` (Mock Service Worker) for API mocking
+- `@vitest/coverage-v8` for coverage reports
+- Consider adding coverage threshold enforcement in CI
 
-1. **Form Validation:**
-   - `components/forms/submit-project-form.tsx` - Form submission logic
-   - `components/profile-creator.tsx` - Complex form state with URL validation
-   - Need: Tests for regex patterns (HTTP_URL_REGEX, AT_SYMBOL_REGEX)
-
-2. **Server Actions:**
-   - `server/projects.ts` - Database operations
-   - `createProject()` - Duplicate checking, error handling
-   - Need: Tests for database queries, error cases
-
-3. **State Management:**
-   - `components/active-theme.tsx` - Theme context, URL sync logic
-   - Complex useEffect dependencies and microtask queue operations
-   - Need: Tests for theme switching, URL parameter updates
-
-4. **Data Transformations:**
-   - `components/profile-creator.tsx` - HTML code generation
-   - `components/profile-creator.tsx` - Image export with font embedding
-   - Need: Tests for code generation output, edge cases (special characters, etc.)
-
-5. **Data Table Operations:**
-   - `components/data-table.tsx` - Drag-and-drop, pagination, column visibility
-   - Complex state management with multiple sources
-   - Need: Tests for drag operations, filtering, sorting, pagination
-
-### Medium Priority:
-
-1. **Utility Functions:**
-   - `lib/utils.ts` - `cn()` function for class merging
-   - `lib/themes.ts` - Theme lookup and code generation
-   - Need: Basic unit tests for output
-
-2. **Custom Hooks:**
-   - `hooks/use-mobile.ts` - Media query listener
-   - Need: Tests for hook behavior at different screen sizes
-
-3. **API Integration:**
-   - Profile submission endpoints
-   - Project creation API
-   - Need: Integration tests with mock handlers
-
-## Manual Testing Areas
-
-Without automated tests, the following manual testing practices are evident:
-
-1. **Component Rendering:**
-   - Examples directory shows component usage patterns
-   - Visual regression testing would be manual via design review
-
-2. **Interactive Features:**
-   - Drag-and-drop tested manually via page interaction
-   - Theme switching tested via browser DevTools
-   - Form submission tested through UI interaction
-
-3. **Browser Compatibility:**
-   - Responsive design tested at breakpoint (`MOBILE_BREAKPOINT = 768px`)
-   - Device testing via browser inspector
-
-## Example of Untested Logic
-
-**Image Export Function** (`components/profile-creator.tsx`, lines 276-330):
-- Fetches Google Fonts CSS
-- Embeds fonts as base64 data URLs
-- Generates PNG with html-to-image library
-- Currently has error handling but no test coverage
-
-```typescript
-const getImage = async () => {
-  // Complex logic here:
-  // 1. Fetch Google Fonts CSS
-  // 2. Replace font URLs with base64 data
-  // 3. Generate PNG
-  // 4. Download file
-  try {
-    // ... implementation ...
-  } catch (e) {
-    console.error("html-to-image failed", e);
-    toast("Failed to generate profile card, try with manual upload.");
-  }
-};
-```
+**CI Integration:**
+- Tests should run in GitHub Actions before merge
+- Coverage reports should be available for PRs
+- Currently no CI pipeline configured (verify `.github/workflows/`)
 
 ---
 
-*Testing analysis: 2026-01-31*
+*Testing analysis: 2026-02-15*
+*Current state: Testing infrastructure not yet implemented*
+*Recommendation: Begin with Phase 1 (foundational tests) for hooks and utilities*
