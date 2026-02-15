@@ -18,6 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2.2: CypherCN Rebrand** [INSERTED] - Rename CyberCN to CypherCN across codebase, update registry to cyphercn.com
 - [x] **Phase 2.3: Cyberpunk Stylesheet** [INSERTED] - Create cyberpunk.css with terminal typography, phosphor glow, CRT effects; apply to cypher components
 - [x] **Phase 2.4: Aesthetic Compliance Review** [INSERTED] - Review cypher components for aesthetic compliance, replace pixelated elements with ASCII art
+- [ ] **Phase 2.5: Branch Audit Fixes** [INSERTED] - Fix critical/high-priority issues from component audit: missing CSS imports, React 19 migration, registry corrections, props anti-patterns, terminal aesthetic gaps
 - [ ] **Phase 3: Cyberpunk Differentiators** - Build unique terminal/HUD components that define CypherCN identity
 - [ ] **Phase 3.2: Themes Page Showcase** [INSERTED] - Refactor /themes page to showcase CypherCN components organized by thematic sections
 - [ ] **Phase 4: Distribution & Registry** - Update registry, verify installation, complete documentation
@@ -140,6 +141,29 @@ Plans:
 - [x] 02.4-05-PLAN.md — Final blocks, README update, build verification, and visual audit checkpoint
 - [x] 02.4-06 — Replace 8bitcn pixel-block borders with terminal-style borders across 24 components
 
+### Phase 2.5: Branch Audit Fixes [INSERTED]
+**Goal**: Fix critical and high-priority issues identified during branch component audit — missing CSS imports, React 19 ref migration, registry.json corrections, props anti-patterns, terminal aesthetic gaps in charts/login blocks, and typos.
+**Depends on**: Phase 2.4
+**Requirements**: Derived from branch audit review
+**Success Criteria** (what must be TRUE):
+  1. All cypher components import cyberpunk.css (scroll-area, slider, switch fixed)
+  2. forwardRef usage migrated to React 19 ref prop pattern (avatar, context-menu, carousel, slider, switch)
+  3. Registry.json corrected: terminal-log added, combo-box removed, title/description typos fixed
+  4. Props anti-pattern fixed in health-bar, mana-bar, enemy-health-display (flat props instead of nested)
+  5. Slider component has terminal aesthetic styling applied
+  6. Toast uses rounded-none instead of rounded-lg
+  7. Console.log statements removed from carousel
+  8. Charts and login forms either restyled for terminal aesthetic or removed from cypher registry
+  9. All naming typos fixed (BitDropownMenu, BitSkeletonProp, displayname)
+  10. Build passes with no regressions
+**Plans**: 4 plans in 2 waves
+
+Plans:
+- [ ] 02.5-01-PLAN.md — Registry fixes, naming typos, console.log removal
+- [ ] 02.5-02-PLAN.md — Missing CSS imports, React 19 ref migration, toast/scroll-area fixes
+- [ ] 02.5-03-PLAN.md — Props anti-pattern fix, hardcoded color replacement
+- [ ] 02.5-04-PLAN.md — Login form and chart terminal aesthetic restyle
+
 ### Phase 3: Cyberpunk Differentiators
 **Goal**: Build the unique terminal/HUD components that differentiate CypherCN from standard UI libraries.
 **Depends on**: Phase 2.4
@@ -219,7 +243,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 2.1 → 2.2 → 2.3 → 2.4 → 3 → 4 → 5 → 6
+Phases execute in numeric order: 1 → 2 → 2.1 → 2.2 → 2.3 → 2.4 → 2.5 → 3 → 3.2 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -229,6 +253,7 @@ Phases execute in numeric order: 1 → 2 → 2.1 → 2.2 → 2.3 → 2.4 → 3 �
 | 2.2. CypherCN Rebrand | 3/3 | Complete | 2026-02-01 |
 | 2.3. Cyberpunk Stylesheet | 2/2 | Complete | 2026-02-06 |
 | 2.4. Aesthetic Compliance Review | 6/6 | Complete | 2026-02-06 |
+| 2.5. Branch Audit Fixes | 0/4 | Not started | - |
 | 3. Cyberpunk Differentiators | 0/3 | Planned | - |
 | 3.2. Themes Page Showcase | 0/2 | Planned | - |
 | 4. Distribution & Registry | 0/TBD | Not started | - |
