@@ -97,7 +97,7 @@ export default function EnemyHealthDisplay({
           value={healthPercentage}
           variant={healthBarVariant}
           className="w-full"
-          props={{ progressBg: healthBarColor }}
+          progressBg={healthBarColor}
         />
 
         {/* Health percentage overlay for bar variant */}

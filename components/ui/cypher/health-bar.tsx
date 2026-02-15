@@ -2,15 +2,16 @@ import { type CypherProgressProps, Progress } from "@/components/ui/cypher/progr
 
 interface HealthBarProps extends React.ComponentProps<"div"> {
   className?: string;
-  props?: CypherProgressProps;
   variant?: CypherProgressProps["variant"];
   value?: number;
+  progressBg?: string;
 }
 
 export default function HealthBar({
   className,
   variant = "default", // Terminal ASCII (█░) is the primary aesthetic
   value,
+  progressBg = "bg-red-500",
   ...props
 }: HealthBarProps) {
   return (
@@ -19,7 +20,7 @@ export default function HealthBar({
       value={value}
       variant={variant}
       className={className}
-      progressBg="bg-red-500"
+      progressBg={progressBg}
     />
   );
 }

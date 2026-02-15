@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 
 interface XpBarProps extends React.ComponentProps<"div"> {
   className?: string;
-  props?: CypherProgressProps;
   variant?: CypherProgressProps["variant"];
   value?: number;
   levelUpMessage?: string;
+  progressBg?: string;
 }
 
 export default function XpBar({
@@ -14,6 +14,7 @@ export default function XpBar({
   variant = "bar",
   value,
   levelUpMessage = "LEVEL UP!",
+  progressBg = "bg-yellow-500",
   ...props
 }: XpBarProps) {
   const isLevelUp = value === 100;
@@ -25,16 +26,16 @@ export default function XpBar({
         value={value}
         variant={variant}
         className={cn(isLevelUp && "animate-pulse")}
-        progressBg="bg-yellow-500"
+        progressBg={progressBg}
       />
       {isLevelUp && (
         <div
           className={cn(
             "cyphercn",
             "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-            "text-[0.625rem] text-black",
+            "text-[0.625rem] text-foreground",
             "pointer-events-none whitespace-nowrap z-10",
-            "drop-shadow-[1px_1px_0_#fff] [text-shadow:1px_1px_0_#fff,-1px_-1px_0_#fff,1px_-1px_0_#fff,-1px_1px_0_#fff]",
+            "drop-shadow-[1px_1px_0_currentColor] [text-shadow:1px_1px_0_currentColor,-1px_-1px_0_currentColor,1px_-1px_0_currentColor,-1px_1px_0_currentColor]",
             "animate-[blink_0.5s_step-end_infinite]"
           )}
         >
