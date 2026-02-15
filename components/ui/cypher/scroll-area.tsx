@@ -2,6 +2,8 @@ import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
 
 import { cn } from "@/lib/utils";
 
+import "./styles/cyberpunk.css";
+
 function ScrollArea({
   className,
   children,
@@ -48,8 +50,8 @@ function ScrollBar({
         data-slot="scroll-area-thumb"
         className={cn(
           "relative dark:bg-ring rounded-none  flex-1 bg-foreground transition-none duration-75",
-          orientation === "vertical" && "scale-x-250 ",
-          orientation === "horizontal" && "scale-y-250 "
+          orientation === "vertical" && "scale-x-[2.5]",
+          orientation === "horizontal" && "scale-y-[2.5]"
         )}
       />
     </ScrollAreaPrimitive.ScrollAreaScrollbar>

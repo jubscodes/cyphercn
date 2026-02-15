@@ -6,6 +6,8 @@ import * as SwitchPrimitive from "@radix-ui/react-switch";
 
 import { cn } from "@/lib/utils";
 
+import "./styles/cyberpunk.css";
+
 function Switch({
   className,
   ...props
