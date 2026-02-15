@@ -1,5 +1,4 @@
-import type React from "react";
-import { forwardRef } from "react";
+import type * as React from "react";
 
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { cva } from "class-variance-authority";
@@ -26,13 +25,20 @@ export const avatarVariants = cva("", {
   },
 });
 
-const Avatar = forwardRef<
-  React.ComponentRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> & {
-    font?: "normal" | "cyphercn";
-    variant?: "default" | "cyphercn" | "framed";
-  }
->(({ className = "", font, variant = "framed", ...props }, ref) => {
+export interface BitAvatarProps
+  extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> {
+  font?: "normal" | "cyphercn";
+  variant?: "default" | "cyphercn" | "framed";
+  ref?: React.Ref<React.ComponentRef<typeof AvatarPrimitive.Root>>;
+}
+
+function Avatar({
+  className = "",
+  font,
+  variant = "framed",
+  ref,
+  ...props
+}: BitAvatarProps) {
   const isFramed = variant === "framed";
 
   return (
@@ -72,19 +78,16 @@ const Avatar = forwardRef<
       )}
     </div>
   );
-});
-Avatar.displayName = AvatarPrimitive.Root.displayName;
+}
 
-interface BitAvatarImageProps
+export interface BitAvatarImageProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
   font?: "normal" | "cyphercn";
   variant?: "default" | "cyphercn" | "framed";
+  ref?: React.Ref<React.ComponentRef<typeof AvatarPrimitive.Image>>;
 }
 
-const AvatarImage = forwardRef<
-  React.ComponentRef<typeof AvatarPrimitive.Image>,
-  BitAvatarImageProps
->(({ className, font, ...props }, ref) => {
+function AvatarImage({ className, font, ref, ...props }: BitAvatarImageProps) {
   return (
     <AvatarPrimitive.Image
       ref={ref}
@@ -97,23 +100,25 @@ const AvatarImage = forwardRef<
       {...props}
     />
   );
-});
-AvatarImage.displayName = AvatarPrimitive.Image.displayName;
+}
 
-const AvatarFallback = forwardRef<
-  React.ComponentRef<typeof AvatarPrimitive.Fallback>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Fallback
-    ref={ref}
-    data-slot="avatar-fallback"
-    className={cn(
-      "flex h-full w-full items-center justify-center rounded-full bg-muted text-foreground",
-      className
-    )}
-    {...props}
-  />
-));
-AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
+export interface BitAvatarFallbackProps
+  extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> {
+  ref?: React.Ref<React.ComponentRef<typeof AvatarPrimitive.Fallback>>;
+}
+
+function AvatarFallback({ className, ref, ...props }: BitAvatarFallbackProps) {
+  return (
+    <AvatarPrimitive.Fallback
+      ref={ref}
+      data-slot="avatar-fallback"
+      className={cn(
+        "flex h-full w-full items-center justify-center rounded-full bg-muted text-foreground",
+        className
+      )}
+      {...props}
+    />
+  );
+}
 
 export { Avatar, AvatarImage, AvatarFallback };
