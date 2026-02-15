@@ -26,27 +26,27 @@ const statusVariants = cva("w-2 h-2 flex-shrink-0", {
     status: {
       // IN-GAME (Red Glow)
       ingame: `
-                bg-[#ff0055] border-[#ff0055] 
-                shadow-[0_0_6px_#ff0055]
+                bg-red-500 border-red-500
+                shadow-[0_0_6px] shadow-red-500/50
             `,
       // ONLINE (Neon Green Glow)
       online: `
-                bg-[#00ff00] border-[#00ff00] 
-                shadow-[0_0_6px_#00ff00]
+                bg-green-500 border-green-500
+                shadow-[0_0_6px] shadow-green-500/50
             `,
       // AWAY (Yellow Glow)
       away: `
-                bg-[#ffea00] border-[#ffea00] 
-                shadow-[0_0_6px_#ffea00]
+                bg-yellow-500 border-yellow-500
+                shadow-[0_0_6px] shadow-yellow-500/50
             `,
       // OFFLINE (No Glow/Subtle Dark Shadow)
       offline: `
-                bg-[#5d6063] border-[#33363a] 
-                shadow-[0_0_2px_#5d6063]
+                bg-muted border-muted-foreground
+                shadow-[0_0_2px] shadow-muted/50
             `,
       default: `
-                bg-[#5d6063] border-[#33363a] 
-                shadow-[0_0_2px_#5d6063]
+                bg-muted border-muted-foreground
+                shadow-[0_0_2px] shadow-muted/50
             `,
     },
   },
