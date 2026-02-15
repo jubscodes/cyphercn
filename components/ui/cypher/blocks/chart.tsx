@@ -9,6 +9,8 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/cypher/chart";
 
+import "@/components/ui/cypher/styles/cyberpunk.css";
+
 export const description = "An area chart with axes";
 
 const chartData = [
@@ -23,11 +25,11 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "hsl(var(--foreground))",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-2)",
+    color: "hsl(var(--foreground) / 0.5)",
   },
 } satisfies ChartConfig;
 
@@ -35,16 +37,21 @@ export function ChartExample() {
   return (
     <ChartContainer
       config={chartConfig}
-      className={`min-h-[200px] w-full ${"cyphercn"}`}
+      className="min-h-[200px] w-full cyphercn-normal"
     >
       <AreaChart accessibilityLayer data={chartData}>
-        <CartesianGrid />
+        <CartesianGrid
+          strokeDasharray="3 3"
+          stroke="hsl(var(--foreground) / 0.15)"
+        />
         <XAxis
           dataKey="month"
           tickLine={false}
           axisLine={false}
           tickMargin={8}
           tickFormatter={(value) => value.slice(0, 3)}
+          tick={{ fill: "hsl(var(--foreground) / 0.7)", fontSize: 11 }}
+          stroke="hsl(var(--foreground) / 0.3)"
         />
         <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
         <YAxis
@@ -53,17 +60,19 @@ export function ChartExample() {
           axisLine={false}
           tickMargin={8}
           tickCount={3}
+          tick={{ fill: "hsl(var(--foreground) / 0.7)", fontSize: 11 }}
+          stroke="hsl(var(--foreground) / 0.3)"
         />
         <Area
           dataKey="mobile"
-          fill="var(--chart-2)"
-          stroke="var(--chart-2)"
+          fill="hsl(var(--foreground) / 0.1)"
+          stroke="hsl(var(--foreground) / 0.5)"
           stackId="a"
         />
         <Area
           dataKey="desktop"
-          fill="var(--chart-1)"
-          stroke="var(--chart-1)"
+          fill="hsl(var(--foreground) / 0.2)"
+          stroke="hsl(var(--foreground))"
           stackId="a"
         />
       </AreaChart>

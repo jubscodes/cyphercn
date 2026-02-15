@@ -10,6 +10,8 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/cypher/chart";
 
+import "@/components/ui/cypher/styles/cyberpunk.css";
+
 export const description = "A step area chart";
 
 const chartData = [
@@ -24,14 +26,14 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "hsl(var(--foreground))",
     icon: Activity,
   },
 } satisfies ChartConfig;
 
 export default function ChartAreaStep() {
   return (
-    <ChartContainer config={chartConfig}>
+    <ChartContainer config={chartConfig} className="cyphercn-normal">
       <AreaChart
         data={chartData}
         margin={{
@@ -39,13 +41,19 @@ export default function ChartAreaStep() {
           right: 20,
         }}
       >
-        <CartesianGrid vertical={false} />
+        <CartesianGrid
+          vertical={false}
+          strokeDasharray="3 3"
+          stroke="hsl(var(--foreground) / 0.15)"
+        />
         <XAxis
           dataKey="month"
           tickLine={false}
           axisLine={false}
           tickMargin={8}
           tickFormatter={(value) => value.slice(0, 3)}
+          tick={{ fill: "hsl(var(--foreground) / 0.7)", fontSize: 11 }}
+          stroke="hsl(var(--foreground) / 0.3)"
         />
         <ChartTooltip
           cursor={false}
@@ -54,10 +62,10 @@ export default function ChartAreaStep() {
         <Area
           dataKey="desktop"
           type="step"
-          fill="var(--color-desktop)"
-          stroke="var(--color-desktop)"
+          fill="hsl(var(--foreground) / 0.2)"
+          stroke="hsl(var(--foreground))"
           activeDot={{
-            fill: "var(--chart-active-dot)",
+            fill: "hsl(var(--foreground))",
           }}
         />
       </AreaChart>
