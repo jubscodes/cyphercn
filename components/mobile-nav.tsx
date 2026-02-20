@@ -17,13 +17,13 @@ export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <Drawer onOpenChange={setOpen} open={open}>
+    <Drawer direction="left" onOpenChange={setOpen} open={open}>
       <DrawerTrigger asChild>
         <Button size="icon" variant="ghost">
           ☰
         </Button>
       </DrawerTrigger>
-      <DrawerContent className="h-3/4">
+      <DrawerContent className="h-full max-h-none w-3/4 border-r sm:max-w-sm">
         <DrawerHeader className="overflow-y-auto">
           <div className="flex flex-col gap-2">
             {navItems.header.map((item) => (

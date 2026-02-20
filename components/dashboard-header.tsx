@@ -4,88 +4,95 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/cypher/button";
 import { useSidebar } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 
 export function DashboardHeader() {
-  const { toggleSidebar, open } = useSidebar();
+  const { open, toggleSidebar } = useSidebar();
 
   return (
     <header className="sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-foreground border-b bg-background/95 dark:border-ring">
       <div className="flex h-full w-full items-center gap-4 pr-4 md:pr-6">
-        <Button onClick={toggleSidebar} variant="ghost">
-          {open ? (
-            <svg
-              className="size-8"
-              color="currentColor"
-              fill="currentColor"
-              height="50"
-              stroke="currentColor"
-              strokeWidth="0.25"
-              viewBox="0 0 256 256"
-              width="50"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Close sidebar</title>
-              <rect height="14" rx="1" width="14" x="80" y="120" />
-              <rect height="14" rx="1" width="14" x="112" y="120" />
-              <rect height="14" rx="1" width="14" x="96" y="120" />
-              <rect height="14" rx="1" width="14" x="128" y="120" />
-              <rect height="14" rx="1" width="14" x="160" y="120" />
-              <rect height="14" rx="1" width="14" x="176" y="120" />
-              <rect height="14" rx="1" width="14" x="96" y="104" />
-              <rect height="14" rx="1" width="14" x="112" y="88" />
-              <rect height="14" rx="1" width="14" x="128" y="72" />
-              <rect height="14" rx="1" width="14" x="96" y="136" />
-              <rect height="14" rx="1" width="14" x="112" y="152" />
-              <rect height="14" rx="1" width="14" x="128" y="168" />
-              <rect height="14" rx="1" width="14" x="192" y="120" />
-              <rect height="14" rx="1" width="14" x="144" y="120" />
-              <rect height="14" rx="1" width="14" x="48" y="64" />
-              <rect height="14" rx="1" width="14" x="48" y="80" />
-              <rect height="14" rx="1" width="14" x="48" y="96" />
-              <rect height="14" rx="1" width="14" x="48" y="112" />
-              <rect height="14" rx="1" width="14" x="48" y="128" />
-              <rect height="14" rx="1" width="14" x="48" y="144" />
-              <rect height="14" rx="1" width="14" x="48" y="160" />
-              <rect height="14" rx="1" width="14" x="48" y="176" />
-            </svg>
-          ) : (
-            <svg
-              className="size-8"
-              color="currentColor"
-              fill="currentColor"
-              height="50"
-              stroke="currentColor"
-              strokeWidth="0.25"
-              viewBox="0 0 256 256"
-              width="50"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Open sidebar</title>
-              <rect height="14" rx="1" width="14" x="48" y="120" />
-              <rect height="14" rx="1" width="14" x="80" y="120" />
-              <rect height="14" rx="1" width="14" x="64" y="120" />
-              <rect height="14" rx="1" width="14" x="96" y="120" />
-              <rect height="14" rx="1" width="14" x="128" y="120" />
-              <rect height="14" rx="1" width="14" x="144" y="120" />
-              <rect height="14" rx="1" width="14" x="144" y="136" />
-              <rect height="14" rx="1" width="14" x="128" y="152" />
-              <rect height="14" rx="1" width="14" x="112" y="72" />
-              <rect height="14" rx="1" width="14" x="112" y="168" />
-              <rect height="14" rx="1" width="14" x="160" y="120" />
-              <rect height="14" rx="1" width="14" x="144" y="104" />
-              <rect height="14" rx="1" width="14" x="128" y="88" />
-              <rect height="14" rx="1" width="14" x="112" y="120" />
-              <rect height="14" rx="1" width="14" x="192" y="64" />
-              <rect height="14" rx="1" width="14" x="192" y="80" />
-              <rect height="14" rx="1" width="14" x="192" y="96" />
-              <rect height="14" rx="1" width="14" x="192" y="112" />
-              <rect height="14" rx="1" width="14" x="192" y="128" />
-              <rect height="14" rx="1" width="14" x="192" y="144" />
-              <rect height="14" rx="1" width="14" x="192" y="160" />
-              <rect height="14" rx="1" width="14" x="192" y="176" />
-            </svg>
-          )}
-        </Button>
+        {/* When sidebar is collapsed, force toggle visible at all breakpoints (md:!flex overrides any md:hidden) */}
+        <div
+          className={cn("flex shrink-0", !open && "md:!flex")}
+          data-state={open ? "expanded" : "collapsed"}
+        >
+          <Button onClick={toggleSidebar} variant="ghost">
+            {open ? (
+              <svg
+                className="size-8"
+                color="currentColor"
+                fill="currentColor"
+                height="50"
+                stroke="currentColor"
+                strokeWidth="0.25"
+                viewBox="0 0 256 256"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Close sidebar</title>
+                <rect height="14" rx="1" width="14" x="80" y="120" />
+                <rect height="14" rx="1" width="14" x="112" y="120" />
+                <rect height="14" rx="1" width="14" x="96" y="120" />
+                <rect height="14" rx="1" width="14" x="128" y="120" />
+                <rect height="14" rx="1" width="14" x="160" y="120" />
+                <rect height="14" rx="1" width="14" x="176" y="120" />
+                <rect height="14" rx="1" width="14" x="96" y="104" />
+                <rect height="14" rx="1" width="14" x="112" y="88" />
+                <rect height="14" rx="1" width="14" x="128" y="72" />
+                <rect height="14" rx="1" width="14" x="96" y="136" />
+                <rect height="14" rx="1" width="14" x="112" y="152" />
+                <rect height="14" rx="1" width="14" x="128" y="168" />
+                <rect height="14" rx="1" width="14" x="192" y="120" />
+                <rect height="14" rx="1" width="14" x="144" y="120" />
+                <rect height="14" rx="1" width="14" x="48" y="64" />
+                <rect height="14" rx="1" width="14" x="48" y="80" />
+                <rect height="14" rx="1" width="14" x="48" y="96" />
+                <rect height="14" rx="1" width="14" x="48" y="112" />
+                <rect height="14" rx="1" width="14" x="48" y="128" />
+                <rect height="14" rx="1" width="14" x="48" y="144" />
+                <rect height="14" rx="1" width="14" x="48" y="160" />
+                <rect height="14" rx="1" width="14" x="48" y="176" />
+              </svg>
+            ) : (
+              <svg
+                className="size-8"
+                color="currentColor"
+                fill="currentColor"
+                height="50"
+                stroke="currentColor"
+                strokeWidth="0.25"
+                viewBox="0 0 256 256"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Open sidebar</title>
+                <rect height="14" rx="1" width="14" x="48" y="120" />
+                <rect height="14" rx="1" width="14" x="80" y="120" />
+                <rect height="14" rx="1" width="14" x="64" y="120" />
+                <rect height="14" rx="1" width="14" x="96" y="120" />
+                <rect height="14" rx="1" width="14" x="128" y="120" />
+                <rect height="14" rx="1" width="14" x="144" y="120" />
+                <rect height="14" rx="1" width="14" x="144" y="136" />
+                <rect height="14" rx="1" width="14" x="128" y="152" />
+                <rect height="14" rx="1" width="14" x="112" y="72" />
+                <rect height="14" rx="1" width="14" x="112" y="168" />
+                <rect height="14" rx="1" width="14" x="160" y="120" />
+                <rect height="14" rx="1" width="14" x="144" y="104" />
+                <rect height="14" rx="1" width="14" x="128" y="88" />
+                <rect height="14" rx="1" width="14" x="112" y="120" />
+                <rect height="14" rx="1" width="14" x="192" y="64" />
+                <rect height="14" rx="1" width="14" x="192" y="80" />
+                <rect height="14" rx="1" width="14" x="192" y="96" />
+                <rect height="14" rx="1" width="14" x="192" y="112" />
+                <rect height="14" rx="1" width="14" x="192" y="128" />
+                <rect height="14" rx="1" width="14" x="192" y="144" />
+                <rect height="14" rx="1" width="14" x="192" y="160" />
+                <rect height="14" rx="1" width="14" x="192" y="176" />
+              </svg>
+            )}
+          </Button>
+        </div>
 
         <div className="ml-auto flex items-center gap-2">
           <Link href="https://github.com/jubscodes/cyphercn-ui" target="_blank">

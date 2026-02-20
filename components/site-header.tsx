@@ -1,76 +1,90 @@
-import Link from "next/link";
-import { Suspense } from "react";
+"use client";
 
+import { SidebarIcon } from "lucide-react";
+import Link from "next/link";
+import { SearchDocumentation } from "@/components/search-documentation";
 import { Button } from "@/components/ui/button";
+import { RetroModeSwitcher } from "@/components/ui/retro-mode-switcher";
+import { Separator } from "@/components/ui/separator";
+import { useSidebarOptional } from "@/components/ui/sidebar";
 import { navItems } from "@/config/nav-items";
+import { cn } from "@/lib/utils";
 
 import MobileNav from "./mobile-nav";
-import { SearchDocumentation } from "./search-documentation";
-import { Skeleton } from "./ui/cypher/skeleton";
-import { RetroModeSwitcher } from "./ui/retro-mode-switcher";
+
+const GITHUB_URL = "https://github.com/jubscodes/cyphercn-ui";
 
 export function SiteHeader() {
+  const sidebar = useSidebarOptional();
+  const isInSidebar = sidebar !== null;
+
   return (
-    <header className="sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-border border-b bg-background/95">
-      <div className="flex h-full w-full max-w-[1400px] items-center gap-2 px-2 md:mx-auto md:gap-5 md:px-6">
-        <Link className="hidden items-center gap-2 md:flex" href="/">
-          <h2
-            className={`${"cyphercn"} hidden font-bold text-xs md:inline-block`}
-          >
-            CypherCN
-          </h2>
-        </Link>
-
-        <div className="block md:hidden">
-          <MobileNav />
-        </div>
-
-        <nav className="hidden items-center gap-4 text-sm md:flex">
-          {navItems.header.map((item) => (
-            <Link
-              className="text-foreground transition-colors hover:text-foreground/80"
-              href={item.href}
-              key={item.href}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex items-center gap-2 md:ml-auto">
-          <SearchDocumentation />
-
-          <Link href="https://github.com/jubscodes/cyphercn" target="_blank">
+    <header className="sticky top-0 z-50 flex w-full items-center border-b bg-background">
+      <div className="flex h-(--header-height) w-full items-center gap-2 px-4">
+        {isInSidebar ? (
+          <>
             <Button
-              className="flex items-center gap-2"
-              size="sm"
+              className="h-8 w-8"
+              onClick={sidebar.toggleSidebar}
+              size="icon"
               variant="ghost"
             >
-              <svg className="size-4 fill-current" viewBox="0 0 24 24">
-                <title>GitHub</title>
-                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-              </svg>
-              <Suspense fallback={<Skeleton className="h-4 w-12" />}>
-                <StarsCount />
-              </Suspense>
+              <SidebarIcon />
             </Button>
-          </Link>
-          <RetroModeSwitcher className="size-7" />
+            <Separator className="mr-2 h-4" orientation="vertical" />
+          </>
+        ) : (
+          <div className="flex md:hidden">
+            <MobileNav />
+          </div>
+        )}
+
+        <Link
+          className={cn(
+            "cyphercn flex shrink-0 items-center font-semibold tracking-tight",
+            isInSidebar ? "ml-0" : "ml-0 md:mr-4"
+          )}
+          href="/"
+        >
+          CypherCN
+        </Link>
+
+        <nav
+          aria-label="Main"
+          className="hidden flex-1 items-center gap-1 md:flex"
+        >
+          {navItems.header.map((item) => (
+            <Button asChild key={item.href} size="sm" variant="ghost">
+              <Link href={item.href}>{item.label}</Link>
+            </Button>
+          ))}
+        </nav>
+
+        <div className="ml-auto flex items-center gap-2">
+          <SearchDocumentation />
+          <Button asChild size="icon" variant="ghost">
+            <a
+              aria-label="GitHub repository"
+              href={GITHUB_URL}
+              rel="noopener"
+              target="_blank"
+            >
+              <svg
+                aria-hidden
+                className="size-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>GitHub</title>
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.218.682-.486 0-.24-.008-.874-.013-1.713-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.58.688.482C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+              </svg>
+              <span className="sr-only">GitHub</span>
+            </a>
+          </Button>
+          <RetroModeSwitcher />
         </div>
       </div>
     </header>
-  );
-}
-
-export async function StarsCount() {
-  "use cache";
-
-  const data = await fetch("https://api.github.com/repos/jubscodes/cyphercn");
-  const json = await data.json();
-  const stars = json.stargazers_count ?? 0;
-
-  return (
-    <span className="cyphercn mt-0.5 w-12 text-muted-foreground text-xs tabular-nums">
-      {stars >= 1000 ? `${(stars / 1000).toFixed(1)}k` : stars.toLocaleString()}
-    </span>
   );
 }
