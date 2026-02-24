@@ -46,6 +46,7 @@ import {
   MenubarTrigger,
 } from "@/components/ui/cypher/menubar";
 import { Progress, ProgressBar } from "@/components/ui/cypher/progress";
+import { Section } from "@/components/ui/cypher/section";
 import {
   Select,
   SelectContent,
@@ -58,41 +59,13 @@ import { Spinner } from "@/components/ui/cypher/spinner";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/cypher/tabs";
 import { Textarea } from "@/components/ui/cypher/textarea";
 
-// Page simulation wrapper with terminal border
-function PageSimulation({
-  title,
-  children,
-  className = "",
-}: {
-  title: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div className={`w-full space-y-6 overflow-hidden ${className}`}>
-      <div className="flex w-full items-center gap-3 overflow-hidden">
-        <div className="min-w-0 flex-1 overflow-hidden">
-          <Separator variant="double" />
-        </div>
-        <h2 className="cyphercn shrink-0 text-foreground/70 text-sm uppercase tracking-widest">
-          {title}
-        </h2>
-        <div className="min-w-0 flex-1 overflow-hidden">
-          <Separator variant="double" />
-        </div>
-      </div>
-      {children}
-    </div>
-  );
-}
-
 export default function ComponentShowcase() {
   return (
-    <div className="space-y-16">
+    <div className="min-w-0 space-y-16">
       {/* ═══════════════════════════════════════════════════════════════════════
           SYSTEM MONITOR - Terminal/Dashboard simulation
           ═══════════════════════════════════════════════════════════════════════ */}
-      <PageSimulation title="System Monitor">
+      <Section title="System Monitor">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {/* Status Panel */}
           <SystemStatus
@@ -211,12 +184,12 @@ export default function ComponentShowcase() {
           <Separator variant="dashed" />
           <Separator label="END OF TRANSMISSION" variant="ascii" />
         </div>
-      </PageSimulation>
+      </Section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
           COMMAND CENTER - Forms and inputs
           ═══════════════════════════════════════════════════════════════════════ */}
-      <PageSimulation title="Command Center">
+      <Section title="Command Center">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Login Form */}
           <Card title="AUTHENTICATE" variant="terminalDouble">
@@ -303,12 +276,12 @@ export default function ComponentShowcase() {
             </div>
           </Card>
         </div>
-      </PageSimulation>
+      </Section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
           COMPONENT VARIANTS - All variants in one place
           ═══════════════════════════════════════════════════════════════════════ */}
-      <PageSimulation title="Component Variants">
+      <Section title="Component Variants">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {/* Card Variants */}
           <div className="space-y-4">
@@ -486,12 +459,12 @@ export default function ComponentShowcase() {
             Error message for failures
           </LogEntry>
         </div>
-      </PageSimulation>
+      </Section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
           DASHBOARD - Analytics simulation
           ═══════════════════════════════════════════════════════════════════════ */}
-      <PageSimulation title="Dashboard">
+      <Section title="Dashboard">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -588,12 +561,12 @@ export default function ComponentShowcase() {
             </CardContent>
           </Card>
         </div>
-      </PageSimulation>
+      </Section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
           GAME HUD - Simulated game interface
           ═══════════════════════════════════════════════════════════════════════ */}
-      <PageSimulation title="Game HUD">
+      <Section title="Game HUD">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Left Column - Player Stats */}
           <div className="space-y-4">
@@ -692,23 +665,23 @@ export default function ComponentShowcase() {
             <AudioSettings />
           </div>
         </div>
-      </PageSimulation>
+      </Section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
           GAME MENUS - Menu screens simulation
           ═══════════════════════════════════════════════════════════════════════ */}
-      <PageSimulation title="Game Menus">
+      <Section title="Game Menus">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <MainMenu />
           <DifficultySelect />
           <GameOver />
         </div>
-      </PageSimulation>
+      </Section>
 
       {/* ═══════════════════════════════════════════════════════════════════════
           LEADERBOARD - Competitive gaming
           ═══════════════════════════════════════════════════════════════════════ */}
-      <PageSimulation title="Leaderboard">
+      <Section title="Leaderboard">
         <div className="mx-auto max-w-2xl">
           <Leaderboard
             currentPlayerId="player-5"
@@ -729,7 +702,7 @@ export default function ComponentShowcase() {
             title="TOP PLAYERS"
           />
         </div>
-      </PageSimulation>
+      </Section>
     </div>
   );
 }

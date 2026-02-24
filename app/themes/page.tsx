@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import ComponentShowcase from "@/components/examples/component-showcase";
 import { ThemeSelector } from "@/components/theme-selector";
+import { Section } from "@/components/ui/cypher/section";
+import { Separator } from "@/components/ui/cypher/separator";
 
 export const metadata: Metadata = {
   title: "Themes",
@@ -11,19 +13,32 @@ export const metadata: Metadata = {
 
 export default function ThemesPage() {
   return (
-    <>
-      <div className="flex flex-col gap-5 p-4 py-10">
-        <h1 className="cyphercn font-bold md:text-2xl">TERMINAL THEMES</h1>
-        <p className="max-w-2xl text-sm md:text-base">
-          Select a phosphor color scheme for your command center interface.
-        </p>
+    <div className="min-h-screen overflow-x-hidden bg-background px-4 py-6 text-foreground sm:px-6 sm:py-8 lg:px-8 lg:py-8">
+      <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-6 sm:gap-8">
+        <header className="min-w-0 text-center">
+          <h1 className="cyphercn phosphor-glow mb-2 text-xl sm:text-2xl">
+            TERMINAL THEMES
+          </h1>
+          <p className="cyphercn-normal text-muted-foreground text-xs sm:text-sm">
+            Phosphor color schemes • Paired with CypherCN for MS-DOS aesthetic
+          </p>
+        </header>
+
+        <Section title="Select theme">
+          <ThemeSelector />
+        </Section>
+
+        <main className="min-w-0">
+          <ComponentShowcase />
+        </main>
+
+        <footer className="mt-6 min-w-0 text-center text-muted-foreground text-xs sm:mt-8">
+          <Separator label="EOF" variant="double" />
+          <p className="cyphercn mt-4 break-words px-2">
+            CypherCN Themes • Terminal UI • 8bitcn/ui
+          </p>
+        </footer>
       </div>
-
-      <ThemeSelector />
-
-      <main className="p-5">
-        <ComponentShowcase />
-      </main>
-    </>
+    </div>
   );
 }
