@@ -9,6 +9,7 @@ export default function SiteFooter() {
           <Link
             className="underline"
             href="https://github.com/jubscodes"
+            rel="noopener"
             target="_blank"
           >
             jubscodes
@@ -17,6 +18,7 @@ export default function SiteFooter() {
           <Link
             className="underline"
             href="https://github.com/jubscodes/cyphercn-ui"
+            rel="noopener"
             target="_blank"
           >
             8bitcn/ui
@@ -25,11 +27,19 @@ export default function SiteFooter() {
           <Link
             className="underline"
             href="https://ui.shadcn.com"
+            rel="noopener"
             target="_blank"
           >
             shadcn/ui
           </Link>
-          .
+          .{" "}
+          <Link className="underline" href="/about">
+            About
+          </Link>
+          {" · "}
+          <Link className="underline" href="/protheus">
+            Protheus demo
+          </Link>
         </p>
       </div>
     </footer>
