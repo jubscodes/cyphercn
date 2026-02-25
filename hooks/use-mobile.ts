@@ -1,5 +1,6 @@
 import * as React from "react"
 
+/** Matches Tailwind's default `md` (768px). Keep in sync so sidebar overlay and mobile nav align. */
 const MOBILE_BREAKPOINT = 768
 
 export function useIsMobile() {

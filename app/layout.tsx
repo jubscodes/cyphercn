@@ -10,6 +10,7 @@ import SearchDialog from "@/components/search";
 import SiteFooter from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
 import { sharedMetaData } from "@/lib/metadata";
 
@@ -53,17 +54,19 @@ export default function RootLayout({
               disableTransitionOnChange
               enableSystem
             >
-              <ActiveThemeProvider>
-                <SiteHeader />
-                <div className="mx-auto w-full max-w-[1400px] flex-1">
-                  {children}
-                </div>
-                <SiteFooter />
-                <Toaster />
-                <Analytics />
-                <SpeedInsights />
-                {process.env.APP_ENV === "development" && <ScreenSize />}
-              </ActiveThemeProvider>
+              <SidebarProvider className="flex flex-col">
+                <ActiveThemeProvider>
+                  <SiteHeader />
+                  <div className="mx-auto w-full max-w-[1400px] flex-1">
+                    {children}
+                  </div>
+                  <SiteFooter />
+                  <Toaster />
+                  <Analytics />
+                  <SpeedInsights />
+                  {process.env.APP_ENV === "development" && <ScreenSize />}
+                </ActiveThemeProvider>
+              </SidebarProvider>
             </ThemeProvider>
           </RootProvider>
         </NuqsAdapter>

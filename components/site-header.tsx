@@ -2,12 +2,14 @@
 
 import { SidebarIcon } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SearchDocumentation } from "@/components/search-documentation";
 import { Button } from "@/components/ui/button";
 import { RetroModeSwitcher } from "@/components/ui/retro-mode-switcher";
 import { Separator } from "@/components/ui/separator";
-import { useSidebarOptional } from "@/components/ui/sidebar";
+import { useSidebar } from "@/components/ui/sidebar";
 import { navItems } from "@/config/nav-items";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 
 import MobileNav from "./mobile-nav";
@@ -15,29 +17,39 @@ import MobileNav from "./mobile-nav";
 const GITHUB_URL = "https://github.com/jubscodes/cyphercn-ui";
 
 export function SiteHeader() {
-  const sidebar = useSidebarOptional();
-  const isInSidebar = sidebar !== null;
+  const pathname = usePathname();
+  const sidebar = useSidebar();
+  const isMobile = useIsMobile();
+  const isInSidebar = pathname.startsWith("/dashboard");
+  const showMobileNav = !isInSidebar && isMobile;
+
+  let leftSlot: ReactNode = null;
+  if (isInSidebar) {
+    leftSlot = (
+      <>
+        <Button
+          className="h-8 w-8"
+          onClick={sidebar.toggleSidebar}
+          size="icon"
+          variant="ghost"
+        >
+          <SidebarIcon />
+        </Button>
+        <Separator className="mr-2 h-4" orientation="vertical" />
+      </>
+    );
+  } else if (showMobileNav) {
+    leftSlot = (
+      <div className="flex">
+        <MobileNav />
+      </div>
+    );
+  }
 
   return (
     <header className="sticky top-0 z-50 flex w-full items-center border-b bg-background">
       <div className="flex h-(--header-height) w-full items-center gap-2 px-4">
-        {isInSidebar ? (
-          <>
-            <Button
-              className="h-8 w-8"
-              onClick={sidebar.toggleSidebar}
-              size="icon"
-              variant="ghost"
-            >
-              <SidebarIcon />
-            </Button>
-            <Separator className="mr-2 h-4" orientation="vertical" />
-          </>
-        ) : (
-          <div className="flex md:hidden">
-            <MobileNav />
-          </div>
-        )}
+        {leftSlot}
 
         <Link
           className={cn(
