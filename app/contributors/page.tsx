@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 };
 
 interface Contributor {
-  login: string;
-  id: number;
   avatar_url: string;
-  html_url: string;
   contributions: number;
+  html_url: string;
+  id: number;
+  login: string;
 }
 
 export default async function ContributorsPage() {
