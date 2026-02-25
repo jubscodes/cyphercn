@@ -36,10 +36,6 @@ export default function SiteFooter() {
           <Link className="underline" href="/about">
             About
           </Link>
-          {" · "}
-          <Link className="underline" href="/protheus">
-            Protheus demo
-          </Link>
         </p>
       </div>
     </footer>
