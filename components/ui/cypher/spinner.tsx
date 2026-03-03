@@ -83,25 +83,6 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
             aria-label="Loading"
             {...(props as React.ComponentProps<"svg">)}
           >
-            <style
-              dangerouslySetInnerHTML={{
-                __html: `
-                @keyframes spin-glyph {
-                    0% { opacity: 0; }
-                    1% { opacity: 1; }
-                    100% { opacity: 0; }
-                }
-                .glyph-1 { animation: spin-glyph 0.8s ease-in-out 0s infinite; }
-                .glyph-2 { animation: spin-glyph 0.8s ease-in-out 0.1s infinite; }
-                .glyph-3 { animation: spin-glyph 0.8s ease-in-out 0.2s infinite; }
-                .glyph-4 { animation: spin-glyph 0.8s ease-in-out 0.3s infinite; }
-                .glyph-5 { animation: spin-glyph 0.8s ease-in-out 0.4s infinite; }
-                .glyph-6 { animation: spin-glyph 0.8s ease-in-out 0.5s infinite; }
-                .glyph-7 { animation: spin-glyph 0.8s ease-in-out 0.6s infinite; }
-                .glyph-8 { animation: spin-glyph 0.8s ease-in-out 0.7s infinite; }
-              `,
-              }}
-            />
             {/* Top */}
             <rect className="glyph-1" x="8" y="0" width="4" height="4" />
             {/* Top Right */}
