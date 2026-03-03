@@ -167,13 +167,14 @@ export interface CypherSpinnerProps extends React.HTMLAttributes<HTMLSpanElement
   glow?: boolean;
 }
 
+const spinnerFrames = ["◐", "◓", "◑", "◒"];
+
 function Spinner({ glow = false, className, ...props }: CypherSpinnerProps) {
   const [frame, setFrame] = React.useState(0);
-  const frames = ["◐", "◓", "◑", "◒"];
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setFrame((f) => (f + 1) % frames.length);
+      setFrame((f) => (f + 1) % spinnerFrames.length);
     }, 100);
     return () => clearInterval(interval);
   }, []);
@@ -185,7 +186,7 @@ function Spinner({ glow = false, className, ...props }: CypherSpinnerProps) {
       aria-label="Loading"
       {...props}
     >
-      {frames[frame]}
+      {spinnerFrames[frame]}
     </span>
   );
 }
