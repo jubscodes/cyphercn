@@ -3,6 +3,7 @@
 import { SidebarIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { ReactNode } from "react";
 import { SearchDocumentation } from "@/components/search-documentation";
 import { Button } from "@/components/ui/button";
 import { RetroModeSwitcher } from "@/components/ui/retro-mode-switcher";
@@ -28,6 +29,7 @@ export function SiteHeader() {
     leftSlot = (
       <>
         <Button
+          aria-label="Toggle sidebar"
           className="h-8 w-8"
           onClick={sidebar.toggleSidebar}
           size="icon"
@@ -65,11 +67,32 @@ export function SiteHeader() {
           aria-label="Main"
           className="hidden flex-1 items-center gap-1 md:flex"
         >
-          {navItems.header.map((item) => (
-            <Button asChild key={item.href} size="sm" variant="ghost">
-              <Link href={item.href}>{item.label}</Link>
-            </Button>
-          ))}
+          {(() => {
+            const activeHref = navItems.header
+              .filter(
+                (item) =>
+                  pathname === item.href || pathname.startsWith(`${item.href}/`)
+              )
+              .reduce<string | null>(
+                (best, item) =>
+                  item.href.length > (best?.length ?? 0) ? item.href : best,
+                null
+              );
+            return navItems.header.map((item) => {
+              const isActive = activeHref !== null && item.href === activeHref;
+              return (
+                <Button asChild key={item.href} size="sm" variant="ghost">
+                  <Link
+                    aria-current={isActive ? "page" : undefined}
+                    className={cn(isActive && "bg-accent")}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Link>
+                </Button>
+              );
+            });
+          })()}
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
@@ -82,7 +105,7 @@ export function SiteHeader() {
               target="_blank"
             >
               <svg
-                aria-hidden
+                aria-hidden="true"
                 className="size-4"
                 fill="currentColor"
                 viewBox="0 0 24 24"

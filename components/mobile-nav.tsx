@@ -19,7 +19,7 @@ export default function MobileNav() {
   return (
     <Drawer direction="left" onOpenChange={setOpen} open={open}>
       <DrawerTrigger asChild>
-        <Button size="icon" variant="ghost">
+        <Button aria-label="Open main menu" size="icon" variant="ghost">
           ☰
         </Button>
       </DrawerTrigger>
