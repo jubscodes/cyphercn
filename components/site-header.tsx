@@ -48,6 +48,35 @@ export function SiteHeader() {
     );
   }
 
+  const activeHref = navItems.header
+    .filter(
+      (item) => pathname === item.href || pathname.startsWith(`${item.href}/`)
+    )
+    .reduce<string | null>(
+      (best, item) =>
+        item.href.length > (best?.length ?? 0) ? item.href : best,
+      null
+    );
+
+  const navElements = (
+    <nav aria-label="Main" className="hidden flex-1 items-center gap-1 md:flex">
+      {navItems.header.map((item) => {
+        const isActive = activeHref !== null && item.href === activeHref;
+        return (
+          <Button asChild key={item.href} size="sm" variant="ghost">
+            <Link
+              aria-current={isActive ? "page" : undefined}
+              className={cn(isActive && "bg-accent")}
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          </Button>
+        );
+      })}
+    </nav>
+  );
+
   return (
     <header className="sticky top-0 z-50 flex w-full items-center border-b bg-background">
       <div className="flex h-(--header-height) w-full items-center gap-2 px-4">
@@ -63,37 +92,7 @@ export function SiteHeader() {
           CypherCN
         </Link>
 
-        <nav
-          aria-label="Main"
-          className="hidden flex-1 items-center gap-1 md:flex"
-        >
-          {(() => {
-            const activeHref = navItems.header
-              .filter(
-                (item) =>
-                  pathname === item.href || pathname.startsWith(`${item.href}/`)
-              )
-              .reduce<string | null>(
-                (best, item) =>
-                  item.href.length > (best?.length ?? 0) ? item.href : best,
-                null
-              );
-            return navItems.header.map((item) => {
-              const isActive = activeHref !== null && item.href === activeHref;
-              return (
-                <Button asChild key={item.href} size="sm" variant="ghost">
-                  <Link
-                    aria-current={isActive ? "page" : undefined}
-                    className={cn(isActive && "bg-accent")}
-                    href={item.href}
-                  >
-                    {item.label}
-                  </Link>
-                </Button>
-              );
-            });
-          })()}
-        </nav>
+        {navElements}
 
         <div className="ml-auto flex items-center gap-2">
           <SearchDocumentation />
@@ -101,7 +100,7 @@ export function SiteHeader() {
             <a
               aria-label="GitHub repository"
               href={GITHUB_URL}
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <svg

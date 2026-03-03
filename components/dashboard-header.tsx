@@ -17,7 +17,7 @@ export function DashboardHeader() {
           className={cn("flex shrink-0", !open && "md:!flex")}
           data-state={open ? "expanded" : "collapsed"}
         >
-          <Button onClick={toggleSidebar} variant="ghost">
+          <Button aria-expanded={open} onClick={toggleSidebar} variant="ghost">
             {open ? (
               <svg
                 className="size-8"
@@ -95,7 +95,11 @@ export function DashboardHeader() {
         </div>
 
         <div className="ml-auto flex items-center gap-2">
-          <Link href="https://github.com/jubscodes/cyphercn-ui" target="_blank">
+          <Link
+            href="https://github.com/jubscodes/cyphercn-ui"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <Button
               className="cyphercn flex items-center gap-2"
               size="sm"

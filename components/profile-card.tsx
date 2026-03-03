@@ -72,7 +72,11 @@ export default function ProfileCard({
           <div className="flex items-center gap-3 text-sm">
             {safeGithubUrl && (
               <Button asChild size="icon">
-                <a href={safeGithubUrl} target="_blank">
+                <a
+                  href={safeGithubUrl}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <svg
                     className="size-7"
                     fill="currentColor"
@@ -154,7 +158,7 @@ export default function ProfileCard({
 
             {safeXUrl && (
               <Button asChild size="icon">
-                <a href={safeXUrl} target="_blank">
+                <a href={safeXUrl} rel="noopener noreferrer" target="_blank">
                   <svg
                     className="size-6"
                     fill="currentColor"
