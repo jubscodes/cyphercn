@@ -35,7 +35,7 @@ export default function ThemesPage() {
         <footer className="mt-6 min-w-0 text-center text-muted-foreground text-xs sm:mt-8">
           <Separator label="EOF" variant="double" />
           <p className="cyphercn mt-4 break-words px-2">
-            CypherCN Themes • Terminal UI • 8bitcn/ui
+            CypherCN Themes • Terminal UI • cyphercn/ui
           </p>
         </footer>
       </div>

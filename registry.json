@@ -6,7 +6,7 @@
     {
       "name": "chapter-intro",
       "type": "registry:block",
-      "title": "8-bit Chapter Intro",
+      "title": "Cypher Chapter Intro",
       "description": "A cinematic chapter/level intro with pixel art background.",
       "registryDependencies": ["card"],
       "categories": ["gaming"],
@@ -31,8 +31,8 @@
     {
       "name": "button",
       "type": "registry:component",
-      "title": "8-bit Button",
-      "description": "A simple 8-bit button component",
+      "title": "Cypher Button",
+      "description": "A simple cypher button component",
       "registryDependencies": ["button"],
       "files": [
         {
@@ -50,8 +50,8 @@
     {
       "name": "input",
       "type": "registry:component",
-      "title": "8-bit Input",
-      "description": "A simple 8-bit input component",
+      "title": "Cypher Input",
+      "description": "A simple cypher input component",
       "registryDependencies": ["input"],
       "files": [
         {
@@ -69,8 +69,8 @@
     {
       "name": "toast",
       "type": "registry:component",
-      "title": "8-bit Toast",
-      "description": "A simple 8-bit toast component",
+      "title": "Cypher Toast",
+      "description": "A simple cypher toast component",
       "registryDependencies": ["sonner"],
       "files": [
         {
@@ -88,8 +88,8 @@
     {
       "name": "input-otp",
       "type": "registry:component",
-      "title": "8-bit Input-OTP",
-      "description": "A simple 8-bit input-otp component",
+      "title": "Cypher Input-OTP",
+      "description": "A simple cypher input-otp component",
       "registryDependencies": ["input-otp"],
       "files": [
         {
@@ -107,8 +107,8 @@
     {
       "name": "badge",
       "type": "registry:component",
-      "title": "8-bit Badge",
-      "description": "A simple 8-bit badge component",
+      "title": "Cypher Badge",
+      "description": "A simple cypher badge component",
       "registryDependencies": ["badge"],
       "files": [
         {
@@ -126,8 +126,8 @@
     {
       "name": "textarea",
       "type": "registry:component",
-      "title": "8-bit Textarea",
-      "description": "A simple 8-bit textarea component",
+      "title": "Cypher Textarea",
+      "description": "A simple cypher textarea component",
       "registryDependencies": ["textarea"],
       "files": [
         {
@@ -145,8 +145,8 @@
     {
       "name": "calendar",
       "type": "registry:component",
-      "title": "8-bit Calendar",
-      "description": "A simple 8-bit calendar component",
+      "title": "Cypher Calendar",
+      "description": "A simple cypher calendar component",
       "registryDependencies": ["calendar"],
       "files": [
         {
@@ -164,8 +164,8 @@
     {
       "name": "date-picker",
       "type": "registry:component",
-      "title": "8-bit Date Picker",
-      "description": "A simple 8-bit date picker component",
+      "title": "Cypher Date Picker",
+      "description": "A simple cypher date picker component",
       "dependencies": ["date-fns"],
       "registryDependencies": ["button", "calendar", "popover", "select"],
       "files": [
@@ -204,8 +204,8 @@
     {
       "name": "card",
       "type": "registry:component",
-      "title": "8-bit Card",
-      "description": "A simple 8-bit card component",
+      "title": "Cypher Card",
+      "description": "A simple cypher card component",
       "registryDependencies": ["card"],
       "files": [
         {
@@ -223,8 +223,8 @@
     {
       "name": "carousel",
       "type": "registry:component",
-      "title": "8-bit Carousel",
-      "description": "A simple 8-bit carousel component",
+      "title": "Cypher Carousel",
+      "description": "A simple cypher carousel component",
       "registryDependencies": ["carousel"],
       "files": [
         {
@@ -242,8 +242,8 @@
     {
       "name": "dialog",
       "type": "registry:component",
-      "title": "8-bit Dialog",
-      "description": "A simple 8-bit dialog component",
+      "title": "Cypher Dialog",
+      "description": "A simple cypher dialog component",
       "registryDependencies": ["dialog"],
       "files": [
         {
@@ -261,8 +261,8 @@
     {
       "name": "dropdown-menu",
       "type": "registry:component",
-      "title": "8-bit Dropdown Menu",
-      "description": "A simple 8-bit dropdown-menu component",
+      "title": "Cypher Dropdown Menu",
+      "description": "A simple cypher dropdown-menu component",
       "registryDependencies": ["dropdown-menu"],
       "files": [
         {
@@ -280,8 +280,8 @@
     {
       "name": "hover-card",
       "type": "registry:component",
-      "title": "8-bit Hover Card",
-      "description": "A simple 8-bit hover card component",
+      "title": "Cypher Hover Card",
+      "description": "A simple cypher hover card component",
       "registryDependencies": ["hover-card"],
       "files": [
         {
@@ -299,8 +299,8 @@
     {
       "name": "popover",
       "type": "registry:component",
-      "title": "8-bit Popover",
-      "description": "A simple 8-bit popover component",
+      "title": "Cypher Popover",
+      "description": "A simple cypher popover component",
       "registryDependencies": ["popover"],
       "files": [
         {
@@ -318,7 +318,7 @@
     {
       "name": "resizable",
       "type": "registry:component",
-      "title": "8-bit Resizable Panel",
+      "title": "Cypher Resizable Panel",
       "description": "Accessible resizable panel groups and layouts with keyboard support.",
       "registryDependencies": [],
       "files": [
@@ -337,8 +337,8 @@
     {
       "name": "select",
       "type": "registry:component",
-      "title": "8-bit Select",
-      "description": "A simple 8-bit select component",
+      "title": "Cypher Select",
+      "description": "A simple cypher select component",
       "registryDependencies": ["select"],
       "files": [
         {
@@ -356,8 +356,8 @@
     {
       "name": "sheet",
       "type": "registry:component",
-      "title": "8-bit sheet",
-      "description": "A simple 8-bit sheet component",
+      "title": "Cypher Sheet",
+      "description": "A simple cypher sheet component",
       "registryDependencies": ["sheet"],
       "files": [
         {
@@ -375,8 +375,8 @@
     {
       "name": "label",
       "type": "registry:component",
-      "title": "8-bit Label",
-      "description": "A simple 8-bit label component",
+      "title": "Cypher Label",
+      "description": "A simple cypher label component",
       "registryDependencies": ["label"],
       "files": [
         {
@@ -394,8 +394,8 @@
     {
       "name": "checkbox",
       "type": "registry:component",
-      "title": "8-bit Checkbox",
-      "description": "A simple 8-bit checkbox component",
+      "title": "Cypher Checkbox",
+      "description": "A simple cypher checkbox component",
       "registryDependencies": ["checkbox"],
       "files": [
         {
@@ -413,8 +413,8 @@
     {
       "name": "scroll-area",
       "type": "registry:component",
-      "title": "8-bit Scroll Area",
-      "description": "A simple 8-bit Scroll Area component",
+      "title": "Cypher Scroll Area",
+      "description": "A simple cypher Scroll Area component",
       "dependencies": ["@radix-ui/react-scroll-area"],
       "registryDependencies": [],
       "files": [
@@ -433,8 +433,8 @@
     {
       "name": "switch",
       "type": "registry:component",
-      "title": "8-bit Switch",
-      "description": "A simple 8-bit switch component",
+      "title": "Cypher Switch",
+      "description": "A simple cypher switch component",
       "registryDependencies": ["switch"],
       "files": [
         {
@@ -452,8 +452,8 @@
     {
       "name": "alert",
       "type": "registry:component",
-      "title": "8-bit Alert",
-      "description": "A simple 8-bit alert component",
+      "title": "Cypher Alert",
+      "description": "A simple cypher alert component",
       "registryDependencies": ["alert"],
       "files": [
         {
@@ -471,8 +471,8 @@
     {
       "name": "alert-dialog",
       "type": "registry:component",
-      "title": "8-bit Alert Dialog",
-      "description": "A simple 8-bit Alert Dialog component",
+      "title": "Cypher Alert Dialog",
+      "description": "A simple cypher Alert Dialog component",
       "registryDependencies": ["alert-dialog"],
       "files": [
         {
@@ -490,8 +490,8 @@
     {
       "name": "tooltip",
       "type": "registry:component",
-      "title": "8-bit Tooltip",
-      "description": "A simple 8-bit tooltip component",
+      "title": "Cypher Tooltip",
+      "description": "A simple cypher tooltip component",
       "registryDependencies": ["tooltip"],
       "files": [
         {
@@ -509,8 +509,8 @@
     {
       "name": "avatar",
       "type": "registry:component",
-      "title": "8-bit Avatar",
-      "description": "A simple 8-bit avatar component",
+      "title": "Cypher Avatar",
+      "description": "A simple cypher avatar component",
       "registryDependencies": ["avatar"],
       "files": [
         {
@@ -528,8 +528,8 @@
     {
       "name": "skeleton",
       "type": "registry:component",
-      "title": "8-bit Skeleton",
-      "description": "A simple 8-bit skeleton component",
+      "title": "Cypher Skeleton",
+      "description": "A simple cypher skeleton component",
       "registryDependencies": ["skeleton"],
       "files": [
         {
@@ -547,8 +547,8 @@
     {
       "name": "breadcrumb",
       "type": "registry:component",
-      "title": "8-bit Breadcrumb",
-      "description": "A simple 8-bit breadcrumb component",
+      "title": "Cypher Breadcrumb",
+      "description": "A simple cypher breadcrumb component",
       "registryDependencies": ["breadcrumb"],
       "files": [
         {
@@ -566,8 +566,8 @@
     {
       "name": "collapsible",
       "type": "registry:component",
-      "title": "8-bit Collapsible",
-      "description": "A simple 8-bit collapsible component",
+      "title": "Cypher Collapsible",
+      "description": "A simple cypher collapsible component",
       "registryDependencies": ["collapsible"],
       "files": [
         {
@@ -585,8 +585,8 @@
     {
       "name": "progress",
       "type": "registry:component",
-      "title": "8-bit Progress",
-      "description": "A simple 8-bit progress component",
+      "title": "Cypher Progress",
+      "description": "A simple cypher progress component",
       "dependencies": ["@radix-ui/react-progress"],
       "registryDependencies": [],
       "files": [
@@ -605,7 +605,7 @@
     {
       "name": "enemy-health-display",
       "type": "registry:component",
-      "title": "8-bit Enemy Health Display",
+      "title": "Cypher Enemy Health Display",
       "description": "A retro-styled enemy health display component with health bar, name, and level",
       "registryDependencies": [],
       "files": [
@@ -634,8 +634,8 @@
     {
       "name": "health-bar",
       "type": "registry:component",
-      "title": "8-bit Health Bar",
-      "description": "A simple 8-bit health bar component",
+      "title": "Cypher Health Bar",
+      "description": "A simple cypher health bar component",
       "registryDependencies": ["progress"],
       "files": [
         {
@@ -658,8 +658,8 @@
     {
       "name": "mana-bar",
       "type": "registry:component",
-      "title": "8-bit Mana Bar",
-      "description": "A simple 8-bit mana bar component",
+      "title": "Cypher Mana Bar",
+      "description": "A simple cypher mana bar component",
       "registryDependencies": [],
       "files": [
         {
@@ -682,8 +682,8 @@
     {
       "name": "xp-bar",
       "type": "registry:component",
-      "title": "8-bit XP Bar",
-      "description": "A simple 8-bit XP bar component with level up animation",
+      "title": "Cypher XP Bar",
+      "description": "A simple cypher XP bar component with level up animation",
       "registryDependencies": [],
       "files": [
         {
@@ -706,8 +706,8 @@
     {
       "name": "game-progress",
       "type": "registry:block",
-      "title": "8-bit Game Progress",
-      "description": "A simple 8-bit game progress component",
+      "title": "Cypher Game Progress",
+      "description": "A simple cypher game progress component",
       "dependencies": ["@radix-ui/react-progress"],
       "categories": ["gaming"],
       "registryDependencies": [],
@@ -742,8 +742,8 @@
     {
       "name": "dialogue",
       "type": "registry:block",
-      "title": "8-bit Dialogue",
-      "description": "A simple 8-bit dialogue component",
+      "title": "Cypher Dialogue",
+      "description": "A simple cypher dialogue component",
       "dependencies": ["@radix-ui/react-avatar"],
       "registryDependencies": ["alert"],
       "categories": ["gaming"],
@@ -773,8 +773,8 @@
     {
       "name": "profile-card",
       "type": "registry:component",
-      "title": "8-bit Profile Card",
-      "description": "A simple 8-bit profile card component",
+      "title": "Cypher Profile Card",
+      "description": "A simple cypher profile card component",
       "registryDependencies": ["card", "button", "avatar", "badge"],
       "dependencies": ["@radix-ui/react-avatar"],
       "files": [
@@ -808,8 +808,8 @@
     {
       "name": "slider",
       "type": "registry:component",
-      "title": "8-bit Slider",
-      "description": "A simple 8-bit slider component",
+      "title": "Cypher Slider",
+      "description": "A simple cypher slider component",
       "registryDependencies": ["slider"],
       "files": [
         {
@@ -827,8 +827,8 @@
     {
       "name": "context-menu",
       "type": "registry:component",
-      "title": "8-bit Context Menu",
-      "description": "A simple 8-bit context menu component",
+      "title": "Cypher Context Menu",
+      "description": "A simple cypher context menu component",
       "registryDependencies": [],
       "files": [
         {
@@ -846,8 +846,8 @@
     {
       "name": "menubar",
       "type": "registry:component",
-      "title": "8-bit Menu Bar",
-      "description": "A simple 8-bit menu bar component",
+      "title": "Cypher Menu Bar",
+      "description": "A simple cypher menu bar component",
       "registryDependencies": [],
       "files": [
         {
@@ -865,8 +865,8 @@
     {
       "name": "toggle",
       "type": "registry:component",
-      "title": "8-bit Toggle",
-      "description": "A simple 8-bit toggle component",
+      "title": "Cypher Toggle",
+      "description": "A simple cypher toggle component",
       "registryDependencies": ["toggle"],
       "files": [
         {
@@ -884,8 +884,8 @@
     {
       "name": "table",
       "type": "registry:component",
-      "title": "8-bit Table",
-      "description": "A simple 8-bit table component",
+      "title": "Cypher Table",
+      "description": "A simple cypher table component",
       "registryDependencies": ["table"],
       "files": [
         {
@@ -903,8 +903,8 @@
     {
       "name": "tabs",
       "type": "registry:component",
-      "title": "8-bit Tabs",
-      "description": "A simple 8-bit tabs component",
+      "title": "Cypher Tabs",
+      "description": "A simple cypher tabs component",
       "registryDependencies": ["tabs"],
       "files": [
         {
@@ -922,8 +922,8 @@
     {
       "name": "command",
       "type": "registry:component",
-      "title": "8-bit Command",
-      "description": "A simple 8-bit command component",
+      "title": "Cypher Command",
+      "description": "A simple cypher command component",
       "registryDependencies": ["command"],
       "files": [
         {
@@ -946,8 +946,8 @@
     {
       "name": "separator",
       "type": "registry:component",
-      "title": "8-bit Separator",
-      "description": "A simple 8-bit separator component",
+      "title": "Cypher Separator",
+      "description": "A simple cypher separator component",
       "registryDependencies": [],
       "files": [
         {
@@ -960,8 +960,8 @@
     {
       "name": "radio-group",
       "type": "registry:component",
-      "title": "8-bit Radio Group",
-      "description": "A simple 8-bit radio group component",
+      "title": "Cypher Radio Group",
+      "description": "A simple cypher radio group component",
       "registryDependencies": ["radio-group"],
       "files": [
         {
@@ -979,8 +979,8 @@
     {
       "name": "pagination",
       "type": "registry:component",
-      "title": "8-bit Pagination",
-      "description": "A simple 8-bit pagination component",
+      "title": "Cypher Pagination",
+      "description": "A simple cypher pagination component",
       "registryDependencies": ["pagination"],
       "files": [
         {
@@ -998,8 +998,8 @@
     {
       "name": "friend-list",
       "type": "registry:block",
-      "title": "8-bit Friend List",
-      "description": "A simple 8-bit friend list component",
+      "title": "Cypher Friend List",
+      "description": "A simple cypher friend list component",
       "registryDependencies": ["scroll-area", "card", "avatar"],
       "files": [
         {
@@ -1032,8 +1032,8 @@
     {
       "name": "login-form",
       "type": "registry:block",
-      "title": "8-bit Login Form",
-      "description": "A simple 8-bit login form component",
+      "title": "Cypher Login Form",
+      "description": "A simple cypher login form component",
       "registryDependencies": ["button", "card", "input", "label"],
       "categories": ["authentication"],
       "files": [
@@ -1072,8 +1072,8 @@
     {
       "name": "login-form-2",
       "type": "registry:block",
-      "title": "8-bit Login Form 2",
-      "description": "A simple 8-bit login form component",
+      "title": "Cypher Login Form 2",
+      "description": "A simple cypher login form component",
       "registryDependencies": ["button", "card", "input", "label"],
       "categories": ["authentication"],
       "files": [
@@ -1112,8 +1112,8 @@
     {
       "name": "login-form-with-image",
       "type": "registry:block",
-      "title": "8-bit Login Form with Image",
-      "description": "A simple 8-bit login form component with image",
+      "title": "Cypher Login Form with Image",
+      "description": "A simple cypher login form component with image",
       "registryDependencies": ["button", "card", "input", "label"],
       "categories": ["authentication"],
       "files": [
@@ -1152,8 +1152,8 @@
     {
       "name": "login-page",
       "type": "registry:page",
-      "title": "8-bit Login Page",
-      "description": "A simple 8-bit login page component",
+      "title": "Cypher Login Page",
+      "description": "A simple cypher login page component",
       "registryDependencies": ["button", "card", "input", "label"],
       "categories": ["authentication"],
       "files": [
@@ -1197,8 +1197,8 @@
     {
       "name": "chart",
       "type": "registry:block",
-      "title": "8-bit Chart",
-      "description": "A simple 8-bit chart component",
+      "title": "Cypher Chart",
+      "description": "A simple cypher chart component",
       "registryDependencies": [],
       "categories": ["charts"],
       "files": [
@@ -1222,8 +1222,8 @@
     {
       "name": "chart-bar",
       "type": "registry:block",
-      "title": "8-bit Chart Bar",
-      "description": "A simple 8-bit chart bar component",
+      "title": "Cypher Chart Bar",
+      "description": "A simple cypher chart bar component",
       "registryDependencies": [],
       "categories": ["charts"],
       "files": [
@@ -1247,8 +1247,8 @@
     {
       "name": "chart-area-step",
       "type": "registry:block",
-      "title": "8-bit Chart Area Step",
-      "description": "A simple 8-bit chart area step component",
+      "title": "Cypher Chart Area Step",
+      "description": "A simple cypher chart area step component",
       "registryDependencies": [],
       "categories": ["charts"],
       "files": [
@@ -1272,8 +1272,8 @@
     {
       "name": "main-menu",
       "type": "registry:block",
-      "title": "8-bit Main Menu",
-      "description": "A simple 8-bit main menu component",
+      "title": "Cypher Main Menu",
+      "description": "A simple cypher main menu component",
       "registryDependencies": ["button", "card"],
       "categories": ["gaming"],
       "files": [
@@ -1302,8 +1302,8 @@
     {
       "name": "pause-menu",
       "type": "registry:block",
-      "title": "8-bit Pause Menu",
-      "description": "A simple 8-bit pause menu component",
+      "title": "Cypher Pause Menu",
+      "description": "A simple cypher pause menu component",
       "registryDependencies": ["button", "card"],
       "categories": ["gaming"],
       "files": [
@@ -1332,8 +1332,8 @@
     {
       "name": "game-over",
       "type": "registry:block",
-      "title": "8-bit Game Over",
-      "description": "A simple 8-bit game over component",
+      "title": "Cypher Game Over",
+      "description": "A simple cypher game over component",
       "registryDependencies": ["button", "card"],
       "categories": ["gaming"],
       "files": [
@@ -1362,8 +1362,8 @@
     {
       "name": "audio-settings",
       "type": "registry:block",
-      "title": "8-bit Audio Settings",
-      "description": "A simple 8-bit audio settings component",
+      "title": "Cypher Audio Settings",
+      "description": "A simple cypher audio settings component",
       "dependencies": ["@radix-ui/react-slider", "@radix-ui/react-switch"],
       "registryDependencies": ["button", "card", "label"],
       "categories": ["gaming"],
@@ -1403,8 +1403,8 @@
     {
       "name": "toggle-group",
       "type": "registry:component",
-      "title": "8-bit Toggle Group",
-      "description": "A simple 8-bit toggle group component",
+      "title": "Cypher Toggle Group",
+      "description": "A simple cypher toggle group component",
       "registryDependencies": ["toggle-group"],
       "files": [
         {
@@ -1422,8 +1422,8 @@
     {
       "name": "sidebar",
       "type": "registry:block",
-      "title": "8-bit Sidebar",
-      "description": "A simple 8-bit sidebar component",
+      "title": "Cypher Sidebar",
+      "description": "A simple cypher sidebar component",
       "registryDependencies": ["sidebar"],
       "categories": ["sidebar"],
       "files": [
@@ -1442,8 +1442,8 @@
     {
       "name": "accordion",
       "type": "registry:component",
-      "title": "8-bit Accordion",
-      "description": "A simple 8-bit accordion component",
+      "title": "Cypher Accordion",
+      "description": "A simple cypher accordion component",
       "registryDependencies": ["accordion"],
       "files": [
         {
@@ -1461,8 +1461,8 @@
     {
       "name": "drawer",
       "type": "registry:component",
-      "title": "8-bit Drawer",
-      "description": "A simple 8-bit drawer component",
+      "title": "Cypher Drawer",
+      "description": "A simple cypher drawer component",
       "registryDependencies": ["drawer"],
       "files": [
         {
@@ -1480,8 +1480,8 @@
     {
       "name": "navigation-menu",
       "type": "registry:component",
-      "title": "8-bit Navigation Menu",
-      "description": "A simple 8-bit navigation menu component",
+      "title": "Cypher Navigation Menu",
+      "description": "A simple cypher navigation menu component",
       "registryDependencies": ["navigation-menu"],
       "files": [
         {
@@ -1499,8 +1499,8 @@
     {
       "name": "difficulty-select",
       "type": "registry:block",
-      "title": "8-bit Difficulty Select",
-      "description": "A reusable 8-bit difficulty selector with Easy, Normal, Hard.",
+      "title": "Cypher Difficulty Select",
+      "description": "A reusable cypher difficulty selector with Easy, Normal, Hard.",
       "registryDependencies": ["button", "card"],
       "categories": ["gaming"],
       "files": [
@@ -1529,7 +1529,7 @@
     {
       "name": "leaderboard",
       "type": "registry:block",
-      "title": "8-bit Leaderboard",
+      "title": "Cypher Leaderboard",
       "description": "A retro-styled leaderboard component for displaying player rankings with avatars and scores.",
       "registryDependencies": ["card", "avatar", "badge", "separator"],
       "categories": ["gaming"],
@@ -1569,7 +1569,7 @@
     {
       "name": "player-profile-card",
       "type": "registry:block",
-      "title": "8-bit Player Profile Card",
+      "title": "Cypher Player Profile Card",
       "description": "A comprehensive player profile card component with stats, health/mana bars, and custom stats support.",
       "registryDependencies": ["card", "avatar", "badge", "progress"],
       "categories": ["gaming"],
@@ -1619,7 +1619,7 @@
     {
       "name": "quest-log",
       "type": "registry:block",
-      "title": "8-bit Quest Log",
+      "title": "Cypher Quest Log",
       "description": "A retro-styled quest log component for tracking game missions and tasks with accordion functionality and status indicators.",
       "registryDependencies": ["accordion", "card", "badge", "scroll-area"],
       "categories": ["gaming"],
@@ -1659,7 +1659,7 @@
     {
       "name": "save-slots",
       "type": "registry:block",
-      "title": "8-bit Save Slots",
+      "title": "Cypher Save Slots",
       "description": "A retro-styled save/load game interface with slot previews, timestamps, and empty slot handling.",
       "categories": ["gaming"],
       "registryDependencies": ["card", "badge", "button", "separator"],
@@ -1699,8 +1699,8 @@
     {
       "name": "dashboard-01",
       "type": "registry:page",
-      "title": "8-bit Dashboard 01",
-      "description": "A complete 8-bit styled dashboard with sidebar navigation, stats cards, charts, and data table with drag-and-drop functionality.",
+      "title": "Cypher Dashboard 01",
+      "description": "A complete cypher styled dashboard with sidebar navigation, stats cards, charts, and data table with drag-and-drop functionality.",
       "registryDependencies": [
         "sidebar",
         "button",
@@ -1845,7 +1845,7 @@
     {
       "name": "theme-selector",
       "type": "registry:component",
-      "title": "8-bit Theme Selector",
+      "title": "Cypher Theme Selector",
       "description": "A complete theme selector component with dropdown selection and code copy functionality. Includes theme context provider for managing active themes across the application.",
       "registryDependencies": ["select"],
       "files": [
@@ -1884,8 +1884,8 @@
     {
       "name": "spinner",
       "type": "registry:component",
-      "title": "8-bit Spinner",
-      "description": "Displays an 8-bit spinner component.",
+      "title": "Cypher Spinner",
+      "description": "Displays a cypher spinner component.",
       "registryDependencies": [],
       "files": [
         {
@@ -1898,8 +1898,8 @@
     {
       "name": "kbd",
       "type": "registry:component",
-      "title": "8-bit Kbd",
-      "description": "A simple 8-bit kbd component",
+      "title": "Cypher Kbd",
+      "description": "A simple cypher kbd component",
       "registryDependencies": [],
       "files": [
         {
@@ -1917,8 +1917,8 @@
     {
       "name": "retro-mode-switcher",
       "type": "registry:component",
-      "title": "8-bit Retro Mode Switcher",
-      "description": "A retro-styled theme toggle component with pixel art sun and moon icons. Perfect for 8-bit themed applications that need a nostalgic theme switcher.",
+      "title": "Cypher Retro Mode Switcher",
+      "description": "A retro-styled theme toggle component with pixel art sun and moon icons. Perfect for cypher themed applications that need a nostalgic theme switcher.",
       "registryDependencies": ["button"],
       "dependencies": ["next-themes"],
       "files": [
@@ -1947,8 +1947,8 @@
     {
       "name": "empty",
       "type": "registry:component",
-      "title": "8-bit Empty",
-      "description": "Displays an 8-bit empty component.",
+      "title": "Cypher Empty",
+      "description": "Displays a cypher empty component.",
       "registryDependencies": [],
       "files": [
         {
@@ -1961,8 +1961,8 @@
     {
       "name": "item",
       "type": "registry:component",
-      "title": "8-bit Item",
-      "description": "Displays an 8-bit item component.",
+      "title": "Cypher Item",
+      "description": "Displays a cypher item component.",
       "registryDependencies": ["separator"],
       "files": [
         {
@@ -1975,7 +1975,7 @@
     {
       "name": "character-sheet",
       "type": "registry:block",
-      "title": "8-bit Character Sheet",
+      "title": "Cypher Character Sheet",
       "description": "A comprehensive RPG character stats page with attributes, equipment, and customizable sections.",
       "categories": ["gaming"],
       "registryDependencies": [
@@ -2036,8 +2036,8 @@
     {
       "name": "victory-screen",
       "type": "registry:block",
-      "title": "8-bit Victory Screen",
-      "description": "A simple 8-bit Victory Screen component",
+      "title": "Cypher Victory Screen",
+      "description": "A simple cypher Victory Screen component",
       "categories": ["gaming"],
       "registryDependencies": ["item", "card", "alert"],
       "files": [
@@ -2071,7 +2071,7 @@
     {
       "name": "loading-screen",
       "type": "registry:block",
-      "title": "8-bit Loading Screen",
+      "title": "Cypher Loading Screen",
       "description": "A retro-styled loading screen with animated progress bar and rotating tips.",
       "categories": ["gaming"],
       "registryDependencies": ["progress"],
