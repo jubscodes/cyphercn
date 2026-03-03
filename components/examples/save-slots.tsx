@@ -45,12 +45,8 @@ const exampleSlots: SaveSlot[] = [
 ];
 
 export function SaveSlotsExample() {
-  const handleSlotClick = (slot: SaveSlot) => {
-    if (slot.isEmpty) {
-      console.log("Create new save in slot:", slot.id);
-    } else {
-      console.log("Load save from slot:", slot.id);
-    }
+  const handleSlotClick = (_slot: SaveSlot) => {
+    // Placeholder for slot interaction
   };
 
   return (

@@ -12,21 +12,21 @@ import {
 const menuItems = [
   {
     label: "START GAME",
-    action: () => console.log("Starting game..."),
+    action: () => {},
   },
   {
     label: "OPTIONS",
-    action: () => console.log("Showing options..."),
+    action: () => {},
   },
   {
     label: "HIGH SCORES",
-    action: () => console.log("Showing high scores..."),
+    action: () => {},
   },
   {
     label: "MULTIPLAYER",
-    action: () => console.log("Multiplayer mode..."),
+    action: () => {},
   },
-  { label: "QUIT", action: () => console.log("Quitting game...") },
+  { label: "QUIT", action: () => {} },
 ];
 
 export default function MainMenu({

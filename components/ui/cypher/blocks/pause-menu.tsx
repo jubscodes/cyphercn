@@ -14,17 +14,17 @@ const menuItems = [
   {
     label: "RESUME",
     icon: Pause,
-    action: () => console.log("Resuming game..."),
+    action: () => {},
   },
   {
     label: "RESTART",
     icon: RotateCcw,
-    action: () => console.log("Restarting game..."),
+    action: () => {},
   },
   {
     label: "QUIT",
     icon: Power,
-    action: () => console.log("Quitting game..."),
+    action: () => {},
   },
 ];
 
