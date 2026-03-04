@@ -133,7 +133,7 @@ function NavigationMenuViewport({
       <Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow md:w-[var(--radix-navigation-menu-viewport-width)]",
+          "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-none border border-foreground dark:border-ring shadow md:w-[var(--radix-navigation-menu-viewport-width)]",
           getFontClassName(font),
           "shadow-[6px_0px_0px_0px_var(--foreground),-6px_0px_0px_0px_var(--foreground),0px_-6px_0px_0px_var(--foreground),0px_6px_0px_0px_var(--foreground)]",
           "dark:shadow-[6px_0px_0px_0px_var(--ring),-6px_0px_0px_0px_var(--ring),0px_-6px_0px_0px_var(--ring),0px_6px_0px_0px_var(--ring)]",
@@ -174,7 +174,7 @@ function NavigationMenuIndicator({
       )}
       {...props}
     >
-      <div className="bg-foreground dark:bg-ring relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm shadow-md" />
+      <div className="bg-foreground dark:bg-ring relative top-[60%] h-2 w-2 rotate-45 shadow-md" />
     </Indicator>
   );
 }
