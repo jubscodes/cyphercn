@@ -606,7 +606,7 @@
       "name": "enemy-health-display",
       "type": "registry:component",
       "title": "Cypher Enemy Health Display",
-      "description": "A retro-styled enemy health display component with health bar, name, and level",
+      "description": "A cyberpunk-styled enemy health display component with health bar, name, and level",
       "registryDependencies": [],
       "files": [
         {
@@ -1530,7 +1530,7 @@
       "name": "leaderboard",
       "type": "registry:block",
       "title": "Cypher Leaderboard",
-      "description": "A retro-styled leaderboard component for displaying player rankings with avatars and scores.",
+      "description": "A cyberpunk-styled leaderboard component for displaying player rankings with avatars and scores.",
       "registryDependencies": ["card", "avatar", "badge", "separator"],
       "categories": ["gaming"],
       "files": [
@@ -1620,7 +1620,7 @@
       "name": "quest-log",
       "type": "registry:block",
       "title": "Cypher Quest Log",
-      "description": "A retro-styled quest log component for tracking game missions and tasks with accordion functionality and status indicators.",
+      "description": "A cyberpunk-styled quest log component for tracking game missions and tasks with accordion functionality and status indicators.",
       "registryDependencies": ["accordion", "card", "badge", "scroll-area"],
       "categories": ["gaming"],
       "files": [
@@ -1660,7 +1660,7 @@
       "name": "save-slots",
       "type": "registry:block",
       "title": "Cypher Save Slots",
-      "description": "A retro-styled save/load game interface with slot previews, timestamps, and empty slot handling.",
+      "description": "A cyberpunk-styled save/load game interface with slot previews, timestamps, and empty slot handling.",
       "categories": ["gaming"],
       "registryDependencies": ["card", "badge", "button", "separator"],
       "files": [
@@ -1873,11 +1873,6 @@
           "path": "components/ui/cypher/styles/cyberpunk.css",
           "type": "registry:component",
           "target": "components/ui/cypher/styles/cyberpunk.css"
-        },
-        {
-          "path": "app/retro-globals.css",
-          "type": "registry:component",
-          "target": "app/retro-globals.css"
         }
       ]
     },
@@ -1918,7 +1913,7 @@
       "name": "retro-mode-switcher",
       "type": "registry:component",
       "title": "Cypher Retro Mode Switcher",
-      "description": "A retro-styled theme toggle component with pixel art sun and moon icons. Perfect for cypher themed applications that need a nostalgic theme switcher.",
+      "description": "A cyberpunk-styled theme toggle component with pixel art sun and moon icons. Perfect for cypher themed applications that need a nostalgic theme switcher.",
       "registryDependencies": ["button"],
       "dependencies": ["next-themes"],
       "files": [
@@ -2072,7 +2067,7 @@
       "name": "loading-screen",
       "type": "registry:block",
       "title": "Cypher Loading Screen",
-      "description": "A retro-styled loading screen with animated progress bar and rotating tips.",
+      "description": "A cyberpunk-styled loading screen with animated progress bar and rotating tips.",
       "categories": ["gaming"],
       "registryDependencies": ["progress"],
       "files": [
