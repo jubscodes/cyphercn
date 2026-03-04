@@ -1420,10 +1420,10 @@
       ]
     },
     {
-      "name": "sidebar",
+      "name": "sidebar-demo",
       "type": "registry:block",
-      "title": "Cypher Sidebar",
-      "description": "A simple cypher sidebar component",
+      "title": "Cypher Sidebar Demo",
+      "description": "A demo block showcasing the cypher sidebar component",
       "registryDependencies": ["sidebar"],
       "categories": ["sidebar"],
       "files": [
@@ -2105,6 +2105,168 @@
           "path": "components/ui/cypher/alert.tsx",
           "type": "registry:component",
           "target": "components/ui/cypher/alert.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "native-select",
+      "type": "registry:component",
+      "title": "Cypher Native Select",
+      "description": "A terminal-styled native HTML select with phosphor glow support",
+      "registryDependencies": ["native-select"],
+      "files": [
+        {
+          "path": "components/ui/cypher/native-select.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/native-select.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:component",
+      "title": "Cypher Sonner",
+      "description": "A terminal-styled toast notification system with bracket prefixes",
+      "registryDependencies": ["sonner"],
+      "files": [
+        {
+          "path": "components/ui/cypher/sonner.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/sonner.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:component",
+      "title": "Cypher Button Group",
+      "description": "A terminal-styled button group with phosphor glow support",
+      "registryDependencies": ["button-group"],
+      "files": [
+        {
+          "path": "components/ui/cypher/button-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/button-group.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:component",
+      "title": "Cypher Form",
+      "description": "Terminal-styled form components with bracket error prefixes",
+      "registryDependencies": ["form"],
+      "files": [
+        {
+          "path": "components/ui/cypher/form.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/form.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:component",
+      "title": "Cypher Input Group",
+      "description": "A terminal-styled input group with addon and button support",
+      "registryDependencies": ["input-group"],
+      "files": [
+        {
+          "path": "components/ui/cypher/input-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/input-group.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:component",
+      "title": "Cypher Field",
+      "description": "Terminal-styled form field components with bracket error prefixes",
+      "registryDependencies": ["field"],
+      "files": [
+        {
+          "path": "components/ui/cypher/field.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/field.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:component",
+      "title": "Cypher Combobox",
+      "description": "A terminal-styled combobox with bracket chip notation and phosphor glow",
+      "registryDependencies": ["combobox"],
+      "files": [
+        {
+          "path": "components/ui/cypher/combobox.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/combobox.tsx"
+        },
+        {
+          "path": "components/ui/cypher/input-group.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/input-group.tsx"
+        },
+        {
+          "path": "components/ui/cypher/styles/cyberpunk.css",
+          "type": "registry:component",
+          "target": "components/ui/cypher/styles/cyberpunk.css"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:component",
+      "title": "Cypher Sidebar",
+      "description": "A terminal-styled sidebar with bracket toggle notation and phosphor rail glow",
+      "registryDependencies": ["sidebar"],
+      "files": [
+        {
+          "path": "components/ui/cypher/sidebar.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/sidebar.tsx"
+        },
+        {
+          "path": "components/ui/cypher/sheet.tsx",
+          "type": "registry:component",
+          "target": "components/ui/cypher/sheet.tsx"
         },
         {
           "path": "components/ui/cypher/styles/cyberpunk.css",
