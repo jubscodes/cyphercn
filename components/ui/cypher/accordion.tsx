@@ -15,7 +15,7 @@ import {
 
 import "./styles/cyberpunk.css";
 
-export interface BitAccordionItemProps
+export interface CypherAccordionItemProps
   extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {
   asChild?: boolean;
 }
@@ -24,7 +24,7 @@ function AccordionItem({
   className,
   children,
   ...props
-}: BitAccordionItemProps) {
+}: CypherAccordionItemProps) {
   return (
     <ShadcnAccordionItem
       className={cn(
@@ -38,7 +38,7 @@ function AccordionItem({
   );
 }
 
-export interface BitAccordionTriggerProps
+export interface CypherAccordionTriggerProps
   extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> {
   font?: "cyphercn" | "normal";
 }
@@ -48,7 +48,7 @@ function AccordionTrigger({
   children,
   font,
   ...props
-}: BitAccordionTriggerProps) {
+}: CypherAccordionTriggerProps) {
   return (
     <ShadcnAccordionTrigger
       className={cn(font === "cyphercn" ? "cyphercn" : "cyphercn-normal", className)}
@@ -59,7 +59,7 @@ function AccordionTrigger({
   );
 }
 
-export interface BitAccordionContentProps
+export interface CypherAccordionContentProps
   extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> {
   font?: "cyphercn" | "normal";
 }
@@ -69,7 +69,7 @@ function AccordionContent({
   children,
   font,
   ...props
-}: BitAccordionContentProps) {
+}: CypherAccordionContentProps) {
   return (
     <div className="relative">
       <ShadcnAccordionContent

@@ -28,13 +28,13 @@ export const tabsVariants = cva("", {
   },
 });
 
-export interface BitTabsProps
+export interface CypherTabsProps
   extends React.ComponentProps<typeof TabsPrimitive.Root>,
     VariantProps<typeof tabsVariants> {
   asChild?: boolean;
 }
 
-function Tabs({ className, ...props }: BitTabsProps) {
+function Tabs({ className, ...props }: CypherTabsProps) {
   const { font } = props;
 
   return (

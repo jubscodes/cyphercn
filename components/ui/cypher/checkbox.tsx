@@ -21,13 +21,13 @@ export const checkboxVariants = cva("", {
   },
 });
 
-export interface BitCheckboxProps
+export interface CypherCheckboxProps
   extends React.ComponentProps<typeof CheckboxPrimitive.Root>,
     VariantProps<typeof checkboxVariants> {
   asChild?: boolean;
 }
 
-function Checkbox({ className, font, ...props }: BitCheckboxProps) {
+function Checkbox({ className, font, ...props }: CypherCheckboxProps) {
   return (
     <ShadcnCheckbox
       className={cn(

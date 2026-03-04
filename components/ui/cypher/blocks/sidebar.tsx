@@ -9,9 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
-
-import "@/components/ui/cypher/styles/cyberpunk.css";
+} from "@/components/ui/cypher/sidebar";
 
 // Menu items.
 const items = [
@@ -44,9 +42,7 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar
-      className={`${"cyphercn"} border-r-4 border-foreground dark:border-ring`}
-    >
+    <Sidebar>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>

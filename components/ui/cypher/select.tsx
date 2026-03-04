@@ -30,7 +30,7 @@ export const inputVariants = cva("", {
   },
 });
 
-export interface BitSelectProps
+export interface CypherSelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement>,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
@@ -46,13 +46,13 @@ function SelectGroup({
   return <ShadcnSelectGroup {...props} />;
 }
 
-interface BitSelectValueProps
+interface CypherSelectValueProps
   extends React.ComponentProps<typeof SelectPrimitive.Value>,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
 }
 
-function SelectValue({ ...props }: BitSelectValueProps) {
+function SelectValue({ ...props }: CypherSelectValueProps) {
   const { font } = props;
 
   return (
@@ -63,13 +63,13 @@ function SelectValue({ ...props }: BitSelectValueProps) {
   );
 }
 
-interface BitSelectTriggerProps
+interface CypherSelectTriggerProps
   extends React.ComponentProps<typeof SelectPrimitive.Trigger>,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
 }
 
-function SelectTrigger({ children, ...props }: BitSelectTriggerProps) {
+function SelectTrigger({ children, ...props }: CypherSelectTriggerProps) {
   const { className, font } = props;
 
   return (
@@ -86,7 +86,7 @@ function SelectTrigger({ children, ...props }: BitSelectTriggerProps) {
   );
 }
 
-export interface BitSelectContentProps
+export interface CypherSelectContentProps
   extends React.ComponentProps<typeof SelectPrimitive.Content>,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
@@ -96,7 +96,7 @@ function SelectContent({
   className,
   children,
   ...props
-}: BitSelectContentProps) {
+}: CypherSelectContentProps) {
   const { font } = props;
 
   return (

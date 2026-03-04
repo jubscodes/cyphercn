@@ -30,7 +30,7 @@ export const popOverVariants = cva("", {
   },
 });
 
-export interface BitPopoverProps
+export interface CypherPopoverProps
   extends React.ComponentProps<typeof PopoverPrimitive.Content>,
     VariantProps<typeof popOverVariants> {}
 
@@ -39,7 +39,7 @@ function PopoverContent({
   font,
   className,
   ...props
-}: BitPopoverProps) {
+}: CypherPopoverProps) {
   return (
     <ShadcnPopoverContent
       className={cn(

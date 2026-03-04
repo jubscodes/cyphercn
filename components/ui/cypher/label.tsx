@@ -23,13 +23,13 @@ export const inputVariants = cva("", {
   },
 });
 
-interface BitLabelProps
+interface CypherLabelProps
   extends React.ComponentProps<typeof LabelPrimitive.Root>,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
 }
 
-function Label({ className, font, ...props }: BitLabelProps) {
+function Label({ className, font, ...props }: CypherLabelProps) {
   return (
     <ShadcnLabel
       className={cn(className, font === "cyphercn" ? "cyphercn" : "cyphercn-normal")}

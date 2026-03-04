@@ -27,7 +27,7 @@ export const tooltipVariants = cva("", {
   },
 });
 
-export interface BitTooltipContentProps
+export interface CypherTooltipContentProps
   extends React.ComponentPropsWithoutRef<typeof ShadcnTooltipContent>,
     VariantProps<typeof tooltipVariants> {}
 
@@ -36,7 +36,7 @@ function TooltipContent({
   children,
   font,
   ...props
-}: BitTooltipContentProps) {
+}: CypherTooltipContentProps) {
   const color = tooltipVariants({ font });
 
   return (
@@ -64,11 +64,11 @@ function TooltipContent({
   );
 }
 
-export interface BitTooltipProps
+export interface CypherTooltipProps
   extends React.ComponentPropsWithoutRef<typeof ShadcnTooltip>,
     VariantProps<typeof tooltipVariants> {}
 
-function Tooltip({ children, ...props }: BitTooltipProps) {
+function Tooltip({ children, ...props }: CypherTooltipProps) {
   return (
     <ShadcnTooltip data-slot="tooltip" {...props}>
       {children}
@@ -76,7 +76,7 @@ function Tooltip({ children, ...props }: BitTooltipProps) {
   );
 }
 
-export interface BitTooltipProviderProps
+export interface CypherTooltipProviderProps
   extends React.ComponentPropsWithoutRef<typeof ShadcnTooltipProvider> {
   delayDuration?: number;
 }
@@ -85,7 +85,7 @@ function TooltipProvider({
   children,
   delayDuration = 0,
   ...props
-}: BitTooltipProviderProps) {
+}: CypherTooltipProviderProps) {
   return (
     <ShadcnTooltipProvider delayDuration={delayDuration} {...props}>
       {children}

@@ -23,7 +23,7 @@ export const hoverCardVariants = cva("", {
   },
 });
 
-export interface BitHoverCardProps
+export interface CypherHoverCardProps
   extends React.ComponentProps<typeof HoverCardPrimitive.Content>,
     VariantProps<typeof hoverCardVariants> {}
 
@@ -52,7 +52,7 @@ function HoverCardContent({
   className,
   font,
   ...props
-}: BitHoverCardProps) {
+}: CypherHoverCardProps) {
   return (
     <ShadcnHoverCardContent
       className={cn(

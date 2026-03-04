@@ -27,11 +27,11 @@ const DialogClose = ShadcnDialogClose;
 
 const DialogFooter = ShadcnDialogFooter;
 
-export interface BitDialogProps
+export interface CypherDialogProps
   extends React.ComponentProps<"div">,
     VariantProps<typeof dialogContentVariants> {}
 
-function DialogTitle({ ...props }: BitDialogProps) {
+function DialogTitle({ ...props }: CypherDialogProps) {
   const { className, font } = props;
   return (
     <ShadcnDialogTitle
@@ -58,7 +58,7 @@ function DialogContent({
   children,
   font,
   ...props
-}: BitDialogProps) {
+}: CypherDialogProps) {
   return (
     <ShadcnDialogContent
       className={cn(

@@ -32,23 +32,23 @@ export const breadcrumbVariants = cva("", {
   },
 });
 
-interface BitBreadcrumbNavigationProps
+interface CypherBreadcrumbNavigationProps
   extends React.ComponentProps<"nav">,
     VariantProps<typeof breadcrumbVariants> {}
 
-interface BitBreadcrumbOrderedListProps
+interface CypherBreadcrumbOrderedListProps
   extends React.ComponentProps<"ol">,
     VariantProps<typeof breadcrumbVariants> {}
 
-interface BitBreadcrumbSpanProps
+interface CypherBreadcrumbSpanProps
   extends React.ComponentProps<"span">,
     VariantProps<typeof breadcrumbVariants> {}
 
-interface BitBreadcrumbListItemProps
+interface CypherBreadcrumbListItemProps
   extends React.ComponentProps<"li">,
     VariantProps<typeof breadcrumbVariants> {}
 
-interface BitBreadcrumbLinkProps
+interface CypherBreadcrumbLinkProps
   extends React.ComponentProps<"a">,
     VariantProps<typeof breadcrumbVariants> {}
 
@@ -77,7 +77,7 @@ const ChevronRight = () => {
   );
 };
 
-function Breadcrumb({ children, ...props }: BitBreadcrumbNavigationProps) {
+function Breadcrumb({ children, ...props }: CypherBreadcrumbNavigationProps) {
   const { variant, className, font } = props;
 
   return (
@@ -102,7 +102,7 @@ function Breadcrumb({ children, ...props }: BitBreadcrumbNavigationProps) {
   );
 }
 
-function BreadcrumbList({ ...props }: BitBreadcrumbOrderedListProps) {
+function BreadcrumbList({ ...props }: CypherBreadcrumbOrderedListProps) {
   const { font, className } = props;
 
   return (
@@ -113,7 +113,7 @@ function BreadcrumbList({ ...props }: BitBreadcrumbOrderedListProps) {
   );
 }
 
-function BreadcrumbItem({ ...props }: BitBreadcrumbListItemProps) {
+function BreadcrumbItem({ ...props }: CypherBreadcrumbListItemProps) {
   const { font, className } = props;
 
   return (
@@ -127,7 +127,7 @@ function BreadcrumbItem({ ...props }: BitBreadcrumbListItemProps) {
 function BreadcrumbLink({
   asChild,
   ...props
-}: BitBreadcrumbLinkProps & {
+}: CypherBreadcrumbLinkProps & {
   asChild?: boolean;
 }) {
   const { font, className } = props;
@@ -143,7 +143,7 @@ function BreadcrumbLink({
   );
 }
 
-function BreadcrumbPage({ ...props }: BitBreadcrumbSpanProps) {
+function BreadcrumbPage({ ...props }: CypherBreadcrumbSpanProps) {
   const { font, className } = props;
 
   return (
@@ -154,7 +154,7 @@ function BreadcrumbPage({ ...props }: BitBreadcrumbSpanProps) {
   );
 }
 
-function BreadcrumbSeparator({ ...props }: BitBreadcrumbListItemProps) {
+function BreadcrumbSeparator({ ...props }: CypherBreadcrumbListItemProps) {
   const { font, children, className } = props;
 
   return (
@@ -167,7 +167,7 @@ function BreadcrumbSeparator({ ...props }: BitBreadcrumbListItemProps) {
   );
 }
 
-function BreadcrumbEllipsis({ ...props }: BitBreadcrumbSpanProps) {
+function BreadcrumbEllipsis({ ...props }: CypherBreadcrumbSpanProps) {
   const { font, className } = props;
 
   return (
