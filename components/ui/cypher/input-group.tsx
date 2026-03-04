@@ -1,9 +1,7 @@
 "use client";
 
+import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
-import { type VariantProps, cva } from "class-variance-authority";
-
-import { cn } from "@/lib/utils";
 import {
   InputGroup as ShadcnInputGroup,
   InputGroupAddon as ShadcnInputGroupAddon,
@@ -12,6 +10,7 @@ import {
   InputGroupText as ShadcnInputGroupText,
   InputGroupTextarea as ShadcnInputGroupTextarea,
 } from "@/components/ui/input-group";
+import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
@@ -53,7 +52,7 @@ function InputGroupAddon({
 }: React.ComponentProps<typeof ShadcnInputGroupAddon>) {
   return (
     <ShadcnInputGroupAddon
-      className={cn("text-foreground/60 cyphercn", className)}
+      className={cn("cyphercn text-foreground/60", className)}
       {...props}
     />
   );
@@ -95,10 +94,7 @@ function InputGroupTextarea({
   );
 }
 
-function InputGroupText({
-  className,
-  ...props
-}: React.ComponentProps<"span">) {
+function InputGroupText({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <ShadcnInputGroupText
       className={cn("cyphercn-normal", className)}

@@ -1,16 +1,15 @@
-import { type VariantProps, cva } from "class-variance-authority";
-
-import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
 import {
   NativeSelect as ShadcnNativeSelect,
   NativeSelectOptGroup as ShadcnNativeSelectOptGroup,
   NativeSelectOption as ShadcnNativeSelectOption,
 } from "@/components/ui/native-select";
+import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
 const nativeSelectVariants = cva(
-  "cyphercn-normal rounded-none border border-foreground shadow-none ring-0 focus-visible:ring-0 focus-visible:border-foreground",
+  "cyphercn-normal rounded-none border border-foreground shadow-none ring-0 focus-visible:border-foreground focus-visible:ring-0",
   {
     variants: {
       glow: {
@@ -41,9 +40,7 @@ function NativeSelect({
   );
 }
 
-function NativeSelectOption({
-  ...props
-}: React.ComponentProps<"option">) {
+function NativeSelectOption({ ...props }: React.ComponentProps<"option">) {
   return <ShadcnNativeSelectOption {...props} />;
 }
 

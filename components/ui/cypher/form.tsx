@@ -1,15 +1,15 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import {
   Form,
   FormControl,
-  FormDescription as ShadcnFormDescription,
   FormField,
   FormItem,
+  FormDescription as ShadcnFormDescription,
   FormLabel as ShadcnFormLabel,
   useFormField,
 } from "@/components/ui/form";
+import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
@@ -25,10 +25,7 @@ function FormLabel({
   );
 }
 
-function FormDescription({
-  className,
-  ...props
-}: React.ComponentProps<"p">) {
+function FormDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <ShadcnFormDescription
       className={cn("cyphercn-normal text-foreground/50", className)}
@@ -51,13 +48,13 @@ function FormMessage({
 
   return (
     <p
+      className={cn("cyphercn text-destructive text-sm", className)}
       data-slot="form-message"
       id={formMessageId}
-      className={cn("cyphercn text-destructive text-sm", className)}
       {...props}
     >
       <span className="inline-flex items-start gap-1.5">
-        <span className="font-bold shrink-0">[ERROR]</span>
+        <span className="shrink-0 font-bold">[ERROR]</span>
         <span className="cyphercn-normal">{body}</span>
       </span>
     </p>

@@ -1,21 +1,19 @@
 "use client";
 
 import { useMemo } from "react";
-
-import { cn } from "@/lib/utils";
 import {
   Field,
   FieldContent,
-  FieldDescription as ShadcnFieldDescription,
   FieldGroup,
+  FieldSet,
+  FieldDescription as ShadcnFieldDescription,
   FieldLabel as ShadcnFieldLabel,
   FieldLegend as ShadcnFieldLegend,
   FieldSeparator as ShadcnFieldSeparator,
-  FieldSet,
   FieldTitle as ShadcnFieldTitle,
 } from "@/components/ui/field";
 import type { Label } from "@/components/ui/label";
-import type { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
@@ -31,10 +29,7 @@ function FieldLabel({
   );
 }
 
-function FieldTitle({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
+function FieldTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <ShadcnFieldTitle
       className={cn("cyphercn uppercase tracking-wider", className)}
@@ -55,10 +50,7 @@ function FieldLegend({
   );
 }
 
-function FieldDescription({
-  className,
-  ...props
-}: React.ComponentProps<"p">) {
+function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <ShadcnFieldDescription
       className={cn("cyphercn-normal text-foreground/50", className)}
@@ -108,16 +100,13 @@ function FieldError({
 
   return (
     <div
-      role="alert"
+      className={cn("cyphercn font-normal text-destructive text-sm", className)}
       data-slot="field-error"
-      className={cn(
-        "cyphercn text-destructive text-sm font-normal",
-        className
-      )}
+      role="alert"
       {...props}
     >
       <span className="inline-flex items-start gap-1.5">
-        <span className="font-bold shrink-0">[ERROR]</span>
+        <span className="shrink-0 font-bold">[ERROR]</span>
         <span className="cyphercn-normal">{content}</span>
       </span>
     </div>

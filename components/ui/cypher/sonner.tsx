@@ -24,20 +24,22 @@ function Toaster({
 
   return (
     <Sonner
-      theme={theme as ToasterProps["theme"]}
       className="toaster group"
       icons={{
-        success: <span className="cyphercn text-xs">{variantPrefixes.success}</span>,
+        success: (
+          <span className="cyphercn text-xs">{variantPrefixes.success}</span>
+        ),
         info: <span className="cyphercn text-xs">{variantPrefixes.info}</span>,
-        warning: <span className="cyphercn text-xs">{variantPrefixes.warning}</span>,
-        error: <span className="cyphercn text-xs">{variantPrefixes.error}</span>,
-        loading: <span className="cyphercn text-xs animate-pulse">{variantPrefixes.loading}</span>,
-      }}
-      toastOptions={{
-        ...toastOptions,
-        className: cn(
-          glow && "phosphor-border-glow",
-          toastOptions?.className
+        warning: (
+          <span className="cyphercn text-xs">{variantPrefixes.warning}</span>
+        ),
+        error: (
+          <span className="cyphercn text-xs">{variantPrefixes.error}</span>
+        ),
+        loading: (
+          <span className="cyphercn animate-pulse text-xs">
+            {variantPrefixes.loading}
+          </span>
         ),
       }}
       style={
@@ -48,6 +50,11 @@ function Toaster({
           "--border-radius": "0px",
         } as React.CSSProperties
       }
+      theme={theme as ToasterProps["theme"]}
+      toastOptions={{
+        ...toastOptions,
+        className: cn(glow && "phosphor-border-glow", toastOptions?.className),
+      }}
       {...props}
     />
   );

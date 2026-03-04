@@ -1,29 +1,25 @@
-import { type VariantProps, cva } from "class-variance-authority";
-
-import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
 import {
+  buttonGroupVariants,
   ButtonGroup as ShadcnButtonGroup,
   ButtonGroupSeparator as ShadcnButtonGroupSeparator,
   ButtonGroupText as ShadcnButtonGroupText,
-  buttonGroupVariants,
 } from "@/components/ui/button-group";
+import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
-const cypherButtonGroupVariants = cva(
-  "rounded-none [&>*]:rounded-none",
-  {
-    variants: {
-      glow: {
-        true: "phosphor-border-glow",
-        false: "",
-      },
+const cypherButtonGroupVariants = cva("rounded-none [&>*]:rounded-none", {
+  variants: {
+    glow: {
+      true: "phosphor-border-glow",
+      false: "",
     },
-    defaultVariants: {
-      glow: false,
-    },
-  }
-);
+  },
+  defaultVariants: {
+    glow: false,
+  },
+});
 
 function ButtonGroup({
   className,
@@ -35,8 +31,8 @@ function ButtonGroup({
   VariantProps<typeof cypherButtonGroupVariants>) {
   return (
     <ShadcnButtonGroup
-      orientation={orientation}
       className={cn(cypherButtonGroupVariants({ glow }), className)}
+      orientation={orientation}
       {...props}
     />
   );
@@ -51,7 +47,7 @@ function ButtonGroupText({
   return (
     <ShadcnButtonGroupText
       className={cn(
-        "cyphercn bg-transparent rounded-none border-foreground",
+        "cyphercn rounded-none border-foreground bg-transparent",
         className
       )}
       {...props}

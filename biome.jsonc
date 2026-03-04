@@ -11,10 +11,30 @@
   "files": {
     "includes": [
       "!public",
-      "!components/ui",
+      "!components/ui/*.tsx",
+      "!components/ui/*.ts",
       "!hooks/use-mobile.ts",
       "!lib/utils.ts",
       "!.source"
     ]
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["components/ui/cypher/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noExportedImports": "off"
+          },
+          "performance": {
+            "noNamespaceImport": "off"
+          },
+          "suspicious": {
+            "noDocumentCookie": "off",
+            "noArrayIndexKey": "off"
+          }
+        }
+      }
+    }
+  ]
 }
