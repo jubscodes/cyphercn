@@ -11,12 +11,12 @@ import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
-export interface BitCollapsibleProps
+export interface CypherCollapsibleProps
   extends React.ComponentProps<typeof CollapsiblePrimitive.Root> {
   asChild?: boolean;
 }
 
-function Collapsible({ children, ...props }: BitCollapsibleProps) {
+function Collapsible({ children, ...props }: CypherCollapsibleProps) {
   const { className } = props;
 
   return (

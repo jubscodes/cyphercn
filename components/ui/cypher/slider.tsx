@@ -8,12 +8,12 @@ import { cn } from "@/lib/utils";
 
 import "./styles/cyberpunk.css";
 
-export interface BitSliderProps
+export interface CypherSliderProps
   extends React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> {
   ref?: React.Ref<React.ComponentRef<typeof SliderPrimitive.Root>>;
 }
 
-function Slider({ className, ref, ...props }: BitSliderProps) {
+function Slider({ className, ref, ...props }: CypherSliderProps) {
   return (
     <SliderPrimitive.Root
       ref={ref}

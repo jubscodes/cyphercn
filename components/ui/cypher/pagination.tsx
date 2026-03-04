@@ -31,10 +31,10 @@ export const paginationVariants = cva("", {
   },
 });
 
-export type BitPaginationProps<T extends React.ElementType> =
+export type CypherPaginationProps<T extends React.ElementType> =
   React.ComponentPropsWithoutRef<T> & VariantProps<typeof paginationVariants>;
 
-function Pagination({ ...props }: BitPaginationProps<"nav">) {
+function Pagination({ ...props }: CypherPaginationProps<"nav">) {
   const { variant, className, font } = props;
   return (
     <ShadcnPagination
@@ -133,7 +133,7 @@ const ChevronRightIcon = () => {
   );
 };
 
-function PaginationContent({ ...props }: BitPaginationProps<"ul">) {
+function PaginationContent({ ...props }: CypherPaginationProps<"ul">) {
   const { className, font } = props;
   return (
     <ShadcnPaginationContent
@@ -143,7 +143,7 @@ function PaginationContent({ ...props }: BitPaginationProps<"ul">) {
   );
 }
 
-function PaginationItem({ ...props }: BitPaginationProps<"li">) {
+function PaginationItem({ ...props }: CypherPaginationProps<"li">) {
   const { className, font } = props;
   return (
     <ShadcnPaginationItem
@@ -156,7 +156,7 @@ function PaginationItem({ ...props }: BitPaginationProps<"li">) {
 type PaginationLinkProps = {
   isActive?: boolean;
 } & Pick<React.ComponentProps<typeof Button>, "size"> &
-  BitPaginationProps<"a">;
+  CypherPaginationProps<"a">;
 
 function PaginationLink({ ...props }: PaginationLinkProps) {
   const { font, children, isActive, className } = props;
@@ -227,7 +227,7 @@ function PaginationNext({
   );
 }
 
-function PaginationEllipsis({ ...props }: BitPaginationProps<"span">) {
+function PaginationEllipsis({ ...props }: CypherPaginationProps<"span">) {
   const { font, className } = props;
 
   return (

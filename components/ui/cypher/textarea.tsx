@@ -18,13 +18,13 @@ export const inputVariants = cva("", {
   },
 });
 
-export interface BitTextareaProps
+export interface CypherTextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement>,
     VariantProps<typeof inputVariants> {
   asChild?: boolean;
 }
 
-function Textarea({ ...props }: BitTextareaProps) {
+function Textarea({ ...props }: CypherTextareaProps) {
   const { className, font } = props;
 
   return (

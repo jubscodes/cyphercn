@@ -26,17 +26,17 @@ export const toggleGroupVariants = cva("", {
   defaultVariants: { variant: "default", font: "cyphercn", size: "default" },
 });
 
-export type BitToggleGroupProps = React.ComponentPropsWithoutRef<
+export type CypherToggleGroupProps = React.ComponentPropsWithoutRef<
   typeof ToggleGroupPrimitive.Root
 > &
   VariantProps<typeof toggleGroupVariants>;
 
-export type BitToggleGroupItemProps = React.ComponentPropsWithoutRef<
+export type CypherToggleGroupItemProps = React.ComponentPropsWithoutRef<
   typeof ToggleGroupPrimitive.Item
 > &
   VariantProps<typeof toggleGroupVariants>;
 
-function ToggleGroup({ ...props }: BitToggleGroupProps) {
+function ToggleGroup({ ...props }: CypherToggleGroupProps) {
   const { className, font, children } = props;
 
   return (
@@ -49,7 +49,7 @@ function ToggleGroup({ ...props }: BitToggleGroupProps) {
     </ShadcnToggleGroup>
   );
 }
-function ToggleGroupItem({ ...props }: BitToggleGroupItemProps) {
+function ToggleGroupItem({ ...props }: CypherToggleGroupItemProps) {
   const { className, font, children, variant } = props;
   return (
     <ShadcnToggleGroupItem

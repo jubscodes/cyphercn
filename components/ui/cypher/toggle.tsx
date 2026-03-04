@@ -35,11 +35,11 @@ const toggleVariants = cva("", {
   },
 });
 
-export interface BitToggleProps
+export interface CypherToggleProps
   extends React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root>,
     VariantProps<typeof toggleVariants> {}
 
-function Toggle({ children, font, ...props }: BitToggleProps) {
+function Toggle({ children, font, ...props }: CypherToggleProps) {
   const { variant, className } = props;
 
   return (

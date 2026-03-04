@@ -35,11 +35,11 @@ export const alertDialogVariants = cva("", {
   },
 });
 
-export interface BitAlertDialogProps
+export interface CypherAlertDialogProps
   extends React.ComponentProps<typeof AlertDialogPrimitive.Root>,
     VariantProps<typeof alertDialogVariants> {}
 
-function AlertDialog({ ...props }: BitAlertDialogProps) {
+function AlertDialog({ ...props }: CypherAlertDialogProps) {
   return <ShadcnAlertDialog {...props} />;
 }
 
@@ -70,7 +70,7 @@ function AlertDialogOverlay({
   return <ShadcnAlertDialogOverlay className={cn(className)} {...props} />;
 }
 
-interface BitAlertDialogContentProps
+interface CypherAlertDialogContentProps
   extends React.ComponentProps<typeof AlertDialogPrimitive.Content>,
     VariantProps<typeof alertDialogVariants> {}
 
@@ -79,7 +79,7 @@ function AlertDialogContent({
   children,
   font,
   ...props
-}: BitAlertDialogContentProps) {
+}: CypherAlertDialogContentProps) {
   return (
     <AlertDialogPortal>
       <AlertDialogOverlay />

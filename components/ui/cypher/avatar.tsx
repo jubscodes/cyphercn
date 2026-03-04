@@ -25,7 +25,7 @@ export const avatarVariants = cva("", {
   },
 });
 
-export interface BitAvatarProps
+export interface CypherAvatarProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> {
   font?: "normal" | "cyphercn";
   variant?: "default" | "cyphercn" | "framed";
@@ -38,7 +38,7 @@ function Avatar({
   variant = "framed",
   ref,
   ...props
-}: BitAvatarProps) {
+}: CypherAvatarProps) {
   const isFramed = variant === "framed";
 
   return (
@@ -80,14 +80,14 @@ function Avatar({
   );
 }
 
-export interface BitAvatarImageProps
+export interface CypherAvatarImageProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
   font?: "normal" | "cyphercn";
   variant?: "default" | "cyphercn" | "framed";
   ref?: React.Ref<React.ComponentRef<typeof AvatarPrimitive.Image>>;
 }
 
-function AvatarImage({ className, font, ref, ...props }: BitAvatarImageProps) {
+function AvatarImage({ className, font, ref, ...props }: CypherAvatarImageProps) {
   return (
     <AvatarPrimitive.Image
       ref={ref}
@@ -102,12 +102,12 @@ function AvatarImage({ className, font, ref, ...props }: BitAvatarImageProps) {
   );
 }
 
-export interface BitAvatarFallbackProps
+export interface CypherAvatarFallbackProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> {
   ref?: React.Ref<React.ComponentRef<typeof AvatarPrimitive.Fallback>>;
 }
 
-function AvatarFallback({ className, ref, ...props }: BitAvatarFallbackProps) {
+function AvatarFallback({ className, ref, ...props }: CypherAvatarFallbackProps) {
   return (
     <AvatarPrimitive.Fallback
       ref={ref}
